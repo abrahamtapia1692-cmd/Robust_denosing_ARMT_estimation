@@ -1,0 +1,788 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:armt:etapa0:manifest:1.0.0",
+  "title": "Manifiesto de Etapa 0 (puerta P0) para el piloto ARMT MT/AMT D0/D1",
+  "description": "Contrato del manifiesto de inventario. Los campos desconocidos deben declararse como null y figurar en unknowns; no se admiten valores convenientes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "manifest_version",
+    "artifact",
+    "generated_at_utc",
+    "generator",
+    "scope",
+    "sources",
+    "governing_documents",
+    "software",
+    "counts",
+    "armt_records",
+    "calibration_files",
+    "tem_dataset",
+    "tem_candidates",
+    "derived_products",
+    "artifacts",
+    "unknowns",
+    "blockers",
+    "p0_checklist"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "manifest_version": { "const": "1.0.0" },
+    "artifact": { "const": "manifest_etapa0" },
+    "generated_at_utc": { "type": "string", "format": "date-time" },
+    "generator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["script", "sha256", "python", "command"],
+      "properties": {
+        "script": { "type": "string", "minLength": 1 },
+        "sha256": { "$ref": "#/definitions/sha256" },
+        "python": { "type": "string", "minLength": 1 },
+        "command": { "type": "string", "minLength": 1 }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "etapa",
+        "puerta",
+        "p0_status",
+        "bandas_incluidas",
+        "bandas_excluidas",
+        "rmt_portadoras",
+        "productos",
+        "separacion_detector_separador",
+        "bss_requiere_sx_sy_zopt",
+        "soporte_tem_vacio_es_valido",
+        "fuente_del_alcance"
+      ],
+      "properties": {
+        "etapa": { "const": 0 },
+        "puerta": { "const": "P0" },
+        "p0_status": { "enum": ["COMPLETO", "PARCIAL"] },
+        "bandas_incluidas": { "const": ["D0", "D1"] },
+        "bandas_excluidas": { "const": ["D2", "D3"] },
+        "rmt_portadoras": { "const": "fuera_de_alcance" },
+        "productos": { "const": ["MT/AMT"] },
+        "separacion_detector_separador": { "const": true },
+        "bss_requiere_sx_sy_zopt": { "const": false },
+        "soporte_tem_vacio_es_valido": { "const": true },
+        "fuente_del_alcance": { "const": "PLAN_IMPLEMENTACION_ARMT.md v1.3, secciones 4 y 3.6" }
+      }
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["read_only", "path_bases", "armt_root", "armt_records_roots", "calibration_root", "tem_manifest", "notes"],
+      "properties": {
+        "read_only": { "const": true },
+        "path_bases": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["workspace", "software_root"],
+          "properties": {
+            "workspace": { "type": "string", "minLength": 1 },
+            "software_root": { "type": "string", "minLength": 1 }
+          }
+        },
+        "armt_root": { "type": "string", "minLength": 1 },
+        "armt_records_roots": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "calibration_root": { "type": "string", "minLength": 1 },
+        "tem_manifest": { "$ref": "#/definitions/file" },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "governing_documents": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["documento", "rol"],
+        "properties": {
+          "documento": { "$ref": "#/definitions/file" },
+          "rol": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "software": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["python", "numpy", "jsonschema", "armt_processing_version", "armt_processing_pyproject_version", "version_consistency", "modules"],
+      "properties": {
+        "python": { "type": "string" },
+        "numpy": { "type": "string" },
+        "jsonschema": { "type": "string" },
+        "armt_processing_version": { "type": ["string", "null"] },
+        "armt_processing_pyproject_version": { "type": ["string", "null"] },
+        "version_consistency": { "enum": ["consistente", "inconsistente", "desconocida"] },
+        "modules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["module", "rol"],
+            "properties": {
+              "module": { "$ref": "#/definitions/file" },
+              "rol": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "armt_records",
+        "armt_traces",
+        "armt_scalar_channels",
+        "armt_scalar_samples",
+        "bytes_armt_sbf",
+        "records_2021",
+        "records_2023",
+        "records_with_d0",
+        "records_with_d1",
+        "records_with_d2",
+        "records_with_d3",
+        "calibration_files",
+        "calibration_gain_groups",
+        "calibration_electrical_amplifier",
+        "calibration_magnetic_sensor",
+        "tem_candidates",
+        "splits"
+      ],
+      "properties": {
+        "armt_records": { "type": "integer", "minimum": 0 },
+        "armt_traces": { "type": "integer", "minimum": 0 },
+        "armt_scalar_channels": { "type": "integer", "minimum": 0 },
+        "armt_scalar_samples": { "type": "integer", "minimum": 0 },
+        "bytes_armt_sbf": { "type": "integer", "minimum": 0 },
+        "records_2021": { "type": "integer", "minimum": 0 },
+        "records_2023": { "type": "integer", "minimum": 0 },
+        "records_with_d0": { "type": "integer", "minimum": 0 },
+        "records_with_d1": { "type": "integer", "minimum": 0 },
+        "records_with_d2": { "type": "integer", "minimum": 0 },
+        "records_with_d3": { "type": "integer", "minimum": 0 },
+        "calibration_files": { "type": "integer", "minimum": 0 },
+        "calibration_gain_groups": { "type": "integer", "minimum": 0 },
+        "calibration_electrical_amplifier": { "type": "integer", "minimum": 0 },
+        "calibration_magnetic_sensor": { "type": "integer", "minimum": 0 },
+        "tem_candidates": { "type": "integer", "minimum": 0 },
+        "splits": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["desarrollo", "validacion", "prueba"],
+          "properties": {
+            "desarrollo": { "type": "integer", "minimum": 0 },
+            "validacion": { "type": "integer", "minimum": 0 },
+            "prueba": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "armt_records": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/record" }
+    },
+    "calibration_files": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/calibration_file" }
+    },
+    "tem_dataset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_manifest", "project_reference", "project_reference_source", "candidate_count", "link_status", "note"],
+      "properties": {
+        "source_manifest": { "$ref": "#/definitions/file" },
+        "project_reference": { "type": "string", "minLength": 1 },
+        "project_reference_source": { "type": "string", "minLength": 1 },
+        "candidate_count": { "type": "integer", "minimum": 0 },
+        "link_status": { "const": "no_verificado" },
+        "note": { "type": "string", "minLength": 1 }
+      }
+    },
+    "tem_candidates": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/tem_candidate" }
+    },
+    "derived_products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["product", "rol"],
+        "properties": {
+          "product": { "$ref": "#/definitions/file" },
+          "rol": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["artifact", "rol"],
+        "properties": {
+          "artifact": { "$ref": "#/definitions/file" },
+          "rol": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "campo", "estado", "impacto", "resolucion_requerida"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "campo": { "type": "string", "minLength": 1 },
+          "estado": { "const": "desconocido" },
+          "impacto": { "type": "string", "minLength": 1 },
+          "resolucion_requerida": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "descripcion", "estado", "severidad", "afecta_p0", "evidencia"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "descripcion": { "type": "string", "minLength": 1 },
+          "estado": { "enum": ["abierto", "cerrado"] },
+          "severidad": { "enum": ["bloqueante", "mayor", "menor"] },
+          "afecta_p0": { "type": "boolean" },
+          "evidencia": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "p0_checklist": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "requisito", "estado", "evidencia", "nota"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "requisito": { "type": "string", "minLength": 1 },
+          "estado": { "enum": ["CUMPLIDO", "PARCIAL", "PENDIENTE", "NO_APLICA"] },
+          "evidencia": { "type": "string", "minLength": 1 },
+          "nota": { "type": "string" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path_abs", "path_ref", "path_base", "sha256", "size_bytes", "mtime_utc"],
+      "properties": {
+        "path_abs": { "type": "string", "minLength": 1 },
+        "path_ref": { "type": "string", "minLength": 1 },
+        "path_base": { "enum": ["workspace", "software_root", "external"] },
+        "sha256": { "$ref": "#/definitions/sha256" },
+        "size_bytes": { "type": "integer", "minimum": 0 },
+        "mtime_utc": { "type": ["string", "null"], "format": "date-time" }
+      }
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["record_id", "source", "campaign", "site", "settings", "traces", "calibration", "split", "tem_link", "remote_reference", "qc", "warnings", "notes"],
+      "properties": {
+        "record_id": { "type": "string", "pattern": "^ARMT5-[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}$" },
+        "source": { "$ref": "#/definitions/file" },
+        "campaign": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["year", "year_status", "campaign_group", "source_directory", "label", "label_status", "verified"],
+          "properties": {
+            "year": { "type": "integer", "minimum": 1900, "maximum": 2200 },
+            "year_status": { "const": "inferido_de_marca_temporal_local_sin_zona" },
+            "campaign_group": { "type": "string", "minLength": 1 },
+            "source_directory": { "type": "string", "minLength": 1 },
+            "label": { "type": ["string", "null"] },
+            "label_status": { "const": "no_verificado" },
+            "verified": { "const": false }
+          }
+        },
+        "site": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["site_id", "site_name", "site_group", "latitude_deg", "longitude_deg", "datum", "crs", "status", "altitude_m_traces", "raw", "attempts", "candidate_latitude_deg", "candidate_longitude_deg", "candidate_policy", "candidate_status", "note"],
+          "properties": {
+            "site_id": { "type": ["string", "null"] },
+            "site_name": { "type": ["string", "null"] },
+            "site_group": { "type": "string", "minLength": 1 },
+            "latitude_deg": { "type": ["number", "null"], "minimum": -90, "maximum": 90 },
+            "longitude_deg": { "type": ["number", "null"], "minimum": -180, "maximum": 180 },
+            "datum": { "type": ["string", "null"] },
+            "crs": { "type": ["string", "null"] },
+            "status": { "enum": ["resuelto", "no_resuelto"] },
+            "altitude_m_traces": {
+              "type": "array",
+              "items": { "type": "integer" }
+            },
+            "candidate_latitude_deg": { "type": ["number", "null"], "minimum": -90, "maximum": 90 },
+            "candidate_longitude_deg": { "type": ["number", "null"], "minimum": -180, "maximum": 180 },
+            "candidate_policy": { "type": ["string", "null"] },
+            "candidate_status": { "enum": ["no_disponible", "candidata_no_verificada"] },
+            "raw": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["latitude_uint32", "longitude_uint32"],
+              "properties": {
+                "latitude_uint32": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+                "longitude_uint32": { "type": "integer", "minimum": 0, "maximum": 4294967295 }
+              }
+            },
+            "attempts": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["unsigned_1e8", "signed_1e8", "status", "note"],
+              "properties": {
+                "unsigned_1e8": { "$ref": "#/definitions/coordinate_attempt" },
+                "signed_1e8": { "$ref": "#/definitions/coordinate_attempt" },
+                "status": { "enum": ["no_concluyente", "candidata_plausible_no_verificada"] },
+                "note": { "type": "string", "minLength": 1 }
+              }
+            },
+            "note": { "type": "string", "minLength": 1 }
+          }
+        },
+        "settings": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "section_index",
+            "event_id",
+            "recording_mode",
+            "band_mask",
+            "channel_mask",
+            "internal_transmitter_mask",
+            "gains",
+            "delay_seconds",
+            "start_time_local",
+            "overlap_percent",
+            "window_type",
+            "frequency_list_ids",
+            "fft_lengths",
+            "fft_counts",
+            "recording_period_seconds",
+            "array_index",
+            "line_index",
+            "station_index",
+            "repeat_index",
+            "sensor_types",
+            "sensor_azimuth_degrees",
+            "sensor_serials",
+            "electric_dipole_lengths_cm"
+          ],
+          "properties": {
+            "section_index": { "type": "integer", "minimum": 0 },
+            "event_id": { "type": "integer", "minimum": 0 },
+            "recording_mode": { "type": "integer", "minimum": 0 },
+            "band_mask": { "type": "integer", "minimum": 0 },
+            "channel_mask": { "type": "integer", "minimum": 0 },
+            "internal_transmitter_mask": { "type": "integer", "minimum": 0 },
+            "gains": { "$ref": "#/definitions/number_matrix" },
+            "delay_seconds": { "type": ["number", "null"] },
+            "start_time_local": { "type": ["string", "null"] },
+            "overlap_percent": { "type": "array", "items": { "type": "integer" } },
+            "window_type": { "type": ["integer", "null"] },
+            "frequency_list_ids": { "type": "array", "items": { "type": "integer" } },
+            "fft_lengths": { "type": "array", "items": { "type": "integer" } },
+            "fft_counts": { "type": "array", "items": { "type": "integer" } },
+            "recording_period_seconds": { "type": ["number", "null"] },
+            "array_index": { "type": "integer", "minimum": 0 },
+            "line_index": { "type": "integer", "minimum": 0 },
+            "station_index": { "type": "integer", "minimum": 0 },
+            "repeat_index": { "type": "integer", "minimum": 0 },
+            "sensor_types": { "type": "array", "minItems": 5, "maxItems": 5, "items": { "type": "integer" } },
+            "sensor_azimuth_degrees": { "type": "array", "minItems": 5, "maxItems": 5, "items": { "type": "number" } },
+            "sensor_serials": { "$ref": "#/definitions/integer_matrix" },
+            "electric_dipole_lengths_cm": {
+              "oneOf": [
+                { "type": "null" },
+                { "type": "array", "items": { "type": "number" } }
+              ]
+            }
+          }
+        },
+        "traces": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/trace" }
+        },
+        "calibration": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "channels_total", "channels_matched", "fraction", "channels_d01_total", "channels_d01_matched", "notes"],
+          "properties": {
+            "status": { "enum": ["candidata_no_verificada", "verificada", "incompleta"] },
+            "channels_total": { "type": "integer", "minimum": 0 },
+            "channels_matched": { "type": "integer", "minimum": 0 },
+            "fraction": { "type": "number", "minimum": 0, "maximum": 1 },
+            "channels_d01_total": { "type": "integer", "minimum": 0 },
+            "channels_d01_matched": { "type": "integer", "minimum": 0 },
+            "notes": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "split": { "$ref": "#/definitions/split" },
+        "tem_link": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "sounding_id", "evidence", "note"],
+          "properties": {
+            "status": { "enum": ["no_verificado", "verificado", "descartado"] },
+            "sounding_id": { "type": ["string", "null"] },
+            "evidence": { "type": ["string", "null"] },
+            "note": { "type": "string", "minLength": 1 }
+          }
+        },
+        "remote_reference": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["available", "source", "note"],
+          "properties": {
+            "available": { "type": "boolean" },
+            "source": { "type": ["string", "null"] },
+            "note": { "type": "string", "minLength": 1 }
+          }
+        },
+        "qc": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "checks", "note"],
+          "properties": {
+            "status": { "enum": ["no_evaluado", "parcial", "completo"] },
+            "checks": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["clipping", "canales_muertos", "saltos", "muestras_faltantes", "transitorios_conmutacion"],
+              "properties": {
+                "clipping": { "$ref": "#/definitions/qc_check" },
+                "canales_muertos": { "$ref": "#/definitions/qc_check" },
+                "saltos": { "$ref": "#/definitions/qc_check" },
+                "muestras_faltantes": { "$ref": "#/definitions/qc_check" },
+                "transitorios_conmutacion": { "$ref": "#/definitions/qc_check" }
+              }
+            },
+            "note": { "type": "string", "minLength": 1 }
+          }
+        },
+        "warnings": { "type": "array", "items": { "type": "string" } },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "coordinate_attempt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["latitude_deg", "longitude_deg", "in_range", "plausible"],
+      "properties": {
+        "latitude_deg": { "type": "number" },
+        "longitude_deg": { "type": "number" },
+        "in_range": { "type": "boolean" },
+        "plausible": { "type": ["boolean", "null"] }
+      }
+    },
+    "number_matrix": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "array",
+        "minItems": 5,
+        "maxItems": 5,
+        "items": { "type": "number" }
+      }
+    },
+    "integer_matrix": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "array",
+        "minItems": 5,
+        "maxItems": 5,
+        "items": { "type": "integer" }
+      }
+    },
+    "trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "index",
+        "section_index",
+        "band",
+        "band_mask",
+        "in_scope",
+        "start_time_local",
+        "latitude_raw",
+        "longitude_raw",
+        "altitude_m",
+        "sample_count",
+        "sample_rate_hz",
+        "duration_seconds",
+        "bytes_per_sample",
+        "channel_count",
+        "channels",
+        "receiver_serial",
+        "adc_to_uv",
+        "settings_match",
+        "calibration_channels"
+      ],
+      "properties": {
+        "index": { "type": "integer", "minimum": 0 },
+        "section_index": { "type": "integer", "minimum": 0 },
+        "band": { "enum": ["D0", "D1", "D2", "D3"] },
+        "band_mask": { "enum": [1, 2, 4, 8] },
+        "in_scope": { "type": "boolean" },
+        "start_time_local": { "type": ["string", "null"] },
+        "latitude_raw": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+        "longitude_raw": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+        "altitude_m": { "type": "integer" },
+        "sample_count": { "type": "integer", "minimum": 0 },
+        "sample_rate_hz": { "type": "number", "exclusiveMinimum": 0 },
+        "duration_seconds": { "type": "number", "minimum": 0 },
+        "bytes_per_sample": { "enum": [2, 4] },
+        "channel_count": { "type": "integer", "minimum": 1 },
+        "channels": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "receiver_serial": { "type": "integer", "minimum": 0 },
+        "adc_to_uv": { "type": "array", "minItems": 1, "items": { "type": "number" } },
+        "settings_match": { "type": "string", "minLength": 1 },
+        "calibration_channels": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/channel_calibration" }
+        }
+      }
+    },
+    "channel_calibration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["channel", "sensor_type", "serial_number", "gain_record", "n_candidates", "selected", "status", "reasons"],
+      "properties": {
+        "channel": { "type": "string", "minLength": 1 },
+        "sensor_type": { "enum": ["electrical_amplifier", "magnetic_sensor", "desconocido"] },
+        "serial_number": { "type": ["integer", "null"] },
+        "gain_record": { "type": "number", "exclusiveMinimum": 0 },
+        "n_candidates": { "type": "integer", "minimum": 0 },
+        "selected": {
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "#/definitions/calibration_selection" }
+          ]
+        },
+        "status": { "enum": ["candidata_no_verificada", "verificada", "sin_candidata"] },
+        "reasons": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "calibration_selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path_ref", "sha256", "gain_directory", "delta_rel", "table_gain", "frequency_count", "frequency_min_hz", "frequency_max_hz"],
+      "properties": {
+        "path_ref": { "type": "string", "minLength": 1 },
+        "sha256": { "$ref": "#/definitions/sha256" },
+        "gain_directory": { "type": "number", "exclusiveMinimum": 0 },
+        "delta_rel": { "type": "number" },
+        "table_gain": { "type": "number" },
+        "frequency_count": { "type": "integer", "minimum": 1 },
+        "frequency_min_hz": { "type": "number", "exclusiveMinimum": 0 },
+        "frequency_max_hz": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    },
+    "split": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["split", "split_group", "campaign_group", "protocol_version", "assignment_basis", "frozen"],
+      "properties": {
+        "split": { "enum": ["desarrollo", "validacion", "prueba"] },
+        "split_group": { "type": "string", "minLength": 1 },
+        "campaign_group": { "type": "string", "minLength": 1 },
+        "protocol_version": { "const": "P0-SPLITS-1.0.0" },
+        "assignment_basis": { "const": "record_level_site_holdout" },
+        "frozen": { "const": true }
+      }
+    },
+    "qc_check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["estado", "detalle"],
+      "properties": {
+        "estado": { "enum": ["no_evaluado", "pasa", "falla"] },
+        "detalle": { "type": ["string", "null"] }
+      }
+    },
+    "calibration_file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path_abs",
+        "path_ref",
+        "path_base",
+        "sha256",
+        "size_bytes",
+        "mtime_utc",
+        "gain_directory",
+        "gain_token",
+        "kind",
+        "kind_code",
+        "serial_number",
+        "filename_variant",
+        "table_count",
+        "tables"
+      ],
+      "properties": {
+        "path_abs": { "type": "string", "minLength": 1 },
+        "path_ref": { "type": "string", "minLength": 1 },
+        "path_base": { "enum": ["workspace", "software_root", "external"] },
+        "sha256": { "$ref": "#/definitions/sha256" },
+        "size_bytes": { "type": "integer", "minimum": 0 },
+        "mtime_utc": { "type": ["string", "null"], "format": "date-time" },
+        "gain_directory": { "type": "number", "exclusiveMinimum": 0 },
+        "gain_token": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["electrical_amplifier", "magnetic_sensor"] },
+        "kind_code": { "type": "integer", "minimum": 0 },
+        "serial_number": { "type": "integer", "minimum": 0 },
+        "filename_variant": { "type": ["string", "null"] },
+        "table_count": { "type": "integer", "minimum": 1 },
+        "tables": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["index", "gain", "frequency_count", "channel_count", "frequency_min_hz", "frequency_max_hz"],
+            "properties": {
+              "index": { "type": "integer", "minimum": 0 },
+              "gain": { "type": "number" },
+              "frequency_count": { "type": "integer", "minimum": 1 },
+              "channel_count": { "type": "integer", "minimum": 1 },
+              "frequency_min_hz": { "type": "number", "exclusiveMinimum": 0 },
+              "frequency_max_hz": { "type": "number", "exclusiveMinimum": 0 }
+            }
+          }
+        }
+      }
+    },
+    "tem_candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sounding_id",
+        "source",
+        "dossier_sha256_matches",
+        "project",
+        "area",
+        "client",
+        "contractor",
+        "operator",
+        "conditions",
+        "coordinates",
+        "acquisition",
+        "gates",
+        "link_to_armt",
+        "notes"
+      ],
+      "properties": {
+        "sounding_id": { "type": "string", "pattern": "^SER-[0-9]{2}$" },
+        "source": { "$ref": "#/definitions/file" },
+        "dossier_sha256_matches": { "type": "boolean" },
+        "project": { "type": ["string", "null"] },
+        "area": { "type": ["string", "null"] },
+        "client": { "type": ["string", "null"] },
+        "contractor": { "type": ["string", "null"] },
+        "operator": { "type": ["string", "null"] },
+        "conditions": { "type": ["string", "null"] },
+        "coordinates": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "datum", "rx_x", "rx_y", "tx_x", "tx_y", "elevation", "crs", "latitude_deg", "longitude_deg", "status"],
+          "properties": {
+            "type": { "type": ["string", "null"] },
+            "datum": { "type": ["string", "null"] },
+            "rx_x": { "type": ["number", "null"] },
+            "rx_y": { "type": ["number", "null"] },
+            "tx_x": { "type": ["number", "null"] },
+            "tx_y": { "type": ["number", "null"] },
+            "elevation": { "type": ["number", "null"] },
+            "crs": { "type": ["string", "null"] },
+            "latitude_deg": { "type": ["number", "null"] },
+            "longitude_deg": { "type": ["number", "null"] },
+            "status": { "const": "no_resuelto" }
+          }
+        },
+        "acquisition": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["date", "time", "receiver", "transmitter", "configuration", "tx_area_m2", "rx_area_m2", "current_a", "repeat_rate_hz", "turnoff_us", "antenna_delay_us", "filter_delay_us", "user_delay_us"],
+          "properties": {
+            "date": { "type": ["string", "null"] },
+            "time": { "type": ["string", "null"] },
+            "receiver": { "type": ["string", "null"] },
+            "transmitter": { "type": ["string", "null"] },
+            "configuration": { "type": ["string", "null"] },
+            "tx_area_m2": { "type": ["number", "null"] },
+            "rx_area_m2": { "type": ["number", "null"] },
+            "current_a": { "type": ["number", "null"] },
+            "repeat_rate_hz": { "type": ["number", "null"] },
+            "turnoff_us": { "type": ["number", "null"] },
+            "antenna_delay_us": { "type": ["number", "null"] },
+            "filter_delay_us": { "type": ["number", "null"] },
+            "user_delay_us": { "type": ["number", "null"] }
+          }
+        },
+        "gates": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["count", "time_min_ms", "time_max_ms", "voltage_min_nv_per_a", "voltage_max_nv_per_a"],
+          "properties": {
+            "count": { "type": "integer", "minimum": 0 },
+            "time_min_ms": { "type": ["number", "null"] },
+            "time_max_ms": { "type": ["number", "null"] },
+            "voltage_min_nv_per_a": { "type": ["number", "null"] },
+            "voltage_max_nv_per_a": { "type": ["number", "null"] }
+          }
+        },
+        "link_to_armt": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "record_ids", "evidence", "note"],
+          "properties": {
+            "status": { "const": "no_verificado" },
+            "record_ids": { "type": "array", "items": { "type": "string" } },
+            "evidence": { "type": ["string", "null"] },
+            "note": { "type": "string", "minLength": 1 }
+          }
+        },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

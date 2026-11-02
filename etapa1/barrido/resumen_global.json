@@ -1,0 +1,179 @@
+{
+  "barrido_version": "P1-BARRIDO-1.0.0",
+  "generated_at_utc": "2026-10-28T19:07:02.026393Z",
+  "stage": 1,
+  "build_mode": "resumen_sin_relectura",
+  "build_note": "QC calculado en una pasada completa; CSV, resumen y reporte regenerados desde barrido/registros/*.json sin releer los SBF",
+  "config_version": "P1-CONFIG-2.0.0",
+  "scope": {
+    "records": "los 15 registros de etapa0/manifest.json",
+    "bands": [
+      "D0",
+      "D1"
+    ],
+    "reads_source": true,
+    "writes_source": false,
+    "exports_time_series": false,
+    "note": "El barrido reutiliza los umbrales de config_p1.json y no reexporta series temporales. La unica exportacion .npy sigue siendo la del registro ARMT5-700-14-14-01."
+  },
+  "p0_hashes": [
+    {
+      "artifact": "etapa0/manifest.json",
+      "expected_sha256": "5a67b03feab778e44578a37ef04982e85e56fc5f586f05c3c03e20c7b17ee435",
+      "actual_sha256": "5a67b03feab778e44578a37ef04982e85e56fc5f586f05c3c03e20c7b17ee435",
+      "unchanged": true
+    },
+    {
+      "artifact": "etapa0/schema.json",
+      "expected_sha256": "bdbcfd867333413cbe0a25b92d3f848887f5b64f89de84411f627429a0bc433e",
+      "actual_sha256": "bdbcfd867333413cbe0a25b92d3f848887f5b64f89de84411f627429a0bc433e",
+      "unchanged": true
+    },
+    {
+      "artifact": "etapa0/splits.csv",
+      "expected_sha256": "78cccedc36a0f3850fbc2017adcca6b66abeb77fc71a129280d9d87ea21d9352",
+      "actual_sha256": "78cccedc36a0f3850fbc2017adcca6b66abeb77fc71a129280d9d87ea21d9352",
+      "unchanged": true
+    },
+    {
+      "artifact": "etapa0/protocolo_validacion.md",
+      "expected_sha256": "3f33c0ff12fa2d0c66b642a7bcd209ef6e607ef02b31de994022b7fdae7045cb",
+      "actual_sha256": "3f33c0ff12fa2d0c66b642a7bcd209ef6e607ef02b31de994022b7fdae7045cb",
+      "unchanged": true
+    }
+  ],
+  "totals": {
+    "records": 15,
+    "by_split": {
+      "prueba": 2,
+      "desarrollo": 10,
+      "validacion": 3
+    },
+    "samples": {
+      "D0": 288000000,
+      "D1": 21600000,
+      "total": 309600000
+    },
+    "jumps": {
+      "Ex": 5946,
+      "Ey": 6513,
+      "Hx": 47,
+      "Hy": 129,
+      "Hz": 23
+    },
+    "bad_samples_by_channel": 0,
+    "bad_union_samples": 0,
+    "dead_channels": 0,
+    "clip_runs": 0,
+    "stuck_runs": 0,
+    "zero_fill_runs": 0,
+    "records_falla": [],
+    "records_con_observaciones": [
+      "ARMT5-123-01-01-01",
+      "ARMT5-123-02-02-01",
+      "ARMT5-700-01-00-01",
+      "ARMT5-700-01-23-01",
+      "ARMT5-700-01-24-01",
+      "ARMT5-700-14-14-01",
+      "ARMT5-700-24-24-01",
+      "ARMT5-700-32-32-01",
+      "ARMT5-700-34-34-01",
+      "ARMT5-700-42-42-01",
+      "ARMT5-700-43-43-01",
+      "ARMT5-700-44-44-01",
+      "ARMT5-700-45-45-01",
+      "ARMT5-700-55-55-01",
+      "ARMT5-700-90-90-01"
+    ],
+    "calibration_uncovered": [],
+    "source_hash_mismatch": [],
+    "consistency_mismatch": []
+  },
+  "timings": [
+    {
+      "record_id": "ARMT5-123-01-01-01",
+      "seconds": 7.012
+    },
+    {
+      "record_id": "ARMT5-123-02-02-01",
+      "seconds": 6.804
+    },
+    {
+      "record_id": "ARMT5-700-01-00-01",
+      "seconds": 29.372
+    },
+    {
+      "record_id": "ARMT5-700-01-23-01",
+      "seconds": 29.393
+    },
+    {
+      "record_id": "ARMT5-700-01-24-01",
+      "seconds": 29.129
+    },
+    {
+      "record_id": "ARMT5-700-14-14-01",
+      "seconds": 29.076
+    },
+    {
+      "record_id": "ARMT5-700-24-24-01",
+      "seconds": 29.148
+    },
+    {
+      "record_id": "ARMT5-700-32-32-01",
+      "seconds": 29.454
+    },
+    {
+      "record_id": "ARMT5-700-34-34-01",
+      "seconds": 28.746
+    },
+    {
+      "record_id": "ARMT5-700-42-42-01",
+      "seconds": 28.738
+    },
+    {
+      "record_id": "ARMT5-700-43-43-01",
+      "seconds": 28.659
+    },
+    {
+      "record_id": "ARMT5-700-44-44-01",
+      "seconds": 20.163
+    },
+    {
+      "record_id": "ARMT5-700-45-45-01",
+      "seconds": 28.973
+    },
+    {
+      "record_id": "ARMT5-700-55-55-01",
+      "seconds": 29.019
+    },
+    {
+      "record_id": "ARMT5-700-90-90-01",
+      "seconds": 37.508
+    }
+  ],
+  "total_seconds": 393.205,
+  "outputs": {
+    "registros": "barrido/registros/*.json",
+    "mascaras": "barrido/mascaras/*.npz",
+    "qc_csv": "barrido/qc_registros.csv",
+    "calibracion_csv": "barrido/calibracion_cobertura.csv",
+    "ganancias_csv": "barrido/ganancias_registros.csv",
+    "reporte": "barrido/reporte_barrido.md"
+  },
+  "p1_status": "PARCIAL",
+  "p1_status_reasons": [
+    "La validez metrologica de las 73 .clb sigue sin resolver (B-P0-04)",
+    "La ganancia no se aplica: no se puede decidir si la tabla ya la incluye",
+    "La unidad magnetica V/(A/m) frente a mV/nT sigue sin resolver",
+    "No hay exportacion independiente del fabricante",
+    "El vinculo TEM-ARMT no esta verificado (B-P0-03); P2-T sigue bloqueado"
+  ],
+  "blockers_open": [
+    "B-P0-01",
+    "B-P0-02",
+    "B-P0-03",
+    "B-P0-04",
+    "B-P0-06",
+    "B-P0-07"
+  ]
+}

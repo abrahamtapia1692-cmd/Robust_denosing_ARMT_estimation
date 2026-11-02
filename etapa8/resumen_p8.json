@@ -1,0 +1,68 @@
+{
+  "version": "P8-2.0.0",
+  "timestamp_utc": "2026-10-29T17:34:04Z",
+  "device": "cuda",
+  "scenarios": {
+    "s1_partial_support": {
+      "record_id": "CTRL-03-STRATIFIED-S1-D0",
+      "band": "D0",
+      "total_windows": 499,
+      "intervened_windows": 251,
+      "intervened_pct": 50.300601202404806,
+      "clean_prefix_flagged": 0,
+      "contam_core_flagged": 245,
+      "clean_suffix_flagged": 0,
+      "snr_in_db": -2.8934189265477855e-07,
+      "snr_out_db": 13.72949553932273,
+      "delta_snr_db": 13.729495828664623,
+      "clean_prefix_max_diff": 0.20987064724538862,
+      "clean_suffix_max_diff": 0.14805492333085968,
+      "passed": true
+    },
+    "s2_clean_non_inferiority": {
+      "record_id": "CTRL-01-HALFSPACE-D0",
+      "intervened_windows": 0,
+      "intervened_pct": 0.0,
+      "clean_bias_z_pct": 9.158603477635145e-08,
+      "clean_phase_diff_deg": 3.5026062050746987e-08,
+      "passed": true
+    },
+    "s3_empty_support_g0": {
+      "support_status": "soporte_vacio",
+      "network_omitted": true,
+      "raw_diff_max": 0.0,
+      "residual_max": 0.0,
+      "passed": true
+    },
+    "s4_field_unsupported_g0": {
+      "record_id": "ARMT5-123-01-01-01",
+      "support_status": "soporte_vacio",
+      "network_omitted": true,
+      "reason": "Compuerta G0: Ausencia de vinculo TEM certificado (B-P0-03)",
+      "passed": true
+    },
+    "s5_rmt_exclusion": {
+      "d2_status": "excluido_rmt",
+      "d2_omitted": true,
+      "d2_diff": 0.0,
+      "d3_status": "excluido_rmt",
+      "d3_omitted": true,
+      "d3_diff": 0.0,
+      "passed": true
+    },
+    "s6_rank1_abstention": {
+      "total_freqs": 3,
+      "abstained_freqs": 3,
+      "cond_hh_max": 1.6662747511450616e+16,
+      "passed": true
+    },
+    "s7_invariance_and_reconstruction": {
+      "batch_diff_max": 5.245208740234375e-06,
+      "identity_reconstruction_err": 8.881784197001252e-16,
+      "residual_identity_err": 2.220446049250313e-16,
+      "passed": true
+    }
+  },
+  "gate_p8_passed": true,
+  "execution_time_sec": 2.2750251293182373
+}

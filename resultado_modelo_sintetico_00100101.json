@@ -1,0 +1,312 @@
+{
+  "timestamp_utc": "2026-10-30T23:25:25Z",
+  "model_5layers": {
+    "rho_ohm_m": [
+      10.0,
+      20.0,
+      12.0,
+      35.0,
+      250.0
+    ],
+    "thicknesses_m": [
+      10.0,
+      25.0,
+      60.0,
+      110.0
+    ],
+    "interfaces_m": [
+      10.0,
+      35.0,
+      95.0,
+      205.0
+    ]
+  },
+  "real_sounding_evaluation": {
+    "sbf_file": "D:\\ARRT_software\\ARMT_processing\\Soundings\\00100101.sbf",
+    "record_id": "ARMT5-123-01-01-01",
+    "band": "D0",
+    "total_windows": 999,
+    "intervened_windows": 999,
+    "intervened_pct": 100.0,
+    "frequencies_results": [
+      {
+        "frequency_hz": 125.0,
+        "z_raw": 1.9003687195156866,
+        "coh_raw": 0.9998591934286679,
+        "z_denoised": 0.6175442422480716,
+        "coh_denoised": 0.9990741792409028,
+        "z_theory": 0.1165133620444565,
+        "rho_a_denoised": 386.3993688456776
+      },
+      {
+        "frequency_hz": 150.7,
+        "z_raw": 1.3814713061989663,
+        "coh_raw": 0.9471242938175901,
+        "z_denoised": 0.7275262227641615,
+        "coh_denoised": 0.9849275577598557,
+        "z_theory": 0.12451638737944946,
+        "rho_a_denoised": 444.8302553961848
+      },
+      {
+        "frequency_hz": 182.1,
+        "z_raw": 1.353402182614577,
+        "coh_raw": 0.9980769294037387,
+        "z_denoised": 0.8267516169135274,
+        "coh_denoised": 0.9973226865379557,
+        "z_theory": 0.13424253240954534,
+        "rho_a_denoised": 475.39042229302106
+      },
+      {
+        "frequency_hz": 220.1,
+        "z_raw": 1.434154940069414,
+        "coh_raw": 0.9564174618570725,
+        "z_denoised": 1.0743397530154002,
+        "coh_denoised": 0.9500589905521923,
+        "z_theory": 0.14592279087912918,
+        "rho_a_denoised": 664.1612247408837
+      },
+      {
+        "frequency_hz": 265.9,
+        "z_raw": 1.5995136655671682,
+        "coh_raw": 0.9437701199433278,
+        "z_denoised": 1.3804290037778273,
+        "coh_denoised": 0.9388259033393479,
+        "z_theory": 0.15978873015498893,
+        "rho_a_denoised": 907.6534889374972
+      },
+      {
+        "frequency_hz": 321.3,
+        "z_raw": 2.1092992237922625,
+        "coh_raw": 0.9962093284095884,
+        "z_denoised": 1.8720037321742875,
+        "coh_denoised": 0.9970116773005647,
+        "z_theory": 0.17611843087201773,
+        "rho_a_denoised": 1381.379359655999
+      },
+      {
+        "frequency_hz": 388.2,
+        "z_raw": 2.716092379384884,
+        "coh_raw": 0.9832863980111871,
+        "z_denoised": 2.081204557807551,
+        "coh_denoised": 0.9471006995786194,
+        "z_theory": 0.19504242375521916,
+        "rho_a_denoised": 1413.1370181932775
+      },
+      {
+        "frequency_hz": 469.1,
+        "z_raw": 1.6814091325636171,
+        "coh_raw": 0.9832084955864159,
+        "z_denoised": 1.7684595935762832,
+        "coh_denoised": 0.9877494478135822,
+        "z_theory": 0.21665994944730468,
+        "rho_a_denoised": 844.374515864603
+      },
+      {
+        "frequency_hz": 566.8,
+        "z_raw": 2.4623287619376133,
+        "coh_raw": 0.9015351128294531,
+        "z_denoised": 2.456496287553199,
+        "coh_denoised": 0.9082546519186737,
+        "z_theory": 0.24094335682598667,
+        "rho_a_denoised": 1348.3810808729554
+      },
+      {
+        "frequency_hz": 684.9,
+        "z_raw": 2.7129131451725406,
+        "coh_raw": 0.9403725809061293,
+        "z_denoised": 2.3405502487577152,
+        "coh_denoised": 0.9480375427795559,
+        "z_theory": 0.2678777762032364,
+        "rho_a_denoised": 1013.0223801153155
+      },
+      {
+        "frequency_hz": 827.6,
+        "z_raw": 2.9826804064595676,
+        "coh_raw": 0.6910256389640836,
+        "z_denoised": 2.7069698351834837,
+        "coh_denoised": 0.6704652431224651,
+        "z_theory": 0.2974178511448792,
+        "rho_a_denoised": 1121.3898431115451
+      },
+      {
+        "frequency_hz": 1000.0,
+        "z_raw": 1.4264985383788416,
+        "coh_raw": 0.6791055466109511,
+        "z_denoised": 1.4004386905189552,
+        "coh_denoised": 0.6778914493920513,
+        "z_theory": 0.32954824680587297,
+        "rho_a_denoised": 248.39249454694146
+      }
+    ],
+    "edi_file": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\00100101_denoised.edi"
+  },
+  "controlled_synthetic_benchmark": {
+    "snr_in_db": -9.643274665532871e-16,
+    "snr_out_db": 13.718154781992094,
+    "delta_snr_db": 13.718154781992096,
+    "median_err_z_raw_pct": 0.4589685897156549,
+    "median_err_z_denoised_pct": 60.843323479798556,
+    "median_err_rho_denoised_pct": 160.1818993161225,
+    "median_err_phase_denoised_deg": 2.9587028481144664,
+    "frequencies_benchmark": [
+      {
+        "frequency_hz": 125.0,
+        "rho_a_true": 13.75471901731362,
+        "phase_true_deg": 31.798542206147708,
+        "rho_a_contam": 42.463199189778095,
+        "error_rho_contam_pct": 208.71731466362894,
+        "rho_a_denoised": 77.56667024881226,
+        "error_rho_denoised_pct": 463.9276974773237,
+        "phase_denoised_deg": 41.309601850821856,
+        "error_phase_denoised_deg": 9.511059644674148,
+        "coherence_contam": 0.03273724105543319,
+        "coherence_denoised": 0.4624667356674899
+      },
+      {
+        "frequency_hz": 150.7,
+        "rho_a_true": 13.03016871884155,
+        "phase_true_deg": 33.9054316188478,
+        "rho_a_contam": 13.21808414709923,
+        "error_rho_contam_pct": 1.4421565239286245,
+        "rho_a_denoised": 70.60871855244464,
+        "error_rho_denoised_pct": 441.8864488711097,
+        "phase_denoised_deg": 45.78255425740859,
+        "error_phase_denoised_deg": 11.877122638560792,
+        "coherence_contam": 0.609727079711062,
+        "coherence_denoised": 0.9697667923549773
+      },
+      {
+        "frequency_hz": 182.1,
+        "rho_a_true": 12.533737487435625,
+        "phase_true_deg": 36.059988442487345,
+        "rho_a_contam": 19.466745086808263,
+        "error_rho_contam_pct": 55.3147662963469,
+        "rho_a_denoised": 63.69680350159359,
+        "error_rho_denoised_pct": 408.2027891955301,
+        "phase_denoised_deg": 45.99439213543693,
+        "error_phase_denoised_deg": 9.934403692949587,
+        "coherence_contam": 0.0956633126938482,
+        "coherence_denoised": 0.8042276456212881
+      },
+      {
+        "frequency_hz": 220.1,
+        "rho_a_true": 12.252832019664599,
+        "phase_true_deg": 38.138039900014796,
+        "rho_a_contam": 12.62118324215179,
+        "error_rho_contam_pct": 3.006253753385537,
+        "rho_a_denoised": 56.04654851363986,
+        "error_rho_denoised_pct": 357.41709691025414,
+        "phase_denoised_deg": 46.65998539068607,
+        "error_phase_denoised_deg": 8.521945490671271,
+        "coherence_contam": 0.8417384450399519,
+        "coherence_denoised": 0.965678293795702
+      },
+      {
+        "frequency_hz": 265.9,
+        "rho_a_true": 12.161418147164937,
+        "phase_true_deg": 40.02849808115241,
+        "rho_a_contam": 12.03199668359514,
+        "error_rho_contam_pct": 1.0641971355944801,
+        "rho_a_denoised": 46.77754844562264,
+        "error_rho_denoised_pct": 284.6389284503584,
+        "phase_denoised_deg": 46.462580278228025,
+        "error_phase_denoised_deg": 6.434082197075618,
+        "coherence_contam": 0.9693584053993161,
+        "coherence_denoised": 0.9712801646207747
+      },
+      {
+        "frequency_hz": 321.3,
+        "rho_a_true": 12.226697204254737,
+        "phase_true_deg": 41.64883257698681,
+        "rho_a_contam": 12.133895812867829,
+        "error_rho_contam_pct": 0.7590062126885306,
+        "rho_a_denoised": 36.59033098397799,
+        "error_rho_denoised_pct": 199.26586364832048,
+        "phase_denoised_deg": 45.68107672920821,
+        "error_phase_denoised_deg": 4.032244152221395,
+        "coherence_contam": 0.7421862045031589,
+        "coherence_denoised": 0.9428481909011682
+      },
+      {
+        "frequency_hz": 388.2,
+        "rho_a_true": 12.411175219415371,
+        "phase_true_deg": 42.93277825348085,
+        "rho_a_contam": 12.42531172515875,
+        "error_rho_contam_pct": 0.11390142749144376,
+        "rho_a_denoised": 27.44085211736395,
+        "error_rho_denoised_pct": 121.09793498392452,
+        "phase_denoised_deg": 44.817939797488386,
+        "error_phase_denoised_deg": 1.8851615440075378,
+        "coherence_contam": 0.9805777648613244,
+        "coherence_denoised": 0.9649289517933337
+      },
+      {
+        "frequency_hz": 469.1,
+        "rho_a_true": 12.67366168171577,
+        "phase_true_deg": 43.85390469484345,
+        "rho_a_contam": 12.576343193440286,
+        "error_rho_contam_pct": 0.7678798023769605,
+        "rho_a_denoised": 20.815916531395978,
+        "error_rho_denoised_pct": 64.24548054195735,
+        "phase_denoised_deg": 44.44708012123162,
+        "error_phase_denoised_deg": 0.5931754263881714,
+        "coherence_contam": 0.9912327866221486,
+        "coherence_denoised": 0.963982062916739
+      },
+      {
+        "frequency_hz": 566.8,
+        "rho_a_true": 12.972101535502373,
+        "phase_true_deg": 44.41868278529765,
+        "rho_a_contam": 13.047351567939458,
+        "error_rho_contam_pct": 0.5800913000190326,
+        "rho_a_denoised": 16.709121030572202,
+        "error_rho_denoised_pct": 28.8081270782707,
+        "phase_denoised_deg": 45.3230772808987,
+        "error_phase_denoised_deg": 0.9043944956010534,
+        "coherence_contam": 0.9979308075037153,
+        "coherence_denoised": 0.9768852575023869
+      },
+      {
+        "frequency_hz": 684.9,
+        "rho_a_true": 13.269558436815025,
+        "phase_true_deg": 44.66371214988552,
+        "rho_a_contam": 13.329158140809197,
+        "error_rho_contam_pct": 0.44914609840232933,
+        "rho_a_denoised": 14.589881995402603,
+        "error_rho_denoised_pct": 9.95001879583631,
+        "phase_denoised_deg": 45.9299929479451,
+        "error_phase_denoised_deg": 1.266280798059583,
+        "coherence_contam": 0.9988175800267496,
+        "coherence_denoised": 0.9855441215869073
+      },
+      {
+        "frequency_hz": 827.6,
+        "rho_a_true": 13.537044253049139,
+        "phase_true_deg": 44.639076451027385,
+        "rho_a_contam": 13.523021213358756,
+        "error_rho_contam_pct": 0.10359011485999853,
+        "rho_a_denoised": 13.416431471309041,
+        "error_rho_denoised_pct": 0.8909831384567619,
+        "phase_denoised_deg": 45.586397702815326,
+        "error_phase_denoised_deg": 0.9473212517879404,
+        "coherence_contam": 0.9995931875166296,
+        "coherence_denoised": 0.9905503075999517
+      },
+      {
+        "frequency_hz": 1000.0,
+        "rho_a_true": 13.754609931584191,
+        "phase_true_deg": 44.39532274931209,
+        "rho_a_contam": 13.608306115782433,
+        "error_rho_contam_pct": 1.06367113665511,
+        "rho_a_denoised": 13.602684559402748,
+        "error_rho_denoised_pct": 1.1045414805445177,
+        "phase_denoised_deg": 43.424829387353945,
+        "error_phase_denoised_deg": 0.9704933619581482,
+        "coherence_contam": 0.9992960923356625,
+        "coherence_denoised": 0.9883911994166493
+      }
+    ],
+    "edi_recovered_file": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\00100101_sintetico_recuperado.edi",
+    "edi_theory_file": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\00100101_teorico_5capas.edi"
+  }
+}

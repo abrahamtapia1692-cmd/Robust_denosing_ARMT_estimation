@@ -1,0 +1,9 @@
+﻿familia,origen,entrada,etiqueta_identificacion,blanco_separacion,tipo_blanco,uso_D_id,uso_D_sep,grupo_a_preservar,restriccion
+S0,Sintético limpio,s,0,s,exact_synthetic,Sí,Sí: identidad,Modelo base y fuente,Sin contaminación objetivo; piso instrumental declarado
+S1,Sintético contaminado,s+n conocido,Actividad inyectada; detectabilidad declarada,s,exact_synthetic,Sí,Sí,"Modelo, fuente y ruido padre",P2-T en etiquetas TEM; no exigir detección bajo el piso
+S2,Sintético con ruido extraído,s+N admitido,Actividad de inyección conocida,s,exact_synthetic,Sí,Sí: semisintético,Modelo y episodio/plantilla de campo,Blanco exacto de construcción; pureza física de N tiene incertidumbre
+F0,Campo de bajo ruido aceptado,r,0 aproximado con evidencia,r,approx_field,Sí: confianza explícita,Identidad aproximada,"Registro, sitio y campaña",r conserva residual desconocido; no afirmar verdad limpia absoluta
+F1,Campo F0 con ruido añadido,r+n conocido,Actividad añadida y estado del fondo,r,approx_field,Sí: confianza explícita,Sí: retirar ruido añadido,Registro base y episodio/plantilla,No certifica eliminación del ruido residual presente en r
+F2,Campo original contaminado,x_real,1 solo en episodios anotados; resto ignore,,unavailable,Solo anotados,No: falta blanco,"Registro, sitio y campaña",Extracción/evaluación permitidas; no inventar blanco TEM temporal
+U,Campo ambiguo,x_real,ignore,,unavailable,No supervisado,No,"Registro, sitio y campaña",Inspección o investigación separada; no pseudo-verdad BSS automática
+N,Solo ruido diseñado,n,Actividad conocida y ausencia de señal,0 diseñado,exact_control,Control separado,Solo control de no alucinación,Episodio/plantilla,No producir impedancia válida ni mezclar su métrica con recuperación normal

@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Execution outputs and generated signals
+salidas_*/
+outputs/
+*.sbf
+*.png
+
+# Raw survey voltage exports (heavy raw data)
+etapa1/exportaciones/
+
+# Environment and IDE files
+.env
+.venv
+env/
+venv/
+.idea/
+.vscode/
+*.swp
+*.bak
+*.tmp

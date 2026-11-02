@@ -1,0 +1,89 @@
+{
+  "artifact": "resumen_p5",
+  "version": "P5-1.0.0",
+  "config_version": "P5-CONFIG-1.0.0",
+  "builder_version": "P5-BUILD-1.0.0",
+  "generated_at_utc": "2026-10-30T16:04:04.289901Z",
+  "gate": "P5",
+  "subgate": "P5-L",
+  "stage": 5,
+  "status": "APROBADO",
+  "summary": {
+    "total_id_windows": 11732,
+    "total_sep_pairs": 8811,
+    "total_real_windows": 61,
+    "zero_group_leakage": true,
+    "zero_source_leakage": true,
+    "b7_auc": 0.4309501006046041,
+    "shortcut_prevented": true,
+    "no_fake_field_targets": true
+  },
+  "manifest": {
+    "manifest_version": "P5-MANIFEST-1.0.0",
+    "generated_at_utc": "2026-10-30T16:04:04.156298Z",
+    "stage": 5,
+    "gate": "P5",
+    "subgate": "P5-L",
+    "datasets": {
+      "D_id": {
+        "file": "etapa5\\datasets\\D_id.npz",
+        "sha256": "f7f8944412a04d31c143f2aff480314fc8dd98d8fae99cfe9c98e357ab3060cf",
+        "total_windows": 11732,
+        "class_counts": {
+          "0": 5866,
+          "1": 5866
+        },
+        "family_counts": {
+          "S0": 5866,
+          "S2": 5866
+        }
+      },
+      "D_sep": {
+        "file": "etapa5\\datasets\\D_sep.npz",
+        "sha256": "f6131666a5be3b2001d832bb2c2433bf8b563ddcddc087d5116534acc36b0e4f",
+        "total_pairs": 8811,
+        "target_type_counts": {
+          "exact_control": 15,
+          "exact_synthetic": 8796
+        }
+      },
+      "D_real": {
+        "file": "etapa5\\datasets\\D_real.npz",
+        "sha256": "df5a16811a98528f2d8b33d035c03347cc1d126ab63d038b658f1a437ce6eb5c",
+        "total_windows": 61,
+        "target_status": "unavailable"
+      }
+    },
+    "isolation": {
+      "groups_train": [
+        "GRP-ENTR-01",
+        "GRP-ENTR-02"
+      ],
+      "groups_val": [
+        "GRP-VAL-01"
+      ],
+      "groups_test": [
+        "GRP-TEST-01"
+      ],
+      "noise_sources": {
+        "entrenamiento": [
+          "NOISE-D0-001",
+          "NOISE-D1-004"
+        ],
+        "validacion": [
+          "NOISE-D0-002"
+        ],
+        "prueba": [
+          "NOISE-D0-IND-001"
+        ]
+      },
+      "zero_group_leakage": true,
+      "zero_source_leakage": true,
+      "zero_leakage": true
+    },
+    "power_matching_b7": {
+      "b7_auc": 0.4309501006046041,
+      "shortcut_prevented": true
+    }
+  }
+}

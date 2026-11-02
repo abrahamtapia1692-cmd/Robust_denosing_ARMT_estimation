@@ -1,0 +1,1185 @@
+{
+ "artifact": "validacion_etapa2",
+ "version": "P2T-VALID-1.0.0",
+ "generated_at_utc": "2026-10-28T23:55:41.828454Z",
+ "stage": 2,
+ "substage": "P2-T",
+ "status": "APROBADO_CON_OBSERVACIONES",
+ "counts": {
+  "checks": 180,
+  "passed": 170,
+  "failed": 0,
+  "observations": 10
+ },
+ "checks": [
+  {
+   "id": "FILE-gates",
+   "descripcion": "Existe tem_valid_gates.csv",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa2\\tem_valid_gates.csv"
+  },
+  {
+   "id": "FILE-armt",
+   "descripcion": "Existe tem_amt_support.csv",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa2\\tem_amt_support.csv"
+  },
+  {
+   "id": "FILE-prov",
+   "descripcion": "Existe model_provenance.json",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa2\\model_provenance.json"
+  },
+  {
+   "id": "FILE-env_D0",
+   "descripcion": "Existe diagnostico_tem\\envolventes_D0.csv",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa2\\diagnostico_tem\\envolventes_D0.csv"
+  },
+  {
+   "id": "FILE-env_D1",
+   "descripcion": "Existe diagnostico_tem\\envolventes_D1.csv",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa2\\diagnostico_tem\\envolventes_D1.csv"
+  },
+  {
+   "id": "FILE-support",
+   "descripcion": "Existe diagnostico_tem\\soporte_por_sondeo.csv",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa2\\diagnostico_tem\\soporte_por_sondeo.csv"
+  },
+  {
+   "id": "FILE-mt",
+   "descripcion": "Existe diagnostico_tem\\sensibilidades_mt.csv",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa2\\diagnostico_tem\\sensibilidades_mt.csv"
+  },
+  {
+   "id": "FILE-tem",
+   "descripcion": "Existe diagnostico_tem\\sensibilidades_tem.csv",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa2\\diagnostico_tem\\sensibilidades_tem.csv"
+  },
+  {
+   "id": "FILE-svd",
+   "descripcion": "Existe diagnostico_tem\\sensibilidad_tem_svd.csv",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa2\\diagnostico_tem\\sensibilidad_tem_svd.csv"
+  },
+  {
+   "id": "FILE-doi",
+   "descripcion": "Existe diagnostico_tem\\comparacion_sensibilidad_doi.csv",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa2\\diagnostico_tem\\comparacion_sensibilidad_doi.csv"
+  },
+  {
+   "id": "FILE-direct",
+   "descripcion": "Existe diagnostico_tem\\pruebas_directo.csv",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa2\\diagnostico_tem\\pruebas_directo.csv"
+  },
+  {
+   "id": "FILE-summary",
+   "descripcion": "Existe diagnostico_tem\\resumen_p2t.json",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa2\\diagnostico_tem\\resumen_p2t.json"
+  },
+  {
+   "id": "FILE-report",
+   "descripcion": "Existe reporte_p2t.md",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa2\\reporte_p2t.md"
+  },
+  {
+   "id": "CFG-VERSION",
+   "descripcion": "config_p2t tiene la version esperada",
+   "resultado": "PASA",
+   "detalle": "P2T-CONFIG-1.0.0"
+  },
+  {
+   "id": "FILE-README",
+   "descripcion": "Existe etapa2/README.md",
+   "resultado": "PASA",
+   "detalle": "README.md"
+  },
+  {
+   "id": "HDR-gates",
+   "descripcion": "Columnas de tem_valid_gates.csv",
+   "resultado": "PASA",
+   "detalle": "tem_valid_gates.csv"
+  },
+  {
+   "id": "HDR-env",
+   "descripcion": "Columnas de envolventes_D0.csv",
+   "resultado": "PASA",
+   "detalle": "envolventes_D0.csv"
+  },
+  {
+   "id": "HDR-mt",
+   "descripcion": "Columnas de sensibilidades_mt.csv",
+   "resultado": "PASA",
+   "detalle": "sensibilidades_mt.csv"
+  },
+  {
+   "id": "HDR-tem",
+   "descripcion": "Columnas de sensibilidades_tem.csv",
+   "resultado": "PASA",
+   "detalle": "sensibilidades_tem.csv"
+  },
+  {
+   "id": "HDR-svd",
+   "descripcion": "Columnas de sensibilidad_tem_svd.csv",
+   "resultado": "PASA",
+   "detalle": "sensibilidad_tem_svd.csv"
+  },
+  {
+   "id": "HDR-support",
+   "descripcion": "Columnas de soporte_por_sondeo.csv",
+   "resultado": "PASA",
+   "detalle": "soporte_por_sondeo.csv"
+  },
+  {
+   "id": "HDR-doi",
+   "descripcion": "Columnas de comparacion_sensibilidad_doi.csv",
+   "resultado": "PASA",
+   "detalle": "comparacion_sensibilidad_doi.csv"
+  },
+  {
+   "id": "HDR-armt",
+   "descripcion": "Columnas de tem_amt_support.csv",
+   "resultado": "PASA",
+   "detalle": "tem_amt_support.csv"
+  },
+  {
+   "id": "HDR-direct",
+   "descripcion": "Columnas de pruebas_directo.csv",
+   "resultado": "PASA",
+   "detalle": "pruebas_directo.csv"
+  },
+  {
+   "id": "HASH-p0_manifest",
+   "descripcion": "Hash de p0_manifest",
+   "resultado": "PASA",
+   "detalle": "5a67b03feab778e4..."
+  },
+  {
+   "id": "HASH-p0_splits",
+   "descripcion": "Hash de p0_splits",
+   "resultado": "PASA",
+   "detalle": "78cccedc36a0f385..."
+  },
+  {
+   "id": "HASH-p1_config",
+   "descripcion": "Hash de p1_config",
+   "resultado": "PASA",
+   "detalle": "a34010977f04abfe..."
+  },
+  {
+   "id": "HASH-p1_calibration_registry",
+   "descripcion": "Hash de p1_calibration_registry",
+   "resultado": "PASA",
+   "detalle": "06e5a94d1573c14c..."
+  },
+  {
+   "id": "HASH-p1_grid_D0",
+   "descripcion": "Hash de p1_grid_D0",
+   "resultado": "PASA",
+   "detalle": "416b73f823d945a8..."
+  },
+  {
+   "id": "HASH-p1_grid_D1",
+   "descripcion": "Hash de p1_grid_D1",
+   "resultado": "PASA",
+   "detalle": "a7e4fe55c007c090..."
+  },
+  {
+   "id": "HASH-tem_manifest",
+   "descripcion": "Hash de tem_manifest",
+   "resultado": "PASA",
+   "detalle": "40d6faced6107175..."
+  },
+  {
+   "id": "HASH-tem_qc_windows",
+   "descripcion": "Hash de tem_qc_windows",
+   "resultado": "PASA",
+   "detalle": "b34f7a344b0fe31c..."
+  },
+  {
+   "id": "HASH-tem_summary",
+   "descripcion": "Hash de tem_summary",
+   "resultado": "PASA",
+   "detalle": "95ceefb00f824ac6..."
+  },
+  {
+   "id": "HASH-tem_checks",
+   "descripcion": "Hash de tem_checks",
+   "resultado": "PASA",
+   "detalle": "8ad6a5a29bf789b4..."
+  },
+  {
+   "id": "HASH-tem_stability",
+   "descripcion": "Hash de tem_stability",
+   "resultado": "PASA",
+   "detalle": "431b569d1d39a646..."
+  },
+  {
+   "id": "HASH-tem_scenarios",
+   "descripcion": "Hash de tem_scenarios",
+   "resultado": "PASA",
+   "detalle": "cd77c57b382c96cf..."
+  },
+  {
+   "id": "FREEZE-P0-manifest",
+   "descripcion": "Hash congelado de P0-manifest",
+   "resultado": "PASA",
+   "detalle": "5a67b03feab778e4..."
+  },
+  {
+   "id": "FREEZE-P0-splits",
+   "descripcion": "Hash congelado de P0-splits",
+   "resultado": "PASA",
+   "detalle": "78cccedc36a0f385..."
+  },
+  {
+   "id": "FREEZE-P1-export-D0",
+   "descripcion": "Hash congelado de P1-export-D0",
+   "resultado": "PASA",
+   "detalle": "159541ba3c9eda65..."
+  },
+  {
+   "id": "FREEZE-P1-export-D1",
+   "descripcion": "Hash congelado de P1-export-D1",
+   "resultado": "PASA",
+   "detalle": "6d67e074086e051a..."
+  },
+  {
+   "id": "GRID-D0-N",
+   "descripcion": "D0 tiene 29 frecuencias",
+   "resultado": "PASA",
+   "detalle": "29"
+  },
+  {
+   "id": "GRID-D0-RANGE",
+   "descripcion": "D0 dentro del rango declarado",
+   "resultado": "PASA",
+   "detalle": "5-1000"
+  },
+  {
+   "id": "GRID-D1-N",
+   "descripcion": "D1 tiene 13 frecuencias",
+   "resultado": "PASA",
+   "detalle": "13"
+  },
+  {
+   "id": "GRID-D1-RANGE",
+   "descripcion": "D1 dentro del rango declarado",
+   "resultado": "PASA",
+   "detalle": "1000-10000"
+  },
+  {
+   "id": "GRID-D1-GUARD",
+   "descripcion": "La grilla D1 conserva 10 kHz como escenario separado",
+   "resultado": "PASA",
+   "detalle": "10000 Hz presente"
+  },
+  {
+   "id": "PROV-MODELS-N",
+   "descripcion": "Hay 18 modelos (6 base + 12 estabilidad)",
+   "resultado": "PASA",
+   "detalle": "18"
+  },
+  {
+   "id": "PROV-MODELS-ROLES",
+   "descripcion": "Roles 6 base / 12 estabilidad",
+   "resultado": "PASA",
+   "detalle": "{'base': 6, 'estabilidad': 12}"
+  },
+  {
+   "id": "PROV-MODELS-POSTERIOR",
+   "descripcion": "Ningun modelo se declara posterior",
+   "resultado": "PASA",
+   "detalle": "is_posterior=false"
+  },
+  {
+   "id": "PROV-MODELS-STATIONS",
+   "descripcion": "6 sondeos con 3 modelos cada uno",
+   "resultado": "PASA",
+   "detalle": "SER-09,SER-10,SER-11,SER-12,SER-13,SER-14"
+  },
+  {
+   "id": "PROV-MODELS-LAYERS",
+   "descripcion": "Todos los modelos tienen 16 capas y 15 interfaces",
+   "resultado": "PASA",
+   "detalle": "16 capas"
+  },
+  {
+   "id": "PROV-MODELS-GATES",
+   "descripcion": "Todos los modelos declaran 19-22 gates de inversion",
+   "resultado": "PASA",
+   "detalle": "22, 22, 21, 22, 22, 21, 21, 21, 19, 22, 22, 20, 21, 21, 19, 22, 22, 20"
+  },
+  {
+   "id": "DIR-PASA",
+   "descripcion": "El directo MT pasa todas las pruebas",
+   "resultado": "PASA",
+   "detalle": "12 pruebas"
+  },
+  {
+   "id": "DIR-META",
+   "descripcion": "El directo MT cumple la meta P2 (Z <= 1%)",
+   "resultado": "PASA",
+   "detalle": "max_error_rel=8.797e-08"
+  },
+  {
+   "id": "DIR-semiespacio_rho_1_Z",
+   "descripcion": "Prueba semiespacio_rho_1_Z",
+   "resultado": "PASA",
+   "detalle": "2.850e-16 rel <= 1.000e-10"
+  },
+  {
+   "id": "DIR-semiespacio_rho_10_Z",
+   "descripcion": "Prueba semiespacio_rho_10_Z",
+   "resultado": "PASA",
+   "detalle": "2.469e-16 rel <= 1.000e-10"
+  },
+  {
+   "id": "DIR-semiespacio_rho_100_Z",
+   "descripcion": "Prueba semiespacio_rho_100_Z",
+   "resultado": "PASA",
+   "detalle": "2.326e-16 rel <= 1.000e-10"
+  },
+  {
+   "id": "DIR-semiespacio_rho_1000_Z",
+   "descripcion": "Prueba semiespacio_rho_1000_Z",
+   "resultado": "PASA",
+   "detalle": "2.577e-16 rel <= 1.000e-10"
+  },
+  {
+   "id": "DIR-semiespacio_rhoa",
+   "descripcion": "Prueba semiespacio_rhoa",
+   "resultado": "PASA",
+   "detalle": "6.661e-16 rel <= 1.000e-10"
+  },
+  {
+   "id": "DIR-semiespacio_fase",
+   "descripcion": "Prueba semiespacio_fase",
+   "resultado": "PASA",
+   "detalle": "1.421e-14 deg <= 1.000e-08"
+  },
+  {
+   "id": "DIR-matriz_vs_recursion_Z",
+   "descripcion": "Prueba matriz_vs_recursion_Z",
+   "resultado": "PASA",
+   "detalle": "1.266e-15 rel <= 1.000e-08"
+  },
+  {
+   "id": "DIR-matriz_vs_recursion_fase",
+   "descripcion": "Prueba matriz_vs_recursion_fase",
+   "resultado": "PASA",
+   "detalle": "4.782e-14 deg <= 1.000e-06"
+  },
+  {
+   "id": "DIR-limite_capa_espesor_nulo",
+   "descripcion": "Prueba limite_capa_espesor_nulo",
+   "resultado": "PASA",
+   "detalle": "8.797e-08 rel <= 1.000e-05"
+  },
+  {
+   "id": "DIR-limite_capa_espesor_grande",
+   "descripcion": "Prueba limite_capa_espesor_grande",
+   "resultado": "PASA",
+   "detalle": "2.400e-16 rel <= 1.000e-05"
+  },
+  {
+   "id": "DIR-convergencia_subdivision",
+   "descripcion": "Prueba convergencia_subdivision",
+   "resultado": "PASA",
+   "detalle": "2.775e-15 rel <= 1.000e-06"
+  },
+  {
+   "id": "DIR-fase_en_rango_1D",
+   "descripcion": "Prueba fase_en_rango_1D",
+   "resultado": "PASA",
+   "detalle": "0.000e+00 bool <= 0.000e+00"
+  },
+  {
+   "id": "GATE-N",
+   "descripcion": "tem_valid_gates.csv tiene 288 filas",
+   "resultado": "PASA",
+   "detalle": "288"
+  },
+  {
+   "id": "GATE-SOUNDINGS",
+   "descripcion": "6 sondeos x 48 gates",
+   "resultado": "PASA",
+   "detalle": "{'SER-09': 48, 'SER-10': 48, 'SER-11': 48, 'SER-12': 48, 'SER-13': 48, 'SER-14': 48}"
+  },
+  {
+   "id": "GATE-COUNTS",
+   "descripcion": "Conteos de estado de gate",
+   "resultado": "PASA",
+   "detalle": "{'no_exportado': 99, 'excluido': 59, 'valido': 120, 'valido_condicional': 10}"
+  },
+  {
+   "id": "GATE-USED",
+   "descripcion": "Los gates marcados como usados coinciden con el modelo base (130 en total)",
+   "resultado": "PASA",
+   "detalle": "{'SER-09': 22, 'SER-10': 22, 'SER-11': 21, 'SER-12': 22, 'SER-13': 21, 'SER-14': 22}"
+  },
+  {
+   "id": "GATE-MODELS-USING",
+   "descripcion": "n_modelos_que_usan_gate en [0,3] y coherente con usado_en_inversion",
+   "resultado": "PASA",
+   "detalle": "288 filas"
+  },
+  {
+   "id": "GATE-TEM-SER-09",
+   "descripcion": "SER-09: gates .tem coinciden",
+   "resultado": "PASA",
+   "detalle": "35 gates"
+  },
+  {
+   "id": "GATE-SEQ-SER-09",
+   "descripcion": "SER-09: gates .tem 1..n y lector = tem+1",
+   "resultado": "PASA",
+   "detalle": "secuencia y desplazamiento"
+  },
+  {
+   "id": "GATE-TIME-SER-09",
+   "descripcion": "SER-09: tiempo .tem vs lector < 0.1%",
+   "resultado": "PASA",
+   "detalle": "max_dt_rel=6.281e-04"
+  },
+  {
+   "id": "GATE-TEM-SER-10",
+   "descripcion": "SER-10: gates .tem coinciden",
+   "resultado": "PASA",
+   "detalle": "27 gates"
+  },
+  {
+   "id": "GATE-SEQ-SER-10",
+   "descripcion": "SER-10: gates .tem 1..n y lector = tem+1",
+   "resultado": "PASA",
+   "detalle": "secuencia y desplazamiento"
+  },
+  {
+   "id": "GATE-TIME-SER-10",
+   "descripcion": "SER-10: tiempo .tem vs lector < 0.1%",
+   "resultado": "PASA",
+   "detalle": "max_dt_rel=0.000e+00"
+  },
+  {
+   "id": "GATE-TEM-SER-11",
+   "descripcion": "SER-11: gates .tem coinciden",
+   "resultado": "PASA",
+   "detalle": "35 gates"
+  },
+  {
+   "id": "GATE-SEQ-SER-11",
+   "descripcion": "SER-11: gates .tem 1..n y lector = tem+1",
+   "resultado": "PASA",
+   "detalle": "secuencia y desplazamiento"
+  },
+  {
+   "id": "GATE-TIME-SER-11",
+   "descripcion": "SER-11: tiempo .tem vs lector < 0.1%",
+   "resultado": "PASA",
+   "detalle": "max_dt_rel=8.393e-04"
+  },
+  {
+   "id": "GATE-TEM-SER-12",
+   "descripcion": "SER-12: gates .tem coinciden",
+   "resultado": "PASA",
+   "detalle": "26 gates"
+  },
+  {
+   "id": "GATE-SEQ-SER-12",
+   "descripcion": "SER-12: gates .tem 1..n y lector = tem+1",
+   "resultado": "PASA",
+   "detalle": "secuencia y desplazamiento"
+  },
+  {
+   "id": "GATE-TIME-SER-12",
+   "descripcion": "SER-12: tiempo .tem vs lector < 0.1%",
+   "resultado": "PASA",
+   "detalle": "max_dt_rel=0.000e+00"
+  },
+  {
+   "id": "GATE-TEM-SER-13",
+   "descripcion": "SER-13: gates .tem coinciden",
+   "resultado": "PASA",
+   "detalle": "32 gates"
+  },
+  {
+   "id": "GATE-SEQ-SER-13",
+   "descripcion": "SER-13: gates .tem 1..n y lector = tem+1",
+   "resultado": "PASA",
+   "detalle": "secuencia y desplazamiento"
+  },
+  {
+   "id": "GATE-TIME-SER-13",
+   "descripcion": "SER-13: tiempo .tem vs lector < 0.1%",
+   "resultado": "PASA",
+   "detalle": "max_dt_rel=6.295e-04"
+  },
+  {
+   "id": "GATE-TEM-SER-14",
+   "descripcion": "SER-14: gates .tem coinciden",
+   "resultado": "PASA",
+   "detalle": "34 gates"
+  },
+  {
+   "id": "GATE-SEQ-SER-14",
+   "descripcion": "SER-14: gates .tem 1..n y lector = tem+1",
+   "resultado": "PASA",
+   "detalle": "secuencia y desplazamiento"
+  },
+  {
+   "id": "GATE-TIME-SER-14",
+   "descripcion": "SER-14: tiempo .tem vs lector < 0.1%",
+   "resultado": "PASA",
+   "detalle": "max_dt_rel=6.297e-04"
+  },
+  {
+   "id": "GATE-VALID-CONSIST",
+   "descripcion": "Todo gate valido esta exportado y en ventana contigua",
+   "resultado": "PASA",
+   "detalle": "0 inconsistencias"
+  },
+  {
+   "id": "GATE-NOEXPORT-EMPTY",
+   "descripcion": "Los gates no exportados no tienen valores .tem",
+   "resultado": "PASA",
+   "detalle": "0 inconsistencias"
+  },
+  {
+   "id": "GATE-DV-SER-09",
+   "descripcion": "SER-09: maxima diferencia de amplitud coincide",
+   "resultado": "PASA",
+   "detalle": "0.038018 vs 0.038018"
+  },
+  {
+   "id": "GATE-DV-SER-10",
+   "descripcion": "SER-10: maxima diferencia de amplitud coincide",
+   "resultado": "PASA",
+   "detalle": "0.078335 vs 0.078335"
+  },
+  {
+   "id": "GATE-DV-SER-11",
+   "descripcion": "SER-11: maxima diferencia de amplitud coincide",
+   "resultado": "PASA",
+   "detalle": "0.072701 vs 0.072701"
+  },
+  {
+   "id": "GATE-DV-SER-12",
+   "descripcion": "SER-12: maxima diferencia de amplitud coincide",
+   "resultado": "PASA",
+   "detalle": "0.106865 vs 0.106865"
+  },
+  {
+   "id": "GATE-DV-SER-13",
+   "descripcion": "SER-13: maxima diferencia de amplitud coincide",
+   "resultado": "PASA",
+   "detalle": "0.049737 vs 0.049737"
+  },
+  {
+   "id": "GATE-DV-SER-14",
+   "descripcion": "SER-14: maxima diferencia de amplitud coincide",
+   "resultado": "PASA",
+   "detalle": "0.127922 vs 0.127922"
+  },
+  {
+   "id": "ENV-D0-N",
+   "descripcion": "envolventes_D0.csv tiene 6x29 filas",
+   "resultado": "PASA",
+   "detalle": "174"
+  },
+  {
+   "id": "ENV-D0-GRID",
+   "descripcion": "D0: grilla identica a P1",
+   "resultado": "PASA",
+   "detalle": "frecuencias"
+  },
+  {
+   "id": "ENV-CONSIST-D0-SER-09",
+   "descripcion": "D0/SER-09: envolvente consistente",
+   "resultado": "PASA",
+   "detalle": "semianchos y umbrales"
+  },
+  {
+   "id": "ENV-SUM-D0-SER-09",
+   "descripcion": "D0/SER-09: recuentos del resumen excluyen 10 kHz",
+   "resultado": "PASA",
+   "detalle": "29/5 vs 29/5"
+  },
+  {
+   "id": "ENV-CONSIST-D0-SER-10",
+   "descripcion": "D0/SER-10: envolvente consistente",
+   "resultado": "PASA",
+   "detalle": "semianchos y umbrales"
+  },
+  {
+   "id": "ENV-SUM-D0-SER-10",
+   "descripcion": "D0/SER-10: recuentos del resumen excluyen 10 kHz",
+   "resultado": "PASA",
+   "detalle": "29/4 vs 29/4"
+  },
+  {
+   "id": "ENV-CONSIST-D0-SER-11",
+   "descripcion": "D0/SER-11: envolvente consistente",
+   "resultado": "PASA",
+   "detalle": "semianchos y umbrales"
+  },
+  {
+   "id": "ENV-SUM-D0-SER-11",
+   "descripcion": "D0/SER-11: recuentos del resumen excluyen 10 kHz",
+   "resultado": "PASA",
+   "detalle": "29/29 vs 29/29"
+  },
+  {
+   "id": "ENV-CONSIST-D0-SER-12",
+   "descripcion": "D0/SER-12: envolvente consistente",
+   "resultado": "PASA",
+   "detalle": "semianchos y umbrales"
+  },
+  {
+   "id": "ENV-SUM-D0-SER-12",
+   "descripcion": "D0/SER-12: recuentos del resumen excluyen 10 kHz",
+   "resultado": "PASA",
+   "detalle": "29/7 vs 29/7"
+  },
+  {
+   "id": "ENV-CONSIST-D0-SER-13",
+   "descripcion": "D0/SER-13: envolvente consistente",
+   "resultado": "PASA",
+   "detalle": "semianchos y umbrales"
+  },
+  {
+   "id": "ENV-SUM-D0-SER-13",
+   "descripcion": "D0/SER-13: recuentos del resumen excluyen 10 kHz",
+   "resultado": "PASA",
+   "detalle": "29/15 vs 29/15"
+  },
+  {
+   "id": "ENV-CONSIST-D0-SER-14",
+   "descripcion": "D0/SER-14: envolvente consistente",
+   "resultado": "PASA",
+   "detalle": "semianchos y umbrales"
+  },
+  {
+   "id": "ENV-SUM-D0-SER-14",
+   "descripcion": "D0/SER-14: recuentos del resumen excluyen 10 kHz",
+   "resultado": "PASA",
+   "detalle": "29/14 vs 29/14"
+  },
+  {
+   "id": "ENV-D1-N",
+   "descripcion": "envolventes_D1.csv tiene 6x13 filas",
+   "resultado": "PASA",
+   "detalle": "78"
+  },
+  {
+   "id": "ENV-D1-GRID",
+   "descripcion": "D1: grilla identica a P1",
+   "resultado": "PASA",
+   "detalle": "frecuencias"
+  },
+  {
+   "id": "ENV-CONSIST-D1-SER-09",
+   "descripcion": "D1/SER-09: envolvente consistente",
+   "resultado": "PASA",
+   "detalle": "semianchos y umbrales"
+  },
+  {
+   "id": "ENV-SUM-D1-SER-09",
+   "descripcion": "D1/SER-09: recuentos del resumen excluyen 10 kHz",
+   "resultado": "PASA",
+   "detalle": "12/0 vs 12/0"
+  },
+  {
+   "id": "ENV-CONSIST-D1-SER-10",
+   "descripcion": "D1/SER-10: envolvente consistente",
+   "resultado": "PASA",
+   "detalle": "semianchos y umbrales"
+  },
+  {
+   "id": "ENV-SUM-D1-SER-10",
+   "descripcion": "D1/SER-10: recuentos del resumen excluyen 10 kHz",
+   "resultado": "PASA",
+   "detalle": "12/0 vs 12/0"
+  },
+  {
+   "id": "ENV-CONSIST-D1-SER-11",
+   "descripcion": "D1/SER-11: envolvente consistente",
+   "resultado": "PASA",
+   "detalle": "semianchos y umbrales"
+  },
+  {
+   "id": "ENV-SUM-D1-SER-11",
+   "descripcion": "D1/SER-11: recuentos del resumen excluyen 10 kHz",
+   "resultado": "PASA",
+   "detalle": "12/12 vs 12/12"
+  },
+  {
+   "id": "ENV-CONSIST-D1-SER-12",
+   "descripcion": "D1/SER-12: envolvente consistente",
+   "resultado": "PASA",
+   "detalle": "semianchos y umbrales"
+  },
+  {
+   "id": "ENV-SUM-D1-SER-12",
+   "descripcion": "D1/SER-12: recuentos del resumen excluyen 10 kHz",
+   "resultado": "PASA",
+   "detalle": "12/0 vs 12/0"
+  },
+  {
+   "id": "ENV-CONSIST-D1-SER-13",
+   "descripcion": "D1/SER-13: envolvente consistente",
+   "resultado": "PASA",
+   "detalle": "semianchos y umbrales"
+  },
+  {
+   "id": "ENV-SUM-D1-SER-13",
+   "descripcion": "D1/SER-13: recuentos del resumen excluyen 10 kHz",
+   "resultado": "PASA",
+   "detalle": "12/12 vs 12/12"
+  },
+  {
+   "id": "ENV-CONSIST-D1-SER-14",
+   "descripcion": "D1/SER-14: envolvente consistente",
+   "resultado": "PASA",
+   "detalle": "semianchos y umbrales"
+  },
+  {
+   "id": "ENV-SUM-D1-SER-14",
+   "descripcion": "D1/SER-14: recuentos del resumen excluyen 10 kHz",
+   "resultado": "PASA",
+   "detalle": "12/12 vs 12/12"
+  },
+  {
+   "id": "ENV-GUARD-10K",
+   "descripcion": "Solo 10 kHz queda no evaluado en D1",
+   "resultado": "PASA",
+   "detalle": "6 filas"
+  },
+  {
+   "id": "MT-N",
+   "descripcion": "sensibilidades_mt.csv tiene 6x42x16 filas",
+   "resultado": "PASA",
+   "detalle": "4032"
+  },
+  {
+   "id": "MT-NGROUPS",
+   "descripcion": "Hay 6x42 grupos sondeo/banda/frecuencia",
+   "resultado": "PASA",
+   "detalle": "252"
+  },
+  {
+   "id": "MT-SHARE",
+   "descripcion": "Las 16 capas suman share=1",
+   "resultado": "PASA",
+   "detalle": "6x42 grupos"
+  },
+  {
+   "id": "MT-CUM",
+   "descripcion": "La sensibilidad acumulada termina en 1",
+   "resultado": "PASA",
+   "detalle": "6x42 grupos"
+  },
+  {
+   "id": "MT-FINITE",
+   "descripcion": "Sensibilidades MT finitas",
+   "resultado": "PASA",
+   "detalle": "sin NaN/inf"
+  },
+  {
+   "id": "TEM-N",
+   "descripcion": "sensibilidades_tem.csv tiene (gates base)x16 filas",
+   "resultado": "PASA",
+   "detalle": "2080 vs 2080"
+  },
+  {
+   "id": "TEM-WEIGHT",
+   "descripcion": "Jacobiano TEM ponderado = J/rel",
+   "resultado": "PASA",
+   "detalle": "6x22x16"
+  },
+  {
+   "id": "SVD-N",
+   "descripcion": "sensibilidad_tem_svd.csv tiene 6x16 filas",
+   "resultado": "PASA",
+   "detalle": "96"
+  },
+  {
+   "id": "SVD-ORDER",
+   "descripcion": "Valores singulares no crecientes y resolved coherente",
+   "resultado": "PASA",
+   "detalle": "6x16"
+  },
+  {
+   "id": "SUP-N",
+   "descripcion": "soporte_por_sondeo.csv tiene 252 filas",
+   "resultado": "PASA",
+   "detalle": "252"
+  },
+  {
+   "id": "SUP-STATES",
+   "descripcion": "Estados permitidos y sin respaldada",
+   "resultado": "PASA",
+   "detalle": "{'no_respaldada': 231, 'no_evaluado': 6, 'condicional': 15}"
+  },
+  {
+   "id": "SUP-COND",
+   "descripcion": "Todo condicional cumple los tres criterios",
+   "resultado": "PASA",
+   "detalle": "0 inconsistencias"
+  },
+  {
+   "id": "SUP-NO",
+   "descripcion": "Todo no_respaldada falla al menos un criterio",
+   "resultado": "PASA",
+   "detalle": "0 inconsistencias"
+  },
+  {
+   "id": "SUP-NE",
+   "descripcion": "Todo no_evaluado es 10 kHz con guarda de empalme",
+   "resultado": "PASA",
+   "detalle": "0 inconsistencias"
+  },
+  {
+   "id": "SUP-DOI",
+   "descripcion": "doi_m coincide con el resumen por sondeo",
+   "resultado": "PASA",
+   "detalle": "100/175 m"
+  },
+  {
+   "id": "SUP-RANK",
+   "descripcion": "Rango efectivo TEM coincide con el SVD del modelo base",
+   "resultado": "PASA",
+   "detalle": "SER-09=4, SER-10=4, SER-11=4, SER-12=4, SER-13=4, SER-14=4"
+  },
+  {
+   "id": "SUP-MONO",
+   "descripcion": "z50 <= z90 y fracciones en [0,1]",
+   "resultado": "PASA",
+   "detalle": "252 filas"
+  },
+  {
+   "id": "SUP-COUNTS",
+   "descripcion": "Conteos por sondeo/banda coinciden con el resumen",
+   "resultado": "PASA",
+   "detalle": "6x2"
+  },
+  {
+   "id": "SUP-BANDS",
+   "descripcion": "Bandas condicionales contiguas coinciden",
+   "resultado": "PASA",
+   "detalle": "por sondeo/banda"
+  },
+  {
+   "id": "AMT-N",
+   "descripcion": "tem_amt_support.csv tiene 15x42=630 filas",
+   "resultado": "PASA",
+   "detalle": "630"
+  },
+  {
+   "id": "AMT-STATE",
+   "descripcion": "Todas las filas son no_evaluado",
+   "resultado": "PASA",
+   "detalle": "{'no_evaluado': 630}"
+  },
+  {
+   "id": "AMT-LINK",
+   "descripcion": "Todas las filas citan B-P0-03 y no tienen sondeo asignado",
+   "resultado": "PASA",
+   "detalle": "B-P0-03"
+  },
+  {
+   "id": "AMT-EMPTY",
+   "descripcion": "Las columnas de envolvente quedan vacias",
+   "resultado": "PASA",
+   "detalle": "vacias"
+  },
+  {
+   "id": "AMT-CAND",
+   "descripcion": "Las 6 candidatas TEM estan declaradas",
+   "resultado": "PASA",
+   "detalle": "6 candidatas"
+  },
+  {
+   "id": "AMT-FREQ",
+   "descripcion": "La grilla ARMT coincide con P1",
+   "resultado": "PASA",
+   "detalle": "D0+D1"
+  },
+  {
+   "id": "AMT-SPLIT",
+   "descripcion": "El split de cada fila coincide con splits.csv",
+   "resultado": "PASA",
+   "detalle": "15 registros"
+  },
+  {
+   "id": "AMT-RECORDS",
+   "descripcion": "Los 15 registros estan presentes",
+   "resultado": "PASA",
+   "detalle": "15"
+  },
+  {
+   "id": "PROV-CAND",
+   "descripcion": "6 candidatas TEM con vinculo no verificado",
+   "resultado": "PASA",
+   "detalle": "6"
+  },
+  {
+   "id": "PROV-SOFT",
+   "descripcion": "Hashes de mt1d.py y tem_parser.py coinciden",
+   "resultado": "PASA",
+   "detalle": "software local"
+  },
+  {
+   "id": "PROV-DIR",
+   "descripcion": "La proveniencia declara el directo aprobado",
+   "resultado": "PASA",
+   "detalle": "directo.pasa"
+  },
+  {
+   "id": "PROV-STATUS",
+   "descripcion": "Estado de proveniencia declarado",
+   "resultado": "PASA",
+   "detalle": "DIAGNOSTICO_CON_SOPORTE_AMT_VACIO"
+  },
+  {
+   "id": "SUM-TOTALS",
+   "descripcion": "Totales de soporte suman 252 y respaldada=0",
+   "resultado": "PASA",
+   "detalle": "{'no_respaldada': 231, 'no_evaluado': 6, 'condicional': 15}"
+  },
+  {
+   "id": "SUM-AMT",
+   "descripcion": "El resumen declara 630 filas no_evaluado y soporte deshabilitado",
+   "resultado": "PASA",
+   "detalle": "{'n_records': 15, 'n_rows': 630, 'states': {'no_evaluado': 630}, 'soporte_habilitado': False, 'motivo_principal': 'B-P0-03_vinculo_TEM_ARMT_no_verificado'}"
+  },
+  {
+   "id": "SUM-CONCLUSION",
+   "descripcion": "La conclusion cierra la rama TEM",
+   "resultado": "PASA",
+   "detalle": "Ninguna frecuencia alcanza el estado respaldada. Las bandas condicionales por sondeo son diagnosticas y no se transfiere"
+  },
+  {
+   "id": "REP-KEY",
+   "descripcion": "El reporte contiene P2-T, B-P0-03, no_evaluado y sintesis",
+   "resultado": "PASA",
+   "detalle": "reporte"
+  },
+  {
+   "id": "REP-UTF8",
+   "descripcion": "El reporte no contiene caracteres de reemplazo",
+   "resultado": "PASA",
+   "detalle": "UTF-8"
+  },
+  {
+   "id": "README-KEY",
+   "descripcion": "El README declara alcance, soporte vacio y bloqueos",
+   "resultado": "PASA",
+   "detalle": "README.md"
+  },
+  {
+   "id": "MATRIZ-FILE",
+   "descripcion": "Existe MATRIZ_VALIDACION_ARMT.csv",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\MATRIZ_VALIDACION_ARMT.csv"
+  },
+  {
+   "id": "MATRIZ-ROWS",
+   "descripcion": "La matriz conserva las 16 puertas/subpuertas",
+   "resultado": "PASA",
+   "detalle": "16"
+  },
+  {
+   "id": "MATRIZ-P0",
+   "descripcion": "P0 figura como PARCIAL en la matriz",
+   "resultado": "PASA",
+   "detalle": "PARCIAL"
+  },
+  {
+   "id": "MATRIZ-P1",
+   "descripcion": "P1 figura como PARCIAL en la matriz",
+   "resultado": "PASA",
+   "detalle": "PARCIAL"
+  },
+  {
+   "id": "MATRIZ-P2T",
+   "descripcion": "P2-T figura cerrada como diagnostico con soporte AMT vacio",
+   "resultado": "PASA",
+   "detalle": "CERRADA COMO DIAGNÓSTICO (soporte AMT vacío)"
+  },
+  {
+   "id": "MATRIZ-P2T-EVID",
+   "descripcion": "Las rutas de evidencia de P2-T existen",
+   "resultado": "PASA",
+   "detalle": "etapa2/validacion_etapa2.json; etapa2/diagnostico_tem/resumen_p2t.json; etapa2/tem_amt_support.csv; etapa2/README.md; etapa2/ANEXO_A_CONVERSION_TF.md"
+  },
+  {
+   "id": "MATRIZ-P3",
+   "descripcion": "P3 no figura habilitada y cita el bloqueo de soporte AMT",
+   "resultado": "PASA",
+   "detalle": "Pendiente de implementación/validación"
+  },
+  {
+   "id": "NOSYN",
+   "descripcion": "No hay marcadores SYN- en los entregables P2-T",
+   "resultado": "PASA",
+   "detalle": ""
+  },
+  {
+   "id": "OBS-01",
+   "descripcion": "La amplitud .tem y la del lector difieren en la ventana util; se conserva como guarda.",
+   "resultado": "OBSERVACION",
+   "detalle": "max_dv_rel=0.1279"
+  },
+  {
+   "id": "OBS-02",
+   "descripcion": "t_parser_ms esta desalineado; clock_max_relative_pct se reclasifica como artefacto de tablas.",
+   "resultado": "OBSERVACION",
+   "detalle": "max_t_parser_rel=0.2597"
+  },
+  {
+   "id": "OBS-03",
+   "descripcion": "No se dispone de un motor MT externo; el directo se valido con semiespacio, formulacion matricial, limites y convergencia.",
+   "resultado": "OBSERVACION",
+   "detalle": "max_error_rel=8.797e-08"
+  },
+  {
+   "id": "OBS-04",
+   "descripcion": "La DOI es operativa y no validada.",
+   "resultado": "OBSERVACION",
+   "detalle": "DOI_validated_m vacia en los 6 sondeos"
+  },
+  {
+   "id": "OBS-05",
+   "descripcion": "El rango efectivo TEM es 4 al 1%; el resultado de sensibilidad compartida depende del umbral.",
+   "resultado": "OBSERVACION",
+   "detalle": "rank 4 (1%), 6-7 (0.1%), 7-8 (0.01%)"
+  },
+  {
+   "id": "OBS-06",
+   "descripcion": "10 kHz queda como escenario separado por el empalme de calibracion.",
+   "resultado": "OBSERVACION",
+   "detalle": "no_evaluado"
+  },
+  {
+   "id": "OBS-07",
+   "descripcion": "Los 18 modelos son escenarios regularizados, no un posterior probabilistico.",
+   "resultado": "OBSERVACION",
+   "detalle": "lambda 1-4; wrms_log 0.25-1.35"
+  },
+  {
+   "id": "OBS-08",
+   "descripcion": "tem_amt_support.csv queda vacio por B-P0-03, no por ausencia de datos TEM.",
+   "resultado": "OBSERVACION",
+   "detalle": "630 filas no_evaluado"
+  },
+  {
+   "id": "OBS-09",
+   "descripcion": "El soporte condicional por sondeo no se transfiere a los registros ARMT.",
+   "resultado": "OBSERVACION",
+   "detalle": "B-P0-03 abierto"
+  },
+  {
+   "id": "OBS-10",
+   "descripcion": "La banda condicional es estrecha y depende de la DOI operativa; SER-09/10 no tienen banda condicional.",
+   "resultado": "OBSERVACION",
+   "detalle": "DOI 100 m vs 175 m"
+  }
+ ],
+ "observations": [
+  {
+   "id": "OBS-01",
+   "descripcion": "La amplitud .tem y la del lector difieren en la ventana util; se conserva como guarda.",
+   "resultado": "OBSERVACION",
+   "detalle": "max_dv_rel=0.1279"
+  },
+  {
+   "id": "OBS-02",
+   "descripcion": "t_parser_ms esta desalineado; clock_max_relative_pct se reclasifica como artefacto de tablas.",
+   "resultado": "OBSERVACION",
+   "detalle": "max_t_parser_rel=0.2597"
+  },
+  {
+   "id": "OBS-03",
+   "descripcion": "No se dispone de un motor MT externo; el directo se valido con semiespacio, formulacion matricial, limites y convergencia.",
+   "resultado": "OBSERVACION",
+   "detalle": "max_error_rel=8.797e-08"
+  },
+  {
+   "id": "OBS-04",
+   "descripcion": "La DOI es operativa y no validada.",
+   "resultado": "OBSERVACION",
+   "detalle": "DOI_validated_m vacia en los 6 sondeos"
+  },
+  {
+   "id": "OBS-05",
+   "descripcion": "El rango efectivo TEM es 4 al 1%; el resultado de sensibilidad compartida depende del umbral.",
+   "resultado": "OBSERVACION",
+   "detalle": "rank 4 (1%), 6-7 (0.1%), 7-8 (0.01%)"
+  },
+  {
+   "id": "OBS-06",
+   "descripcion": "10 kHz queda como escenario separado por el empalme de calibracion.",
+   "resultado": "OBSERVACION",
+   "detalle": "no_evaluado"
+  },
+  {
+   "id": "OBS-07",
+   "descripcion": "Los 18 modelos son escenarios regularizados, no un posterior probabilistico.",
+   "resultado": "OBSERVACION",
+   "detalle": "lambda 1-4; wrms_log 0.25-1.35"
+  },
+  {
+   "id": "OBS-08",
+   "descripcion": "tem_amt_support.csv queda vacio por B-P0-03, no por ausencia de datos TEM.",
+   "resultado": "OBSERVACION",
+   "detalle": "630 filas no_evaluado"
+  },
+  {
+   "id": "OBS-09",
+   "descripcion": "El soporte condicional por sondeo no se transfiere a los registros ARMT.",
+   "resultado": "OBSERVACION",
+   "detalle": "B-P0-03 abierto"
+  },
+  {
+   "id": "OBS-10",
+   "descripcion": "La banda condicional es estrecha y depende de la DOI operativa; SER-09/10 no tienen banda condicional.",
+   "resultado": "OBSERVACION",
+   "detalle": "DOI 100 m vs 175 m"
+  }
+ ],
+ "blockers": [
+  {
+   "id": "B-P0-01",
+   "impact": "sitio no identificado; no se agrupa por sitio"
+  },
+  {
+   "id": "B-P0-02",
+   "impact": "coordenadas candidatas sin datum; no se comparan espacialmente"
+  },
+  {
+   "id": "B-P0-03",
+   "impact": "vinculo TEM-ARMT no verificado; tem_amt_support queda no_evaluado"
+  },
+  {
+   "id": "B-P0-04",
+   "impact": "calibracion sin fecha ni certificado; no se certifica amplitud/fase"
+  },
+  {
+   "id": "B-P0-06",
+   "impact": "F_red_validada no definida; no se alcanza respaldada"
+  },
+  {
+   "id": "B-P0-07",
+   "impact": "zona horaria no declarada; no afecta la grilla de frecuencias"
+  }
+ ],
+ "note": "La validacion no certifica el vinculo TEM-ARMT ni la DOI. Confirma coherencia interna, hashes, pruebas del directo y la ausencia de soporte habilitado."
+}

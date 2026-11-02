@@ -1,0 +1,749 @@
+{
+  "audit_version": "P1-GAIN-AUDIT-1.0.0",
+  "generated_at_utc": "2026-10-28T18:50:45.955616Z",
+  "target_record": "ARMT5-700-14-14-01",
+  "record_gain": 1.7782800197601318,
+  "record_gain_db": 5.000002978142914,
+  "record_gain_source": "SBF settings.gains[0][0] (una sola configuracion en el registro)",
+  "selected_directory": "CLB_G1.8_Ex_shifted",
+  "selected_label": 1.8,
+  "selected_label_delta_rel": 0.01221403828335088,
+  "selected_label_delta_pct": 1.2214038283350879,
+  "divide_by_label_result_ratio": 0.9879333443111843,
+  "divide_by_label_result_pct": -1.2066655688815708,
+  "directory_map": [
+    {
+      "folder": "CLB_G1_Ex_shifted",
+      "label": "1",
+      "label_value": 1.0,
+      "nominal_gain": 1.0,
+      "nominal_gain_db": 0.0,
+      "delta_rel_to_record": -0.43765886762036066,
+      "delta_pct_to_record": -43.76588676203607,
+      "selected": false
+    },
+    {
+      "folder": "CLB_G1.8_Ex_shifted",
+      "label": "1.8",
+      "label_value": 1.8,
+      "nominal_gain": 1.77828,
+      "nominal_gain_db": 5.000002881625873,
+      "delta_rel_to_record": -1.1111934866002496e-08,
+      "delta_pct_to_record": -1.1111934866002496e-06,
+      "selected": true
+    },
+    {
+      "folder": "CLB_G3.2_Ex_shifted",
+      "label": "3.2",
+      "label_value": 3.2,
+      "nominal_gain": 3.16228,
+      "nominal_gain_db": 10.000006426858706,
+      "delta_rel_to_record": 0.778280116101486,
+      "delta_pct_to_record": 77.8280116101486,
+      "selected": false
+    },
+    {
+      "folder": "CLB_G5.6_Ex_shifted",
+      "label": "5.6",
+      "label_value": 5.6,
+      "nominal_gain": 5.62341,
+      "nominal_gain_db": 14.99999497712835,
+      "delta_rel_to_record": 2.1622747472349877,
+      "delta_pct_to_record": 216.22747472349877,
+      "selected": false
+    },
+    {
+      "folder": "CLB_G10_Ex_shifted",
+      "label": "10",
+      "label_value": 10.0,
+      "nominal_gain": 10.0,
+      "nominal_gain_db": 20.0,
+      "delta_rel_to_record": 4.623411323796394,
+      "delta_pct_to_record": 462.3411323796394,
+      "selected": false
+    },
+    {
+      "folder": "CLB_G18_Ex_shifted",
+      "label": "18",
+      "label_value": 18.0,
+      "nominal_gain": 17.7828,
+      "nominal_gain_db": 25.000002881625875,
+      "delta_rel_to_record": 8.999999888880652,
+      "delta_pct_to_record": 899.9999888880652,
+      "selected": false
+    },
+    {
+      "folder": "CLB_G32_Ex_shifted",
+      "label": "32",
+      "label_value": 32.0,
+      "nominal_gain": 31.6228,
+      "nominal_gain_db": 30.000006426858707,
+      "delta_rel_to_record": 16.78280116101486,
+      "delta_pct_to_record": 1678.2801161014859,
+      "selected": false
+    },
+    {
+      "folder": "CLB_G56_Ex_shifted",
+      "label": "56",
+      "label_value": 56.0,
+      "nominal_gain": 56.2341,
+      "nominal_gain_db": 34.999994977128345,
+      "delta_rel_to_record": 30.622747472349875,
+      "delta_pct_to_record": 3062.2747472349874,
+      "selected": false
+    },
+    {
+      "folder": "CLB_G100_Ex_shifted",
+      "label": "100",
+      "label_value": 100.0,
+      "nominal_gain": 100.0,
+      "nominal_gain_db": 40.0,
+      "delta_rel_to_record": 55.23411323796394,
+      "delta_pct_to_record": 5523.411323796394,
+      "selected": false
+    }
+  ],
+  "table_structure": {
+    "files_total": 73,
+    "table_count_distribution": {
+      "1": 73
+    },
+    "unique_table_gain_values": [
+      1.0
+    ],
+    "files_with_gain_sections": 0,
+    "implication": "Ningun .clb declara la ganancia aplicada. El manual (App. 7) preve secciones con gain para otras ganancias, pero los 73 archivos solo tienen la tabla por defecto con gain=1.0. La ganancia solo se conoce por el nombre del directorio."
+  },
+  "amplitude_probe": [
+    {
+      "channel": "Ex",
+      "serial_number": 100,
+      "filename": "e000100.clb",
+      "amplitude_100_hz": {
+        "min": 1.481397769907066,
+        "max": 1.870607108702342,
+        "median": 1.615097596647792,
+        "spread_pct": 24.098193174399956,
+        "selected": 1.870607108702342,
+        "selected_vs_median_pct": 15.820066390097502
+      },
+      "amplitude_10000_hz": {
+        "min": 1.37131629466109,
+        "max": 1.8159443309121894,
+        "median": 1.5270468435983577,
+        "spread_pct": 29.11685637641415,
+        "selected": 1.8159443309121894,
+        "selected_vs_median_pct": 18.918704984391244
+      },
+      "by_directory": [
+        {
+          "folder": "CLB_G1_Ex_shifted",
+          "label": "1",
+          "nominal_gain": 1.0,
+          "amplitude_100_hz": 1.7149550285309025,
+          "phase_100_hz": -180.1297607421875,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.660940690987435,
+          "phase_10000_hz": -8.223388671875,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G1.8_Ex_shifted",
+          "label": "1.8",
+          "nominal_gain": 1.77828,
+          "amplitude_100_hz": 1.870607108702342,
+          "phase_100_hz": -180.1044464111328,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.8159443309121894,
+          "phase_10000_hz": -8.095436096191406,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G3.2_Ex_shifted",
+          "label": "3.2",
+          "nominal_gain": 3.16228,
+          "amplitude_100_hz": 1.5751414215197137,
+          "phase_100_hz": -180.1190185546875,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.5270468435983577,
+          "phase_10000_hz": -8.237106323242188,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G5.6_Ex_shifted",
+          "label": "5.6",
+          "nominal_gain": 5.62341,
+          "amplitude_100_hz": 1.496153713216026,
+          "phase_100_hz": -180.13612365722656,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.4469937527116559,
+          "phase_10000_hz": -8.28662109375,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G10_Ex_shifted",
+          "label": "10",
+          "nominal_gain": 10.0,
+          "amplitude_100_hz": 1.5049238958450617,
+          "phase_100_hz": -180.14280700683594,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.37131629466109,
+          "phase_10000_hz": -8.269248962402344,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G18_Ex_shifted",
+          "label": "18",
+          "nominal_gain": 17.7828,
+          "amplitude_100_hz": 1.481397769907066,
+          "phase_100_hz": -180.14187622070312,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.3840629841020227,
+          "phase_10000_hz": -8.155426025390625,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G32_Ex_shifted",
+          "label": "32",
+          "nominal_gain": 31.6228,
+          "amplitude_100_hz": 1.61627483802776,
+          "phase_100_hz": -180.14663696289062,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.535849609326538,
+          "phase_10000_hz": -8.661575317382812,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G56_Ex_shifted",
+          "label": "56",
+          "nominal_gain": 56.2341,
+          "amplitude_100_hz": 1.615097596647792,
+          "phase_100_hz": -180.14845275878906,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.5535813327268517,
+          "phase_10000_hz": -9.586418151855469,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G100_Ex_shifted",
+          "label": "100",
+          "nominal_gain": 100.0,
+          "amplitude_100_hz": 1.6200371519194505,
+          "phase_100_hz": -180.1522674560547,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.5158803099607872,
+          "phase_10000_hz": -9.050125122070312,
+          "frequency_10000_hz": 10000.0
+        }
+      ]
+    },
+    {
+      "channel": "Ey",
+      "serial_number": 101,
+      "filename": "e000101.clb",
+      "amplitude_100_hz": {
+        "min": 1.481397769907066,
+        "max": 1.870607108702342,
+        "median": 1.615097596647792,
+        "spread_pct": 24.098193174399956,
+        "selected": 1.870607108702342,
+        "selected_vs_median_pct": 15.820066390097502
+      },
+      "amplitude_10000_hz": {
+        "min": 1.37131629466109,
+        "max": 1.8159443309121894,
+        "median": 1.5270468435983577,
+        "spread_pct": 29.11685637641415,
+        "selected": 1.8159443309121894,
+        "selected_vs_median_pct": 18.918704984391244
+      },
+      "by_directory": [
+        {
+          "folder": "CLB_G1_Ex_shifted",
+          "label": "1",
+          "nominal_gain": 1.0,
+          "amplitude_100_hz": 1.7149550285309025,
+          "phase_100_hz": -180.1297607421875,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.660940690987435,
+          "phase_10000_hz": -8.223388671875,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G1.8_Ex_shifted",
+          "label": "1.8",
+          "nominal_gain": 1.77828,
+          "amplitude_100_hz": 1.870607108702342,
+          "phase_100_hz": -180.1044464111328,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.8159443309121894,
+          "phase_10000_hz": -8.095436096191406,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G3.2_Ex_shifted",
+          "label": "3.2",
+          "nominal_gain": 3.16228,
+          "amplitude_100_hz": 1.5751414215197137,
+          "phase_100_hz": -180.1190185546875,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.5270468435983577,
+          "phase_10000_hz": -8.237106323242188,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G5.6_Ex_shifted",
+          "label": "5.6",
+          "nominal_gain": 5.62341,
+          "amplitude_100_hz": 1.496153713216026,
+          "phase_100_hz": -180.13612365722656,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.4469937527116559,
+          "phase_10000_hz": -8.28662109375,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G10_Ex_shifted",
+          "label": "10",
+          "nominal_gain": 10.0,
+          "amplitude_100_hz": 1.5049238958450617,
+          "phase_100_hz": -180.14280700683594,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.37131629466109,
+          "phase_10000_hz": -8.269248962402344,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G18_Ex_shifted",
+          "label": "18",
+          "nominal_gain": 17.7828,
+          "amplitude_100_hz": 1.481397769907066,
+          "phase_100_hz": -180.14187622070312,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.3840629841020227,
+          "phase_10000_hz": -8.155426025390625,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G32_Ex_shifted",
+          "label": "32",
+          "nominal_gain": 31.6228,
+          "amplitude_100_hz": 1.61627483802776,
+          "phase_100_hz": -180.14663696289062,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.535849609326538,
+          "phase_10000_hz": -8.661575317382812,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G56_Ex_shifted",
+          "label": "56",
+          "nominal_gain": 56.2341,
+          "amplitude_100_hz": 1.615097596647792,
+          "phase_100_hz": -180.14845275878906,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.5535813327268517,
+          "phase_10000_hz": -9.586418151855469,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G100_Ex_shifted",
+          "label": "100",
+          "nominal_gain": 100.0,
+          "amplitude_100_hz": 1.6200371519194505,
+          "phase_100_hz": -180.1522674560547,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 1.5158803099607872,
+          "phase_10000_hz": -9.050125122070312,
+          "frequency_10000_hz": 10000.0
+        }
+      ]
+    },
+    {
+      "channel": "Hx",
+      "serial_number": 200,
+      "filename": "h000200.clb",
+      "amplitude_100_hz": {
+        "min": 4.153347310709281,
+        "max": 4.3480284012377926,
+        "median": 4.190764283165758,
+        "spread_pct": 4.645479377366633,
+        "selected": 4.3480284012377926,
+        "selected_vs_median_pct": 3.7526357352944477
+      },
+      "amplitude_10000_hz": {
+        "min": 4.158045263115689,
+        "max": 4.374709802398524,
+        "median": 4.218034132820401,
+        "spread_pct": 5.136623660699532,
+        "selected": 4.374709802398524,
+        "selected_vs_median_pct": 3.714423938844728
+      },
+      "by_directory": [
+        {
+          "folder": "CLB_G1_Ex_shifted",
+          "label": "1",
+          "nominal_gain": 1.0,
+          "amplitude_100_hz": 4.154441333095012,
+          "phase_100_hz": 9.903337478637695,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.180637035634252,
+          "phase_10000_hz": -22.641681671142578,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G1.8_Ex_shifted",
+          "label": "1.8",
+          "nominal_gain": 1.77828,
+          "amplitude_100_hz": 4.3480284012377926,
+          "phase_100_hz": 9.90074634552002,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.374709802398524,
+          "phase_10000_hz": -22.705806732177734,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G3.2_Ex_shifted",
+          "label": "3.2",
+          "nominal_gain": 3.16228,
+          "amplitude_100_hz": 4.311255867011657,
+          "phase_100_hz": 9.902548789978027,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.338534437470945,
+          "phase_10000_hz": -22.73472023010254,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G5.6_Ex_shifted",
+          "label": "5.6",
+          "nominal_gain": 5.62341,
+          "amplitude_100_hz": 4.298826282902687,
+          "phase_100_hz": 9.902874946594238,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.3239777498111005,
+          "phase_10000_hz": -22.81972885131836,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G10_Ex_shifted",
+          "label": "10",
+          "nominal_gain": 10.0,
+          "amplitude_100_hz": 4.293454230576813,
+          "phase_100_hz": 9.903407096862793,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.318953612572696,
+          "phase_10000_hz": -22.84779167175293,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G18_Ex_shifted",
+          "label": "18",
+          "nominal_gain": 17.7828,
+          "amplitude_100_hz": 4.190764283165758,
+          "phase_100_hz": 10.882246017456055,
+          "frequency_100_hz": 91.82500453813334,
+          "amplitude_10000_hz": 4.218034132820401,
+          "phase_10000_hz": -23.3693904876709,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G32_Ex_shifted",
+          "label": "32",
+          "nominal_gain": 31.6228,
+          "amplitude_100_hz": 4.154423087524491,
+          "phase_100_hz": 9.928287506103516,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.1646537310532805,
+          "phase_10000_hz": -23.79129981994629,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G56_Ex_shifted",
+          "label": "56",
+          "nominal_gain": 56.2341,
+          "amplitude_100_hz": 4.153347310709281,
+          "phase_100_hz": 9.906402587890625,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.168010811529198,
+          "phase_10000_hz": -23.660682678222656,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G100_Ex_shifted",
+          "label": "100",
+          "nominal_gain": 100.0,
+          "amplitude_100_hz": 4.156092889045781,
+          "phase_100_hz": 9.90462589263916,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.158045263115689,
+          "phase_10000_hz": -25.000463485717773,
+          "frequency_10000_hz": 10000.0
+        }
+      ]
+    },
+    {
+      "channel": "Hy",
+      "serial_number": 201,
+      "filename": "h000201.clb",
+      "amplitude_100_hz": {
+        "min": 4.121842410334763,
+        "max": 4.30713311759921,
+        "median": 4.173392581214023,
+        "spread_pct": 4.439810146270659,
+        "selected": 4.30713311759921,
+        "selected_vs_median_pct": 3.2045999455503384
+      },
+      "amplitude_10000_hz": {
+        "min": 4.141064365718118,
+        "max": 4.337067518536062,
+        "median": 4.182013737820388,
+        "spread_pct": 4.686812743950921,
+        "selected": 4.337067518536062,
+        "selected_vs_median_pct": 3.7076344181615726
+      },
+      "by_directory": [
+        {
+          "folder": "CLB_G1_Ex_shifted",
+          "label": "1",
+          "nominal_gain": 1.0,
+          "amplitude_100_hz": 4.121842410334763,
+          "phase_100_hz": 9.868147850036621,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.141064365718118,
+          "phase_10000_hz": -23.075746536254883,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G1.8_Ex_shifted",
+          "label": "1.8",
+          "nominal_gain": 1.77828,
+          "amplitude_100_hz": 4.30713311759921,
+          "phase_100_hz": 10.754908561706543,
+          "frequency_100_hz": 91.82500453813334,
+          "amplitude_10000_hz": 4.337067518536062,
+          "phase_10000_hz": -23.157339096069336,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G3.2_Ex_shifted",
+          "label": "3.2",
+          "nominal_gain": 3.16228,
+          "amplitude_100_hz": 4.281055992716964,
+          "phase_100_hz": 9.875020027160645,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.301202244672923,
+          "phase_10000_hz": -23.168607711791992,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G5.6_Ex_shifted",
+          "label": "5.6",
+          "nominal_gain": 5.62341,
+          "amplitude_100_hz": 4.235205680649091,
+          "phase_100_hz": 9.830315589904785,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.252838764722724,
+          "phase_10000_hz": -23.34695053100586,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G10_Ex_shifted",
+          "label": "10",
+          "nominal_gain": 10.0,
+          "amplitude_100_hz": 4.173308956713442,
+          "phase_100_hz": 9.841856002807617,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.188630980999687,
+          "phase_10000_hz": -23.557674407958984,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G18_Ex_shifted",
+          "label": "18",
+          "nominal_gain": 17.7828,
+          "amplitude_100_hz": 4.170853663741081,
+          "phase_100_hz": 9.835640907287598,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.179807445734532,
+          "phase_10000_hz": -24.055891036987305,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G32_Ex_shifted",
+          "label": "32",
+          "nominal_gain": 31.6228,
+          "amplitude_100_hz": 4.165159035710791,
+          "phase_100_hz": 9.840347290039062,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.171450748709639,
+          "phase_10000_hz": -24.356584548950195,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G56_Ex_shifted",
+          "label": "56",
+          "nominal_gain": 56.2341,
+          "amplitude_100_hz": 4.174203711255695,
+          "phase_100_hz": 9.848786354064941,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.182013737820388,
+          "phase_10000_hz": -24.11847496032715,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G100_Ex_shifted",
+          "label": "100",
+          "nominal_gain": 100.0,
+          "amplitude_100_hz": 4.173392581214023,
+          "phase_100_hz": 9.83984661102295,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.166798268075951,
+          "phase_10000_hz": -25.550397872924805,
+          "frequency_10000_hz": 10000.0
+        }
+      ]
+    },
+    {
+      "channel": "Hz",
+      "serial_number": 202,
+      "filename": "h000202.clb",
+      "amplitude_100_hz": {
+        "min": 4.088361201938812,
+        "max": 4.26838657990815,
+        "median": 4.176085498219407,
+        "spread_pct": 4.310864278188201,
+        "selected": 4.26838657990815,
+        "selected_vs_median_pct": 2.2102296930486443
+      },
+      "amplitude_10000_hz": {
+        "min": 4.111501937469572,
+        "max": 4.305182234538782,
+        "median": 4.188265955928477,
+        "spread_pct": 4.624355260798468,
+        "selected": 4.305182234538782,
+        "selected_vs_median_pct": 2.791519923533265
+      },
+      "by_directory": [
+        {
+          "folder": "CLB_G1_Ex_shifted",
+          "label": "1",
+          "nominal_gain": 1.0,
+          "amplitude_100_hz": 4.088361201938812,
+          "phase_100_hz": 9.916023254394531,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.111501937469572,
+          "phase_10000_hz": -23.116130828857422,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G1.8_Ex_shifted",
+          "label": "1.8",
+          "nominal_gain": 1.77828,
+          "amplitude_100_hz": 4.26838657990815,
+          "phase_100_hz": 10.801714897155762,
+          "frequency_100_hz": 91.82500453813334,
+          "amplitude_10000_hz": 4.305182234538782,
+          "phase_10000_hz": -23.171907424926758,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G3.2_Ex_shifted",
+          "label": "3.2",
+          "nominal_gain": 3.16228,
+          "amplitude_100_hz": 4.23225100562899,
+          "phase_100_hz": 10.799012184143066,
+          "frequency_100_hz": 91.82500453813334,
+          "amplitude_10000_hz": 4.268220797845025,
+          "phase_10000_hz": -23.212980270385742,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G5.6_Ex_shifted",
+          "label": "5.6",
+          "nominal_gain": 5.62341,
+          "amplitude_100_hz": 4.205792500021108,
+          "phase_100_hz": 10.803845405578613,
+          "frequency_100_hz": 91.82500453813334,
+          "amplitude_10000_hz": 4.238967520093298,
+          "phase_10000_hz": -23.38368797302246,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G10_Ex_shifted",
+          "label": "10",
+          "nominal_gain": 10.0,
+          "amplitude_100_hz": 4.176085498219407,
+          "phase_100_hz": 10.798990249633789,
+          "frequency_100_hz": 91.82500453813334,
+          "amplitude_10000_hz": 4.209207004974084,
+          "phase_10000_hz": -23.472850799560547,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G18_Ex_shifted",
+          "label": "18",
+          "nominal_gain": 17.7828,
+          "amplitude_100_hz": 4.146595156667595,
+          "phase_100_hz": 11.773736953735352,
+          "frequency_100_hz": 84.31900892198487,
+          "amplitude_10000_hz": 4.186610808421003,
+          "phase_10000_hz": -23.898317337036133,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G32_Ex_shifted",
+          "label": "32",
+          "nominal_gain": 31.6228,
+          "amplitude_100_hz": 4.149901228827543,
+          "phase_100_hz": 10.796936988830566,
+          "frequency_100_hz": 91.82500453813334,
+          "amplitude_10000_hz": 4.175494053558141,
+          "phase_10000_hz": -24.223432540893555,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G56_Ex_shifted",
+          "label": "56",
+          "nominal_gain": 56.2341,
+          "amplitude_100_hz": 4.172616541501443,
+          "phase_100_hz": 9.907696723937988,
+          "frequency_100_hz": 100.0,
+          "amplitude_10000_hz": 4.188265955928477,
+          "phase_10000_hz": -24.008543014526367,
+          "frequency_10000_hz": 10000.0
+        },
+        {
+          "folder": "CLB_G100_Ex_shifted",
+          "label": "100",
+          "nominal_gain": 100.0,
+          "amplitude_100_hz": 4.191151959249917,
+          "phase_100_hz": 8.25497055053711,
+          "frequency_100_hz": 118.597024069554,
+          "amplitude_10000_hz": 4.174713612373015,
+          "phase_10000_hz": -25.379785537719727,
+          "frequency_10000_hz": 10000.0
+        }
+      ]
+    }
+  ],
+  "spread_conclusion": "La amplitud de la tabla electrica no escala con la ganancia del directorio y difiere hasta ~25-32 % entre directorios para el mismo numero de serie. La tabla magnetica varia ~5 %. Elegir el directorio mas proximo no es una operacion neutra y no se puede certificar sin metadatos de calibracion.",
+  "double_compensation_risk": {
+    "electric_amplitude_at_100_hz": 1.8706,
+    "record_gain": 1.7782800197601318,
+    "ratio_table_over_gain": 1.0519153222293534,
+    "ratio_db": 0.4396156220451921,
+    "note": "La amplitud electrica de la tabla (V/V) esta cerca de la ganancia de registro (1.77828). Si la tabla ya incluye la ganancia del amplificador, dividir otra vez por 1.77828 introduciria una doble correccion de 5.00 dB. Si no la incluye, no aplicarla deja ese mismo sesgo. Los archivos no permiten decidirlo."
+  },
+  "unit_interpretation": {
+    "manual_reference": "ARMT-5 user manual, Appendix 7, p. 70",
+    "electric": "V/V para sensores electricos y grabador",
+    "magnetic_literal": "V/(A/m) para sensores magneticos",
+    "conversion_nT_per_A_per_m": 0.0012566370614359172,
+    "V_per_A_per_m_to_V_per_nT": 795.7747154594767,
+    "existing_code_factor": 1000.0,
+    "existing_code_ratio_to_literal": 1.2566370614359172,
+    "field_ratio_code_over_literal": 0.7957747154594768,
+    "note": "instrument_calibration.py multiplica la tabla H por 1000 como si estuviera en mV/nT. Si el manual se lee literalmente (V/(A/m)), el cociente de sensibilidades es 1.2566 y el campo calculado por ese codigo seria 0.7958 veces el literal (-20.4 %). La unidad real no esta verificada; P1 no aplica la tabla."
+  },
+  "conclusion": "La cadena de ganancia no se puede cerrar con los archivos disponibles. P1 no aplica ganancia ni respuesta .clb; solo caracteriza y deja la decision registrada."
+}

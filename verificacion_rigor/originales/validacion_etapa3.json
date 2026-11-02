@@ -1,0 +1,268 @@
+{
+  "artifact": "validacion_etapa3",
+  "version": "P3-VAL-1.0.0",
+  "generated_at_utc": "2026-10-29T15:56:25.492892Z",
+  "stage": 3,
+  "gate": "P3",
+  "status": "APROBADO",
+  "counts": {
+    "checks": 42,
+    "passed": 42,
+    "failed": 0,
+    "observations": 0
+  },
+  "checks": [
+    {
+      "id": "FILE-CONFIG",
+      "descripcion": "Existe config_p3.json",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\config_p3.json"
+    },
+    {
+      "id": "FILE-GEN",
+      "descripcion": "Existe clean_generator.py",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\clean_generator.py"
+    },
+    {
+      "id": "FILE-DRIVER",
+      "descripcion": "Existe p3.py",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\p3.py"
+    },
+    {
+      "id": "FILE-RESUMEN",
+      "descripcion": "Existe resumen_p3.json",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\resumen_p3.json"
+    },
+    {
+      "id": "FILE-REPORTE",
+      "descripcion": "Existe reporte_p3.md",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\reporte_p3.md"
+    },
+    {
+      "id": "VER-CONFIG",
+      "descripcion": "config_p3.json declara P3-CONFIG-1.0.0",
+      "resultado": "PASA",
+      "detalle": "P3-CONFIG-1.0.0"
+    },
+    {
+      "id": "VER-RESUMEN",
+      "descripcion": "resumen_p3.json declara P3-1.0.0",
+      "resultado": "PASA",
+      "detalle": "P3-1.0.0"
+    },
+    {
+      "id": "SCENARIOS-COUNT",
+      "descripcion": "Configuraci\u00f3n declara exactamente 6 escenarios",
+      "resultado": "PASA",
+      "detalle": "6 escenarios"
+    },
+    {
+      "id": "SCENARIOS-MATCH",
+      "descripcion": "Resumen cubre los 6 escenarios",
+      "resultado": "PASA",
+      "detalle": "6 en resumen"
+    },
+    {
+      "id": "DATA-FILE-CTRL-01-HALFSPACE-D0",
+      "descripcion": "Existe archivo de datos CTRL-01-HALFSPACE-D0.npz",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\datos\\CTRL-01-HALFSPACE-D0.npz"
+    },
+    {
+      "id": "CHANNELS-CTRL-01-HALFSPACE-D0",
+      "descripcion": "CTRL-01-HALFSPACE-D0.npz contiene canales Ex, Ey, Hx, Hy, Hz y time_s",
+      "resultado": "PASA",
+      "detalle": "Keys: ['time_s', 'Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "CLOSURE-CTRL-01-HALFSPACE-D0",
+      "descripcion": "CTRL-01-HALFSPACE-D0 residuo espectral ||E - ZH|| / ||E|| < 1e-8",
+      "resultado": "PASA",
+      "detalle": "Residuo relativo = 2.886e-17"
+    },
+    {
+      "id": "FFT-RECON-CTRL-01-HALFSPACE-D0",
+      "descripcion": "CTRL-01-HALFSPACE-D0 error de reconstrucci\u00f3n FFT roundtrip < 1e-12",
+      "resultado": "PASA",
+      "detalle": "Error FFT = 4.860e-16"
+    },
+    {
+      "id": "DATA-FILE-CTRL-02-HALFSPACE-D1",
+      "descripcion": "Existe archivo de datos CTRL-02-HALFSPACE-D1.npz",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\datos\\CTRL-02-HALFSPACE-D1.npz"
+    },
+    {
+      "id": "CHANNELS-CTRL-02-HALFSPACE-D1",
+      "descripcion": "CTRL-02-HALFSPACE-D1.npz contiene canales Ex, Ey, Hx, Hy, Hz y time_s",
+      "resultado": "PASA",
+      "detalle": "Keys: ['time_s', 'Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "CLOSURE-CTRL-02-HALFSPACE-D1",
+      "descripcion": "CTRL-02-HALFSPACE-D1 residuo espectral ||E - ZH|| / ||E|| < 1e-8",
+      "resultado": "PASA",
+      "detalle": "Residuo relativo = 2.849e-17"
+    },
+    {
+      "id": "FFT-RECON-CTRL-02-HALFSPACE-D1",
+      "descripcion": "CTRL-02-HALFSPACE-D1 error de reconstrucci\u00f3n FFT roundtrip < 1e-12",
+      "resultado": "PASA",
+      "detalle": "Error FFT = 4.596e-16"
+    },
+    {
+      "id": "DATA-FILE-CTRL-03-STRATIFIED-S1-D0",
+      "descripcion": "Existe archivo de datos CTRL-03-STRATIFIED-S1-D0.npz",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\datos\\CTRL-03-STRATIFIED-S1-D0.npz"
+    },
+    {
+      "id": "CHANNELS-CTRL-03-STRATIFIED-S1-D0",
+      "descripcion": "CTRL-03-STRATIFIED-S1-D0.npz contiene canales Ex, Ey, Hx, Hy, Hz y time_s",
+      "resultado": "PASA",
+      "detalle": "Keys: ['time_s', 'Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "CLOSURE-CTRL-03-STRATIFIED-S1-D0",
+      "descripcion": "CTRL-03-STRATIFIED-S1-D0 residuo espectral ||E - ZH|| / ||E|| < 1e-8",
+      "resultado": "PASA",
+      "detalle": "Residuo relativo = 2.915e-17"
+    },
+    {
+      "id": "FFT-RECON-CTRL-03-STRATIFIED-S1-D0",
+      "descripcion": "CTRL-03-STRATIFIED-S1-D0 error de reconstrucci\u00f3n FFT roundtrip < 1e-12",
+      "resultado": "PASA",
+      "detalle": "Error FFT = 4.839e-16"
+    },
+    {
+      "id": "DATA-FILE-CTRL-04-ABSTENTION-RANK1",
+      "descripcion": "Existe archivo de datos CTRL-04-ABSTENTION-RANK1.npz",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\datos\\CTRL-04-ABSTENTION-RANK1.npz"
+    },
+    {
+      "id": "CHANNELS-CTRL-04-ABSTENTION-RANK1",
+      "descripcion": "CTRL-04-ABSTENTION-RANK1.npz contiene canales Ex, Ey, Hx, Hy, Hz y time_s",
+      "resultado": "PASA",
+      "detalle": "Keys: ['time_s', 'Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "CLOSURE-CTRL-04-ABSTENTION-RANK1",
+      "descripcion": "CTRL-04-ABSTENTION-RANK1 residuo espectral ||E - ZH|| / ||E|| < 1e-8",
+      "resultado": "PASA",
+      "detalle": "Residuo relativo = 2.737e-17"
+    },
+    {
+      "id": "FFT-RECON-CTRL-04-ABSTENTION-RANK1",
+      "descripcion": "CTRL-04-ABSTENTION-RANK1 error de reconstrucci\u00f3n FFT roundtrip < 1e-12",
+      "resultado": "PASA",
+      "detalle": "Error FFT = 5.055e-16"
+    },
+    {
+      "id": "DATA-FILE-CTRL-05-NONSTATIONARY-SFERICS",
+      "descripcion": "Existe archivo de datos CTRL-05-NONSTATIONARY-SFERICS.npz",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\datos\\CTRL-05-NONSTATIONARY-SFERICS.npz"
+    },
+    {
+      "id": "CHANNELS-CTRL-05-NONSTATIONARY-SFERICS",
+      "descripcion": "CTRL-05-NONSTATIONARY-SFERICS.npz contiene canales Ex, Ey, Hx, Hy, Hz y time_s",
+      "resultado": "PASA",
+      "detalle": "Keys: ['time_s', 'Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "CLOSURE-CTRL-05-NONSTATIONARY-SFERICS",
+      "descripcion": "CTRL-05-NONSTATIONARY-SFERICS residuo espectral ||E - ZH|| / ||E|| < 1e-8",
+      "resultado": "PASA",
+      "detalle": "Residuo relativo = 2.694e-17"
+    },
+    {
+      "id": "FFT-RECON-CTRL-05-NONSTATIONARY-SFERICS",
+      "descripcion": "CTRL-05-NONSTATIONARY-SFERICS error de reconstrucci\u00f3n FFT roundtrip < 1e-12",
+      "resultado": "PASA",
+      "detalle": "Error FFT = 4.383e-16"
+    },
+    {
+      "id": "DATA-FILE-CTRL-06-INSTRUMENT-ADC-SAT",
+      "descripcion": "Existe archivo de datos CTRL-06-INSTRUMENT-ADC-SAT.npz",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\datos\\CTRL-06-INSTRUMENT-ADC-SAT.npz"
+    },
+    {
+      "id": "CHANNELS-CTRL-06-INSTRUMENT-ADC-SAT",
+      "descripcion": "CTRL-06-INSTRUMENT-ADC-SAT.npz contiene canales Ex, Ey, Hx, Hy, Hz y time_s",
+      "resultado": "PASA",
+      "detalle": "Keys: ['time_s', 'Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "CLOSURE-CTRL-06-INSTRUMENT-ADC-SAT",
+      "descripcion": "CTRL-06-INSTRUMENT-ADC-SAT residuo espectral ||E - ZH|| / ||E|| < 1e-8",
+      "resultado": "PASA",
+      "detalle": "Residuo relativo = 2.891e-17"
+    },
+    {
+      "id": "FFT-RECON-CTRL-06-INSTRUMENT-ADC-SAT",
+      "descripcion": "CTRL-06-INSTRUMENT-ADC-SAT error de reconstrucci\u00f3n FFT roundtrip < 1e-12",
+      "resultado": "PASA",
+      "detalle": "Error FFT = 5.411e-16"
+    },
+    {
+      "id": "EST-RECOVERY-CTRL-01",
+      "descripcion": "CTRL-01 recuperaci\u00f3n P6: bias rho_a <= 0.01 dec, fase <= 0.5 deg",
+      "resultado": "PASA",
+      "detalle": "Bias=0.0047 dec, ErrFase=0.006 deg"
+    },
+    {
+      "id": "COND-SHH-CTRL-01",
+      "descripcion": "CTRL-01 cond(S_HH) <= 2.0 (excitaci\u00f3n ortogonal rica de rango 2)",
+      "resultado": "PASA",
+      "detalle": "cond=1.050"
+    },
+    {
+      "id": "EST-RECOVERY-CTRL-02",
+      "descripcion": "CTRL-02 recuperaci\u00f3n P6: bias rho_a <= 0.01 dec, fase <= 0.5 deg",
+      "resultado": "PASA",
+      "detalle": "Bias=0.0028 dec, ErrFase=0.001 deg"
+    },
+    {
+      "id": "EST-RECOVERY-CTRL-03",
+      "descripcion": "CTRL-03 estratificado S1: bias rho_a <= 0.02 dec, fase <= 0.5 deg",
+      "resultado": "PASA",
+      "detalle": "Bias=0.0047 dec, ErrFase=0.086 deg"
+    },
+    {
+      "id": "RANK1-ABSTENTION-CTRL-04",
+      "descripcion": "CTRL-04 detecta rango 1 y activa abstenci\u00f3n (cond > 1e4)",
+      "resultado": "PASA",
+      "detalle": "cond=4.80e+15, abstention=True"
+    },
+    {
+      "id": "TIPPER-CLOSURE-CTRL-05",
+      "descripcion": "CTRL-05 residuo relativo de tipper ||Hz - TH|| / ||Hz|| < 1e-8",
+      "resultado": "PASA",
+      "detalle": "Residuo Hz = 3.687e-17"
+    },
+    {
+      "id": "INSTRUMENT-CLIPPING-CTRL-06",
+      "descripcion": "CTRL-06 detecta saturaci\u00f3n ADC (clip_fraction > 0.05)",
+      "resultado": "PASA",
+      "detalle": "clip_fraction = 15.45%"
+    },
+    {
+      "id": "ISOLATION-P0",
+      "descripcion": "Manifiesto y particiones de P0 intactos (sin fuga de datos)",
+      "resultado": "PASA",
+      "detalle": "Manifest hash=5a67b03fea..."
+    },
+    {
+      "id": "CUARENTENA-FLAG",
+      "descripcion": "config_p3 declara synthetic: true y scientific_claim: false",
+      "resultado": "PASA",
+      "detalle": "synthetic=True"
+    }
+  ]
+}

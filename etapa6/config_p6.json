@@ -1,0 +1,126 @@
+{
+ "artifact": "config_p6",
+ "version": "P6-CONFIG-1.0.0",
+ "stage": 6,
+ "gate": "P6",
+ "title": "Estimador de referencia e incertidumbre (rama AMT sin TEM)",
+ "scope": {
+  "rama": "AMT_sin_TEM",
+  "tem_usado": false,
+  "sintesis_para_entrenamiento": false,
+  "etiquetas": false,
+  "red_neuronal": false,
+  "calibracion_aplicada": false,
+  "respuesta_real": "respuesta relativa no calibrada; no se presenta como rho_a fisica",
+  "justificacion": "PLAN_IMPLEMENTACION_ARMT.md v1.3, seccion 10: la Etapa 6 puede estimar respuestas convencionales fuera del soporte TEM si los datos ARMT lo permiten. P3-P5 y P7 siguen cerradas porque exigen P2-T.",
+  "bloqueos_que_limitan": ["B-P0-04", "B-P0-06", "B-P0-01", "B-P0-02"]
+ },
+ "inputs": {
+  "manifest": "etapa0/manifest.json",
+  "splits": "etapa0/splits.csv",
+  "grid_D0": "etapa1/respuesta_interpolada_D0.csv",
+  "grid_D1": "etapa1/respuesta_interpolada_D1.csv",
+  "p1_export_reference": "etapa1/exportaciones/01401401_D0_900s_uV.npy",
+  "p1_export_meta": "etapa1/exportaciones/exportaciones.json"
+ },
+ "bands": {
+  "D0": {
+   "trace_index": 0,
+   "sample_rate_hz": 4000.0,
+   "band_range_hz": [5.0, 1000.0],
+   "f_min_hz": 125.0,
+   "f_max_hz": 1000.0,
+   "note": "f_min = N_c*fs/L con N_c=8 y L=256; por debajo no hay resolucion con esta ventana y se marca no_evaluado."
+  },
+  "D1": {
+   "trace_index": 1,
+   "sample_rate_hz": 32000.0,
+   "band_range_hz": [1000.0, 10000.0],
+   "f_min_hz": 1000.0,
+   "f_max_hz": 10000.0,
+   "note": "1000 Hz es el empalme D0/D1; se estima en ambas bandas por separado y no se fusiona."
+  }
+ },
+ "estimator": {
+  "window_samples": 256,
+  "overlap_fraction": 0.5,
+  "taper": "hann_periodic",
+  "detrend": "linear",
+  "band_half_width_rel": 0.1225,
+  "min_bins": 1,
+  "channels": ["Ex", "Ey", "Hx", "Hy", "Hz"]
+ },
+ "robust": {
+  "enabled": true,
+  "passes": 2,
+  "huber_c": 1.5,
+  "subsample_stride": 64,
+  "note": "Pesos Huber sobre el misfit relativo por ventana; la escala se estima con una submuestra de ventanas y se recalcula en cada pasada."
+ },
+ "bootstrap": {
+  "replicates": 200,
+  "block_seconds": 5.0,
+  "seed": 20261028,
+  "note": "Bootstrap por bloques temporales sobre las matrices ponderadas; no se remuestrean ventanas solapadas como independientes."
+ },
+ "identifiability": {
+  "cond_max": 1000000.0,
+  "eig_ratio_min": 0.0001,
+  "min_windows": 32,
+  "min_blocks": 8,
+  "gamma2_alpha": 0.05
+ },
+ "controls": {
+  "duration_D0_s": 240.0,
+  "duration_D1_s": 30.0,
+  "realizations": 48,
+  "calibration_realizations": 24,
+  "seed": 20261028,
+  "band_D0_hz": [110.0, 1200.0],
+  "band_D1_hz": [900.0, 11000.0],
+  "frequencies_D0_hz": [150.7313464, 321.30845, 684.9213684, 1000.0],
+  "frequencies_D1_hz": [1211.527659, 3162.27766, 8254.041853],
+  "models": {
+   "semiespacio_100": {"rho": [100.0], "interfaces_m": []},
+   "dos_capas": {"rho": [50.0, 200.0], "interfaces_m": [100.0]},
+   "tres_capas": {"rho": [30.0, 5.0, 300.0], "interfaces_m": [40.0, 250.0]}
+  },
+  "scenarios": {
+   "limpio": {"snr_db": null, "noise_target": null, "coherente_rel": 0.0, "outliers": 0.0, "rango_uno": false},
+   "ruido_E": {"snr_db": 10.0, "noise_target": "E", "coherente_rel": 0.0, "outliers": 0.0, "rango_uno": false},
+   "ruido_H": {"snr_db": 10.0, "noise_target": "H", "coherente_rel": 0.0, "outliers": 0.0, "rango_uno": false},
+   "ruido_coherente": {"snr_db": null, "noise_target": null, "coherente_rel": 0.35, "outliers": 0.0, "rango_uno": false},
+   "outliers": {"snr_db": null, "noise_target": null, "coherente_rel": 0.0, "outliers": 0.0002, "rango_uno": false},
+   "rango_uno": {"snr_db": null, "noise_target": null, "coherente_rel": 0.0, "outliers": 0.0, "rango_uno": true}
+  }
+ },
+ "tolerances": {
+  "limpio_bias_log10": 0.01,
+  "limpio_bias_phase_deg": 0.2,
+  "ruido_bias_log10": 0.02,
+  "ruido_bias_phase_deg": 0.4,
+  "outliers_bias_log10": 0.03,
+  "coverage_nominal": 0.68,
+  "coverage_min": 0.45,
+  "coverage_max": 0.88,
+  "rango_uno_flag_min": 0.95,
+  "covarianza_psd_tol": 1e-10
+ },
+ "outputs": {
+  "responses_dir": "respuestas",
+  "responses_csv": "respuestas_resumen.csv",
+  "benchmark_csv": "benchmark_control.csv",
+  "calibration": "calibracion_p6.json",
+  "summary": "resumen_p6.json",
+  "report": "reporte_p6.md",
+  "schema": "esquema_response.json",
+  "validation": "validacion_etapa6.json"
+ },
+ "blockers": [
+  {"id": "B-P0-04", "impact": "sin calibracion certificada; la respuesta real es relativa y no se convierte a rho_a"},
+  {"id": "B-P0-06", "impact": "sin F_red_validada por familia de ruido; la cobertura de frecuencias es solo instrumental"},
+  {"id": "B-P0-01", "impact": "sitio sin identificar; no se agrupa por sitio"},
+  {"id": "B-P0-02", "impact": "coordenadas candidatas sin datum; no se comparan espacialmente"},
+  {"id": "SIN-REF-REMOTA", "impact": "no hay referencia remota; el ruido en H no es corregible y se reporta como limite"}
+ ]
+}

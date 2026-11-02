@@ -1,0 +1,45 @@
+{
+  "release_version": "P10-RELEASE-1.0.0",
+  "release_timestamp_utc": "2026-10-30T16:05:21Z",
+  "frozen_models_and_code": {
+    "etapa7/checkpoints/c_theta_scnet18.pt": "1e1d92b89b04afc4af6301ac0ad84c99e472161b05cb8573da5cfb90348acd08",
+    "etapa7/checkpoints/d_psi_b3_scnet18.pt": "35c5e45c9676cead3b2c32eeddf0899bfbd861072e4f514670f63fc962a25f4e",
+    "etapa7/checkpoints/d_psi_b4_cbam.pt": "c987c9713ce4dbcc1597b3fc956fa7bbe05c9e1e9809fd6f20599ec6dc6f7be3",
+    "etapa7/modelos_cbam.py": "18f03b97888c046441f599cb0e8ac37470dcca73d08db5f31e6bb5ade6bac8d5",
+    "etapa8/pipeline_armt.py": "8e37cd1a23c0266697b5772633d67777c93d757d2b5e9baf6c46cdf0d4578191",
+    "etapa8/config_p8.json": "dd197dd2d5987347548d88381a3e529edfd85259960f52f1625c5d72986e43c8",
+    "etapa9/evaluador_ciego.py": "bc10461d608c813fe60bd959e04bb03f26b4d7424b27857b5ad940a8233c05d9",
+    "etapa9/config_p9.json": "1d7336ee80ea699f87a69ee15beb9e0149c434acb5e6c8fae8c1145e70634103",
+    "banco_sintetico/soporte_S1.json": "a6b50cfb1c64c832644078867f4b381802752f810e93dd41a8ba7fa12a8ffffd",
+    "etapa4/noise_episodes.csv": "1f3be6d1e78e3cd79e6d90ab3d29799fe41c04793143bb40741d00f13c730f69"
+  },
+  "exported_soundings": {
+    "etapa10/salidas/SND-BLIND-01.edi": "6504127cc8cb23c2387ca48681003d3d6b2b650ed8f78073d1f8f5db5b0fd44b",
+    "etapa10/salidas/SND-BLIND-01.json": "8d6cf77c6f530ebb6fb616f9b0d12c22bafa63aa104693d6d6d8e83479b8f156",
+    "etapa10/salidas/SND-BLIND-02.edi": "c55767a888baa689d8188c359575f353c7494b459fb5d039cc2df3256eaf19ef",
+    "etapa10/salidas/SND-BLIND-02.json": "25a413a4f760a8bf9d01a00b286972cf6138f8884d9fda67226d35b15ba1bef7",
+    "etapa10/salidas/SND-FIELD-EMPTY.edi": "9a0548d762523fb5881c457052b94fffe69e6351d66adc84ca51f2eefd3c38b9",
+    "etapa10/salidas/SND-FIELD-EMPTY.json": "4ce7ba697dff7256433e3550ec2f2ed42c91a2c658a20fb1f232a8aca9fcabfa",
+    "etapa10/salidas/SND-RANK1-TEST.edi": "aeed8f7a248fd86bc847734e220c5a68b57b2f21daf1c52ba6f8f415384c1503",
+    "etapa10/salidas/SND-RANK1-TEST.json": "e409d94cdea68651e1a98491531080372a2ce4ac077963184d5d4e041da4343c",
+    "etapa10/salidas/SND-RMT-SCOPE.edi": "8389acb7762935c20b875bee6bdb7a9c93db27731b5ed1509746ac8daaae9ac5",
+    "etapa10/salidas/SND-RMT-SCOPE.json": "54948f8c86b0e220f12ae05162b318078ec4cf2e2dcef3121bd1c34199f985d3",
+    "etapa10/salidas/SND-FALLBACK-ANOMALY.edi": "5b1c2a28e4790e485127b7ee678262a3f6227660cb3827f5bf9069875c6a1a04",
+    "etapa10/salidas/SND-FALLBACK-ANOMALY.json": "96ba8a54e8732a0c161e965759cfa718b13f30c1d77f96a990b78c0e31a4ba7b"
+  },
+  "categories_policy": [
+    "aceptado",
+    "condicional",
+    "direccional",
+    "sin_soporte_tem",
+    "fuera_de_dominio_rmt",
+    "no_identificable"
+  ],
+  "governance_rules": {
+    "zero_d2_d3_intervention": true,
+    "zero_fake_field_targets": true,
+    "zero_support_extrapolation": true,
+    "revert_to_classical_on_failure": true
+  },
+  "certification_status": "BLOCKED_P9_FAILED"
+}

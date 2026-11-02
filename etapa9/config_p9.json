@@ -1,0 +1,181 @@
+{
+  "version": "P9-CONFIG-1.1.0",
+  "stage": 9,
+  "gate": "P9",
+  "safety_gate": "G4",
+  "synthetic": true,
+  "scientific_claim": false,
+  "data_origin": "synthetic",
+  "truth_model_source": "etapa3/config_p3.json",
+  "mandatory_benchmarks": ["B0", "B1", "B3", "B4", "B7", "B8", "B9", "B10"],
+  "preregistered_endpoints": {
+    "clean_non_inferiority": {
+      "p95_bias_z_pct_max": 2.0,
+      "p95_phase_diff_deg_max": 1.0,
+      "median_bias_z_pct_max": 5.0,
+      "median_phase_diff_deg_max": 2.0
+    },
+    "contaminated_recovery": {
+      "median_bias_log10_rho_max": 0.05,
+      "median_phase_diff_deg_max": 3.0,
+      "p90_bias_log10_rho_max": 0.15,
+      "p90_phase_diff_deg_max": 8.0,
+      "min_impedance_improvement_pct": 20.0
+    },
+    "non_identifiable_rejection": {
+      "max_false_recovery_rate_pct": 5.0
+    },
+    "domain_governance": {
+      "zero_d2_d3_intervention": true,
+      "zero_fake_field_targets": true,
+      "zero_support_extrapolation": true
+    }
+  },
+  "benchmarks": [
+    {
+      "id": "B0",
+      "name": "Datos calibrados + estimador robusto Huber",
+      "type": "classical_baseline"
+    },
+    {
+      "id": "B1",
+      "name": "Pre-QC espectral + estimador robusto",
+      "type": "spectral_filtering"
+    },
+    {
+      "id": "B3",
+      "name": "SCNet18 reproducido (Zhang et al. 2024)",
+      "type": "deep_learning_prior"
+    },
+    {
+      "id": "B4",
+      "name": "CBAM Adaptado Plan v1.3 (CBAM_ResUNet)",
+      "type": "deep_learning_adapted"
+    },
+    {
+      "id": "B7",
+      "name": "Clasificador solo-potencia (control de atajo)",
+      "type": "energy_shortcut_control",
+      "implemented": true
+    },
+    {
+      "id": "B8",
+      "name": "Filtro multicanal de Wiener 4x4 (cota analítica lineal)",
+      "type": "linear_optimal_bound",
+      "implemented": true,
+      "implementation": "scalar_z_preserving"
+    },
+    {
+      "id": "B9",
+      "name": "Familia de ruido independiente (NOISE-D0-003)",
+      "type": "independent_noise_family",
+      "implemented": true
+    },
+    {
+      "id": "B2",
+      "name": "BSS directa + estimación robusta",
+      "type": "bss_baseline",
+      "implemented": false,
+      "not_implemented_reason": "Requiere separacion BSS por registro no congelada en etapa4"
+    },
+    {
+      "id": "B5",
+      "name": "BSS seguida de CBAM",
+      "type": "bss_then_cbam",
+      "implemented": false,
+      "not_implemented_reason": "Depende de B2"
+    },
+    {
+      "id": "B6",
+      "name": "Referencia remota robusta",
+      "type": "remote_reference",
+      "implemented": false,
+      "not_implemented_reason": "No existe referencia remota en el conjunto actual"
+    },
+    {
+      "id": "B10",
+      "name": "Oráculo de ruido y máscara ideal",
+      "type": "theoretical_oracle",
+      "implemented": true
+    }
+  ],
+  "blind_soundings": {
+    "synth_clean_halfspace": {
+      "id": "SND-BLIND-01",
+      "source_file": "etapa3/datos/CTRL-01-HALFSPACE-D0.npz",
+      "band": "D0",
+      "fs_hz": 4000.0,
+      "model_type": "halfspace",
+      "rho_ohm_m": [100.0],
+      "interfaces_m": [],
+      "strike_deg": 0.0,
+      "test_type": "clean_physical"
+    },
+    "synth_stratified_s1": {
+      "id": "SND-BLIND-02",
+      "source_file": "etapa3/datos/CTRL-03-STRATIFIED-S1-D0.npz",
+      "band": "D0",
+      "fs_hz": 4000.0,
+      "support_file": "banco_sintetico/soporte_S1.json",
+      "model_type": "stratified_3layers",
+      "rho_ohm_m": [40.0, 8.0, 300.0],
+      "interfaces_m": [30.0, 120.0],
+      "strike_deg": 0.0,
+      "noise_source": "etapa4/noise_bank/NOISE-D0-001.npz",
+      "independent_noise_source": "etapa4/noise_bank/NOISE-D0-003.npz",
+      "test_snr_db": 0.0,
+      "test_type": "semisynthetic_partial_support"
+    },
+    "synth_nonstationary_sferics": {
+      "id": "SND-BLIND-03",
+      "source_file": "etapa3/datos/CTRL-05-NONSTATIONARY-SFERICS.npz",
+      "band": "D0",
+      "fs_hz": 4000.0,
+      "model_type": "nonstationary_sferics_tipper",
+      "rho_ohm_m": [100.0],
+      "interfaces_m": [],
+      "strike_deg": 30.0,
+      "tipper": [0.05, -0.02],
+      "noise_source": "etapa4/noise_bank/NOISE-D0-001.npz",
+      "test_snr_db": -2.4,
+      "test_type": "nonstationary_bursts_test_split"
+    },
+    "field_texture_stress_f1": {
+      "id": "SND-BLIND-04",
+      "source_file": "etapa3/datos/CTRL-03-STRATIFIED-S1-D0.npz",
+      "band": "D0",
+      "fs_hz": 4000.0,
+      "support_file": "banco_sintetico/soporte_S1.json",
+      "noise_source": "etapa4/noise_bank/NOISE-D0-002.npz",
+      "test_snr_db": 3.0,
+      "test_type": "sim_to_real_texture_stress"
+    },
+    "non_identifiable_rank1": {
+      "id": "SND-BLIND-05",
+      "source_file": "etapa3/datos/CTRL-04-ABSTENTION-RANK1.npz",
+      "band": "D0",
+      "fs_hz": 4000.0,
+      "test_type": "abstention_rank1"
+    },
+    "non_identifiable_adc_sat": {
+      "id": "SND-BLIND-06",
+      "source_file": "etapa3/datos/CTRL-06-INSTRUMENT-ADC-SAT.npz",
+      "band": "D0",
+      "fs_hz": 4000.0,
+      "test_type": "abstention_clipping"
+    },
+    "non_identifiable_empty_support": {
+      "id": "SND-BLIND-07",
+      "catalog_row": "ARMT5-123-01-01-01",
+      "band": "D0",
+      "support_file": "banco_sintetico/soporte_S0.json",
+      "test_type": "abstention_empty_support"
+    },
+    "rmt_scope_exclusion": {
+      "id": "SND-BLIND-08",
+      "band": "D2",
+      "fs_hz": 400000.0,
+      "test_type": "rmt_exclusion"
+    }
+  }
+}

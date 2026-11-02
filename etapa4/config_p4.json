@@ -1,0 +1,50 @@
+{
+  "version": "P4-CONFIG-1.0.0",
+  "stage": 4,
+  "gate": "P4",
+  "subgate": "P4-N",
+  "synthetic": false,
+  "scientific_claim": false,
+  "description": "Configuración de extracción y validación de banco de contaminantes multicanal (Etapa 4)",
+  "target_record": "ARMT5-700-14-14-01",
+  "target_split": "desarrollo",
+  "allowed_splits": ["desarrollo"],
+  "bands": {
+    "D0": {
+      "file": "etapa1/exportaciones/01401401_D0_900s_uV.npy",
+      "mask_file": "etapa1/mascaras_QC_D0.npz",
+      "fs": 4000.0,
+      "window_length": 256,
+      "step": 128,
+      "k_eff_min": 16,
+      "alpha_significance": 0.05,
+      "max_sources": 2
+    },
+    "D1": {
+      "file": "etapa1/exportaciones/01401401_D1_45s_uV.npy",
+      "mask_file": "etapa1/mascaras_QC_D1.npz",
+      "fs": 32000.0,
+      "window_length": 256,
+      "step": 128,
+      "k_eff_min": 16,
+      "alpha_significance": 0.05,
+      "max_sources": 2
+    }
+  },
+  "tolerances": {
+    "max_rms_reconstruction_error": 0.01,
+    "max_useful_signal_leakage": 0.05,
+    "min_kurtosis_excess": 1.2
+  },
+  "leakage_benchmark": {
+    "clean_source_npz": "etapa3/datos/CTRL-01-HALFSPACE-D0.npz",
+    "test_duration_s": 8.0,
+    "nominal_snr_levels_db": [0.0, 10.0],
+    "stress_snr_levels_db": [-10.0]
+  },
+  "episode_classes": [
+    "ruido_admitido",
+    "candidato_o_ambiguo",
+    "senal_protegida"
+  ]
+}

@@ -1,0 +1,399 @@
+{
+  "artifact": "resumen_p3",
+  "version": "P3-1.0.0",
+  "config_version": "P3-CONFIG-1.0.0",
+  "generator_version": "P3-GEN-1.0.0",
+  "generated_at_utc": "2026-10-29T00:35:11.014392Z",
+  "gate": "P3",
+  "stage": 3,
+  "status": "APROBADO",
+  "summary": {
+    "total_scenarios": 6,
+    "all_closure_pass": true,
+    "all_fft_pass": true,
+    "max_relative_spectral_residual": 2.915049874165935e-17,
+    "max_fft_reconstruction_error": 5.410535340862219e-16
+  },
+  "scenarios": [
+    {
+      "id": "CTRL-01-HALFSPACE-D0",
+      "name": "Semiespacio 100 ohm.m en D0",
+      "band": "D0",
+      "fs": 4000.0,
+      "n_samples": 64000,
+      "closure_metrics": {
+        "e_rel_residual": 2.885592866021382e-17,
+        "hz_rel_residual": 0.0,
+        "n_valid_bins": 17254,
+        "pasa_cierre": true
+      },
+      "max_fft_reconstruction_error": 4.859604501359353e-16,
+      "estimation_metrics": {
+        "freq_details": [
+          {
+            "f_hz": 150.0,
+            "cond_shh": 1.06600374901078,
+            "ratio_shh": 0.9380830047999084,
+            "z_est_xy_re": 0.24127970325284098,
+            "z_est_xy_im": 0.2414256291031783,
+            "z_true_xy_re": 0.24334672055841672,
+            "z_true_xy_im": 0.24334672055841672,
+            "rho_est_xy": 98.367864991618,
+            "rho_true_xy": 100.0,
+            "bias_log10_rho": 0.007146754578456482,
+            "phase_est_deg": 45.017320991774994,
+            "phase_true_deg": 45.0,
+            "phase_err_deg": 0.017320991774994354
+          },
+          {
+            "f_hz": 250.0,
+            "cond_shh": 1.1120676377670753,
+            "ratio_shh": 0.89922587982859,
+            "z_est_xy_re": 0.31327394285620885,
+            "z_est_xy_im": 0.3133634739933321,
+            "z_true_xy_re": 0.3141592653589793,
+            "z_true_xy_im": 0.3141592653589792,
+            "rho_est_xy": 99.46560273691122,
+            "rho_true_xy": 99.99999999999997,
+            "bias_log10_rho": 0.0023270813073665852,
+            "phase_est_deg": 45.00818616335273,
+            "phase_true_deg": 44.99999999999999,
+            "phase_err_deg": 0.008186163352739584
+          },
+          {
+            "f_hz": 500.0,
+            "cond_shh": 1.033298020746873,
+            "ratio_shh": 0.9677750077148072,
+            "z_est_xy_re": 0.4436015110427554,
+            "z_est_xy_im": 0.4436474461673,
+            "z_true_xy_re": 0.44428829381583657,
+            "z_true_xy_im": 0.44428829381583645,
+            "rho_est_xy": 99.70140167085599,
+            "rho_true_xy": 99.99999999999999,
+            "bias_log10_rho": 0.0012987360349927535,
+            "phase_est_deg": 45.002966347544366,
+            "phase_true_deg": 44.99999999999999,
+            "phase_err_deg": 0.0029663475443726384
+          },
+          {
+            "f_hz": 800.0,
+            "cond_shh": 1.0116094491507996,
+            "ratio_shh": 0.9885237834022358,
+            "z_est_xy_re": 0.5567396774039451,
+            "z_est_xy_im": 0.5567374513609414,
+            "z_true_xy_re": 0.5619851784832582,
+            "z_true_xy_im": 0.5619851784832581,
+            "rho_est_xy": 98.14154412740797,
+            "rho_true_xy": 100.0,
+            "bias_log10_rho": 0.008147113252015226,
+            "phase_est_deg": 44.999885455331025,
+            "phase_true_deg": 44.99999999999999,
+            "phase_err_deg": 0.00011454466896765325
+          }
+        ],
+        "median_bias_log10_rho": 0.004736917942911534,
+        "median_phase_err_deg": 0.005576255448556111,
+        "median_cond_shh": 1.0496508848788264
+      },
+      "is_rank1": false,
+      "clip_fraction": 0.0,
+      "file": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\datos\\CTRL-01-HALFSPACE-D0.npz"
+    },
+    {
+      "id": "CTRL-02-HALFSPACE-D1",
+      "name": "Semiespacio 100 ohm.m en D1",
+      "band": "D1",
+      "fs": 32000.0,
+      "n_samples": 262144,
+      "closure_metrics": {
+        "e_rel_residual": 2.849362295986108e-17,
+        "hz_rel_residual": 0.0,
+        "n_valid_bins": 95957,
+        "pasa_cierre": true
+      },
+      "max_fft_reconstruction_error": 4.595936190513639e-16,
+      "estimation_metrics": {
+        "freq_details": [
+          {
+            "f_hz": 1500.0,
+            "cond_shh": 1.057848425476473,
+            "ratio_shh": 0.9453150148137555,
+            "z_est_xy_re": 0.7667744375536345,
+            "z_est_xy_im": 0.7667604585041643,
+            "z_true_xy_re": 0.7695298980971184,
+            "z_true_xy_im": 0.7695298980971182,
+            "rho_est_xy": 99.28333083960138,
+            "rho_true_xy": 99.99999999999999,
+            "bias_log10_rho": 0.003123661193115579,
+            "phase_est_deg": 44.99947771613265,
+            "phase_true_deg": 45.0,
+            "phase_err_deg": 0.0005222838673475394
+          },
+          {
+            "f_hz": 3000.0,
+            "cond_shh": 1.0231893800964054,
+            "ratio_shh": 0.9773361798436372,
+            "z_est_xy_re": 1.0855976066034632,
+            "z_est_xy_im": 1.0855016953325,
+            "z_true_xy_re": 1.0882796185405306,
+            "z_true_xy_im": 1.0882796185405308,
+            "rho_est_xy": 99.49892612433224,
+            "rho_true_xy": 100.0,
+            "bias_log10_rho": 0.002181606498430577,
+            "phase_est_deg": 44.99746888084509,
+            "phase_true_deg": 45.00000000000001,
+            "phase_err_deg": 0.002531119154916439
+          },
+          {
+            "f_hz": 6000.0,
+            "cond_shh": 1.0235433327514039,
+            "ratio_shh": 0.976998206135429,
+            "z_est_xy_re": 1.534643417524062,
+            "z_est_xy_im": 1.5346365521025882,
+            "z_true_xy_re": 1.5390597961942367,
+            "z_true_xy_im": 1.5390597961942365,
+            "rho_est_xy": 99.42647256880257,
+            "rho_true_xy": 99.99999999999999,
+            "bias_log10_rho": 0.0024979681190075986,
+            "phase_est_deg": 44.9998718397543,
+            "phase_true_deg": 45.0,
+            "phase_err_deg": 0.00012816024570128093
+          },
+          {
+            "f_hz": 9000.0,
+            "cond_shh": 1.0215160055406671,
+            "ratio_shh": 0.9789371821645819,
+            "z_est_xy_re": 1.8737245062204164,
+            "z_est_xy_im": 1.8736626969198737,
+            "z_true_xy_re": 1.884955592153876,
+            "z_true_xy_im": 1.884955592153876,
+            "rho_est_xy": 98.808635383279,
+            "rho_true_xy": 100.0,
+            "bias_log10_rho": 0.005205098576100076,
+            "phase_est_deg": 44.99905496500269,
+            "phase_true_deg": 45.0,
+            "phase_err_deg": 0.0009450349973079142
+          }
+        ],
+        "median_bias_log10_rho": 0.0028108146560615888,
+        "median_phase_err_deg": 0.0007336594323277268,
+        "median_cond_shh": 1.0233663564239046
+      },
+      "is_rank1": false,
+      "clip_fraction": 0.0,
+      "file": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\datos\\CTRL-02-HALFSPACE-D1.npz"
+    },
+    {
+      "id": "CTRL-03-STRATIFIED-S1-D0",
+      "name": "Capas estratificadas S1 en D0 restringido a soporte TEM",
+      "band": "D0",
+      "fs": 4000.0,
+      "n_samples": 64000,
+      "closure_metrics": {
+        "e_rel_residual": 2.915049874165935e-17,
+        "hz_rel_residual": 0.0,
+        "n_valid_bins": 16013,
+        "pasa_cierre": true
+      },
+      "max_fft_reconstruction_error": 4.839195623249287e-16,
+      "estimation_metrics": {
+        "freq_details": [
+          {
+            "f_hz": 150.0,
+            "cond_shh": 1.0631495901101395,
+            "ratio_shh": 0.9406014067092878,
+            "z_est_xy_re": 0.08387141275459553,
+            "z_est_xy_im": 0.07243110819146677,
+            "z_true_xy_re": 0.08408903119017144,
+            "z_true_xy_im": 0.07334234593205737,
+            "rho_est_xy": 10.369108031270411,
+            "rho_true_xy": 10.512127578238276,
+            "bias_log10_rho": 0.005949223743689114,
+            "phase_est_deg": 40.813795049296814,
+            "phase_true_deg": 41.09489557153164,
+            "phase_err_deg": 0.28110052223482285
+          },
+          {
+            "f_hz": 250.0,
+            "cond_shh": 1.0974739624298844,
+            "ratio_shh": 0.9111833485196585,
+            "z_est_xy_re": 0.0946240335489622,
+            "z_est_xy_im": 0.11219506622615259,
+            "z_true_xy_re": 0.09468940827886137,
+            "z_true_xy_im": 0.11274473761076995,
+            "rho_est_xy": 10.913021300118297,
+            "rho_true_xy": 10.9819294766919,
+            "bias_log10_rho": 0.0027336475844592645,
+            "phase_est_deg": 49.856100043695484,
+            "phase_true_deg": 49.97455937562169,
+            "phase_err_deg": 0.1184593319262035
+          },
+          {
+            "f_hz": 500.0,
+            "cond_shh": 1.0569092758993197,
+            "ratio_shh": 0.9461550038427887,
+            "z_est_xy_re": 0.12696633007308777,
+            "z_est_xy_im": 0.20122946820193358,
+            "z_true_xy_re": 0.12729743330583349,
+            "z_true_xy_im": 0.20217008684947027,
+            "rho_est_xy": 14.340429855226146,
+            "rho_true_xy": 14.457869389546042,
+            "bias_log10_rho": 0.003542127541076079,
+            "phase_est_deg": 57.7500018060386,
+            "phase_true_deg": 57.803219594420874,
+            "phase_err_deg": 0.053217788382276865
+          },
+          {
+            "f_hz": 800.0,
+            "cond_shh": 1.00897461165771,
+            "ratio_shh": 0.9911052155782542,
+            "z_est_xy_re": 0.16948699247292096,
+            "z_est_xy_im": 0.28707771361038814,
+            "z_true_xy_re": 0.17169091378506754,
+            "z_true_xy_im": 0.2912956310488565,
+            "rho_est_xy": 17.59497039988645,
+            "rho_true_xy": 18.100224357125022,
+            "bias_log10_rho": 0.012295417543003007,
+            "phase_est_deg": 59.44294372674018,
+            "phase_true_deg": 59.48471730126102,
+            "phase_err_deg": 0.04177357452083896
+          }
+        ],
+        "median_bias_log10_rho": 0.004745675642382596,
+        "median_phase_err_deg": 0.08583856015424018,
+        "median_cond_shh": 1.0600294330047295
+      },
+      "is_rank1": false,
+      "clip_fraction": 0.0,
+      "file": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\datos\\CTRL-03-STRATIFIED-S1-D0.npz"
+    },
+    {
+      "id": "CTRL-04-ABSTENTION-RANK1",
+      "name": "Excitaci\u00f3n polarizada de rango uno (abstenci\u00f3n)",
+      "band": "D0",
+      "fs": 4000.0,
+      "n_samples": 64000,
+      "closure_metrics": {
+        "e_rel_residual": 2.7374741388812003e-17,
+        "hz_rel_residual": 0.0,
+        "n_valid_bins": 17254,
+        "pasa_cierre": true
+      },
+      "max_fft_reconstruction_error": 5.054660489805435e-16,
+      "estimation_metrics": {
+        "rank1_detected": true,
+        "median_cond_shh": 4802770973936201.0,
+        "abstention_triggered": true
+      },
+      "is_rank1": true,
+      "clip_fraction": 0.0,
+      "file": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\datos\\CTRL-04-ABSTENTION-RANK1.npz"
+    },
+    {
+      "id": "CTRL-05-NONSTATIONARY-SFERICS",
+      "name": "Fuente no estacionaria con r\u00e1fagas impulsivas (sferics) y tipper",
+      "band": "D0",
+      "fs": 4000.0,
+      "n_samples": 64000,
+      "closure_metrics": {
+        "e_rel_residual": 2.6943345549952668e-17,
+        "hz_rel_residual": 3.6869707909351706e-17,
+        "n_valid_bins": 17254,
+        "pasa_cierre": true
+      },
+      "max_fft_reconstruction_error": 4.3830230510275832e-16,
+      "estimation_metrics": {
+        "freq_details": [
+          {
+            "f_hz": 150.0,
+            "cond_shh": 1.1777795420575845,
+            "ratio_shh": 0.8490553319112648,
+            "z_est_xy_re": 0.24099495956801725,
+            "z_est_xy_im": 0.24085554999340072,
+            "z_true_xy_re": 0.24334672055841672,
+            "z_true_xy_im": 0.24334672055841672,
+            "rho_est_xy": 98.01977345633729,
+            "rho_true_xy": 100.0,
+            "bias_log10_rho": 0.008686305565241081,
+            "phase_est_deg": 44.98342311595014,
+            "phase_true_deg": 45.0,
+            "phase_err_deg": 0.016576884049861462
+          },
+          {
+            "f_hz": 250.0,
+            "cond_shh": 1.5283116969859247,
+            "ratio_shh": 0.6543167875847316,
+            "z_est_xy_re": 0.31529719813487644,
+            "z_est_xy_im": 0.3158874775945091,
+            "z_true_xy_re": 0.3141592653589793,
+            "z_true_xy_im": 0.3141592653589792,
+            "rho_est_xy": 100.91449138059609,
+            "rho_true_xy": 99.99999999999997,
+            "bias_log10_rho": 0.003953535659401597,
+            "phase_est_deg": 45.05358259351193,
+            "phase_true_deg": 44.99999999999999,
+            "phase_err_deg": 0.0535825935119405
+          },
+          {
+            "f_hz": 500.0,
+            "cond_shh": 1.095147947660309,
+            "ratio_shh": 0.91311863583036,
+            "z_est_xy_re": 0.44336649424339136,
+            "z_est_xy_im": 0.4433684391292908,
+            "z_true_xy_re": 0.44428829381583657,
+            "z_true_xy_im": 0.44428829381583645,
+            "rho_est_xy": 99.58591171856519,
+            "rho_true_xy": 99.99999999999999,
+            "bias_log10_rho": 0.00180209627159722,
+            "phase_est_deg": 45.00012566749034,
+            "phase_true_deg": 44.99999999999999,
+            "phase_err_deg": 0.0001256674903444832
+          },
+          {
+            "f_hz": 800.0,
+            "cond_shh": 1.3063540617146743,
+            "ratio_shh": 0.7654892569380733,
+            "z_est_xy_re": 0.556729299549918,
+            "z_est_xy_im": 0.5568915968960327,
+            "z_true_xy_re": 0.5619851784832582,
+            "z_true_xy_im": 0.5619851784832581,
+            "rho_est_xy": 98.1668911297617,
+            "rho_true_xy": 100.0,
+            "bias_log10_rho": 0.00803496256117242,
+            "phase_est_deg": 45.008350196123644,
+            "phase_true_deg": 44.99999999999999,
+            "phase_err_deg": 0.008350196123650733
+          }
+        ],
+        "median_bias_log10_rho": 0.005994249110287009,
+        "median_phase_err_deg": 0.012463540086756097,
+        "median_cond_shh": 1.2420668018861294
+      },
+      "is_rank1": false,
+      "clip_fraction": 0.0,
+      "file": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\datos\\CTRL-05-NONSTATIONARY-SFERICS.npz"
+    },
+    {
+      "id": "CTRL-06-INSTRUMENT-ADC-SAT",
+      "name": "Efectos instrumentales: ruido sensor, ganancias y saturaci\u00f3n ADC",
+      "band": "D0",
+      "fs": 4000.0,
+      "n_samples": 64000,
+      "closure_metrics": {
+        "e_rel_residual": 2.89091047296302e-17,
+        "hz_rel_residual": 0.0,
+        "n_valid_bins": 17254,
+        "pasa_cierre": true
+      },
+      "max_fft_reconstruction_error": 5.410535340862219e-16,
+      "estimation_metrics": {
+        "simulate_clipping": true,
+        "clip_fraction": 0.154484375,
+        "clipping_detected": true
+      },
+      "is_rank1": false,
+      "clip_fraction": 0.154484375,
+      "file": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa3\\datos\\CTRL-06-INSTRUMENT-ADC-SAT.npz"
+    }
+  ]
+}

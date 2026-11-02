@@ -1,0 +1,92 @@
+{
+  "motivo": "El evaluador P9 usa un modelo de verdad distinto al del generador",
+  "modelo_generador": {
+    "rho": [
+      40.0,
+      8.0,
+      300.0
+    ],
+    "interfaces": [
+      30.0,
+      120.0
+    ]
+  },
+  "modelo_usado_por_evaluador": {
+    "rho": [
+      100.0,
+      10.0,
+      500.0
+    ],
+    "interfaces": [
+      200.0,
+      800.0
+    ]
+  },
+  "inyeccion_replicada": {
+    "n_start": 16000,
+    "n_len": 32000,
+    "scale_n": 8.883070908334312e-05,
+    "snr_db": 0.0
+  },
+  "senal_limpia_vs_verdad_generador": {
+    "median_err_z_pct": 0.4240022287043212,
+    "median_err_rho_dec": 0.003684668496967136,
+    "median_err_phase_deg": 0.01989527125633117,
+    "p90_err_rho_dec": 0.016641936998290325,
+    "p90_err_phase_deg": 0.23529251620929142,
+    "p95_err_z_pct": 2.7265176715016413
+  },
+  "benchmarks_vs_verdad_generador": {
+    "B0": {
+      "median_err_z_pct": 1.2416973903822441,
+      "median_err_rho_dec": 0.007708821412486078,
+      "median_err_phase_deg": 0.23545694384944582,
+      "p90_err_rho_dec": 0.022429183716591836,
+      "p90_err_phase_deg": 0.8641323397162821,
+      "p95_err_z_pct": 2.7877485969029854
+    },
+    "B4": {
+      "median_err_z_pct": 36.56672006112311,
+      "median_err_rho_dec": 0.2638415953467921,
+      "median_err_phase_deg": 1.8408565486886062,
+      "p90_err_rho_dec": 0.5525483338844969,
+      "p90_err_phase_deg": 4.400540282657436,
+      "p95_err_z_pct": 90.39899686989732
+    },
+    "B8": {
+      "median_err_z_pct": 261.8470744370728,
+      "median_err_rho_dec": 0.7276749567047351,
+      "median_err_phase_deg": 95.83530368665872,
+      "p90_err_rho_dec": 0.9310953270507575,
+      "p90_err_phase_deg": 97.16946622176394,
+      "p95_err_z_pct": 303.07807564230427
+    }
+  },
+  "benchmarks_vs_verdad_del_evaluador": {
+    "B0": {
+      "median_err_z_pct": 63.93811442621633,
+      "median_err_rho_dec": 0.8447089224889053,
+      "median_err_phase_deg": 10.496590929203926,
+      "p90_err_rho_dec": 0.8923389631994123,
+      "p90_err_phase_deg": 22.74337205486135,
+      "p95_err_z_pct": 64.9477078129198
+    },
+    "B4": {
+      "median_err_z_pct": 52.004696570208,
+      "median_err_rho_dec": 0.6267106143318639,
+      "median_err_phase_deg": 10.470355293979292,
+      "p90_err_rho_dec": 0.8068111150286615,
+      "p90_err_phase_deg": 18.53625680592136,
+      "p95_err_z_pct": 61.17962696865999
+    },
+    "B8": {
+      "median_err_z_pct": 140.85020722983154,
+      "median_err_rho_dec": 0.20844618609194365,
+      "median_err_phase_deg": 100.03589753499188,
+      "p90_err_rho_dec": 0.424969174150213,
+      "p90_err_phase_deg": 107.57318142501262,
+      "p95_err_z_pct": 180.09500763321478
+    }
+  },
+  "ventanas_intervenidas_pct_b4": 50.300601202404806
+}

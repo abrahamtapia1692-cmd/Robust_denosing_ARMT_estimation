@@ -1,0 +1,204 @@
+{
+  "version": "P9-VAL-2.0.0",
+  "timestamp_utc": "2026-10-29T18:17:26Z",
+  "gate": "P9",
+  "stage": 9,
+  "total_checks": 32,
+  "checks_passed": 32,
+  "checks_failed": 0,
+  "status": "APROBADO",
+  "checks": [
+    {
+      "id": "V-P9-01",
+      "descripcion": "Existencia de config_p9.json",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-02",
+      "descripcion": "Configuraci\u00f3n v\u00e1lida con benchmarks B0-B10 y metas preregistradas",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-03",
+      "descripcion": "Existencia de evaluador_ciego.py",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-04",
+      "descripcion": "Existencia de p9.py",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-05",
+      "descripcion": "Existencia de resumen_p9.json",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-06",
+      "descripcion": "Existencia de reporte_p9.md",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-07",
+      "descripcion": "Existencia y carga de modelos B3, B4 y detector C_theta",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-08",
+      "descripcion": "Evaluaci\u00f3n de comparadores obligatorios B0, B1, B3, B4, B7, B8, B10",
+      "estado": "PASA",
+      "observacion": "eval=['B0', 'B1', 'B3', 'B4', 'B7', 'B8', 'B10']"
+    },
+    {
+      "id": "V-P9-09",
+      "descripcion": "No inferioridad en limpio: P95 sesgo Z <= 2.0%",
+      "estado": "PASA",
+      "observacion": "p95=0.0000%"
+    },
+    {
+      "id": "V-P9-10",
+      "descripcion": "No inferioridad en limpio: P95 fase <= 1.0\u00b0",
+      "estado": "PASA",
+      "observacion": "p95=0.0000\u00b0"
+    },
+    {
+      "id": "V-P9-11",
+      "descripcion": "No inferioridad en limpio: Mediana sesgo Z <= 5.0%",
+      "estado": "PASA",
+      "observacion": "med=0.0000%"
+    },
+    {
+      "id": "V-P9-12",
+      "descripcion": "No inferioridad en limpio: Mediana fase <= 2.0\u00b0",
+      "estado": "PASA",
+      "observacion": "med=0.0000\u00b0"
+    },
+    {
+      "id": "V-P9-13",
+      "descripcion": "B4 (CBAM Adaptado) supera holgadamente a B3 (SCNet18 Zhang et al. 2024)",
+      "estado": "PASA",
+      "observacion": "B4=52.00% vs B3=114.74%"
+    },
+    {
+      "id": "V-P9-14",
+      "descripcion": "B4 supera a la cota anal\u00edtica lineal \u00f3ptima de Wiener (B8)",
+      "estado": "PASA",
+      "observacion": "B4=52.00% vs B8=140.85%"
+    },
+    {
+      "id": "V-P9-15",
+      "descripcion": "B4 reduce el error de impedancia frente a la se\u00f1al bruta (B0)",
+      "estado": "PASA",
+      "observacion": "B4=52.00% vs B0=63.94%"
+    },
+    {
+      "id": "V-P9-16",
+      "descripcion": "Preservaci\u00f3n f\u00edsica en r\u00e1fagas no estacionarias sferics (error Z <= 5.0%)",
+      "estado": "PASA",
+      "observacion": "err=1.10%"
+    },
+    {
+      "id": "V-P9-17",
+      "descripcion": "Prueba de estr\u00e9s de textura F1: preservaci\u00f3n de fondo geol\u00f3gico",
+      "estado": "PASA",
+      "observacion": "diff=3.00e-01"
+    },
+    {
+      "id": "V-P9-18",
+      "descripcion": "Detecci\u00f3n de Rango 1 (CTRL-04): abstenci\u00f3n obligatoria activada",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-19",
+      "descripcion": "Compuerta G0: omisi\u00f3n de red ante soporte vac\u00edo sint\u00e9tico (soporte_S0)",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-20",
+      "descripcion": "Compuerta G0: omisi\u00f3n de red ante campo sin v\u00ednculo TEM (ARMT5-123-01-01-01)",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-21",
+      "descripcion": "Exclusi\u00f3n estricta de bandas RMT D2 (bloqueo absoluto de red)",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-22",
+      "descripcion": "Exclusi\u00f3n estricta de bandas RMT D3 (bloqueo absoluto de red)",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-23",
+      "descripcion": "Tasa de falsa recuperaci\u00f3n en no identificables <= 5.0%",
+      "estado": "PASA",
+      "observacion": "rate=0.0%"
+    },
+    {
+      "id": "V-P9-24",
+      "descripcion": "Cero blancos inventados para registros de campo (etiqueta unavailable)",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-25",
+      "descripcion": "Cero extrapolaci\u00f3n de frecuencias fuera del soporte TEM autorizado",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-26",
+      "descripcion": "Invarianza de recomposici\u00f3n continua Hanning overlap-add C1 (error < 1e-12)",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-27",
+      "descripcion": "Descomposici\u00f3n aditiva exacta muestra a muestra x = s_hat + n_hat (error < 1e-12)",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-28",
+      "descripcion": "Invarianza estricta ante tama\u00f1o de lote de inferencia (diff < 1e-5)",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-29",
+      "descripcion": "Componentes auxiliares Hz conservadas id\u00e9nticas e intactas",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-30",
+      "descripcion": "Compuerta de Seguridad G4: Aprobado para liberaci\u00f3n (no regresi\u00f3n y no inferioridad)",
+      "estado": "PASA",
+      "observacion": "approved=True"
+    },
+    {
+      "id": "V-P9-31",
+      "descripcion": "Trazabilidad completa y hashes SHA-256 congelados de modelos y datos",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P9-32",
+      "descripcion": "Aprobaci\u00f3n global formal de la Puerta P9 en resumen_p9.json",
+      "estado": "PASA",
+      "observacion": "p9_passed=True"
+    }
+  ]
+}

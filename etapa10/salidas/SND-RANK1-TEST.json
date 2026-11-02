@@ -1,0 +1,547 @@
+{
+  "format": "JSON-COV",
+  "format_version": "1.0.0",
+  "sounding_id": "SND-RANK1-TEST",
+  "timestamp_utc": "2026-10-30T16:05:21Z",
+  "provenance": {
+    "software": "ARMT MT/AMT Suite",
+    "software_version": "1.3.0",
+    "release_title": "ARMT MT/AMT Robust Denoising & Transfer Function Estimation Suite",
+    "data_origin": "synthetic",
+    "synthetic": true,
+    "frozen_hashes": {
+      "etapa7/checkpoints/c_theta_scnet18.pt": "1e1d92b89b04afc4af6301ac0ad84c99e472161b05cb8573da5cfb90348acd08",
+      "etapa7/checkpoints/d_psi_b3_scnet18.pt": "35c5e45c9676cead3b2c32eeddf0899bfbd861072e4f514670f63fc962a25f4e",
+      "etapa7/checkpoints/d_psi_b4_cbam.pt": "c987c9713ce4dbcc1597b3fc956fa7bbe05c9e1e9809fd6f20599ec6dc6f7be3",
+      "etapa7/modelos_cbam.py": "18f03b97888c046441f599cb0e8ac37470dcca73d08db5f31e6bb5ade6bac8d5",
+      "etapa8/pipeline_armt.py": "8e37cd1a23c0266697b5772633d67777c93d757d2b5e9baf6c46cdf0d4578191",
+      "etapa8/config_p8.json": "dd197dd2d5987347548d88381a3e529edfd85259960f52f1625c5d72986e43c8",
+      "etapa9/evaluador_ciego.py": "bc10461d608c813fe60bd959e04bb03f26b4d7424b27857b5ad940a8233c05d9",
+      "etapa9/config_p9.json": "1d7336ee80ea699f87a69ee15beb9e0149c434acb5e6c8fae8c1145e70634103",
+      "banco_sintetico/soporte_S1.json": "a6b50cfb1c64c832644078867f4b381802752f810e93dd41a8ba7fa12a8ffffd",
+      "etapa4/noise_episodes.csv": "1f3be6d1e78e3cd79e6d90ab3d29799fe41c04793143bb40741d00f13c730f69"
+    },
+    "operator_metadata": {}
+  },
+  "domain_governance": {
+    "band": "D0",
+    "tem_support_status": "soporte_aprobado",
+    "release_allowed": false,
+    "quarantine": true,
+    "zero_d2_d3_intervention": true,
+    "zero_fake_field_targets": true,
+    "zero_support_extrapolation": true
+  },
+  "window_statistics": {
+    "total_windows": 0,
+    "clean_windows": 0,
+    "contaminated_windows": 0,
+    "intervened_windows": 0
+  },
+  "residual_decomposition": {
+    "identity_error_norm_inf": 0.0,
+    "relative_signal_leakage_pct": 0.0
+  },
+  "transfer_functions": [
+    {
+      "f_hz": 125.0,
+      "band": "D0",
+      "category": "direccional",
+      "category_reason": "CAT_DIRECTIONAL_RANK1_POLARIZED",
+      "fallback_to_b0": false,
+      "cond_hh": 1.6662747511450616e+16,
+      "coherence_xy": null,
+      "Z": {
+        "Zxx": null,
+        "Zxy": null,
+        "Zyx": null,
+        "Zyy": null
+      },
+      "cov_4x4": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": null,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": null,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 150.0,
+      "band": "D0",
+      "category": "direccional",
+      "category_reason": "CAT_DIRECTIONAL_RANK1_POLARIZED",
+      "fallback_to_b0": false,
+      "cond_hh": 1645569979351872.8,
+      "coherence_xy": null,
+      "Z": {
+        "Zxx": null,
+        "Zxy": null,
+        "Zyx": null,
+        "Zyy": null
+      },
+      "cov_4x4": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": null,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": null,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 200.0,
+      "band": "D0",
+      "category": "direccional",
+      "category_reason": "CAT_DIRECTIONAL_RANK1_POLARIZED",
+      "fallback_to_b0": false,
+      "cond_hh": 1.0957096471887484e+16,
+      "coherence_xy": null,
+      "Z": {
+        "Zxx": null,
+        "Zxy": null,
+        "Zyx": null,
+        "Zyy": null
+      },
+      "cov_4x4": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": null,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": null,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 250.0,
+      "band": "D0",
+      "category": "direccional",
+      "category_reason": "CAT_DIRECTIONAL_RANK1_POLARIZED",
+      "fallback_to_b0": false,
+      "cond_hh": 8701322213690452.0,
+      "coherence_xy": null,
+      "Z": {
+        "Zxx": null,
+        "Zxy": null,
+        "Zyx": null,
+        "Zyy": null
+      },
+      "cov_4x4": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": null,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": null,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 300.0,
+      "band": "D0",
+      "category": "direccional",
+      "category_reason": "CAT_DIRECTIONAL_RANK1_POLARIZED",
+      "fallback_to_b0": false,
+      "cond_hh": 3753584225360184.5,
+      "coherence_xy": null,
+      "Z": {
+        "Zxx": null,
+        "Zxy": null,
+        "Zyx": null,
+        "Zyy": null
+      },
+      "cov_4x4": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": null,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": null,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 400.0,
+      "band": "D0",
+      "category": "direccional",
+      "category_reason": "CAT_DIRECTIONAL_RANK1_POLARIZED",
+      "fallback_to_b0": false,
+      "cond_hh": 1.1734610192304488e+16,
+      "coherence_xy": null,
+      "Z": {
+        "Zxx": null,
+        "Zxy": null,
+        "Zyx": null,
+        "Zyy": null
+      },
+      "cov_4x4": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": null,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": null,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 500.0,
+      "band": "D0",
+      "category": "direccional",
+      "category_reason": "CAT_DIRECTIONAL_RANK1_POLARIZED",
+      "fallback_to_b0": false,
+      "cond_hh": 891052591309741.8,
+      "coherence_xy": null,
+      "Z": {
+        "Zxx": null,
+        "Zxy": null,
+        "Zyx": null,
+        "Zyy": null
+      },
+      "cov_4x4": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": null,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": null,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 600.0,
+      "band": "D0",
+      "category": "direccional",
+      "category_reason": "CAT_DIRECTIONAL_RANK1_POLARIZED",
+      "fallback_to_b0": false,
+      "cond_hh": 5113835662258955.0,
+      "coherence_xy": null,
+      "Z": {
+        "Zxx": null,
+        "Zxy": null,
+        "Zyx": null,
+        "Zyy": null
+      },
+      "cov_4x4": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": null,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": null,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 800.0,
+      "band": "D0",
+      "category": "direccional",
+      "category_reason": "CAT_DIRECTIONAL_RANK1_POLARIZED",
+      "fallback_to_b0": false,
+      "cond_hh": 813470273562658.8,
+      "coherence_xy": null,
+      "Z": {
+        "Zxx": null,
+        "Zxy": null,
+        "Zyx": null,
+        "Zyy": null
+      },
+      "cov_4x4": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": null,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": null,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 1000.0,
+      "band": "D0",
+      "category": "direccional",
+      "category_reason": "CAT_DIRECTIONAL_RANK1_POLARIZED",
+      "fallback_to_b0": false,
+      "cond_hh": 830960352924860.4,
+      "coherence_xy": null,
+      "Z": {
+        "Zxx": null,
+        "Zxy": null,
+        "Zyx": null,
+        "Zyy": null
+      },
+      "cov_4x4": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": null,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": null,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "manifest_version": "1.0.0",
+  "artifact": "banco_sintetico_contrato",
+  "generated_at_utc": "2026-10-28T18:25:35.633480Z",
+  "synthetic": true,
+  "scientific_claim": false,
+  "purpose": "Fixture de contrato para ejercitar la maquinaria de soporte TEM de P2-T sin afirmar nada del sitio.",
+  "target_record": {
+    "record_id": "ARMT5-700-14-14-01",
+    "split": "desarrollo",
+    "campaign_group": "C2021-A700",
+    "site_group": "S2021-A700-L014",
+    "source_path_ref": "ARMT_processing/ARMT_data/01401401.sbf",
+    "source_sha256": "51b08fc815b2b171e6e02da5c7f009fd165704524990af36dcfeb6da9a30f8d2",
+    "traces": [
+      {
+        "band": "D0",
+        "sample_rate_hz": 4000.0,
+        "sample_count": 21600000,
+        "duration_seconds": 5400.0,
+        "channels": [
+          "Ex",
+          "Ey",
+          "Hx",
+          "Hy",
+          "Hz"
+        ]
+      },
+      {
+        "band": "D1",
+        "sample_rate_hz": 32000.0,
+        "sample_count": 1440000,
+        "duration_seconds": 45.0,
+        "channels": [
+          "Ex",
+          "Ey",
+          "Hx",
+          "Hy",
+          "Hz"
+        ]
+      }
+    ]
+  },
+  "real_inputs": {
+    "manifest": {
+      "path_abs": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa0\\manifest.json",
+      "path_ref": "etapa0/manifest.json",
+      "path_base": "workspace",
+      "sha256": "5a67b03feab778e44578a37ef04982e85e56fc5f586f05c3c03e20c7b17ee435",
+      "size_bytes": 633237,
+      "mtime_utc": "2026-10-28T18:09:23.944364Z"
+    },
+    "splits": {
+      "path_abs": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa0\\splits.csv",
+      "path_ref": "etapa0/splits.csv",
+      "path_base": "workspace",
+      "sha256": "78cccedc36a0f3850fbc2017adcca6b66abeb77fc71a129280d9d87ea21d9352",
+      "size_bytes": 3932,
+      "mtime_utc": "2026-10-28T18:09:23.809026Z"
+    },
+    "p0_validation": {
+      "path_abs": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa0\\validacion_etapa0.json",
+      "path_ref": "etapa0/validacion_etapa0.json",
+      "path_base": "workspace",
+      "sha256": "aba86203e19dbc83e0d038811696252e3aaf65384ccaecd9f5678603d0b195ad",
+      "size_bytes": 6463,
+      "mtime_utc": "2026-10-28T18:09:31.802605Z"
+    },
+    "manifest_sha256_p0": "5a67b03feab778e44578a37ef04982e85e56fc5f586f05c3c03e20c7b17ee435",
+    "splits_sha256_p0": "78cccedc36a0f3850fbc2017adcca6b66abeb77fc71a129280d9d87ea21d9352"
+  },
+  "model": {
+    "path_abs": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\banco_sintetico\\modelo_control.json",
+    "path_ref": "banco_sintetico/modelo_control.json",
+    "path_base": "workspace",
+    "sha256": "8c3e91a0df394225692c8f6064b6f7af548c04c54d929e58eb0f238aafaf9682",
+    "size_bytes": 2873,
+    "mtime_utc": "2026-10-28T18:22:37.418214Z"
+  },
+  "generator": {
+    "script": "banco_sintetico/generar_tem_sintetico.py",
+    "sha256": "db52ae2d702c9f491607fdb4e15f5280c991d39ce56f3cb52354218c0277f29f",
+    "python": "3.8.19"
+  },
+  "quarantine": {
+    "directory": "banco_sintetico",
+    "id_prefix": "SYN-TEM-",
+    "real_manifest_modified": false,
+    "real_splits_modified": false,
+    "allowed_target_splits": [
+      "desarrollo"
+    ],
+    "p2t_evidence": false,
+    "training_labels": false,
+    "note": "El banco no se registra en etapa0/manifest.json ni en splits.csv. No cierra B-P0-03, no cierra P2-T y no habilita etiquetas de entrenamiento."
+  },
+  "scenarios": [
+    {
+      "id": "S0",
+      "tem_id": "SYN-TEM-001",
+      "purpose": "Soporte vacio y abstencion (G0).",
+      "mode": "constante_sin_decaimiento",
+      "expected": {
+        "supported_any": false,
+        "g0_trigger": true
+      },
+      "tem_file": {
+        "path_abs": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\banco_sintetico\\datos\\SYN-TEM-001.tem",
+        "path_ref": "banco_sintetico/datos/SYN-TEM-001.tem",
+        "path_base": "workspace",
+        "sha256": "f80072f7abe0787fc1be0aeb24fd48dfe3dd07019f3316e4d32ad7fc6d40f274",
+        "size_bytes": 3105,
+        "mtime_utc": "2026-10-28T18:25:35.608469Z"
+      },
+      "truth_file": {
+        "path_abs": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\banco_sintetico\\verdad_S0.json",
+        "path_ref": "banco_sintetico/verdad_S0.json",
+        "path_base": "workspace",
+        "sha256": "56bc981f5b7c08dbefe0f6ae1471473de01318db4e890022082b547a4cf517a1",
+        "size_bytes": 5553,
+        "mtime_utc": "2026-10-28T18:25:35.613480Z"
+      },
+      "support_file": {
+        "path_abs": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\banco_sintetico\\soporte_S0.json",
+        "path_ref": "banco_sintetico/soporte_S0.json",
+        "path_base": "workspace",
+        "sha256": "722c500a4f469a343de557ce33b7502bbbe82983deddde59c01c10abba339af1",
+        "size_bytes": 21583,
+        "mtime_utc": "2026-10-28T18:25:35.991710Z"
+      }
+    },
+    {
+      "id": "S1",
+      "tem_id": "SYN-TEM-002",
+      "purpose": "Soporte parcial en D0 y borde de D1, con banda muerta AMT penalizada.",
+      "mode": "surrogate_capas",
+      "expected": {
+        "supported_any": true,
+        "g0_trigger": false
+      },
+      "tem_file": {
+        "path_abs": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\banco_sintetico\\datos\\SYN-TEM-002.tem",
+        "path_ref": "banco_sintetico/datos/SYN-TEM-002.tem",
+        "path_base": "workspace",
+        "sha256": "34e021def8bbe302544641167ae875867d8d34f08e9b611aefcf8e1164afdac5",
+        "size_bytes": 3105,
+        "mtime_utc": "2026-10-28T18:25:35.621471Z"
+      },
+      "truth_file": {
+        "path_abs": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\banco_sintetico\\verdad_S1.json",
+        "path_ref": "banco_sintetico/verdad_S1.json",
+        "path_base": "workspace",
+        "sha256": "169aef5b67c4620df996ebebb6f6496b3693a84c2696c11c2faf3e85aa8cdf4e",
+        "size_bytes": 6989,
+        "mtime_utc": "2026-10-28T18:25:35.626480Z"
+      },
+      "support_file": {
+        "path_abs": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\banco_sintetico\\soporte_S1.json",
+        "path_ref": "banco_sintetico/soporte_S1.json",
+        "path_base": "workspace",
+        "sha256": "a6b50cfb1c64c832644078867f4b381802752f810e93dd41a8ba7fa12a8ffffd",
+        "size_bytes": 23074,
+        "mtime_utc": "2026-10-28T18:25:36.015471Z"
+      }
+    }
+  ],
+  "support": {
+    "status": "calculado",
+    "version": "SYN-FS-1.0.0",
+    "generated_at_utc": "2026-10-28T18:25:36.023480Z",
+    "files": [
+      {
+        "path_abs": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\banco_sintetico\\soporte_S0.json",
+        "path_ref": "banco_sintetico/soporte_S0.json",
+        "path_base": "workspace",
+        "sha256": "722c500a4f469a343de557ce33b7502bbbe82983deddde59c01c10abba339af1",
+        "size_bytes": 21583,
+        "mtime_utc": "2026-10-28T18:25:35.991710Z"
+      },
+      {
+        "path_abs": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\banco_sintetico\\soporte_S1.json",
+        "path_ref": "banco_sintetico/soporte_S1.json",
+        "path_base": "workspace",
+        "sha256": "a6b50cfb1c64c832644078867f4b381802752f810e93dd41a8ba7fa12a8ffffd",
+        "size_bytes": 23074,
+        "mtime_utc": "2026-10-28T18:25:36.015471Z"
+      }
+    ]
+  },
+  "notes": [
+    "Fixture de contrato; el modelo directo es un surrogate fenomenologico, no Maxwell.",
+    "No usa muestras del SBF objetivo; solo su identificador, particion y trazas D0/D1.",
+    "S0 representa ausencia de informacion; S1 representa soporte parcial declarado.",
+    "Los rangos de soporte prueban la logica de clasificacion, no el subsuelo del sitio."
+  ]
+}

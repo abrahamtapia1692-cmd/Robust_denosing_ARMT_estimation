@@ -1,0 +1,3378 @@
+{
+  "validacion_version": "1.0.0",
+  "generated_at_utc": "2026-10-28T18:05:03.036082Z",
+  "scope": "Lectura de todas las muestras declaradas, comprobaciones puntuales independientes y roundtrip NPY. No aplica calibracion ni convierte unidades.",
+  "resultado": "APROBADO",
+  "summary": {
+    "records": 15,
+    "records_ok": 15,
+    "total_scalar_samples": 1832999925
+  },
+  "records": [
+    {
+      "record_id": "ARMT5-123-01-01-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\Soundings\\00100101.sbf",
+      "sha256_before": "c5b9178df9f00581dc0d41531457e4340360e6b71ae755d5e817744c5b47489d",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 44199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 3600000,
+          "channel_count": 5,
+          "duration_seconds": 900.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -89510,
+              "maximum_counts": 73683,
+              "mean_counts": 2515.8042252777777,
+              "std_counts": 36092.78564888771,
+              "rms_counts": 36180.3599594653
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -53646,
+              "maximum_counts": 64026,
+              "mean_counts": 3549.1269194444435,
+              "std_counts": 22689.59132048761,
+              "rms_counts": 22965.492726720928
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -49604,
+              "maximum_counts": 40715,
+              "mean_counts": 399.33319638888884,
+              "std_counts": 22965.836431857584,
+              "rms_counts": 22969.30800038554
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -48978,
+              "maximum_counts": 45711,
+              "mean_counts": 115.67290916666663,
+              "std_counts": 20524.101306813107,
+              "rms_counts": 20524.427267873823
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -56960,
+              "maximum_counts": 71792,
+              "mean_counts": 2492.319936944444,
+              "std_counts": 23678.756419284782,
+              "rms_counts": 23809.560353603993
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -116275,
+              "maximum_counts": 160490,
+              "mean_counts": 2636.2930083333335,
+              "std_counts": 41177.97062014428,
+              "rms_counts": 41262.27460064766
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -71537,
+              "maximum_counts": 76719,
+              "mean_counts": 3529.761664583333,
+              "std_counts": 29619.449006639945,
+              "rms_counts": 29829.029096933515
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -46563,
+              "maximum_counts": 39218,
+              "mean_counts": 374.13833125,
+              "std_counts": 24139.175819719563,
+              "rms_counts": 24142.075071257736
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -45015,
+              "maximum_counts": 41346,
+              "mean_counts": 124.57126527777777,
+              "std_counts": 23285.46493845376,
+              "rms_counts": 23285.798148229584
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -43805,
+              "maximum_counts": 58553,
+              "mean_counts": 2438.9287125000005,
+              "std_counts": 25076.74667264492,
+              "rms_counts": 25195.070885962297
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -3009,
+              "maximum_counts": 2312,
+              "mean_counts": -0.7985220000000006,
+              "std_counts": 347.3973040031285,
+              "rms_counts": 347.39822173699537
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1020,
+              "maximum_counts": 1480,
+              "mean_counts": -3.7746810000000006,
+              "std_counts": 171.8390384701257,
+              "rms_counts": 171.88049150205822
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2397,
+              "maximum_counts": 1890,
+              "mean_counts": -5.341540999999999,
+              "std_counts": 285.3416407619154,
+              "rms_counts": 285.3916326961193
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -812,
+              "maximum_counts": 663,
+              "mean_counts": -6.407764,
+              "std_counts": 110.20578757271754,
+              "rms_counts": 110.39191570945148
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -239,
+              "maximum_counts": 242,
+              "mean_counts": -3.073934,
+              "std_counts": 53.30297284170365,
+              "rms_counts": 53.39153475973277
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1813,
+              "maximum_counts": 1496,
+              "mean_counts": 3.5641516300541527,
+              "std_counts": 217.56143164590557,
+              "rms_counts": 217.59062414694725
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -717,
+              "maximum_counts": 989,
+              "mean_counts": -3.6600284500101594,
+              "std_counts": 125.51506234643823,
+              "rms_counts": 125.56841435681649
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1467,
+              "maximum_counts": 958,
+              "mean_counts": 0.6039773585633421,
+              "std_counts": 168.58745286087134,
+              "rms_counts": 168.58853475478745
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -549,
+              "maximum_counts": 382,
+              "mean_counts": -2.4323680115600044,
+              "std_counts": 69.18287957235295,
+              "rms_counts": 69.22562560256391
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -188,
+              "maximum_counts": 171,
+              "mean_counts": -1.398365142273265,
+              "std_counts": 38.69900448318119,
+              "rms_counts": 38.724260781329356
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-123-02-02-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\Soundings\\00200201.sbf",
+      "sha256_before": "199df735fcab6a0b2016e7c2dc19c5daf9dd83912b73bdfc128ec33e616c4ac7",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 44199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 3600000,
+          "channel_count": 5,
+          "duration_seconds": 900.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -94477,
+              "maximum_counts": 123445,
+              "mean_counts": 2199.7831352777794,
+              "std_counts": 32076.835532951478,
+              "rms_counts": 32152.17603289505
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -333983,
+              "maximum_counts": 348317,
+              "mean_counts": 2801.2822713888877,
+              "std_counts": 167241.50011919686,
+              "rms_counts": 167264.9591052571
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -171765,
+              "maximum_counts": 172688,
+              "mean_counts": -182.77353777777782,
+              "std_counts": 82731.93423441054,
+              "rms_counts": 82732.13612818747
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -97917,
+              "maximum_counts": 84446,
+              "mean_counts": -382.45835777777785,
+              "std_counts": 30155.698607727983,
+              "rms_counts": 30158.123829501754
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -216085,
+              "maximum_counts": 208236,
+              "mean_counts": 2255.5399225,
+              "std_counts": 72006.15106463351,
+              "rms_counts": 72041.46897089768
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -394278,
+              "maximum_counts": 390089,
+              "mean_counts": 2364.9891479166668,
+              "std_counts": 83451.06871966842,
+              "rms_counts": 83484.5736895421
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -419786,
+              "maximum_counts": 414924,
+              "mean_counts": 3025.723274305556,
+              "std_counts": 173522.09682560287,
+              "rms_counts": 173548.47475010136
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -164254,
+              "maximum_counts": 161456,
+              "mean_counts": -174.64718750000003,
+              "std_counts": 81266.05026717976,
+              "rms_counts": 81266.23793229196
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -85535,
+              "maximum_counts": 98205,
+              "mean_counts": -375.18873888888885,
+              "std_counts": 25564.649616238225,
+              "rms_counts": 25567.402617215896
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -181532,
+              "maximum_counts": 187882,
+              "mean_counts": 2262.280849305555,
+              "std_counts": 80393.0634736242,
+              "rms_counts": 80424.88774822943
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -4894,
+              "maximum_counts": 3845,
+              "mean_counts": 0.40187699999999976,
+              "std_counts": 775.3041541368196,
+              "rms_counts": 775.3042582927895
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -3769,
+              "maximum_counts": 3648,
+              "mean_counts": -5.000979,
+              "std_counts": 1117.0561758165354,
+              "rms_counts": 1117.067370269502
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2877,
+              "maximum_counts": 3292,
+              "mean_counts": -4.99585,
+              "std_counts": 378.67809196312004,
+              "rms_counts": 378.7110453235444
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -1940,
+              "maximum_counts": 1760,
+              "mean_counts": -6.1759590000000015,
+              "std_counts": 362.35895457329764,
+              "rms_counts": 362.4115815326862
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -1886,
+              "maximum_counts": 2392,
+              "mean_counts": -2.7286230000000002,
+              "std_counts": 425.2995797405687,
+              "rms_counts": 425.30833275516767
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -2998,
+              "maximum_counts": 2584,
+              "mean_counts": 4.894148176481494,
+              "std_counts": 487.2054747732767,
+              "rms_counts": 487.23005586214333
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -2338,
+              "maximum_counts": 2324,
+              "mean_counts": -4.489229460439093,
+              "std_counts": 725.4917532112919,
+              "rms_counts": 725.5056424031053
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1668,
+              "maximum_counts": 1169,
+              "mean_counts": 0.7734570619489507,
+              "std_counts": 232.95052280414214,
+              "rms_counts": 232.95180684113578
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -1088,
+              "maximum_counts": 1169,
+              "mean_counts": -2.3098911821039936,
+              "std_counts": 221.04333306755612,
+              "rms_counts": 221.05540185864652
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -1223,
+              "maximum_counts": 1333,
+              "mean_counts": -1.4317990827853868,
+              "std_counts": 260.5100113234986,
+              "rms_counts": 260.5139459767612
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-700-01-00-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\00100001.sbf",
+      "sha256_before": "2f431128e1ab385b80c2dd1bfea3e543a66ed2c59149db1601bc3f893bf7105b",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 134199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 21600000,
+          "channel_count": 5,
+          "duration_seconds": 5400.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -30275,
+              "maximum_counts": 22846,
+              "mean_counts": 2465.187813148147,
+              "std_counts": 961.7340879416993,
+              "rms_counts": 2646.145009254632
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -27173,
+              "maximum_counts": 102370,
+              "mean_counts": 3203.4330513425903,
+              "std_counts": 1143.7358937672093,
+              "rms_counts": 3401.487190792518
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -33104,
+              "maximum_counts": 27814,
+              "mean_counts": 929.7023043981478,
+              "std_counts": 2605.66855647546,
+              "rms_counts": 2766.5601386935605
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -20659,
+              "maximum_counts": 18141,
+              "mean_counts": 368.6945346296294,
+              "std_counts": 1562.8439434252907,
+              "rms_counts": 1605.7449521536328
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -35362,
+              "maximum_counts": 24194,
+              "mean_counts": 2988.535061481483,
+              "std_counts": 2557.130544288841,
+              "rms_counts": 3933.2249407120203
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -330214,
+              "maximum_counts": 343008,
+              "mean_counts": 2525.7067652777782,
+              "std_counts": 1296.6568131688268,
+              "rms_counts": 2839.104357945843
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -224702,
+              "maximum_counts": 263288,
+              "mean_counts": 3205.548160416667,
+              "std_counts": 1466.3710688514825,
+              "rms_counts": 3525.0224283421685
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -54774,
+              "maximum_counts": 15595,
+              "mean_counts": 945.40276875,
+              "std_counts": 2785.6237647516273,
+              "rms_counts": 2941.680838212942
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -264371,
+              "maximum_counts": 27000,
+              "mean_counts": 443.0277041666667,
+              "std_counts": 1826.6632553577203,
+              "rms_counts": 1879.6202263045723
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -9994,
+              "maximum_counts": 66668,
+              "mean_counts": 2968.2225375,
+              "std_counts": 2804.88154941491,
+              "rms_counts": 4083.8346609983028
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -3798,
+              "maximum_counts": 2847,
+              "mean_counts": 0.22514900000000004,
+              "std_counts": 332.214445184012,
+              "rms_counts": 332.21452147820554
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1354,
+              "maximum_counts": 1646,
+              "mean_counts": -4.964012999999999,
+              "std_counts": 177.17864370722927,
+              "rms_counts": 177.2481684277653
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2213,
+              "maximum_counts": 1482,
+              "mean_counts": -5.49849,
+              "std_counts": 271.0842299318263,
+              "rms_counts": 271.13998803203367
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -900,
+              "maximum_counts": 1179,
+              "mean_counts": -7.0464970000000005,
+              "std_counts": 100.5601789528456,
+              "rms_counts": 100.80675925253892
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -392,
+              "maximum_counts": 344,
+              "mean_counts": -2.818294999999999,
+              "std_counts": 19.664079594343804,
+              "rms_counts": 19.86501479988659
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1833,
+              "maximum_counts": 1432,
+              "mean_counts": 5.2127843617086995,
+              "std_counts": 216.21139850131155,
+              "rms_counts": 216.27422861426328
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -773,
+              "maximum_counts": 1014,
+              "mean_counts": -5.1233407583359885,
+              "std_counts": 117.12074237578256,
+              "rms_counts": 117.23274676975053
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1492,
+              "maximum_counts": 1149,
+              "mean_counts": 2.6376180848636013,
+              "std_counts": 170.33875230656903,
+              "rms_counts": 170.3591722406524
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -538,
+              "maximum_counts": 435,
+              "mean_counts": -1.9919953542840547,
+              "std_counts": 65.9875272087349,
+              "rms_counts": 66.01758699479268
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -122,
+              "maximum_counts": 124,
+              "mean_counts": -1.2318811542432695,
+              "std_counts": 23.976640112958385,
+              "rms_counts": 24.008265291030607
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-700-01-23-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\00102301.sbf",
+      "sha256_before": "0c45acb8289e96465b480d2fac8f918075122ca58f76e8153f037c1313d9031d",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 134199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 21600000,
+          "channel_count": 5,
+          "duration_seconds": 5400.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -6560,
+              "maximum_counts": 7029,
+              "mean_counts": 2536.10286388889,
+              "std_counts": 1733.2092630690406,
+              "rms_counts": 3071.779954002851
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1957,
+              "maximum_counts": 9475,
+              "mean_counts": 3628.8600027314815,
+              "std_counts": 2390.9522681310286,
+              "rms_counts": 4345.7194649338835
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -9723,
+              "maximum_counts": 12995,
+              "mean_counts": 791.8567365277769,
+              "std_counts": 2250.8353613794375,
+              "rms_counts": 2386.0630576790136
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -5686,
+              "maximum_counts": 6093,
+              "mean_counts": 495.2295229166667,
+              "std_counts": 1332.1491675193272,
+              "rms_counts": 1421.222602160093
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -6003,
+              "maximum_counts": 11666,
+              "mean_counts": 2707.926582916666,
+              "std_counts": 1656.3378402601645,
+              "rms_counts": 3174.322198445589
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -24428,
+              "maximum_counts": 31456,
+              "mean_counts": 2588.8100104166665,
+              "std_counts": 1867.0148646108123,
+              "rms_counts": 3191.8148089623355
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -35377,
+              "maximum_counts": 31646,
+              "mean_counts": 3596.5034576388884,
+              "std_counts": 2478.1725746387474,
+              "rms_counts": 4367.628238586718
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -6230,
+              "maximum_counts": 7628,
+              "mean_counts": 736.9164159722224,
+              "std_counts": 2353.6854641650434,
+              "rms_counts": 2466.349745747987
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -4503,
+              "maximum_counts": 5644,
+              "mean_counts": 466.3532027777778,
+              "std_counts": 1496.2974134872443,
+              "rms_counts": 1567.2878674161004
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -2578,
+              "maximum_counts": 7776,
+              "mean_counts": 2680.564611111111,
+              "std_counts": 1787.6182236403934,
+              "rms_counts": 3221.956788635207
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -3153,
+              "maximum_counts": 2789,
+              "mean_counts": -0.6965190000000001,
+              "std_counts": 333.2547891932256,
+              "rms_counts": 333.2555170720188
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1518,
+              "maximum_counts": 1644,
+              "mean_counts": -4.692124999999999,
+              "std_counts": 176.8313739979251,
+              "rms_counts": 176.89361454560674
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2341,
+              "maximum_counts": 1443,
+              "mean_counts": -5.720985,
+              "std_counts": 267.61251792785407,
+              "rms_counts": 267.67366217290834
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -823,
+              "maximum_counts": 557,
+              "mean_counts": -7.098678,
+              "std_counts": 97.19159461933549,
+              "rms_counts": 97.45048637126922
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -115,
+              "maximum_counts": 85,
+              "mean_counts": -2.9051019999999994,
+              "std_counts": 19.267379592710967,
+              "rms_counts": 19.48516189309237
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1828,
+              "maximum_counts": 1396,
+              "mean_counts": 4.569145560409129,
+              "std_counts": 193.50728960962488,
+              "rms_counts": 193.56122603252814
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -730,
+              "maximum_counts": 985,
+              "mean_counts": -4.95052176804349,
+              "std_counts": 104.69661541418628,
+              "rms_counts": 104.81359141333677
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1314,
+              "maximum_counts": 810,
+              "mean_counts": 0.5239001871072106,
+              "std_counts": 159.9574357967973,
+              "rms_counts": 159.95829374587797
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -484,
+              "maximum_counts": 348,
+              "mean_counts": -2.6733859547806986,
+              "std_counts": 61.68230559242618,
+              "rms_counts": 61.74021230657269
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -125,
+              "maximum_counts": 126,
+              "mean_counts": -1.344670123096473,
+              "std_counts": 23.928455353609763,
+              "rms_counts": 23.96620773818094
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-700-01-24-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\00102401.sbf",
+      "sha256_before": "02cceed835e3bebec7179eba8124e979f57054098ec7b1e6907cfc143a4d49a5",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 134199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 21600000,
+          "channel_count": 5,
+          "duration_seconds": 5400.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -56480,
+              "maximum_counts": 26499,
+              "mean_counts": 2190.073235879628,
+              "std_counts": 1849.6658193011583,
+              "rms_counts": 2866.6503835674293
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -606665,
+              "maximum_counts": 405773,
+              "mean_counts": 3435.3854503240755,
+              "std_counts": 4658.408374789198,
+              "rms_counts": 5788.146661808466
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -14045,
+              "maximum_counts": 13578,
+              "mean_counts": 739.5783711111113,
+              "std_counts": 2323.553221410064,
+              "rms_counts": 2438.416646051378
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -23833,
+              "maximum_counts": 8602,
+              "mean_counts": 398.46025837962947,
+              "std_counts": 1399.3944226026765,
+              "rms_counts": 1455.0172945774352
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -16998,
+              "maximum_counts": 22990,
+              "mean_counts": 2712.4893243055562,
+              "std_counts": 1722.5614644710859,
+              "rms_counts": 3213.2252229422675
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -102298,
+              "maximum_counts": 86684,
+              "mean_counts": 2198.686711111111,
+              "std_counts": 1959.2029356116468,
+              "rms_counts": 2944.9447187554965
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -65838,
+              "maximum_counts": 70144,
+              "mean_counts": 3410.472440972222,
+              "std_counts": 1663.647209875567,
+              "rms_counts": 3794.6072668403754
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -7665,
+              "maximum_counts": 9702,
+              "mean_counts": 715.7443618055555,
+              "std_counts": 2793.180318059327,
+              "rms_counts": 2883.4261358062295
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -9578,
+              "maximum_counts": 6867,
+              "mean_counts": 379.3295402777777,
+              "std_counts": 1581.2780726522642,
+              "rms_counts": 1626.1399826516197
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -2644,
+              "maximum_counts": 8027,
+              "mean_counts": 2717.496051388889,
+              "std_counts": 1813.6028299359957,
+              "rms_counts": 3267.099633324037
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -3019,
+              "maximum_counts": 2774,
+              "mean_counts": -0.34180099999999936,
+              "std_counts": 322.88535088650093,
+              "rms_counts": 322.8855317988442
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1467,
+              "maximum_counts": 1589,
+              "mean_counts": -4.759202,
+              "std_counts": 171.94572328592076,
+              "rms_counts": 172.01157449426256
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2391,
+              "maximum_counts": 3039,
+              "mean_counts": -5.919205999999999,
+              "std_counts": 275.28232292754325,
+              "rms_counts": 275.3459538763093
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -867,
+              "maximum_counts": 1121,
+              "mean_counts": -7.3440520000000005,
+              "std_counts": 100.11349331744798,
+              "rms_counts": 100.38250168232213
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -124,
+              "maximum_counts": 125,
+              "mean_counts": -2.9895670000000005,
+              "std_counts": 19.669539398583222,
+              "rms_counts": 19.895433923388218
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1820,
+              "maximum_counts": 1450,
+              "mean_counts": 4.412467290166888,
+              "std_counts": 190.0017026888081,
+              "rms_counts": 190.0529318169889
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -776,
+              "maximum_counts": 1002,
+              "mean_counts": -4.811282789743854,
+              "std_counts": 103.40118622581707,
+              "rms_counts": 103.51306079422531
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1340,
+              "maximum_counts": 848,
+              "mean_counts": 0.16837863156379623,
+              "std_counts": 162.17608985442735,
+              "rms_counts": 162.17617726360078
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -512,
+              "maximum_counts": 335,
+              "mean_counts": -2.964916416041577,
+              "std_counts": 62.39517788933391,
+              "rms_counts": 62.46558214885807
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -138,
+              "maximum_counts": 123,
+              "mean_counts": -1.3492022675722386,
+              "std_counts": 24.012788888046188,
+              "rms_counts": 24.05066271312906
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-700-14-14-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\01401401.sbf",
+      "sha256_before": "51b08fc815b2b171e6e02da5c7f009fd165704524990af36dcfeb6da9a30f8d2",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 134199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 21600000,
+          "channel_count": 5,
+          "duration_seconds": 5400.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -219983,
+              "maximum_counts": 234499,
+              "mean_counts": 2307.1880270833335,
+              "std_counts": 9795.166633867413,
+              "rms_counts": 10063.220457564574
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -92725,
+              "maximum_counts": 112618,
+              "mean_counts": 3664.062820046295,
+              "std_counts": 7827.239494930098,
+              "rms_counts": 8642.397494922296
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -10828,
+              "maximum_counts": 20610,
+              "mean_counts": 480.8249416203702,
+              "std_counts": 3067.142047436788,
+              "rms_counts": 3104.601900991327
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -25380,
+              "maximum_counts": 38682,
+              "mean_counts": -83.62644314814813,
+              "std_counts": 2192.0225472044235,
+              "rms_counts": 2193.6171565353375
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -23889,
+              "maximum_counts": 23929,
+              "mean_counts": 2390.16190865741,
+              "std_counts": 3423.488512358052,
+              "rms_counts": 4175.3020901300515
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -534330,
+              "maximum_counts": 757842,
+              "mean_counts": 2423.5091444444442,
+              "std_counts": 10169.624584426478,
+              "rms_counts": 10454.40867583515
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -657712,
+              "maximum_counts": 940825,
+              "mean_counts": 3794.4343659722226,
+              "std_counts": 7787.471649751384,
+              "rms_counts": 8662.704361419277
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -29023,
+              "maximum_counts": 16839,
+              "mean_counts": 359.57660277777774,
+              "std_counts": 3017.0948896829223,
+              "rms_counts": 3038.446462687143
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -14966,
+              "maximum_counts": 17438,
+              "mean_counts": -106.63297847222222,
+              "std_counts": 2281.9325276378445,
+              "rms_counts": 2284.4226081856
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -7042,
+              "maximum_counts": 11675,
+              "mean_counts": 2319.957977777778,
+              "std_counts": 3735.579076447302,
+              "rms_counts": 4397.357849327894
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -2772,
+              "maximum_counts": 3063,
+              "mean_counts": 0.35271699999999906,
+              "std_counts": 324.26211039793077,
+              "rms_counts": 324.26230223231613
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -969,
+              "maximum_counts": 921,
+              "mean_counts": -4.2737690000000015,
+              "std_counts": 109.81313620664169,
+              "rms_counts": 109.89626920420821
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2812,
+              "maximum_counts": 1709,
+              "mean_counts": -6.793502,
+              "std_counts": 307.95116084621463,
+              "rms_counts": 308.0260851550647
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -986,
+              "maximum_counts": 635,
+              "mean_counts": -7.734274999999999,
+              "std_counts": 107.05275358078129,
+              "rms_counts": 107.33178028432727
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -139,
+              "maximum_counts": 111,
+              "mean_counts": -3.0982330000000005,
+              "std_counts": 21.66909987234442,
+              "rms_counts": 21.889470916400104
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1625,
+              "maximum_counts": 1738,
+              "mean_counts": 4.48563338772621,
+              "std_counts": 191.40794846427784,
+              "rms_counts": 191.46050151974617
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -641,
+              "maximum_counts": 563,
+              "mean_counts": -3.592690568818061,
+              "std_counts": 69.37961844851633,
+              "rms_counts": 69.47257647147529
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1610,
+              "maximum_counts": 959,
+              "mean_counts": 0.8328270831525286,
+              "std_counts": 180.3225642259841,
+              "rms_counts": 180.32448743857444
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -589,
+              "maximum_counts": 366,
+              "mean_counts": -2.755940984264637,
+              "std_counts": 66.15353991691508,
+              "rms_counts": 66.21092095906556
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -141,
+              "maximum_counts": 124,
+              "mean_counts": -1.269826524938045,
+              "std_counts": 25.260544109463094,
+              "rms_counts": 25.292440532885845
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-700-24-24-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\02402401.sbf",
+      "sha256_before": "ea2bd30ce0c71315d9e28987f99997ee471c950fe1998d4a7ea424eb9f75a3ca",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 134199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 21600000,
+          "channel_count": 5,
+          "duration_seconds": 5400.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -449064,
+              "maximum_counts": 477020,
+              "mean_counts": 2167.0866349999988,
+              "std_counts": 26675.197333706332,
+              "rms_counts": 26763.07936833445
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -262360,
+              "maximum_counts": 259929,
+              "mean_counts": 3458.6912415277798,
+              "std_counts": 23747.130214856727,
+              "rms_counts": 23997.68194108719
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -30493,
+              "maximum_counts": 74236,
+              "mean_counts": 648.2463020370369,
+              "std_counts": 3498.311760035674,
+              "rms_counts": 3557.8657139510747
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -42629,
+              "maximum_counts": 78357,
+              "mean_counts": 226.4839427314815,
+              "std_counts": 2122.859280609297,
+              "rms_counts": 2134.9066728042744
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -15273,
+              "maximum_counts": 22226,
+              "mean_counts": 2484.8643390277775,
+              "std_counts": 3387.2194925655363,
+              "rms_counts": 4200.9292631735525
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1053843,
+              "maximum_counts": 1145000,
+              "mean_counts": 2199.3874749999995,
+              "std_counts": 26642.12733365921,
+              "rms_counts": 26732.756201486187
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1248694,
+              "maximum_counts": 1200455,
+              "mean_counts": 3516.5587895833337,
+              "std_counts": 23445.68547008932,
+              "rms_counts": 23707.93860467319
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -37193,
+              "maximum_counts": 55031,
+              "mean_counts": 697.9416083333332,
+              "std_counts": 3449.4817636914677,
+              "rms_counts": 3519.3816114031906
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -48345,
+              "maximum_counts": 49291,
+              "mean_counts": 252.46326805555552,
+              "std_counts": 2215.035369461108,
+              "rms_counts": 2229.376457595486
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -5755,
+              "maximum_counts": 12410,
+              "mean_counts": 2478.1179229166664,
+              "std_counts": 3295.4587229946305,
+              "rms_counts": 4123.241035258819
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -3492,
+              "maximum_counts": 2363,
+              "mean_counts": -0.3726160000000001,
+              "std_counts": 354.0782354273235,
+              "rms_counts": 354.07843148942374
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -3944,
+              "maximum_counts": 2882,
+              "mean_counts": -5.121942,
+              "std_counts": 200.9364722247504,
+              "rms_counts": 201.00174168394474
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2249,
+              "maximum_counts": 1479,
+              "mean_counts": -5.237397999999999,
+              "std_counts": 284.02349576082474,
+              "rms_counts": 284.0717805098029
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -799,
+              "maximum_counts": 516,
+              "mean_counts": -6.887035999999999,
+              "std_counts": 103.70713480340409,
+              "rms_counts": 103.93556212383095
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -129,
+              "maximum_counts": 94,
+              "mean_counts": -3.0104990000000007,
+              "std_counts": 21.042594582677523,
+              "rms_counts": 21.256855153101327
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1732,
+              "maximum_counts": 1361,
+              "mean_counts": 3.1339529049831816,
+              "std_counts": 226.49409598117205,
+              "rms_counts": 226.51577687909295
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1647,
+              "maximum_counts": 2205,
+              "mean_counts": -4.560990200353642,
+              "std_counts": 129.42126123379876,
+              "rms_counts": 129.50160420224495
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1362,
+              "maximum_counts": 890,
+              "mean_counts": 0.21305114751826748,
+              "std_counts": 181.81742479399813,
+              "rms_counts": 181.81754961915152
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -526,
+              "maximum_counts": 348,
+              "mean_counts": -2.795554569840917,
+              "std_counts": 69.4674135490707,
+              "rms_counts": 69.52364109100277
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -143,
+              "maximum_counts": 127,
+              "mean_counts": -1.3670569168060418,
+              "std_counts": 24.78524171513919,
+              "rms_counts": 24.82291383966965
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-700-32-32-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\03203201.sbf",
+      "sha256_before": "794e2c5814dd98cbdcefe63bfa7ef22961e8d001add3b56cde02853d5a163bfa",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 134199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 21600000,
+          "channel_count": 5,
+          "duration_seconds": 5400.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -43664,
+              "maximum_counts": 48120,
+              "mean_counts": 2558.7829340740745,
+              "std_counts": 4468.688246193086,
+              "rms_counts": 5149.421787479927
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -34959,
+              "maximum_counts": 33455,
+              "mean_counts": 3830.1415304629636,
+              "std_counts": 9813.97552235834,
+              "rms_counts": 10534.899130832997
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -38966,
+              "maximum_counts": 53816,
+              "mean_counts": 501.4799888888892,
+              "std_counts": 5472.752057029956,
+              "rms_counts": 5495.6798721342575
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -40779,
+              "maximum_counts": 29875,
+              "mean_counts": 106.33746986111124,
+              "std_counts": 2383.190167108456,
+              "rms_counts": 2385.5613658212387
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -110085,
+              "maximum_counts": 110842,
+              "mean_counts": 2436.0619800462973,
+              "std_counts": 1882.7622757621739,
+              "rms_counts": 3078.829608416199
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -357954,
+              "maximum_counts": 454212,
+              "mean_counts": 2534.6343048611116,
+              "std_counts": 5045.681225255161,
+              "rms_counts": 5646.527258968223
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -161781,
+              "maximum_counts": 142127,
+              "mean_counts": 3751.7070354166663,
+              "std_counts": 10923.477699584524,
+              "rms_counts": 11549.790938926786
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -21808,
+              "maximum_counts": 29468,
+              "mean_counts": 436.24480902777776,
+              "std_counts": 6069.006960667746,
+              "rms_counts": 6084.665563696763
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -51462,
+              "maximum_counts": 59738,
+              "mean_counts": -31.38481875,
+              "std_counts": 2614.175905638568,
+              "rms_counts": 2614.3642960515654
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -14402,
+              "maximum_counts": 10082,
+              "mean_counts": 2453.766775,
+              "std_counts": 1785.8828601139894,
+              "rms_counts": 3034.8556763284187
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -2767,
+              "maximum_counts": 3655,
+              "mean_counts": -0.9513850000000001,
+              "std_counts": 303.715526546809,
+              "rms_counts": 303.71701664382203
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -2413,
+              "maximum_counts": 1663,
+              "mean_counts": -4.211391000000001,
+              "std_counts": 121.25529449407951,
+              "rms_counts": 121.32840663670166
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2972,
+              "maximum_counts": 2032,
+              "mean_counts": -5.394449000000001,
+              "std_counts": 290.37987153550336,
+              "rms_counts": 290.42997412971863
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -3808,
+              "maximum_counts": 1652,
+              "mean_counts": -6.881144000000001,
+              "std_counts": 101.80942085709133,
+              "rms_counts": 102.04169891767324
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -452,
+              "maximum_counts": 540,
+              "mean_counts": -2.893619,
+              "std_counts": 21.439719403080936,
+              "rms_counts": 21.634107307675215
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1440,
+              "maximum_counts": 1540,
+              "mean_counts": 2.658218092220749,
+              "std_counts": 193.03401389361076,
+              "rms_counts": 193.05231581958432
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -592,
+              "maximum_counts": 581,
+              "mean_counts": -3.514066969309633,
+              "std_counts": 79.37221776818657,
+              "rms_counts": 79.4499692895172
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1489,
+              "maximum_counts": 2153,
+              "mean_counts": 0.8075288598317361,
+              "std_counts": 192.8004228624314,
+              "rms_counts": 192.80211398942652
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -547,
+              "maximum_counts": 822,
+              "mean_counts": -2.5787484209815794,
+              "std_counts": 70.38261274680224,
+              "rms_counts": 70.4298382824002
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -139,
+              "maximum_counts": 147,
+              "mean_counts": -1.3273908312110114,
+              "std_counts": 25.31243120278635,
+              "rms_counts": 25.34721167731423
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-700-34-34-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\03403401.sbf",
+      "sha256_before": "9d77aa101efedd563dcc40abd3d703493a17a0ed0e2dc0bf6848a11e6f0d8cce",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 134199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 21600000,
+          "channel_count": 5,
+          "duration_seconds": 5400.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -136893,
+              "maximum_counts": 66506,
+              "mean_counts": 2594.653067175924,
+              "std_counts": 5024.7074800961955,
+              "rms_counts": 5655.078231071618
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -142282,
+              "maximum_counts": 91488,
+              "mean_counts": 3970.3797906481473,
+              "std_counts": 11722.526512670574,
+              "rms_counts": 12376.65316320417
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -8961,
+              "maximum_counts": 11155,
+              "mean_counts": 425.9964449537034,
+              "std_counts": 3514.6678947203463,
+              "rms_counts": 3540.3902865773352
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -35187,
+              "maximum_counts": 12191,
+              "mean_counts": 305.01715055555576,
+              "std_counts": 2222.5747037965984,
+              "rms_counts": 2243.4067344308223
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -7176,
+              "maximum_counts": 8974,
+              "mean_counts": 2470.8270620833327,
+              "std_counts": 2669.3446260882342,
+              "rms_counts": 3637.3599084431403
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -382741,
+              "maximum_counts": 384378,
+              "mean_counts": 2449.5887291666672,
+              "std_counts": 5129.208671265798,
+              "rms_counts": 5684.124078118688
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -647055,
+              "maximum_counts": 568683,
+              "mean_counts": 3836.6057326388886,
+              "std_counts": 12406.027684204115,
+              "rms_counts": 12985.725487971647
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -26894,
+              "maximum_counts": 29525,
+              "mean_counts": 442.2250798611111,
+              "std_counts": 3710.9921610182996,
+              "rms_counts": 3737.248431720513
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -29014,
+              "maximum_counts": 21705,
+              "mean_counts": 323.81035972222213,
+              "std_counts": 2164.29146176401,
+              "rms_counts": 2188.3808353501977
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -8244,
+              "maximum_counts": 10987,
+              "mean_counts": 2456.0543555555555,
+              "std_counts": 2709.4790485691506,
+              "rms_counts": 3656.976854189619
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -2705,
+              "maximum_counts": 2528,
+              "mean_counts": -0.9874290000000002,
+              "std_counts": 301.7582691940108,
+              "rms_counts": 301.7598847477828
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1258,
+              "maximum_counts": 1376,
+              "mean_counts": -4.458432999999999,
+              "std_counts": 153.21081979478717,
+              "rms_counts": 153.27567624057718
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2437,
+              "maximum_counts": 2997,
+              "mean_counts": -6.094213,
+              "std_counts": 273.3510968862574,
+              "rms_counts": 273.419022017506
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -897,
+              "maximum_counts": 1106,
+              "mean_counts": -7.3379400000000015,
+              "std_counts": 98.32407617952516,
+              "rms_counts": 98.59751173331234
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -130,
+              "maximum_counts": 149,
+              "mean_counts": -2.867814,
+              "std_counts": 20.803066477361558,
+              "rms_counts": 20.999807903886172
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1689,
+              "maximum_counts": 1511,
+              "mean_counts": 5.081459671949885,
+              "std_counts": 177.6172625870962,
+              "rms_counts": 177.6899355656677
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -716,
+              "maximum_counts": 846,
+              "mean_counts": -4.93734819191007,
+              "std_counts": 93.76477084807087,
+              "rms_counts": 93.89467322143147
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1412,
+              "maximum_counts": 1154,
+              "mean_counts": 0.718122042186443,
+              "std_counts": 162.98130738401474,
+              "rms_counts": 162.98288945736044
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -528,
+              "maximum_counts": 423,
+              "mean_counts": -2.8327481545529127,
+              "std_counts": 62.11715292397172,
+              "rms_counts": 62.181710731429796
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -133,
+              "maximum_counts": 117,
+              "mean_counts": -1.3172858276020813,
+              "std_counts": 24.812534511905447,
+              "rms_counts": 24.847476951515624
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-700-42-42-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\04204201.sbf",
+      "sha256_before": "4bc90a5ba91d7886df6d48747e14c5e644a6dc5b577aabb8c3550dc9e83a4473",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 134199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 21600000,
+          "channel_count": 5,
+          "duration_seconds": 5400.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -142740,
+              "maximum_counts": 156852,
+              "mean_counts": 2758.746912777777,
+              "std_counts": 24098.579920217882,
+              "rms_counts": 24255.973258145907
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -65132,
+              "maximum_counts": 113669,
+              "mean_counts": 3812.924458564813,
+              "std_counts": 25699.642192441213,
+              "rms_counts": 25980.95459651601
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -30398,
+              "maximum_counts": 15478,
+              "mean_counts": 301.47596296296314,
+              "std_counts": 5118.062500835379,
+              "rms_counts": 5126.933929621265
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -32810,
+              "maximum_counts": 17542,
+              "mean_counts": -60.142978564814804,
+              "std_counts": 2459.1253516647585,
+              "rms_counts": 2459.860701964843
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -22396,
+              "maximum_counts": 24766,
+              "mean_counts": 2513.220125370373,
+              "std_counts": 2086.186794185396,
+              "rms_counts": 3266.259441440654
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -585886,
+              "maximum_counts": 334161,
+              "mean_counts": 2805.588934027777,
+              "std_counts": 21434.685636889375,
+              "rms_counts": 21617.51784130201
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -151550,
+              "maximum_counts": 358364,
+              "mean_counts": 3769.955209027778,
+              "std_counts": 23312.018768294936,
+              "rms_counts": 23614.884741014743
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -29963,
+              "maximum_counts": 20345,
+              "mean_counts": 275.52207222222216,
+              "std_counts": 4741.394364775221,
+              "rms_counts": 4749.3929016879465
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -53079,
+              "maximum_counts": 45794,
+              "mean_counts": -24.108429166666664,
+              "std_counts": 2239.077174518899,
+              "rms_counts": 2239.2069600214313
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -9381,
+              "maximum_counts": 10215,
+              "mean_counts": 2527.59736875,
+              "std_counts": 2518.3526331545463,
+              "rms_counts": 3568.031452135527
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -2723,
+              "maximum_counts": 2730,
+              "mean_counts": -0.5319919999999995,
+              "std_counts": 322.0230433873895,
+              "rms_counts": 322.02348282068596
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -906,
+              "maximum_counts": 974,
+              "mean_counts": -4.196743,
+              "std_counts": 132.29167785311694,
+              "rms_counts": 132.3582286108458
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2798,
+              "maximum_counts": 1691,
+              "mean_counts": -7.081037,
+              "std_counts": 301.7834527372098,
+              "rms_counts": 301.8665159155403
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -915,
+              "maximum_counts": 604,
+              "mean_counts": -7.784597,
+              "std_counts": 104.59830096399394,
+              "rms_counts": 104.88758036586917
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -142,
+              "maximum_counts": 257,
+              "mean_counts": -2.6860389999999996,
+              "std_counts": 21.49580962631137,
+              "rms_counts": 21.6629784886599
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1774,
+              "maximum_counts": 1563,
+              "mean_counts": 4.46362016557863,
+              "std_counts": 190.0781288666844,
+              "rms_counts": 190.13053142102783
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -589,
+              "maximum_counts": 687,
+              "mean_counts": -3.5782734208119367,
+              "std_counts": 81.66958209071923,
+              "rms_counts": 81.74793379374684
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1524,
+              "maximum_counts": 1306,
+              "mean_counts": 0.7320766900273896,
+              "std_counts": 179.93871228724782,
+              "rms_counts": 179.94020150003453
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -553,
+              "maximum_counts": 450,
+              "mean_counts": -2.7934192119354324,
+              "std_counts": 65.99041031261368,
+              "rms_counts": 66.04950752368043
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -153,
+              "maximum_counts": 120,
+              "mean_counts": -1.4140519335899764,
+              "std_counts": 25.325698462739783,
+              "rms_counts": 25.36514430269439
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-700-43-43-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\04304301.sbf",
+      "sha256_before": "ed69a73565b75feaec5a90f84610382c3817d1eefd435565e8c20977d2838c00",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 134199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 21600000,
+          "channel_count": 5,
+          "duration_seconds": 5400.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -159584,
+              "maximum_counts": 50449,
+              "mean_counts": 2563.1738549999977,
+              "std_counts": 4570.938425285838,
+              "rms_counts": 5240.547518982165
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -228829,
+              "maximum_counts": 190939,
+              "mean_counts": 3676.7565568981504,
+              "std_counts": 20243.402286117827,
+              "rms_counts": 20574.59294606564
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -22789,
+              "maximum_counts": 26986,
+              "mean_counts": 426.8783306018517,
+              "std_counts": 4181.5208782281825,
+              "rms_counts": 4203.253735404944
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -28960,
+              "maximum_counts": 27650,
+              "mean_counts": 246.06691365740735,
+              "std_counts": 1942.915993510257,
+              "rms_counts": 1958.4359789982493
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -5430,
+              "maximum_counts": 9524,
+              "mean_counts": 2461.3881787500027,
+              "std_counts": 1649.1740727056758,
+              "rms_counts": 2962.8038896583894
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -648257,
+              "maximum_counts": 600477,
+              "mean_counts": 2403.467716666667,
+              "std_counts": 5133.142484686561,
+              "rms_counts": 5667.9633761301775
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1101382,
+              "maximum_counts": 923273,
+              "mean_counts": 3559.8885319444444,
+              "std_counts": 21030.786544428458,
+              "rms_counts": 21329.950516519784
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -67893,
+              "maximum_counts": 48212,
+              "mean_counts": 486.02274097222227,
+              "std_counts": 4681.695850915463,
+              "rms_counts": 4706.856078660278
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -60145,
+              "maximum_counts": 41930,
+              "mean_counts": 297.09430625000005,
+              "std_counts": 2094.187301822051,
+              "rms_counts": 2115.1561365343437
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -4153,
+              "maximum_counts": 14805,
+              "mean_counts": 2408.329041666667,
+              "std_counts": 1778.891652669961,
+              "rms_counts": 2994.078202865441
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -2432,
+              "maximum_counts": 2635,
+              "mean_counts": -0.741995,
+              "std_counts": 308.9218245874115,
+              "rms_counts": 308.9227156798209
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1368,
+              "maximum_counts": 1268,
+              "mean_counts": -4.963229,
+              "std_counts": 166.5505020914094,
+              "rms_counts": 166.62443815061167
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2454,
+              "maximum_counts": 3093,
+              "mean_counts": -5.281967,
+              "std_counts": 279.3888426111423,
+              "rms_counts": 279.4387670867855
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -908,
+              "maximum_counts": 1148,
+              "mean_counts": -6.8641559999999995,
+              "std_counts": 101.2308019745185,
+              "rms_counts": 101.46325396909225
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -126,
+              "maximum_counts": 117,
+              "mean_counts": -2.816382,
+              "std_counts": 20.80137395534377,
+              "rms_counts": 20.991168762124182
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1558,
+              "maximum_counts": 1474,
+              "mean_counts": 5.0266871523882655,
+              "std_counts": 184.4696319363791,
+              "rms_counts": 184.5381063370684
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -772,
+              "maximum_counts": 792,
+              "mean_counts": -5.396294784390995,
+              "std_counts": 102.24012579191671,
+              "rms_counts": 102.38243657652907
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1407,
+              "maximum_counts": 870,
+              "mean_counts": 1.0251857232806174,
+              "std_counts": 164.57221107412963,
+              "rms_counts": 164.5754041878527
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -550,
+              "maximum_counts": 375,
+              "mean_counts": -2.5303341179764707,
+              "std_counts": 63.24516930524359,
+              "rms_counts": 63.295766297577295
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -127,
+              "maximum_counts": 119,
+              "mean_counts": -1.2210118646470944,
+              "std_counts": 24.706211899333976,
+              "rms_counts": 24.7363654644008
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-700-44-44-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\04404401.sbf",
+      "sha256_before": "616003940a895a4e7c22ddcc13cc8687f8876b34377f783aaad12c52e86f7074",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 98199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 14400000,
+          "channel_count": 5,
+          "duration_seconds": 3600.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -130158,
+              "maximum_counts": 78637,
+              "mean_counts": 2011.3337271527776,
+              "std_counts": 2720.1951616325864,
+              "rms_counts": 3383.0348918318323
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -142336,
+              "maximum_counts": 157783,
+              "mean_counts": 3774.2657197916665,
+              "std_counts": 5746.951954025557,
+              "rms_counts": 6875.502780558864
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -113285,
+              "maximum_counts": 99642,
+              "mean_counts": 530.2494295833336,
+              "std_counts": 3874.441850917409,
+              "rms_counts": 3910.558030986597
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -34831,
+              "maximum_counts": 242743,
+              "mean_counts": 365.7080887500004,
+              "std_counts": 2226.214255949841,
+              "rms_counts": 2256.052375183582
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -289081,
+              "maximum_counts": 295602,
+              "mean_counts": 2436.043577361111,
+              "std_counts": 3736.5600714659263,
+              "rms_counts": 4460.514485849784
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -753668,
+              "maximum_counts": 1152090,
+              "mean_counts": 2029.0129312500003,
+              "std_counts": 3579.1272383813125,
+              "rms_counts": 4114.249052221166
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -244110,
+              "maximum_counts": 97130,
+              "mean_counts": 3793.517602777778,
+              "std_counts": 6599.259568066646,
+              "rms_counts": 7611.898754535825
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -11986,
+              "maximum_counts": 169202,
+              "mean_counts": 540.2748229166666,
+              "std_counts": 4281.004716696292,
+              "rms_counts": 4314.962139886459
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -50784,
+              "maximum_counts": 767982,
+              "mean_counts": 365.42550069444445,
+              "std_counts": 2590.0807691755017,
+              "rms_counts": 2615.7320557370826
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -39977,
+              "maximum_counts": 242585,
+              "mean_counts": 2406.814372222222,
+              "std_counts": 2517.624319124481,
+              "rms_counts": 3482.985448517185
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -2590,
+              "maximum_counts": 2603,
+              "mean_counts": -0.6134140000000001,
+              "std_counts": 316.19325541091973,
+              "rms_counts": 316.1938504210518
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1517,
+              "maximum_counts": 1518,
+              "mean_counts": -5.323462999999999,
+              "std_counts": 183.58374747423449,
+              "rms_counts": 183.6609147178459
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2412,
+              "maximum_counts": 1546,
+              "mean_counts": -4.466156999999999,
+              "std_counts": 266.13322758466205,
+              "rms_counts": 266.170699707872
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -855,
+              "maximum_counts": 571,
+              "mean_counts": -6.2709150000000005,
+              "std_counts": 98.26529313068549,
+              "rms_counts": 98.46518272464013
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -117,
+              "maximum_counts": 92,
+              "mean_counts": -2.976476,
+              "std_counts": 20.578280069561888,
+              "rms_counts": 20.792426986763815
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1694,
+              "maximum_counts": 1742,
+              "mean_counts": 4.369037988942139,
+              "std_counts": 209.26115680361733,
+              "rms_counts": 209.3067610941819
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1922,
+              "maximum_counts": 2144,
+              "mean_counts": -5.386779066706808,
+              "std_counts": 122.07155268545166,
+              "rms_counts": 122.19034889773624
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1274,
+              "maximum_counts": 915,
+              "mean_counts": 1.8415760148485778,
+              "std_counts": 165.61923118997203,
+              "rms_counts": 165.62946942550974
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -563,
+              "maximum_counts": 626,
+              "mean_counts": -1.9530506975181063,
+              "std_counts": 64.86702276267746,
+              "rms_counts": 64.89641784506132
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -130,
+              "maximum_counts": 120,
+              "mean_counts": -1.2991790354210841,
+              "std_counts": 24.605177691446794,
+              "rms_counts": 24.639452822531364
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-700-45-45-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\04504501.sbf",
+      "sha256_before": "91a7e729b3b3cb651d7556284315089866b3d74ee98e69537cfd60719660b2ac",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 134199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 21600000,
+          "channel_count": 5,
+          "duration_seconds": 5400.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -37200,
+              "maximum_counts": 255514,
+              "mean_counts": 2887.537000972222,
+              "std_counts": 1314.1036994546566,
+              "rms_counts": 3172.4971969891585
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -272698,
+              "maximum_counts": 141726,
+              "mean_counts": 4097.082973425928,
+              "std_counts": 10530.31128319222,
+              "rms_counts": 11299.271862029962
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -9207,
+              "maximum_counts": 35483,
+              "mean_counts": 168.51034981481476,
+              "std_counts": 2778.643698747885,
+              "rms_counts": 2783.7486493191227
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -9235,
+              "maximum_counts": 33925,
+              "mean_counts": -56.391360879629616,
+              "std_counts": 1918.7040725728516,
+              "rms_counts": 1919.5325742715343
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -4739,
+              "maximum_counts": 9239,
+              "mean_counts": 2380.8346595833327,
+              "std_counts": 2186.713255218399,
+              "rms_counts": 3232.6596691920927
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -319478,
+              "maximum_counts": 274935,
+              "mean_counts": 3030.3962201388886,
+              "std_counts": 1727.047397753084,
+              "rms_counts": 3487.9784926397933
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -675568,
+              "maximum_counts": 765480,
+              "mean_counts": 4129.5318125,
+              "std_counts": 11685.833769806099,
+              "rms_counts": 12394.020489170984
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -26848,
+              "maximum_counts": 22448,
+              "mean_counts": 314.4553340277778,
+              "std_counts": 3538.109564488133,
+              "rms_counts": 3552.055946549959
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -21866,
+              "maximum_counts": 21192,
+              "mean_counts": 159.56976180555557,
+              "std_counts": 2187.806663020966,
+              "rms_counts": 2193.6181307697143
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -4011,
+              "maximum_counts": 8173,
+              "mean_counts": 2326.6772194444443,
+              "std_counts": 2482.7722685136882,
+              "rms_counts": 3402.5850497500187
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -3108,
+              "maximum_counts": 2863,
+              "mean_counts": -0.4249499999999998,
+              "std_counts": 349.0307751237196,
+              "rms_counts": 349.0310338149991
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -877,
+              "maximum_counts": 933,
+              "mean_counts": -3.9125870000000003,
+              "std_counts": 112.74931167843918,
+              "rms_counts": 112.81717786310023
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2682,
+              "maximum_counts": 1991,
+              "mean_counts": -5.9920029999999995,
+              "std_counts": 319.0484199318688,
+              "rms_counts": 319.10468244915194
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -1033,
+              "maximum_counts": 746,
+              "mean_counts": -7.184583,
+              "std_counts": 119.20357561801492,
+              "rms_counts": 119.41989228350397
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -171,
+              "maximum_counts": 104,
+              "mean_counts": -2.788706,
+              "std_counts": 21.42883563905449,
+              "rms_counts": 21.609532109697515
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1808,
+              "maximum_counts": 1416,
+              "mean_counts": 5.71277311170468,
+              "std_counts": 203.4729401141223,
+              "rms_counts": 203.55312116327525
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -443,
+              "maximum_counts": 603,
+              "mean_counts": -3.7754859912449965,
+              "std_counts": 69.34081087769118,
+              "rms_counts": 69.44351911910732
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1688,
+              "maximum_counts": 1154,
+              "mean_counts": 1.0813328861903173,
+              "std_counts": 189.90861913714153,
+              "rms_counts": 189.9116976475821
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -661,
+              "maximum_counts": 451,
+              "mean_counts": -2.513315540469836,
+              "std_counts": 74.16866130238672,
+              "rms_counts": 74.211232804705
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -143,
+              "maximum_counts": 117,
+              "mean_counts": -1.2036557870199238,
+              "std_counts": 24.805903959335083,
+              "rms_counts": 24.835089258816495
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-700-55-55-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\05505501.sbf",
+      "sha256_before": "ad589097d9e81ab8757ee19ae5521dc08e8e209457b78a75a264d13aa0d7619a",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 134199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 21600000,
+          "channel_count": 5,
+          "duration_seconds": 5400.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -63560,
+              "maximum_counts": 81334,
+              "mean_counts": 2328.241112175926,
+              "std_counts": 2690.0299335405175,
+              "rms_counts": 3557.6632386680717
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -87770,
+              "maximum_counts": 174952,
+              "mean_counts": 3770.870795462963,
+              "std_counts": 3599.30952404165,
+              "rms_counts": 5212.916228555031
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -49282,
+              "maximum_counts": 24722,
+              "mean_counts": 372.9750368518517,
+              "std_counts": 2067.881807958391,
+              "rms_counts": 2101.2485692558853
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -22897,
+              "maximum_counts": 16353,
+              "mean_counts": 337.33545939814826,
+              "std_counts": 1671.8805586370463,
+              "rms_counts": 1705.5731630498535
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -14110,
+              "maximum_counts": 20510,
+              "mean_counts": 2214.658295879628,
+              "std_counts": 1347.4537111233105,
+              "rms_counts": 2592.3624112242564
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -180069,
+              "maximum_counts": 143786,
+              "mean_counts": 2306.7851208333336,
+              "std_counts": 2792.4586059161575,
+              "rms_counts": 3622.027423895803
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -140129,
+              "maximum_counts": 116159,
+              "mean_counts": 3723.392300000001,
+              "std_counts": 3877.5004408744153,
+              "rms_counts": 5375.747379544596
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -10713,
+              "maximum_counts": 12502,
+              "mean_counts": 399.71550486111107,
+              "std_counts": 2262.6998911347628,
+              "rms_counts": 2297.73438024669
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -5847,
+              "maximum_counts": 9556,
+              "mean_counts": 281.40936180555565,
+              "std_counts": 1819.6701453985554,
+              "rms_counts": 1841.3013514812317
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -2495,
+              "maximum_counts": 8013,
+              "mean_counts": 2209.578913888889,
+              "std_counts": 1516.171790546921,
+              "rms_counts": 2679.7417553101377
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -2298,
+              "maximum_counts": 2263,
+              "mean_counts": -1.5367400000000004,
+              "std_counts": 287.6759233932338,
+              "rms_counts": 287.6800279302985
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1027,
+              "maximum_counts": 1064,
+              "mean_counts": -4.514975,
+              "std_counts": 135.49972059655485,
+              "rms_counts": 135.57492128338137
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2359,
+              "maximum_counts": 1530,
+              "mean_counts": -5.408666000000001,
+              "std_counts": 273.215569640763,
+              "rms_counts": 273.2691002693612
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -875,
+              "maximum_counts": 565,
+              "mean_counts": -6.611129999999999,
+              "std_counts": 100.19908692259689,
+              "rms_counts": 100.41695105906685
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -128,
+              "maximum_counts": 87,
+              "mean_counts": -2.8500970000000003,
+              "std_counts": 20.784391694020933,
+              "rms_counts": 20.978893941290025
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1390,
+              "maximum_counts": 2000,
+              "mean_counts": 4.284908316038683,
+              "std_counts": 167.54362621240747,
+              "rms_counts": 167.59841026596814
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -910,
+              "maximum_counts": 679,
+              "mean_counts": -4.793229569010558,
+              "std_counts": 81.76492846944885,
+              "rms_counts": 81.90530249816139
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1403,
+              "maximum_counts": 1663,
+              "mean_counts": 1.010887861031378,
+              "std_counts": 169.4775386326085,
+              "rms_counts": 169.48055344267345
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -530,
+              "maximum_counts": 641,
+              "mean_counts": -2.4301083678958455,
+              "std_counts": 65.72621498127113,
+              "rms_counts": 65.7711240776983
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -124,
+              "maximum_counts": 124,
+              "mean_counts": -1.3122083257886874,
+              "std_counts": 24.64304276687858,
+              "rms_counts": 24.677954686328356
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "ARMT5-700-90-90-01",
+      "source": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\09009001.sbf",
+      "sha256_before": "6a6779ecc0b7cbf6ac0f40adcd6c7e556573e117c36ca4b8e164909762311905",
+      "status": "readable_with_notes",
+      "source_unchanged": true,
+      "total_scalar_samples": 170199995,
+      "spot_checks_ok": true,
+      "roundtrip": {
+        "trace_index": 0,
+        "samples": 4096,
+        "channels": 5,
+        "dtype": "int32",
+        "repeatable_read": true,
+        "npy_roundtrip": true,
+        "ok": true
+      },
+      "traces": [
+        {
+          "trace_index": 0,
+          "band_mask": 1,
+          "sample_rate_hz": 4000.0,
+          "sample_count_per_channel": 28800000,
+          "channel_count": 5,
+          "duration_seconds": 7200.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -128620,
+              "maximum_counts": 295598,
+              "mean_counts": 2633.4720025347233,
+              "std_counts": 4186.997401863379,
+              "rms_counts": 4946.324092833479
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -221140,
+              "maximum_counts": 109225,
+              "mean_counts": 3816.151132395835,
+              "std_counts": 24306.924442393192,
+              "rms_counts": 24604.665925663317
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -23392,
+              "maximum_counts": 33391,
+              "mean_counts": 300.04945236111104,
+              "std_counts": 3894.816979846098,
+              "rms_counts": 3906.357508006619
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -38823,
+              "maximum_counts": 38483,
+              "mean_counts": 73.67945034722229,
+              "std_counts": 2482.798943647424,
+              "rms_counts": 2483.8919573886933
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -11836,
+              "maximum_counts": 21490,
+              "mean_counts": 2496.1743618402766,
+              "std_counts": 4394.153792632783,
+              "rms_counts": 5053.659465972928
+            }
+          ]
+        },
+        {
+          "trace_index": 1,
+          "band_mask": 2,
+          "sample_rate_hz": 32000.0,
+          "sample_count_per_channel": 1440000,
+          "channel_count": 5,
+          "duration_seconds": 45.0,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -321476,
+              "maximum_counts": 629528,
+              "mean_counts": 2383.6434333333336,
+              "std_counts": 4704.683507186107,
+              "rms_counts": 5274.068914989838
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -280819,
+              "maximum_counts": 210569,
+              "mean_counts": 3727.657673611111,
+              "std_counts": 26139.297346891668,
+              "rms_counts": 26403.755367766335
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -13133,
+              "maximum_counts": 13474,
+              "mean_counts": 515.6282118055557,
+              "std_counts": 4578.648106746444,
+              "rms_counts": 4607.590578406744
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -20587,
+              "maximum_counts": 19382,
+              "mean_counts": 260.859257638889,
+              "std_counts": 2648.8713346671866,
+              "rms_counts": 2661.6849738309443
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -8131,
+              "maximum_counts": 11669,
+              "mean_counts": 2356.2078201388895,
+              "std_counts": 4557.19022290399,
+              "rms_counts": 5130.272704195691
+            }
+          ]
+        },
+        {
+          "trace_index": 2,
+          "band_mask": 4,
+          "sample_rate_hz": 400000.0,
+          "sample_count_per_channel": 1000000,
+          "channel_count": 5,
+          "duration_seconds": 2.5,
+          "bytes_per_sample": 4,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -2281,
+              "maximum_counts": 2868,
+              "mean_counts": -1.4309799999999995,
+              "std_counts": 291.0431498871375,
+              "rms_counts": 291.0466677355836
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -1388,
+              "maximum_counts": 1278,
+              "mean_counts": -4.646318999999999,
+              "std_counts": 164.79922226377835,
+              "rms_counts": 164.8647079850505
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -2289,
+              "maximum_counts": 2778,
+              "mean_counts": -5.942339,
+              "std_counts": 271.9690104960348,
+              "rms_counts": 272.0339207947847
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -821,
+              "maximum_counts": 1038,
+              "mean_counts": -7.068167,
+              "std_counts": 99.53480937974449,
+              "rms_counts": 99.78545616973427
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -128,
+              "maximum_counts": 116,
+              "mean_counts": -2.704435,
+              "std_counts": 20.980063687481508,
+              "rms_counts": 21.153653136042607
+            }
+          ]
+        },
+        {
+          "trace_index": 3,
+          "band_mask": 8,
+          "sample_rate_hz": 4000000.0,
+          "sample_count_per_channel": 2799999,
+          "channel_count": 5,
+          "duration_seconds": 0.69999975,
+          "bytes_per_sample": 2,
+          "channel_statistics": [
+            {
+              "channel": "Ex",
+              "minimum_counts": -1438,
+              "maximum_counts": 1549,
+              "mean_counts": 4.519775899919965,
+              "std_counts": 169.11505353983088,
+              "rms_counts": 169.1754406170274
+            },
+            {
+              "channel": "Ey",
+              "minimum_counts": -817,
+              "maximum_counts": 724,
+              "mean_counts": -5.0277878670670955,
+              "std_counts": 98.58543014458898,
+              "rms_counts": 98.71355371796652
+            },
+            {
+              "channel": "Hx",
+              "minimum_counts": -1361,
+              "maximum_counts": 924,
+              "mean_counts": 1.0961789629210563,
+              "std_counts": 158.28643122118928,
+              "rms_counts": 158.2902268526362
+            },
+            {
+              "channel": "Hy",
+              "minimum_counts": -527,
+              "maximum_counts": 344,
+              "mean_counts": -2.5031801797072064,
+              "std_counts": 61.543111268753584,
+              "rms_counts": 61.59399691244484
+            },
+            {
+              "channel": "Hz",
+              "minimum_counts": -140,
+              "maximum_counts": 125,
+              "mean_counts": -1.3002783215279723,
+              "std_counts": 24.711188775356,
+              "rms_counts": 24.745374808329654
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Un resultado legible no certifica unidades, cableado, polaridad ni calibracion",
+    "Los bytes sobrantes se excluyen de las muestras y se registran en el lector",
+    "La prueba NPY usa una copia temporal y no modifica el SBF"
+  ]
+}

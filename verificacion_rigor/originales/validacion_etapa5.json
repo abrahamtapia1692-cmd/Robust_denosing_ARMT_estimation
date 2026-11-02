@@ -1,0 +1,167 @@
+{
+  "artifact": "validacion_etapa5",
+  "version": "P5-VAL-1.0.0",
+  "generated_at_utc": "2026-10-29T16:01:27.605554Z",
+  "stage": 5,
+  "gate": "P5",
+  "subgate": "P5-L",
+  "status": "APROBADO",
+  "counts": {
+    "checks": 25,
+    "passed": 25,
+    "failed": 0,
+    "observations": 0
+  },
+  "checks": [
+    {
+      "id": "FILE-CONFIG",
+      "descripcion": "Existe config_p5.json",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa5\\config_p5.json"
+    },
+    {
+      "id": "FILE-BUILDER",
+      "descripcion": "Existe builder_datasets.py",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa5\\builder_datasets.py"
+    },
+    {
+      "id": "FILE-DRIVER",
+      "descripcion": "Existe p5.py",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa5\\p5.py"
+    },
+    {
+      "id": "FILE-MANIFEST",
+      "descripcion": "Existe dataset_manifest.json",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa5\\dataset_manifest.json"
+    },
+    {
+      "id": "FILE-SPLIT-REPORT",
+      "descripcion": "Existe split_report.csv",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa5\\split_report.csv"
+    },
+    {
+      "id": "FILE-RESUMEN",
+      "descripcion": "Existe resumen_p5.json",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa5\\resumen_p5.json"
+    },
+    {
+      "id": "FILE-REPORTE",
+      "descripcion": "Existe reporte_p5.md",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa5\\reporte_p5.md"
+    },
+    {
+      "id": "FILE-D-ID",
+      "descripcion": "Existe D_id.npz",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa5\\datasets\\D_id.npz"
+    },
+    {
+      "id": "FILE-D-SEP",
+      "descripcion": "Existe D_sep.npz",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa5\\datasets\\D_sep.npz"
+    },
+    {
+      "id": "FILE-D-REAL",
+      "descripcion": "Existe D_real.npz",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa5\\datasets\\D_real.npz"
+    },
+    {
+      "id": "VER-CONFIG",
+      "descripcion": "config_p5.json declara P5-CONFIG-1.0.0",
+      "resultado": "PASA",
+      "detalle": "P5-CONFIG-1.0.0"
+    },
+    {
+      "id": "VER-MANIFEST",
+      "descripcion": "dataset_manifest.json declara P5-MANIFEST-1.0.0",
+      "resultado": "PASA",
+      "detalle": "P5-MANIFEST-1.0.0"
+    },
+    {
+      "id": "VER-RESUMEN",
+      "descripcion": "resumen_p5.json declara P5-1.0.0",
+      "resultado": "PASA",
+      "detalle": "P5-1.0.0"
+    },
+    {
+      "id": "D-ID-SHAPE",
+      "descripcion": "D_id tiene forma (N, 256, 4)",
+      "resultado": "PASA",
+      "detalle": "(11232, 256, 4)"
+    },
+    {
+      "id": "D-ID-LABELS-MATCH",
+      "descripcion": "D_id X y labels y tienen la misma longitud",
+      "resultado": "PASA",
+      "detalle": "11232 vs 11232"
+    },
+    {
+      "id": "D-ID-BALANCED",
+      "descripcion": "D_id clases 0 y 1 equilibradas (ratio >= 0.90)",
+      "resultado": "PASA",
+      "detalle": "Clase 0: 5616, Clase 1: 5616 (ratio=1.000)"
+    },
+    {
+      "id": "D-SEP-ALIGNMENT",
+      "descripcion": "D_sep entrada X y blanco Y tienen forma id\u00e9ntica",
+      "resultado": "PASA",
+      "detalle": "X=(8435, 256, 4), Y=(8435, 256, 4)"
+    },
+    {
+      "id": "D-SEP-CHANNELS",
+      "descripcion": "D_sep tiene 4 canales Ex, Ey, Hx, Hy",
+      "resultado": "PASA",
+      "detalle": "(8435, 256, 4)"
+    },
+    {
+      "id": "NO-INVENTED-TARGETS",
+      "descripcion": "D_sep solo contiene blancos declarados exact_synthetic o exact_control",
+      "resultado": "PASA",
+      "detalle": "Tipos presentes: {'exact_synthetic', 'exact_control'}"
+    },
+    {
+      "id": "D-REAL-NO-FAKE-TARGET",
+      "descripcion": "D_real declara target_type='unavailable' (sin blanco inventado)",
+      "resultado": "PASA",
+      "detalle": "target_type=unavailable"
+    },
+    {
+      "id": "DISJOINT-TRAIN-VAL",
+      "descripcion": "Grupos disjuntos entre entrenamiento y validaci\u00f3n",
+      "resultado": "PASA",
+      "detalle": "train={'GRP-ENTR-01', 'GRP-ENTR-02'}, val={'GRP-VAL-01'}"
+    },
+    {
+      "id": "DISJOINT-TRAIN-TEST",
+      "descripcion": "Grupos disjuntos entre entrenamiento y prueba",
+      "resultado": "PASA",
+      "detalle": "train={'GRP-ENTR-01', 'GRP-ENTR-02'}, test={'GRP-TEST-01'}"
+    },
+    {
+      "id": "DISJOINT-VAL-TEST",
+      "descripcion": "Grupos disjuntos entre validaci\u00f3n y prueba",
+      "resultado": "PASA",
+      "detalle": "val={'GRP-VAL-01'}, test={'GRP-TEST-01'}"
+    },
+    {
+      "id": "POWER-MATCHING-B7",
+      "descripcion": "Clasificador B7 (solo-potencia) AUC <= 0.65 (atajo prevenido)",
+      "resultado": "PASA",
+      "detalle": "B7 AUC=0.4287"
+    },
+    {
+      "id": "ISOLATION-P0",
+      "descripcion": "Manifiesto y particiones de P0 intactos (sin fuga de datos)",
+      "resultado": "PASA",
+      "detalle": "Manifest hash=5a67b03fea..."
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "artifact": "config_p2t",
+  "version": "P2T-CONFIG-1.0.0",
+  "stage": 2,
+  "substage": "P2-T",
+  "title": "Diagnostico de soporte TEM-MT/AMT con la evidencia disponible",
+  "scope": {
+    "bands": ["D0", "D1"],
+    "observable": "Zxy (1D isotropo), expresado como rho_a y fase",
+    "records": "los 15 registros de etapa0/manifest.json",
+    "tem_soundings": ["SER-09", "SER-10", "SER-11", "SER-12", "SER-13", "SER-14"],
+    "excluded": [
+      "D2", "D3", "RMT", "sintesis_guiada_por_TEM",
+      "entrenamiento_guiado_por_TEM", "inferencia_guiada_por_TEM",
+      "inversion_TEM_nueva", "etiquetas_temporales_TEM"
+    ],
+    "note": "P2-T es un diagnostico. Un soporte vacio es un resultado valido y cierra la rama guiada por TEM; no se amplia por extrapolacion."
+  },
+  "inputs": [
+    {"id": "p0_manifest", "path": "etapa0/manifest.json", "base": "workspace", "role": "inventario y bloqueos"},
+    {"id": "p0_splits", "path": "etapa0/splits.csv", "base": "workspace", "role": "particiones congeladas"},
+    {"id": "p1_config", "path": "etapa1/config_p1.json", "base": "workspace", "role": "bandas y tolerancias P1"},
+    {"id": "p1_calibration_registry", "path": "etapa1/calibration_registry.json", "base": "workspace", "role": "respuesta calibrada y empalme 10 kHz"},
+    {"id": "p1_grid_D0", "path": "etapa1/respuesta_interpolada_D0.csv", "base": "workspace", "role": "grilla de frecuencias D0"},
+    {"id": "p1_grid_D1", "path": "etapa1/respuesta_interpolada_D1.csv", "base": "workspace", "role": "grilla de frecuencias D1"},
+    {"id": "tem_manifest", "path": "D:/ARRT_software/TEM_MT_inversion/dosier_doi_20261014/manifiesto_entradas.json", "base": "external", "role": "hashes del dosier TEM"},
+    {"id": "tem_qc_windows", "path": "D:/ARRT_software/TEM_MT_inversion/dosier_doi_20261014/ventanas_QC.csv", "base": "external", "role": "mascara QC por gate y sigma efectiva"},
+    {"id": "tem_summary", "path": "D:/ARRT_software/TEM_MT_inversion/dosier_doi_20261014/resumen_por_sondeo.csv", "base": "external", "role": "ventana preferente y DOI operativa"},
+    {"id": "tem_checks", "path": "D:/ARRT_software/TEM_MT_inversion/dosier_doi_20261014/comprobaciones_modelos.json", "base": "external", "role": "detectabilidad y comprobaciones de modelos"},
+    {"id": "tem_stability", "path": "D:/ARRT_software/TEM_MT_inversion/dosier_doi_20261014/estabilidad_modelos.json", "base": "external", "role": "12 modelos de estabilidad"},
+    {"id": "tem_scenarios", "path": "D:/ARRT_software/TEM_MT_inversion/dosier_doi_20261014/modelos_escenario.json", "base": "external", "role": "6 modelos base con Jacobiano TEM"},
+    {"id": "tem_dossier", "path": "D:/ARRT_software/TEM_MT_inversion/dosier_doi_20261014", "base": "external", "role": "directorio del dosier (no se modifica)"}
+  ],
+  "tem_soundings": {
+    "SER-09": {
+      "tem": "D:/WP.2026/GTM26-068-GH-027/Gabinete/Información de entregables/Winglink/TEMS/SER-09.tem",
+      "model": "D:/ARRT_software/TEM_MT_inversion/dosier_doi_20261014/SER-09_modelo.json"
+    },
+    "SER-10": {
+      "tem": "D:/WP.2026/GTM26-068-GH-027/Gabinete/Información de entregables/Winglink/TEMS/SER-10.tem",
+      "model": "D:/ARRT_software/TEM_MT_inversion/dosier_doi_20261014/SER-10_modelo.json"
+    },
+    "SER-11": {
+      "tem": "D:/WP.2026/GTM26-068-GH-027/Gabinete/Información de entregables/Winglink/TEMS/SER-11.tem",
+      "model": "D:/ARRT_software/TEM_MT_inversion/dosier_doi_20261014/SER-11_modelo.json"
+    },
+    "SER-12": {
+      "tem": "D:/WP.2026/GTM26-068-GH-027/Gabinete/Información de entregables/Winglink/TEMS/SER-12.tem",
+      "model": "D:/ARRT_software/TEM_MT_inversion/dosier_doi_20261014/SER-12_modelo.json"
+    },
+    "SER-13": {
+      "tem": "D:/WP.2026/GTM26-068-GH-027/Gabinete/Información de entregables/Winglink/TEMS/SER-13.tem",
+      "model": "D:/ARRT_software/TEM_MT_inversion/dosier_doi_20261014/SER-13_modelo.json"
+    },
+    "SER-14": {
+      "tem": "D:/WP.2026/GTM26-068-GH-027/Gabinete/Información de entregables/Winglink/TEMS/SER-14.tem",
+      "model": "D:/ARRT_software/TEM_MT_inversion/dosier_doi_20261014/SER-14_modelo.json"
+    }
+  },
+  "frequency_grid": {
+    "D0": {
+      "file": "etapa1/respuesta_interpolada_D0.csv",
+      "range_hz": [5.0, 1000.0],
+      "expected_n": 29,
+      "evaluate": true,
+      "note": "El primer punto de la grilla es 5.000000178 Hz por la tabla .clb; la banda de revision declarada en P1 empieza en 5 Hz."
+    },
+    "D1": {
+      "file": "etapa1/respuesta_interpolada_D1.csv",
+      "range_hz": [1000.0, 10000.0],
+      "expected_n": 13,
+      "evaluate": true,
+      "guard_frequencies_hz": [10000.0],
+      "guard": "empalme_calibracion_10kHz",
+      "usable_max_hz": 9900.0
+    }
+  },
+  "tem_gate_rules": {
+    "time_match_rel_tol": 0.001,
+    "amplitude_match_rel_tol": 0.05,
+    "valid_qc": ["preferente"],
+    "conditional_qc": ["condicional"],
+    "require_use_contiguous": true,
+    "note": "El estado del gate se decide con la tabla QC del lector. La comparacion con el .tem es una guarda de consistencia, no una reversion de la inversion.",
+    "used_in_inversion_note": "usado_en_inversion se refiere al modelo base del sondeo, que es el que aporta el Jacobiano TEM usado en el analisis SVD. Los 12 modelos de estabilidad pueden usar un subconjunto distinto de gates; n_modelos_que_usan_gate cuenta cuantos de los 3 modelos del sondeo usan cada gate."
+  },
+  "tolerances": {
+    "envelope_log10rhoa_halfwidth_max_dex": 0.025,
+    "envelope_phase_halfwidth_max_deg": 1.5,
+    "envelope_complex_rel_max": 0.065,
+    "envelope_complex_rel_ref": "media aritmetica de los 3 modelos del sondeo; se mide max |Z_i/Z_ref - 1|",
+    "tem_null_fraction_max": 0.10,
+    "tem_svd_effective_rank_rel": 0.01,
+    "tem_svd_rank_sensitivity_rel": [0.01, 0.001, 0.0001],
+    "frac_sensitivity_below_doi_max": 0.10,
+    "directo_Z_rel_max": 0.01,
+    "directo_phase_deg_max": 0.5
+  },
+  "depth_model": {
+    "last_layer_nominal_bottom_m": 3000.0,
+    "depth_metric": "z50 y z90 de la sensibilidad MT acumulada, suponiendo sensibilidad uniforme dentro de cada capa",
+    "doi_source": "DOI_operativa_creible_m del dosier; DOI_validated_m vacia en los 6 sondeos"
+  },
+  "support": {
+    "states": ["respaldada", "condicional", "no_respaldada", "no_evaluado"],
+    "max_state_without_posterior": "condicional",
+    "cap_reason": "conjunto_escenario_no_posterior; F_red_validada_no_definida; vinculo_TEM_ARMT_no_verificado; DOI_no_validada; calibracion_parcial",
+    "primary_armt_blocker": "B-P0-03",
+    "armt_state": "no_evaluado",
+    "note": "Solo respaldada habilitaria pares TEM. En P2-T no se alcanza respaldada: no hay posterior probabilistico ni vinculo TEM-ARMT verificado."
+  },
+  "outputs": {
+    "tem_valid_gates": "tem_valid_gates.csv",
+    "tem_amt_support": "tem_amt_support.csv",
+    "model_provenance": "model_provenance.json",
+    "envelopes_D0": "diagnostico_tem/envolventes_D0.csv",
+    "envelopes_D1": "diagnostico_tem/envolventes_D1.csv",
+    "support_by_sounding": "diagnostico_tem/soporte_por_sondeo.csv",
+    "mt_sensitivity": "diagnostico_tem/sensibilidades_mt.csv",
+    "tem_sensitivity": "diagnostico_tem/sensibilidades_tem.csv",
+    "tem_svd": "diagnostico_tem/sensibilidad_tem_svd.csv",
+    "doi_comparison": "diagnostico_tem/comparacion_sensibilidad_doi.csv",
+    "direct_tests": "diagnostico_tem/pruebas_directo.csv",
+    "summary": "diagnostico_tem/resumen_p2t.json",
+    "report": "reporte_p2t.md",
+    "validation": "validacion_etapa2.json"
+  },
+  "guards": {
+    "global": [
+      "no_se_generan_series_temporales_sinteticas",
+      "no_se_habilitan_etiquetas_TEM",
+      "no_se_entrena_ni_infiere_con_TEM",
+      "no_se_asigna_sondeo_a_registro_ARMT",
+      "no_se_amplia_el_soporte_por_extrapolacion",
+      "no_se_modifican_los_proyectos_de_origen"
+    ],
+    "data": [
+      "los_.tem_no_tienen_columna_de_error; C_d se toma de sigma_effective_nVA del dosier",
+      "el_empalme_de_calibracion_D1_esta_en_10kHz; 10kHz queda como escenario separado",
+      "la_geometria_TEM_es_lazo_cuadrado_coincidente_sin_datum_ni_elevacion",
+      "la_inversion_TEM_uso_empymod_y_no_incluye_filtros_ni_forma_de_onda_periodica_completa"
+    ]
+  },
+  "blockers": [
+    {"id": "B-P0-01", "impact": "sitio no identificado; no se agrupa por sitio"},
+    {"id": "B-P0-02", "impact": "coordenadas candidatas sin datum; no se comparan espacialmente"},
+    {"id": "B-P0-03", "impact": "vinculo TEM-ARMT no verificado; tem_amt_support queda no_evaluado"},
+    {"id": "B-P0-04", "impact": "calibracion sin fecha ni certificado; no se certifica amplitud/fase"},
+    {"id": "B-P0-06", "impact": "F_red_validada no definida; no se alcanza respaldada"},
+    {"id": "B-P0-07", "impact": "zona horaria no declarada; no afecta la grilla de frecuencias"}
+  ]
+}

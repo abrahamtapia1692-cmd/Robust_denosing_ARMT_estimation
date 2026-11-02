@@ -1,0 +1,1746 @@
+{
+  "record_version": "P1-BARRIDO-1.0.0",
+  "record_id": "ARMT5-700-32-32-01",
+  "generated_at_utc": "2026-10-28T19:01:24.120620Z",
+  "split": {
+    "split": "desarrollo",
+    "split_group": "S2021-A700-L032",
+    "campaign_group": "C2021-A700",
+    "protocol_version": "P0-SPLITS-1.0.0",
+    "assignment_basis": "record_level_site_holdout",
+    "frozen": true
+  },
+  "campaign": {
+    "year": 2021,
+    "campaign_group": "C2021-A700",
+    "label": null
+  },
+  "site": {
+    "site_id": null,
+    "site_name": null,
+    "status": "no_resuelto",
+    "note": "Identidad de sitio sin resolver (B-P0-01/B-P0-02)."
+  },
+  "source": {
+    "path_abs": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\03203201.sbf",
+    "path_ref": "ARMT_processing/ARMT_data/03203201.sbf",
+    "path_base": "software_root",
+    "sha256": "794e2c5814dd98cbdcefe63bfa7ef22961e8d001add3b56cde02853d5a163bfa",
+    "size_bytes": 508952577,
+    "mtime_utc": "2021-01-19T18:11:56Z"
+  },
+  "source_sha256_recomputed": "794e2c5814dd98cbdcefe63bfa7ef22961e8d001add3b56cde02853d5a163bfa",
+  "source_sha256_match": true,
+  "consistency": {
+    "bands": {
+      "D0": {
+        "sample_count_match": true,
+        "sample_rate_match": true,
+        "channels_match": true,
+        "adc_to_uv_match": true,
+        "receiver_serial_match": true
+      },
+      "D1": {
+        "sample_count_match": true,
+        "sample_rate_match": true,
+        "channels_match": true,
+        "adc_to_uv_match": true,
+        "receiver_serial_match": true
+      }
+    },
+    "all_match": true
+  },
+  "settings_summary": {
+    "gain_values_unique": [
+      1.77828002
+    ],
+    "gain_db": [
+      5.000002979314534
+    ],
+    "nearest_gain_directory": {
+      "directory": "CLB_G1.8_Ex_shifted",
+      "label": "1.8",
+      "delta_pct": -1.1246822577723491e-06
+    },
+    "adc_to_uv": [
+      0.5960090756416321,
+      0.5960000157356262
+    ],
+    "electric_dipole_lengths_cm": [
+      2000.0,
+      2000.0
+    ],
+    "sensor_azimuth_degrees": [
+      0.0,
+      90.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "delay_seconds": 0.0,
+    "settings_sections": 4
+  },
+  "bands": {
+    "D0": {
+      "trace_index": 0,
+      "sample_rate_hz": 4000.0,
+      "n_samples": 21600000,
+      "duration_s": 5400.0,
+      "channels": [
+        "Ex",
+        "Ey",
+        "Hx",
+        "Hy",
+        "Hz"
+      ],
+      "thresholds": {
+        "clip_run_samples": 4,
+        "stuck_run_samples": 2000,
+        "zero_fill_run_samples": 400,
+        "guard_samples": 40,
+        "jump_guard_samples": 20,
+        "edge_samples": 400
+      },
+      "sbf_audit": {
+        "trace_index": 0,
+        "band": "D0",
+        "sample_rate_hz": 4000.0,
+        "sample_count": 21600000,
+        "duration_s": 5400.0,
+        "bytes_per_sample": 4,
+        "channel_count": 5,
+        "channels": [
+          "Ex",
+          "Ey",
+          "Hx",
+          "Hy",
+          "Hz"
+        ],
+        "receiver_serial": 1,
+        "adc_to_uv": [
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321
+        ],
+        "settings_match": "inferred_single_settings_0xabcd",
+        "settings_count": 1,
+        "independent_export_comparison": "no_disponible",
+        "note": "No hay exportacion independiente del software del fabricante para comparar signo, bits e intercalado. Se usa el lector ARMT_processing y se verifica la longitud leida."
+      },
+      "checks": {
+        "clipping": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "plateaus >= 1.000 ms en el minimo o maximo global"
+        },
+        "canales_muertos": {
+          "estado": "PASA",
+          "channels": [],
+          "detail": "std <= 1.000 counts"
+        },
+        "valores_pegados": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos constantes >= 0.500 s"
+        },
+        "relleno_de_ceros": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos de ceros >= 0.100 s"
+        },
+        "saltos": {
+          "estado": "OBSERVACION",
+          "counts": {
+            "Ex": 12,
+            "Ey": 0,
+            "Hx": 0,
+            "Hy": 0,
+            "Hz": 0
+          },
+          "enmascarados": false,
+          "detail": "|diff - mediana| > 50.0 sigma robusta; se reportan como candidatos, no se enmascaran para no borrar sferics"
+        },
+        "muestras_faltantes": {
+          "estado": "PASA",
+          "expected_samples": 21600000,
+          "read_samples": 21600000,
+          "match": true,
+          "note": "El lector entrega exactamente sample_count; no hay huecos declarados en el SBF."
+        },
+        "transitorios_conmutacion": {
+          "estado": "NO_APLICABLE",
+          "detail": "El registro tiene una sola configuracion de ganancia (settings_count=1); el detector de cambios de media por bloque queda como observacion.",
+          "detector_por_bloque": {
+            "Ex": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.09600000000000364,
+              "robust_sigma": 31.50413804999977,
+              "threshold": 315.04138049999773,
+              "count": 42,
+              "events": [
+                {
+                  "block_index": 13,
+                  "time_s": 13.0,
+                  "delta_mean_counts": -695.5252500000001
+                },
+                {
+                  "block_index": 14,
+                  "time_s": 14.0,
+                  "delta_mean_counts": 637.6817499999997
+                },
+                {
+                  "block_index": 15,
+                  "time_s": 15.0,
+                  "delta_mean_counts": 340.42175
+                },
+                {
+                  "block_index": 989,
+                  "time_s": 989.0,
+                  "delta_mean_counts": 362.83224999999993
+                },
+                {
+                  "block_index": 1057,
+                  "time_s": 1057.0,
+                  "delta_mean_counts": 448.9187500000003
+                },
+                {
+                  "block_index": 2052,
+                  "time_s": 2052.0,
+                  "delta_mean_counts": -475.596
+                },
+                {
+                  "block_index": 2053,
+                  "time_s": 2053.0,
+                  "delta_mean_counts": 546.5702500000002
+                },
+                {
+                  "block_index": 3544,
+                  "time_s": 3544.0,
+                  "delta_mean_counts": 590.3229999999999
+                },
+                {
+                  "block_index": 4621,
+                  "time_s": 4621.0,
+                  "delta_mean_counts": 523.8652499999998
+                },
+                {
+                  "block_index": 4661,
+                  "time_s": 4661.0,
+                  "delta_mean_counts": -444.2025000000003
+                },
+                {
+                  "block_index": 4677,
+                  "time_s": 4677.0,
+                  "delta_mean_counts": -480.80674999999974
+                },
+                {
+                  "block_index": 4679,
+                  "time_s": 4679.0,
+                  "delta_mean_counts": 441.34850000000006
+                },
+                {
+                  "block_index": 5006,
+                  "time_s": 5006.0,
+                  "delta_mean_counts": -318.1999999999998
+                },
+                {
+                  "block_index": 5007,
+                  "time_s": 5007.0,
+                  "delta_mean_counts": 376.0124999999998
+                },
+                {
+                  "block_index": 5034,
+                  "time_s": 5034.0,
+                  "delta_mean_counts": -453.29275000000007
+                },
+                {
+                  "block_index": 5035,
+                  "time_s": 5035.0,
+                  "delta_mean_counts": 369.2972500000001
+                },
+                {
+                  "block_index": 5147,
+                  "time_s": 5147.0,
+                  "delta_mean_counts": -406.89800000000014
+                },
+                {
+                  "block_index": 5148,
+                  "time_s": 5148.0,
+                  "delta_mean_counts": 327.6847499999999
+                },
+                {
+                  "block_index": 5160,
+                  "time_s": 5160.0,
+                  "delta_mean_counts": 315.61850000000004
+                },
+                {
+                  "block_index": 5221,
+                  "time_s": 5221.0,
+                  "delta_mean_counts": 783.683
+                }
+              ]
+            },
+            "Ey": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.7469999999998436,
+              "robust_sigma": 27.488145300000095,
+              "threshold": 274.88145300000093,
+              "count": 14,
+              "events": [
+                {
+                  "block_index": 1624,
+                  "time_s": 1624.0,
+                  "delta_mean_counts": -398.36850000000004
+                },
+                {
+                  "block_index": 1838,
+                  "time_s": 1838.0,
+                  "delta_mean_counts": 366.23425
+                },
+                {
+                  "block_index": 3816,
+                  "time_s": 3816.0,
+                  "delta_mean_counts": -329.0142500000002
+                },
+                {
+                  "block_index": 3817,
+                  "time_s": 3817.0,
+                  "delta_mean_counts": 285.03375000000005
+                },
+                {
+                  "block_index": 3829,
+                  "time_s": 3829.0,
+                  "delta_mean_counts": -307.8705
+                },
+                {
+                  "block_index": 4008,
+                  "time_s": 4008.0,
+                  "delta_mean_counts": -391.42750000000024
+                },
+                {
+                  "block_index": 4009,
+                  "time_s": 4009.0,
+                  "delta_mean_counts": 496.1199999999999
+                },
+                {
+                  "block_index": 4014,
+                  "time_s": 4014.0,
+                  "delta_mean_counts": -306.4744999999998
+                },
+                {
+                  "block_index": 4049,
+                  "time_s": 4049.0,
+                  "delta_mean_counts": -314.75824999999986
+                },
+                {
+                  "block_index": 4282,
+                  "time_s": 4282.0,
+                  "delta_mean_counts": -325.2592499999996
+                },
+                {
+                  "block_index": 4345,
+                  "time_s": 4345.0,
+                  "delta_mean_counts": -313.0442499999999
+                },
+                {
+                  "block_index": 4394,
+                  "time_s": 4394.0,
+                  "delta_mean_counts": -360.71799999999985
+                },
+                {
+                  "block_index": 4427,
+                  "time_s": 4427.0,
+                  "delta_mean_counts": -309.9659999999999
+                },
+                {
+                  "block_index": 4428,
+                  "time_s": 4428.0,
+                  "delta_mean_counts": 349.97800000000007
+                }
+              ]
+            },
+            "Hx": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.07625000000007276,
+              "robust_sigma": 13.20514755000015,
+              "threshold": 132.05147550000152,
+              "count": 40,
+              "events": [
+                {
+                  "block_index": 4683,
+                  "time_s": 4683.0,
+                  "delta_mean_counts": 364.75274999999993
+                },
+                {
+                  "block_index": 4684,
+                  "time_s": 4684.0,
+                  "delta_mean_counts": -438.1285
+                },
+                {
+                  "block_index": 4686,
+                  "time_s": 4686.0,
+                  "delta_mean_counts": 798.6345
+                },
+                {
+                  "block_index": 4687,
+                  "time_s": 4687.0,
+                  "delta_mean_counts": -234.89025000000004
+                },
+                {
+                  "block_index": 4689,
+                  "time_s": 4689.0,
+                  "delta_mean_counts": 164.65274999999997
+                },
+                {
+                  "block_index": 4690,
+                  "time_s": 4690.0,
+                  "delta_mean_counts": -1055.452
+                },
+                {
+                  "block_index": 4691,
+                  "time_s": 4691.0,
+                  "delta_mean_counts": 4093.1475
+                },
+                {
+                  "block_index": 4692,
+                  "time_s": 4692.0,
+                  "delta_mean_counts": -4149.965999999999
+                },
+                {
+                  "block_index": 4693,
+                  "time_s": 4693.0,
+                  "delta_mean_counts": -8680.351
+                },
+                {
+                  "block_index": 4694,
+                  "time_s": 4694.0,
+                  "delta_mean_counts": 9679.14725
+                },
+                {
+                  "block_index": 4695,
+                  "time_s": 4695.0,
+                  "delta_mean_counts": -389.19475000000006
+                },
+                {
+                  "block_index": 4696,
+                  "time_s": 4696.0,
+                  "delta_mean_counts": -558.41775
+                },
+                {
+                  "block_index": 4697,
+                  "time_s": 4697.0,
+                  "delta_mean_counts": 501.558
+                },
+                {
+                  "block_index": 4698,
+                  "time_s": 4698.0,
+                  "delta_mean_counts": 197.10675
+                },
+                {
+                  "block_index": 4700,
+                  "time_s": 4700.0,
+                  "delta_mean_counts": -732.5455000000001
+                },
+                {
+                  "block_index": 4701,
+                  "time_s": 4701.0,
+                  "delta_mean_counts": 2693.8134999999997
+                },
+                {
+                  "block_index": 4702,
+                  "time_s": 4702.0,
+                  "delta_mean_counts": 2264.4522500000003
+                },
+                {
+                  "block_index": 4703,
+                  "time_s": 4703.0,
+                  "delta_mean_counts": -4210.275000000001
+                },
+                {
+                  "block_index": 4704,
+                  "time_s": 4704.0,
+                  "delta_mean_counts": 572.064
+                },
+                {
+                  "block_index": 4705,
+                  "time_s": 4705.0,
+                  "delta_mean_counts": 1784.6145000000001
+                }
+              ]
+            },
+            "Hy": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": 0.10175000000000978,
+              "robust_sigma": 13.646591699999993,
+              "threshold": 136.46591699999993,
+              "count": 40,
+              "events": [
+                {
+                  "block_index": 4682,
+                  "time_s": 4682.0,
+                  "delta_mean_counts": 194.86625
+                },
+                {
+                  "block_index": 4683,
+                  "time_s": 4683.0,
+                  "delta_mean_counts": -196.994
+                },
+                {
+                  "block_index": 4684,
+                  "time_s": 4684.0,
+                  "delta_mean_counts": -301.46074999999996
+                },
+                {
+                  "block_index": 4685,
+                  "time_s": 4685.0,
+                  "delta_mean_counts": 1107.148
+                },
+                {
+                  "block_index": 4686,
+                  "time_s": 4686.0,
+                  "delta_mean_counts": -1127.652
+                },
+                {
+                  "block_index": 4687,
+                  "time_s": 4687.0,
+                  "delta_mean_counts": -548.2819999999999
+                },
+                {
+                  "block_index": 4688,
+                  "time_s": 4688.0,
+                  "delta_mean_counts": 1096.364
+                },
+                {
+                  "block_index": 4689,
+                  "time_s": 4689.0,
+                  "delta_mean_counts": -434.552
+                },
+                {
+                  "block_index": 4690,
+                  "time_s": 4690.0,
+                  "delta_mean_counts": -423.97075000000007
+                },
+                {
+                  "block_index": 4691,
+                  "time_s": 4691.0,
+                  "delta_mean_counts": 624.22
+                },
+                {
+                  "block_index": 4692,
+                  "time_s": 4692.0,
+                  "delta_mean_counts": 3908.43775
+                },
+                {
+                  "block_index": 4693,
+                  "time_s": 4693.0,
+                  "delta_mean_counts": -7568.68825
+                },
+                {
+                  "block_index": 4694,
+                  "time_s": 4694.0,
+                  "delta_mean_counts": 2769.083
+                },
+                {
+                  "block_index": 4695,
+                  "time_s": 4695.0,
+                  "delta_mean_counts": 2541.6730000000002
+                },
+                {
+                  "block_index": 4696,
+                  "time_s": 4696.0,
+                  "delta_mean_counts": -1863.0062500000001
+                },
+                {
+                  "block_index": 4697,
+                  "time_s": 4697.0,
+                  "delta_mean_counts": 164.536
+                },
+                {
+                  "block_index": 4699,
+                  "time_s": 4699.0,
+                  "delta_mean_counts": -676.6387500000001
+                },
+                {
+                  "block_index": 4700,
+                  "time_s": 4700.0,
+                  "delta_mean_counts": 2107.44875
+                },
+                {
+                  "block_index": 4701,
+                  "time_s": 4701.0,
+                  "delta_mean_counts": -2169.95125
+                },
+                {
+                  "block_index": 4702,
+                  "time_s": 4702.0,
+                  "delta_mean_counts": 1499.2115
+                }
+              ]
+            },
+            "Hz": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.1000000000003638,
+              "robust_sigma": 13.405669200000549,
+              "threshold": 134.05669200000548,
+              "count": 46,
+              "events": [
+                {
+                  "block_index": 4682,
+                  "time_s": 4682.0,
+                  "delta_mean_counts": 189.92425000000003
+                },
+                {
+                  "block_index": 4683,
+                  "time_s": 4683.0,
+                  "delta_mean_counts": 615.4155000000001
+                },
+                {
+                  "block_index": 4685,
+                  "time_s": 4685.0,
+                  "delta_mean_counts": 353.21725000000015
+                },
+                {
+                  "block_index": 4686,
+                  "time_s": 4686.0,
+                  "delta_mean_counts": -1582.665
+                },
+                {
+                  "block_index": 4687,
+                  "time_s": 4687.0,
+                  "delta_mean_counts": -216.25025000000005
+                },
+                {
+                  "block_index": 4688,
+                  "time_s": 4688.0,
+                  "delta_mean_counts": 855.8272499999998
+                },
+                {
+                  "block_index": 4689,
+                  "time_s": 4689.0,
+                  "delta_mean_counts": -1570.4087499999998
+                },
+                {
+                  "block_index": 4690,
+                  "time_s": 4690.0,
+                  "delta_mean_counts": -4400.9605
+                },
+                {
+                  "block_index": 4691,
+                  "time_s": 4691.0,
+                  "delta_mean_counts": 10100.871500000001
+                },
+                {
+                  "block_index": 4692,
+                  "time_s": 4692.0,
+                  "delta_mean_counts": -6559.18475
+                },
+                {
+                  "block_index": 4693,
+                  "time_s": 4693.0,
+                  "delta_mean_counts": -4967.39375
+                },
+                {
+                  "block_index": 4694,
+                  "time_s": 4694.0,
+                  "delta_mean_counts": 9393.6265
+                },
+                {
+                  "block_index": 4695,
+                  "time_s": 4695.0,
+                  "delta_mean_counts": -5332.056500000001
+                },
+                {
+                  "block_index": 4696,
+                  "time_s": 4696.0,
+                  "delta_mean_counts": 4884.30925
+                },
+                {
+                  "block_index": 4697,
+                  "time_s": 4697.0,
+                  "delta_mean_counts": -2614.0694999999996
+                },
+                {
+                  "block_index": 4698,
+                  "time_s": 4698.0,
+                  "delta_mean_counts": -1465.74775
+                },
+                {
+                  "block_index": 4699,
+                  "time_s": 4699.0,
+                  "delta_mean_counts": 2928.8199999999997
+                },
+                {
+                  "block_index": 4700,
+                  "time_s": 4700.0,
+                  "delta_mean_counts": -944.953
+                },
+                {
+                  "block_index": 4701,
+                  "time_s": 4701.0,
+                  "delta_mean_counts": 2074.54425
+                },
+                {
+                  "block_index": 4702,
+                  "time_s": 4702.0,
+                  "delta_mean_counts": 3779.6547500000006
+                }
+              ]
+            }
+          }
+        }
+      },
+      "per_channel": {
+        "Ex": {
+          "minimum_counts": -43664,
+          "maximum_counts": 48120,
+          "mean_counts": 2558.782934074074,
+          "std_counts": 4468.688246193034,
+          "zero_count": 1126,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 3398938,
+          "jump_count": 12,
+          "jump_fraction": 5.555555812757213e-07,
+          "jump_threshold": {
+            "median_diff_counts": -1.0,
+            "robust_sigma_counts": 566.3532,
+            "threshold_counts": 28317.66,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              1416274,
+              1416315
+            ],
+            [
+              9223734,
+              9223775
+            ],
+            [
+              9493323,
+              9493364
+            ],
+            [
+              10070303,
+              10070344
+            ],
+            [
+              10300547,
+              10300591
+            ],
+            [
+              10591616,
+              10591657
+            ],
+            [
+              10654997,
+              10655040
+            ],
+            [
+              15380428,
+              15380471
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 13193,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Ey": {
+          "minimum_counts": -34959,
+          "maximum_counts": 33455,
+          "mean_counts": 3830.141530462963,
+          "std_counts": 9813.975522358336,
+          "zero_count": 553,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 4579764,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": -3.0,
+            "robust_sigma_counts": 1343.2356,
+            "threshold_counts": 67161.78,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 28409,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hx": {
+          "minimum_counts": -38966,
+          "maximum_counts": 53816,
+          "mean_counts": 501.4799888888889,
+          "std_counts": 5472.752057029883,
+          "zero_count": 1013,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 0.0005,
+          "longest_constant_run_start_sample": 1044,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 1.0,
+            "robust_sigma_counts": 797.6388,
+            "threshold_counts": 39881.939999999995,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 17297,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hy": {
+          "minimum_counts": -40779,
+          "maximum_counts": 29875,
+          "mean_counts": 106.33746986111112,
+          "std_counts": 2383.190167108444,
+          "zero_count": 1696,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 320748,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 369.1674,
+            "threshold_counts": 18458.37,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 7485,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hz": {
+          "minimum_counts": -110085,
+          "maximum_counts": 110842,
+          "mean_counts": 2436.0619800462964,
+          "std_counts": 1882.7622757621716,
+          "zero_count": 3044,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 1553367,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 327.65459999999996,
+            "threshold_counts": 16382.729999999998,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 5268,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        }
+      },
+      "bad_mask": {
+        "file": "ARMT5-700-32-32-01_D0.npz",
+        "sha256": "3074161eb56f3f1340d2817f99cbf3b14ab70799672025a3a0067164538a8127",
+        "total_bad_samples_summed": 0,
+        "union_bad_samples": 0,
+        "union_bad_fraction": 0.0,
+        "max_channel_bad_fraction": 0.0,
+        "guard_samples": 40,
+        "bitorder": "little",
+        "relative_path": "barrido/mascaras/ARMT5-700-32-32-01_D0.npz"
+      },
+      "status": "PASA_CON_OBSERVACIONES",
+      "manifest_trace": {
+        "index": 0,
+        "section_index": 1,
+        "sample_count": 21600000,
+        "sample_rate_hz": 4000.0,
+        "duration_seconds": 5400.0,
+        "start_time_local": "2021-01-19T16:41:06",
+        "adc_to_uv": [
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321
+        ]
+      }
+    },
+    "D1": {
+      "trace_index": 1,
+      "sample_rate_hz": 32000.0,
+      "n_samples": 1440000,
+      "duration_s": 45.0,
+      "channels": [
+        "Ex",
+        "Ey",
+        "Hx",
+        "Hy",
+        "Hz"
+      ],
+      "thresholds": {
+        "clip_run_samples": 32,
+        "stuck_run_samples": 16000,
+        "zero_fill_run_samples": 3200,
+        "guard_samples": 320,
+        "jump_guard_samples": 160,
+        "edge_samples": 3200
+      },
+      "sbf_audit": {
+        "trace_index": 1,
+        "band": "D1",
+        "sample_rate_hz": 32000.0,
+        "sample_count": 1440000,
+        "duration_s": 45.0,
+        "bytes_per_sample": 4,
+        "channel_count": 5,
+        "channels": [
+          "Ex",
+          "Ey",
+          "Hx",
+          "Hy",
+          "Hz"
+        ],
+        "receiver_serial": 1,
+        "adc_to_uv": [
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262
+        ],
+        "settings_match": "inferred_single_settings_0xabcd",
+        "settings_count": 1,
+        "independent_export_comparison": "no_disponible",
+        "note": "No hay exportacion independiente del software del fabricante para comparar signo, bits e intercalado. Se usa el lector ARMT_processing y se verifica la longitud leida."
+      },
+      "checks": {
+        "clipping": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "plateaus >= 1.000 ms en el minimo o maximo global"
+        },
+        "canales_muertos": {
+          "estado": "PASA",
+          "channels": [],
+          "detail": "std <= 1.000 counts"
+        },
+        "valores_pegados": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos constantes >= 0.500 s"
+        },
+        "relleno_de_ceros": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos de ceros >= 0.100 s"
+        },
+        "saltos": {
+          "estado": "OBSERVACION",
+          "counts": {
+            "Ex": 132,
+            "Ey": 57,
+            "Hx": 0,
+            "Hy": 3,
+            "Hz": 0
+          },
+          "enmascarados": false,
+          "detail": "|diff - mediana| > 50.0 sigma robusta; se reportan como candidatos, no se enmascaran para no borrar sferics"
+        },
+        "muestras_faltantes": {
+          "estado": "PASA",
+          "expected_samples": 1440000,
+          "read_samples": 1440000,
+          "match": true,
+          "note": "El lector entrega exactamente sample_count; no hay huecos declarados en el SBF."
+        },
+        "transitorios_conmutacion": {
+          "estado": "NO_APLICABLE",
+          "detail": "El registro tiene una sola configuracion de ganancia (settings_count=1); el detector de cambios de media por bloque queda como observacion.",
+          "detector_por_bloque": {
+            "Ex": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -3.3078906250000273,
+              "robust_sigma": 71.3985874875001,
+              "threshold": 713.985874875001,
+              "count": 0,
+              "events": []
+            },
+            "Ey": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -0.24370312499991087,
+              "robust_sigma": 18.395567990625167,
+              "threshold": 183.95567990625167,
+              "count": 0,
+              "events": []
+            },
+            "Hx": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": 0.601734375000035,
+              "robust_sigma": 15.065532562500003,
+              "threshold": 150.65532562500005,
+              "count": 0,
+              "events": []
+            },
+            "Hy": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": 0.3778281250000006,
+              "robust_sigma": 12.166169268749996,
+              "threshold": 121.66169268749996,
+              "count": 0,
+              "events": []
+            },
+            "Hz": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -0.9843281250000473,
+              "robust_sigma": 14.406308371875037,
+              "threshold": 144.06308371875036,
+              "count": 0,
+              "events": []
+            }
+          }
+        }
+      },
+      "per_channel": {
+        "Ex": {
+          "minimum_counts": -357954,
+          "maximum_counts": 454212,
+          "mean_counts": 2534.634304861111,
+          "std_counts": 5045.6812252551945,
+          "zero_count": 88,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 385,
+          "jump_count": 132,
+          "jump_fraction": 9.166673032411828e-05,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 808.0169999999999,
+            "threshold_counts": 40400.85,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              206783,
+              207113
+            ],
+            [
+              207645,
+              207967
+            ],
+            [
+              209197,
+              209521
+            ],
+            [
+              376174,
+              376501
+            ],
+            [
+              378906,
+              379228
+            ],
+            [
+              384037,
+              384365
+            ],
+            [
+              385517,
+              385838
+            ],
+            [
+              386647,
+              386968
+            ],
+            [
+              420369,
+              420713
+            ],
+            [
+              426155,
+              426477
+            ],
+            [
+              428817,
+              429144
+            ],
+            [
+              429677,
+              429998
+            ],
+            [
+              431754,
+              432076
+            ],
+            [
+              437275,
+              437613
+            ],
+            [
+              437893,
+              439028
+            ],
+            [
+              440110,
+              440431
+            ],
+            [
+              548942,
+              549264
+            ],
+            [
+              568486,
+              568933
+            ],
+            [
+              587189,
+              587520
+            ],
+            [
+              588462,
+              588796
+            ],
+            [
+              589836,
+              590198
+            ],
+            [
+              1407917,
+              1408238
+            ],
+            [
+              1435605,
+              1435929
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 16592,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Ey": {
+          "minimum_counts": -161781,
+          "maximum_counts": 142127,
+          "mean_counts": 3751.7070354166667,
+          "std_counts": 10923.477699584368,
+          "zero_count": 42,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 2349,
+          "jump_count": 57,
+          "jump_fraction": 3.958336082177835e-05,
+          "jump_threshold": {
+            "median_diff_counts": -1.0,
+            "robust_sigma_counts": 824.3256,
+            "threshold_counts": 41216.28,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              206784,
+              207113
+            ],
+            [
+              207646,
+              207967
+            ],
+            [
+              209197,
+              209521
+            ],
+            [
+              376174,
+              376498
+            ],
+            [
+              378906,
+              379228
+            ],
+            [
+              384037,
+              384365
+            ],
+            [
+              386647,
+              386968
+            ],
+            [
+              420373,
+              420708
+            ],
+            [
+              428820,
+              429141
+            ],
+            [
+              437286,
+              437607
+            ],
+            [
+              437932,
+              438520
+            ],
+            [
+              548942,
+              549264
+            ],
+            [
+              568503,
+              568826
+            ],
+            [
+              587190,
+              587516
+            ],
+            [
+              588465,
+              588786
+            ],
+            [
+              1407913,
+              1408239
+            ],
+            [
+              1435606,
+              1435927
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 34282,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hx": {
+          "minimum_counts": -21808,
+          "maximum_counts": 29468,
+          "mean_counts": 436.24480902777776,
+          "std_counts": 6069.00696066794,
+          "zero_count": 53,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 1033,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 840.6342,
+            "threshold_counts": 42031.71,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 21586,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hy": {
+          "minimum_counts": -51462,
+          "maximum_counts": 59738,
+          "mean_counts": -31.38481875,
+          "std_counts": 2614.175905638483,
+          "zero_count": 112,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 761,
+          "jump_count": 3,
+          "jump_fraction": 2.083334780093597e-06,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 842.1167999999999,
+            "threshold_counts": 42105.84,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              420377,
+              420703
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 9966,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hz": {
+          "minimum_counts": -14402,
+          "maximum_counts": 10082,
+          "mean_counts": 2453.766775,
+          "std_counts": 1785.8828601140544,
+          "zero_count": 233,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 9.375e-05,
+          "longest_constant_run_start_sample": 1165557,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 870.2862,
+            "threshold_counts": 43514.31,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 8089,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        }
+      },
+      "bad_mask": {
+        "file": "ARMT5-700-32-32-01_D1.npz",
+        "sha256": "dd70f0cce0a34e73ee4790ac96c3d93cef4840a8e636aab173a33a1b15105028",
+        "total_bad_samples_summed": 0,
+        "union_bad_samples": 0,
+        "union_bad_fraction": 0.0,
+        "max_channel_bad_fraction": 0.0,
+        "guard_samples": 320,
+        "bitorder": "little",
+        "relative_path": "barrido/mascaras/ARMT5-700-32-32-01_D1.npz"
+      },
+      "status": "PASA_CON_OBSERVACIONES",
+      "manifest_trace": {
+        "index": 1,
+        "section_index": 2,
+        "sample_count": 1440000,
+        "sample_rate_hz": 32000.0,
+        "duration_seconds": 45.0,
+        "start_time_local": "2021-01-19T18:11:07",
+        "adc_to_uv": [
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "D0": [
+      {
+        "record_id": "ARMT5-700-32-32-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Ex",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 100,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000100.clb",
+        "clb_sha256": "781e02eba3a351c533494f78273ecad7495d017b339ac2cdf350a387987c9f42",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.66015625,
+        "amplitude_max_step_db": 0.6482192873954773,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-32-32-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Ey",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 101,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000101.clb",
+        "clb_sha256": "3b47ffbe0a0498289f4ced40883f98138c7763f50616ca972a5b9201ef218922",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.66015625,
+        "amplitude_max_step_db": 0.6482192873954773,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-32-32-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hx",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 200,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000200.clb",
+        "clb_sha256": "ede90272fa32f9bb2c35dd94569072bc07acbe5a9febb47f68c4e4b2b02a4771",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 4.324948310852051,
+        "amplitude_max_step_db": 0.6732779741287231,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-32-32-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hy",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 201,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000201.clb",
+        "clb_sha256": "f125fc82e8266bfecd41fef4beba4aef1064bc50f047271d80631a9f1a17bf54",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8949241638183594,
+        "amplitude_max_step_db": 0.678858757019043,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-32-32-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hz",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 202,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000202.clb",
+        "clb_sha256": "95f58d4322992f326bb23e1e4d084d6547d67878ebd9824d25121df61b37455c",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8952369689941406,
+        "amplitude_max_step_db": 0.6696397066116333,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      }
+    ],
+    "D1": [
+      {
+        "record_id": "ARMT5-700-32-32-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Ex",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 100,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000100.clb",
+        "clb_sha256": "781e02eba3a351c533494f78273ecad7495d017b339ac2cdf350a387987c9f42",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.66015625,
+        "amplitude_max_step_db": 0.6482192873954773,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-32-32-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Ey",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 101,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000101.clb",
+        "clb_sha256": "3b47ffbe0a0498289f4ced40883f98138c7763f50616ca972a5b9201ef218922",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.66015625,
+        "amplitude_max_step_db": 0.6482192873954773,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-32-32-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hx",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 200,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000200.clb",
+        "clb_sha256": "ede90272fa32f9bb2c35dd94569072bc07acbe5a9febb47f68c4e4b2b02a4771",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 4.324948310852051,
+        "amplitude_max_step_db": 0.6732779741287231,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-32-32-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hy",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 201,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000201.clb",
+        "clb_sha256": "f125fc82e8266bfecd41fef4beba4aef1064bc50f047271d80631a9f1a17bf54",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8949241638183594,
+        "amplitude_max_step_db": 0.678858757019043,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-32-32-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hz",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 202,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000202.clb",
+        "clb_sha256": "95f58d4322992f326bb23e1e4d084d6547d67878ebd9824d25121df61b37455c",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8952369689941406,
+        "amplitude_max_step_db": 0.6696397066116333,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      }
+    ]
+  },
+  "calibration_all_covered": true,
+  "status": "PASA_CON_OBSERVACIONES",
+  "blockers": {
+    "B-P0-05": {
+      "id": "B-P0-05",
+      "alcance": "registro ARMT5-700-32-32-01, bandas D0/D1",
+      "estado": "CERRADO_PARA_ESTE_REGISTRO",
+      "evidencia": "barrido/registros/ARMT5-700-32-32-01.json y mascaras en barrido/mascaras/"
+    }
+  }
+}

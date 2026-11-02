@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:armt:etapa6:response:1.0.0",
+  "title": "Contrato de respuestas de la Etapa 6 (P6, rama AMT sin TEM)",
+  "description": "Define la fila de respuestas_resumen.csv y los arreglos de respuestas/<registro>_<banda>.npz. Una respuesta estimada es relativa: se obtiene sin calibracion aplicada y no representa rho_a fisica. Los campos desconocidos se escriben 'nan' o cadena vacia, nunca con valores convenientes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "artifact",
+    "csv",
+    "npz",
+    "conventions",
+    "guards"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "artifact": { "const": "esquema_response" },
+    "csv": {
+      "type": "object",
+      "description": "Una fila por registro, banda y frecuencia de la grilla de P1.",
+      "required": [
+        "record_id", "split", "band", "frequency_hz", "estado", "motivo",
+        "band_lo_hz", "band_hi_hz", "n_bins", "n_windows", "n_blocks", "k_eff",
+        "gamma2_crit", "cond_hh", "eig_ratio", "coherence_xy", "coherence_yx",
+        "zxx_re", "zxx_im", "zxy_re", "zxy_im", "zyx_re", "zyx_im",
+        "zyy_re", "zyy_im", "abs_zxy", "phase_zxy_deg",
+        "sigma_log10_abs_zxy", "sigma_phase_zxy_deg",
+        "sigma_cal_log10_abs_zxy", "sigma_cal_phase_zxy_deg",
+        "abs_zxx_over_zxy", "abs_zyy_over_zxy",
+        "calibrado", "soporte_tem", "rama", "version"
+      ],
+      "properties": {
+        "record_id": { "type": "string", "pattern": "^ARMT5-[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}$" },
+        "split": { "enum": ["desarrollo", "validacion", "prueba"] },
+        "band": { "enum": ["D0", "D1"] },
+        "frequency_hz": { "type": "string", "description": "Frecuencia objetivo de la grilla de P1; cadena para no perder precision decimal." },
+        "estado": {
+          "enum": ["estimado", "no_evaluado", "no_identificable", "senal_insuficiente"],
+          "description": "no_evaluado: fuera del rango estimable (D0 < 125 Hz por L=256) o frecuencia de guarda. no_identificable: S_HH con rango deficiente. senal_insuficiente: menos ventanas validas que el minimo o coherencia Ex-Hy bajo el critico de ruido."
+        },
+        "motivo": { "type": "string" },
+        "band_lo_hz": { "type": "string", "description": "Borde inferior de la banda agregada; vacio si no_evaluado." },
+        "band_hi_hz": { "type": "string", "description": "Borde superior de la banda agregada; vacio si no_evaluado." },
+        "n_bins": { "type": "string", "description": "Numero de bins rfft promediados en la banda." },
+        "n_windows": { "type": "string", "description": "Posiciones de ventana nominales (n_samples // paso); el numero efectivo puede ser una ventana menor por el recorte final." },
+        "n_blocks": { "type": "string", "description": "Bloques temporales del bootstrap." },
+        "k_eff": { "type": "string", "description": "Replicas bootstrap validas; no son ventanas independientes." },
+        "gamma2_crit": { "type": "string", "description": "Umbral critico 1 - alpha^(1/(k_eff-1)); por debajo la fila se marca senal_insuficiente." },
+        "cond_hh": { "type": "string", "description": "Numero de condicion de S_HH (autovalores)." },
+        "eig_ratio": { "type": "string", "description": "Autovalor menor / mayor de S_HH." },
+        "coherence_xy": { "type": "string", "description": "Coherencia E_x-H_y; alta coherencia no implica identidad." },
+        "coherence_yx": { "type": "string", "description": "Coherencia E_y-H_x." },
+        "zxx_re": { "type": "string" },
+        "zxx_im": { "type": "string" },
+        "zxy_re": { "type": "string" },
+        "zxy_im": { "type": "string" },
+        "zyx_re": { "type": "string" },
+        "zyx_im": { "type": "string" },
+        "zyy_re": { "type": "string" },
+        "zyy_im": { "type": "string" },
+        "abs_zxy": { "type": "string", "description": "Diagnostico relativo; no es rho_a." },
+        "phase_zxy_deg": { "type": "string" },
+        "sigma_log10_abs_zxy": { "type": "string", "description": "sigma 1sigma del bootstrap por bloques sobre log10|Zxy|; incertidumbre estadistica condicional." },
+        "sigma_phase_zxy_deg": { "type": "string" },
+        "sigma_cal_log10_abs_zxy": { "type": "string", "description": "sigma escalada por el factor r calibrado en controles 1D; no cubre calibracion ni modelo." },
+        "sigma_cal_phase_zxy_deg": { "type": "string" },
+        "abs_zxx_over_zxy": { "type": "string", "description": "Diagnostico de desviacion del supuesto 1D; no demuestra 3D." },
+        "abs_zyy_over_zxy": { "type": "string" },
+        "calibrado": { "const": "no" },
+        "soporte_tem": { "const": "no_aplica" },
+        "rama": { "const": "AMT_sin_TEM" },
+        "version": { "const": "P6-RESPONSE-1.0.0" }
+      }
+    },
+    "npz": {
+      "type": "object",
+      "description": "Arreglos por registro y banda; la primera dimension es la grilla completa de P1.",
+      "required": [
+        "frequency_hz", "z", "cov", "estado", "motivo", "meta",
+        "band_lo_hz", "band_hi_hz", "n_bins", "n_windows", "n_blocks", "k_eff",
+        "gamma2_crit", "cond_hh", "eig_ratio", "coherence_xy", "coherence_yx",
+        "sigma_log10_abs_zxy", "sigma_phase_zxy_deg",
+        "sigma_cal_log10_abs_zxy", "sigma_cal_phase_zxy_deg"
+      ],
+      "properties": {
+        "frequency_hz": { "dtype": "float64", "shape": "(n,)" },
+        "z": { "dtype": "complex128", "shape": "(n, 2, 2)", "description": "Componentes Zxx, Zxy, Zyx, Zyy; nan donde no_evaluado." },
+        "cov": { "dtype": "float64", "shape": "(n, 8, 8)", "description": "Covarianza de [Re Zxx, Im Zxx, Re Zxy, Im Zxy, Re Zyx, Im Zyx, Re Zyy, Im Zyy]; debe ser semidefinida positiva donde hay datos." },
+        "estado": { "dtype": "object", "shape": "(n,)" },
+        "motivo": { "dtype": "object", "shape": "(n,)" },
+        "meta": { "dtype": "object", "shape": "()", "description": "JSON serializado con versiones, registro, banda, semilla e indicadores de guarda." },
+        "band_lo_hz": { "dtype": "float64", "shape": "(n,)" },
+        "band_hi_hz": { "dtype": "float64", "shape": "(n,)" },
+        "n_bins": { "dtype": "float64", "shape": "(n,)" },
+        "n_windows": { "dtype": "float64", "shape": "(n,)" },
+        "n_blocks": { "dtype": "float64", "shape": "(n,)" },
+        "k_eff": { "dtype": "float64", "shape": "(n,)" },
+        "gamma2_crit": { "dtype": "float64", "shape": "(n,)" },
+        "cond_hh": { "dtype": "float64", "shape": "(n,)" },
+        "eig_ratio": { "dtype": "float64", "shape": "(n,)" },
+        "coherence_xy": { "dtype": "float64", "shape": "(n,)" },
+        "coherence_yx": { "dtype": "float64", "shape": "(n,)" },
+        "sigma_log10_abs_zxy": { "dtype": "float64", "shape": "(n,)" },
+        "sigma_phase_zxy_deg": { "dtype": "float64", "shape": "(n,)" },
+        "sigma_cal_log10_abs_zxy": { "dtype": "float64", "shape": "(n,)" },
+        "sigma_cal_phase_zxy_deg": { "dtype": "float64", "shape": "(n,)" }
+      }
+    },
+    "conventions": {
+      "type": "object",
+      "properties": {
+        "tiempo": { "const": "exp(+i*omega*t)" },
+        "regresion": { "const": "Z_hat = S_EH S_HH^-1 resuelta por descomposicion hermitica" },
+        "ventana": { "const": "L=256 muestras, solape 50%, detrend lineal, Hann periodica" },
+        "banda": { "const": "media de bins rfft dentro de +/-12.25% de la frecuencia objetivo" },
+        "bootstrap": { "const": "bloques temporales de 5 s, 200 replicas" },
+        "unidades": { "const": "uV del ADC en E y H; el cociente es relativo" }
+      }
+    },
+    "guards": {
+      "type": "object",
+      "properties": {
+        "calibrado": { "const": "no", "description": "B-P0-04: sin calibracion certificada no se calcula rho_a." },
+        "soporte_tem": { "const": "no_aplica", "description": "B-P0-03: sin vinculo TEM-ARMT no se declara soporte." },
+        "rama": { "const": "AMT_sin_TEM" },
+        "prohibido": {
+          "const": ["etiquetas", "entrenamiento", "sintesis_guiada_por_TEM"],
+          "description": "P3-P5 y P7 permanecen cerradas en esta rama."
+        }
+      }
+    }
+  }
+}

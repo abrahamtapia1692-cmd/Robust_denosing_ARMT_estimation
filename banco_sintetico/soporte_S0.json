@@ -1,0 +1,831 @@
+{
+  "support_version": "SYN-FS-1.0.0",
+  "sounding_id": "SYN-TEM-001",
+  "scenario": "S0",
+  "target_record": "ARMT5-700-14-14-01",
+  "synthetic": true,
+  "scientific_claim": false,
+  "model_version": "SYN-MOD-1.0.0",
+  "model_sha256": "8c3e91a0df394225692c8f6064b6f7af548c04c54d929e58eb0f238aafaf9682",
+  "truth_sha256": "56bc981f5b7c08dbefe0f6ae1471473de01318db4e890022082b547a4cf517a1",
+  "mapping": "t_ms = 1000 / (2 * pi * f_hz)",
+  "guard": {
+    "early_ms": 0.08,
+    "late_fraction": 0.1,
+    "late_ms": 18.0
+  },
+  "bands_hz": {
+    "D0": [
+      125.0,
+      1000.0
+    ],
+    "D1": [
+      1000.0,
+      10000.0
+    ]
+  },
+  "frequencies": [
+    {
+      "f_hz": 125.0,
+      "band": "D0",
+      "t_eq_ms": 1.27324,
+      "n_gates": 8,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 133.39255,
+      "band": "D0",
+      "t_eq_ms": 1.193132,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 142.348579,
+      "band": "D0",
+      "t_eq_ms": 1.118065,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 151.90592,
+      "band": "D0",
+      "t_eq_ms": 1.04772,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 162.104944,
+      "band": "D0",
+      "t_eq_ms": 0.981802,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 172.988735,
+      "band": "D0",
+      "t_eq_ms": 0.920031,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 184.603268,
+      "band": "D0",
+      "t_eq_ms": 0.862146,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 196.997606,
+      "band": "D0",
+      "t_eq_ms": 0.807903,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 210.224104,
+      "band": "D0",
+      "t_eq_ms": 0.757073,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 224.338634,
+      "band": "D0",
+      "t_eq_ms": 0.709441,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 239.40082,
+      "band": "D0",
+      "t_eq_ms": 0.664805,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 255.474287,
+      "band": "D0",
+      "t_eq_ms": 0.622978,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 272.626933,
+      "band": "D0",
+      "t_eq_ms": 0.583783,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 290.931215,
+      "band": "D0",
+      "t_eq_ms": 0.547054,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 310.464453,
+      "band": "D0",
+      "t_eq_ms": 0.512635,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 331.309161,
+      "band": "D0",
+      "t_eq_ms": 0.480382,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 353.553391,
+      "band": "D0",
+      "t_eq_ms": 0.450158,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 377.291107,
+      "band": "D0",
+      "t_eq_ms": 0.421836,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 402.622583,
+      "band": "D0",
+      "t_eq_ms": 0.395296,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 429.654825,
+      "band": "D0",
+      "t_eq_ms": 0.370425,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 458.502022,
+      "band": "D0",
+      "t_eq_ms": 0.347119,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 489.286031,
+      "band": "D0",
+      "t_eq_ms": 0.32528,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 522.136891,
+      "band": "D0",
+      "t_eq_ms": 0.304815,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 557.193371,
+      "band": "D0",
+      "t_eq_ms": 0.285637,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 594.603558,
+      "band": "D0",
+      "t_eq_ms": 0.267666,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 634.525479,
+      "band": "D0",
+      "t_eq_ms": 0.250825,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 677.127773,
+      "band": "D0",
+      "t_eq_ms": 0.235044,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 722.590403,
+      "band": "D0",
+      "t_eq_ms": 0.220256,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 771.105413,
+      "band": "D0",
+      "t_eq_ms": 0.206398,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 822.877739,
+      "band": "D0",
+      "t_eq_ms": 0.193413,
+      "n_gates": 8,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 878.12608,
+      "band": "D0",
+      "t_eq_ms": 0.181244,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 937.083817,
+      "band": "D0",
+      "t_eq_ms": 0.169841,
+      "n_gates": 8,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 1000.0,
+      "band": "D0",
+      "t_eq_ms": 0.159155,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 1074.607828,
+      "band": "D1",
+      "t_eq_ms": 0.148105,
+      "n_gates": 8,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 1154.781985,
+      "band": "D1",
+      "t_eq_ms": 0.137823,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 1240.937761,
+      "band": "D1",
+      "t_eq_ms": 0.128254,
+      "n_gates": 8,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 1333.521432,
+      "band": "D1",
+      "t_eq_ms": 0.119349,
+      "n_gates": 7,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 1433.01257,
+      "band": "D1",
+      "t_eq_ms": 0.111063,
+      "n_gates": 6,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 1539.926526,
+      "band": "D1",
+      "t_eq_ms": 0.103352,
+      "n_gates": 6,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 1654.8171,
+      "band": "D1",
+      "t_eq_ms": 0.096177,
+      "n_gates": 5,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 1778.27941,
+      "band": "D1",
+      "t_eq_ms": 0.089499,
+      "n_gates": 5,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 1910.952975,
+      "band": "D1",
+      "t_eq_ms": 0.083286,
+      "n_gates": 4,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 2053.525026,
+      "band": "D1",
+      "t_eq_ms": 0.077503,
+      "n_gates": 4,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 2206.734069,
+      "band": "D1",
+      "t_eq_ms": 0.072122,
+      "n_gates": 3,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 2371.373706,
+      "band": "D1",
+      "t_eq_ms": 0.067115,
+      "n_gates": 2,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 2548.296748,
+      "band": "D1",
+      "t_eq_ms": 0.062455,
+      "n_gates": 2,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 2738.419634,
+      "band": "D1",
+      "t_eq_ms": 0.058119,
+      "n_gates": 1,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 2942.727176,
+      "band": "D1",
+      "t_eq_ms": 0.054084,
+      "n_gates": 1,
+      "sensitivity_max": 0.0,
+      "status": "no_respaldada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sensibilidad insuficiente"
+    },
+    {
+      "f_hz": 3162.27766,
+      "band": "D1",
+      "t_eq_ms": 0.050329,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 3398.208329,
+      "band": "D1",
+      "t_eq_ms": 0.046835,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 3651.741273,
+      "band": "D1",
+      "t_eq_ms": 0.043583,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 3924.189758,
+      "band": "D1",
+      "t_eq_ms": 0.040557,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 4216.965034,
+      "band": "D1",
+      "t_eq_ms": 0.037742,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 4531.583638,
+      "band": "D1",
+      "t_eq_ms": 0.035121,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 4869.675252,
+      "band": "D1",
+      "t_eq_ms": 0.032683,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "penalizada",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 5232.991147,
+      "band": "D1",
+      "t_eq_ms": 0.030414,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 5623.413252,
+      "band": "D1",
+      "t_eq_ms": 0.028302,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 6042.963902,
+      "band": "D1",
+      "t_eq_ms": 0.026337,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 6493.816316,
+      "band": "D1",
+      "t_eq_ms": 0.024509,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 6978.305849,
+      "band": "D1",
+      "t_eq_ms": 0.022807,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 7498.942093,
+      "band": "D1",
+      "t_eq_ms": 0.021224,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 8058.421878,
+      "band": "D1",
+      "t_eq_ms": 0.01975,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 8659.643234,
+      "band": "D1",
+      "t_eq_ms": 0.018379,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 9305.720409,
+      "band": "D1",
+      "t_eq_ms": 0.017103,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    },
+    {
+      "f_hz": 10000.0,
+      "band": "D1",
+      "t_eq_ms": 0.015915,
+      "n_gates": 0,
+      "sensitivity_max": 0.0,
+      "status": "no_evaluada",
+      "observacion_amt": "favorable",
+      "aplicacion": "no_habilitada",
+      "reason": "sin gates en la ventana de difusion"
+    }
+  ],
+  "summary": {
+    "counts": {
+      "respaldada": 0,
+      "condicional": 0,
+      "no_respaldada": 48,
+      "no_evaluada": 17
+    },
+    "application_counts": {
+      "habilitada": 0,
+      "condicional": 0,
+      "no_habilitada": 65
+    },
+    "supported_any": false,
+    "admissible_any": false,
+    "conditional_any": false,
+    "empty_intersection": true,
+    "g0_trigger": true,
+    "supported_ranges_hz": [],
+    "application_ranges_hz": [],
+    "conditional_ranges_hz": [],
+    "unsupported_ranges_hz": [
+      [
+        125.0,
+        2942.727176
+      ]
+    ],
+    "not_evaluated_ranges_hz": [
+      [
+        3162.27766,
+        10000.0
+      ]
+    ],
+    "bands": {
+      "D0": {
+        "supported_ranges_hz": [],
+        "application_ranges_hz": [],
+        "conditional_ranges_hz": [],
+        "unsupported_ranges_hz": [
+          [
+            125.0,
+            1000.0
+          ]
+        ],
+        "not_evaluated_ranges_hz": [],
+        "counts": {
+          "respaldada": 0,
+          "condicional": 0,
+          "no_respaldada": 33,
+          "no_evaluada": 0
+        },
+        "application_counts": {
+          "habilitada": 0,
+          "condicional": 0,
+          "no_habilitada": 33
+        }
+      },
+      "D1": {
+        "supported_ranges_hz": [],
+        "application_ranges_hz": [],
+        "conditional_ranges_hz": [],
+        "unsupported_ranges_hz": [
+          [
+            1074.607828,
+            2942.727176
+          ]
+        ],
+        "not_evaluated_ranges_hz": [
+          [
+            3162.27766,
+            10000.0
+          ]
+        ],
+        "counts": {
+          "respaldada": 0,
+          "condicional": 0,
+          "no_respaldada": 15,
+          "no_evaluada": 17
+        },
+        "application_counts": {
+          "habilitada": 0,
+          "condicional": 0,
+          "no_habilitada": 32
+        }
+      }
+    }
+  },
+  "note": "Soporte calculado por sensibilidad de un surrogate de contrato. No es P2-T, no es evidencia TEM del sitio y no habilita etiquetas de entrenamiento."
+}

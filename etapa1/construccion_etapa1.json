@@ -1,0 +1,225 @@
+{
+  "build_version": "P1-BUILD-1.0.0",
+  "generated_at_utc": "2026-10-28T18:51:16.569543Z",
+  "stage": 1,
+  "target_record": "ARMT5-700-14-14-01",
+  "config_version": "P1-CONFIG-1.1.0",
+  "p0_hashes": [
+    {
+      "artifact": "etapa0/manifest.json",
+      "expected_sha256": "5a67b03feab778e44578a37ef04982e85e56fc5f586f05c3c03e20c7b17ee435",
+      "actual_sha256": "5a67b03feab778e44578a37ef04982e85e56fc5f586f05c3c03e20c7b17ee435",
+      "unchanged": true
+    },
+    {
+      "artifact": "etapa0/schema.json",
+      "expected_sha256": "bdbcfd867333413cbe0a25b92d3f848887f5b64f89de84411f627429a0bc433e",
+      "actual_sha256": "bdbcfd867333413cbe0a25b92d3f848887f5b64f89de84411f627429a0bc433e",
+      "unchanged": true
+    },
+    {
+      "artifact": "etapa0/splits.csv",
+      "expected_sha256": "78cccedc36a0f3850fbc2017adcca6b66abeb77fc71a129280d9d87ea21d9352",
+      "actual_sha256": "78cccedc36a0f3850fbc2017adcca6b66abeb77fc71a129280d9d87ea21d9352",
+      "unchanged": true
+    },
+    {
+      "artifact": "etapa0/protocolo_validacion.md",
+      "expected_sha256": "3f33c0ff12fa2d0c66b642a7bcd209ef6e607ef02b31de994022b7fdae7045cb",
+      "actual_sha256": "3f33c0ff12fa2d0c66b642a7bcd209ef6e607ef02b31de994022b7fdae7045cb",
+      "unchanged": true
+    }
+  ],
+  "synthetic_leaks": 0,
+  "source_sha256_before": "51b08fc815b2b171e6e02da5c7f009fd165704524990af36dcfeb6da9a30f8d2",
+  "source_sha256_after": "51b08fc815b2b171e6e02da5c7f009fd165704524990af36dcfeb6da9a30f8d2",
+  "source_unchanged": true,
+  "steps": [
+    {
+      "name": "registro_calibracion",
+      "seconds": 1.883,
+      "result": {
+        "registry": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa1\\calibration_registry.json",
+        "gain_audit": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa1\\auditoria_ganancias.json",
+        "responses": {
+          "D0": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa1\\respuesta_interpolada_D0.csv",
+          "D1": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa1\\respuesta_interpolada_D1.csv"
+        }
+      }
+    },
+    {
+      "name": "qc_tiempo",
+      "seconds": 27.759,
+      "result": {
+        "report": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa1\\qc_D0_D1.json",
+        "masks": {
+          "D0": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa1\\mascaras_QC_D0.npz",
+          "D1": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa1\\mascaras_QC_D1.npz"
+        },
+        "global_status": "PASA_CON_OBSERVACIONES"
+      }
+    },
+    {
+      "name": "exportar_calibrado",
+      "seconds": 2.3,
+      "result": {
+        "report": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa1\\exportaciones\\exportaciones.json",
+        "bands": {
+          "D0": {
+            "file": "exportaciones\\01401401_D0_900s_uV.npy",
+            "abs_path": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa1\\exportaciones\\01401401_D0_900s_uV.npy",
+            "sha256": "159541ba3c9eda652c57504387a658405cc1dac76fe9de2b7bdd26a9645b33e4",
+            "shape": [
+              3600000,
+              5
+            ],
+            "dtype": "float32",
+            "units": "uV",
+            "channels": [
+              "Ex",
+              "Ey",
+              "Hx",
+              "Hy",
+              "Hz"
+            ],
+            "trace_index": 0,
+            "sample_rate_hz": 4000.0,
+            "start_sample": 0,
+            "stop_sample": 3600000,
+            "n_samples_total": 21600000,
+            "duration_s": 900.0,
+            "start_time_local": "2021-01-18T17:17:36",
+            "adc_to_uv": [
+              0.5960090756416321,
+              0.5960090756416321,
+              0.5960090756416321,
+              0.5960090756416321,
+              0.5960090756416321
+            ],
+            "formula": "uV = counts * adc_to_uv",
+            "mask_file": "mascaras_QC_D0.npz",
+            "stats": {
+              "Ex": {
+                "min_uV": -82618.78125,
+                "max_uV": 139763.53125,
+                "mean_uV": 1268.9597641033306,
+                "std_uV": 5742.767930123655,
+                "nonfinite": 0
+              },
+              "Ey": {
+                "min_uV": -27394.9609375,
+                "max_uV": 65751.71875,
+                "mean_uV": 2214.846714316977,
+                "std_uV": 4744.844891906167,
+                "nonfinite": 0
+              },
+              "Hx": {
+                "min_uV": -4786.548828125,
+                "max_uV": 5155.478515625,
+                "mean_uV": 378.9599481115094,
+                "std_uV": 1861.4124193612495,
+                "nonfinite": 0
+              },
+              "Hy": {
+                "min_uV": -9362.1103515625,
+                "max_uV": 6337.96044921875,
+                "mean_uV": 16.074646424967334,
+                "std_uV": 1282.6016127090552,
+                "nonfinite": 0
+              },
+              "Hz": {
+                "min_uV": -2314.30322265625,
+                "max_uV": 5332.4931640625,
+                "mean_uV": 1489.9020143070522,
+                "std_uV": 2040.0667555846019,
+                "nonfinite": 0
+              }
+            }
+          },
+          "D1": {
+            "file": "exportaciones\\01401401_D1_45s_uV.npy",
+            "abs_path": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa1\\exportaciones\\01401401_D1_45s_uV.npy",
+            "sha256": "6d67e074086e051a075a094f4368bb77e0efd31a7fe71b97fc22290a1a21e61d",
+            "shape": [
+              1440000,
+              5
+            ],
+            "dtype": "float32",
+            "units": "uV",
+            "channels": [
+              "Ex",
+              "Ey",
+              "Hx",
+              "Hy",
+              "Hz"
+            ],
+            "trace_index": 1,
+            "sample_rate_hz": 32000.0,
+            "start_sample": 0,
+            "stop_sample": 1440000,
+            "n_samples_total": 1440000,
+            "duration_s": 45.0,
+            "start_time_local": "2021-01-18T18:47:37",
+            "adc_to_uv": [
+              0.5960000157356262,
+              0.5960000157356262,
+              0.5960000157356262,
+              0.5960000157356262,
+              0.5960000157356262
+            ],
+            "formula": "uV = counts * adc_to_uv",
+            "mask_file": "mascaras_QC_D1.npz",
+            "stats": {
+              "Ex": {
+                "min_uV": -318460.6875,
+                "max_uV": 451673.84375,
+                "mean_uV": 1444.411488053126,
+                "std_uV": 6061.096412595311,
+                "nonfinite": 0
+              },
+              "Ey": {
+                "min_uV": -391996.375,
+                "max_uV": 560731.6875,
+                "mean_uV": 2261.4829417580245,
+                "std_uV": 4641.333225708025,
+                "nonfinite": 0
+              },
+              "Hx": {
+                "min_uV": -17297.708984375,
+                "max_uV": 10036.0439453125,
+                "mean_uV": 214.30766089082928,
+                "std_uV": 1798.1886017170202,
+                "nonfinite": 0
+              },
+              "Hy": {
+                "min_uV": -8919.736328125,
+                "max_uV": 10393.0478515625,
+                "mean_uV": -63.55325680035332,
+                "std_uV": 1360.0318223039455,
+                "nonfinite": 0
+              },
+              "Hz": {
+                "min_uV": -4197.0322265625,
+                "max_uV": 6958.30029296875,
+                "mean_uV": 1382.6949913395213,
+                "std_uV": 2226.40518835336,
+                "nonfinite": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "presupuesto_instrumental",
+      "seconds": 0.034,
+      "result": {
+        "file": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa1\\presupuesto_instrumental.csv",
+        "rows": 24
+      }
+    }
+  ],
+  "total_seconds": 33.022,
+  "status": "COMPLETADO",
+  "note": "La construccion no modifica P0 ni los proyectos de origen."
+}

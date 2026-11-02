@@ -1,0 +1,61 @@
+{
+  "version": "P1-CONFIG-1.1.0",
+  "stage": 1,
+  "target_record": "ARMT5-700-14-14-01",
+  "bands": {
+    "D0": {
+      "trace_index": 0,
+      "sample_rate_hz": 4000.0,
+      "nominal_processing_hz": [null, 1000.0],
+      "review_range_hz": [5.0, 1000.0],
+      "note": "DC excluida de Z. El limite inferior util depende de sensor, duracion y senal; la calibracion empieza en 5 Hz."
+    },
+    "D1": {
+      "trace_index": 1,
+      "sample_rate_hz": 32000.0,
+      "nominal_processing_hz": [1000.0, 10000.0],
+      "review_range_hz": [1000.0, 10000.0],
+      "note": "Rango nominal de procesamiento. La tabla magnetica termina en 15317.4 Hz, por encima de 10 kHz y por debajo de Nyquist (16 kHz)."
+    }
+  },
+  "qc": {
+    "block_samples": 2000000,
+    "clip_run_ms": 1.0,
+    "stuck_run_s": 0.5,
+    "zero_fill_run_s": 0.1,
+    "jump_sigma": 50.0,
+    "jump_sample_blocks": 24,
+    "jump_block_samples": 50000,
+    "jump_mask_enabled": false,
+    "jump_guard_ms": 5.0,
+    "guard_ms": 10.0,
+    "dead_std_counts": 1.0,
+    "clip_fraction_max": 0.001,
+    "edge_ms": 100.0,
+    "switching_block_s": 1.0,
+    "switching_sigma": 10.0,
+    "mask_bitorder": "little",
+    "max_intervals": 200
+  },
+  "calibration": {
+    "near_duplicate_rel": 1e-06,
+    "phase_outlier_deg": 90.0,
+    "phase_continuity_deg": 45.0,
+    "amplitude_continuity_db": 1.0,
+    "interp_grid_per_decade": 12,
+    "interp_min_points": 8,
+    "splice_guard_rel": 0.005
+  },
+  "export": {
+    "d0_start_s": 0.0,
+    "d0_duration_s": 900.0,
+    "d1_full": true,
+    "dtype": "float32",
+    "units": "uV",
+    "note": "Solo se aplica counts * adc_to_uv. No se aplica ganancia, respuesta .clb ni longitud de dipolo."
+  },
+  "tolerances": {
+    "amplitude_pct": 1.0,
+    "phase_deg": 1.0
+  }
+}

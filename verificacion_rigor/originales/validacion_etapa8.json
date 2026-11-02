@@ -1,0 +1,204 @@
+{
+  "version": "P8-VAL-2.0.0",
+  "timestamp_utc": "2026-10-29T17:34:04Z",
+  "gate": "P8",
+  "stage": 8,
+  "total_checks": 32,
+  "checks_passed": 32,
+  "checks_failed": 0,
+  "status": "APROBADO",
+  "checks": [
+    {
+      "id": "V-P8-01",
+      "descripcion": "Existencia de config_p8.json",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P8-02",
+      "descripcion": "Configuraci\u00f3n v\u00e1lida con bandas D0, D1 y excluded_bands",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P8-03",
+      "descripcion": "Existencia de pipeline_armt.py",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P8-04",
+      "descripcion": "Existencia de p8.py",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P8-05",
+      "descripcion": "Existencia de resumen_p8.json",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P8-06",
+      "descripcion": "Existencia de reporte_p8.md",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P8-07",
+      "descripcion": "Existencia y carga del detector c_theta_scnet18.pt",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P8-08",
+      "descripcion": "Existencia y carga del separador d_psi_b4_cbam.pt",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P8-09",
+      "descripcion": "Reconstrucci\u00f3n Hanning overlap-add en identidad (error < 1e-12)",
+      "estado": "PASA",
+      "observacion": "err=4.44e-16"
+    },
+    {
+      "id": "V-P8-10",
+      "descripcion": "Continuidad temporal suave C1 sin discontinuidades de costura",
+      "estado": "PASA",
+      "observacion": "max_deriv=5.50"
+    },
+    {
+      "id": "V-P8-11",
+      "descripcion": "Descomposici\u00f3n exacta muestra a muestra x = s_hat + n_hat (error < 1e-12)",
+      "estado": "PASA",
+      "observacion": "err=2.22e-16"
+    },
+    {
+      "id": "V-P8-12",
+      "descripcion": "Invarianza estricta ante tama\u00f1o de lote (batch size 1 vs 32, diff < 1e-5)",
+      "estado": "PASA",
+      "observacion": "diff=5.72e-06"
+    },
+    {
+      "id": "V-P8-13",
+      "descripcion": "Compuerta G0: Soporte sint\u00e9tico vac\u00edo omite la red",
+      "estado": "PASA",
+      "observacion": "omitted=True, status=soporte_vacio"
+    },
+    {
+      "id": "V-P8-14",
+      "descripcion": "Compuerta G0: Cero modificaci\u00f3n ante soporte vac\u00edo (s_hat == x, n_hat == 0)",
+      "estado": "PASA",
+      "observacion": "diff=0.0e+00, n_norm=0.0e+00"
+    },
+    {
+      "id": "V-P8-15",
+      "descripcion": "Compuerta G0: Sondeo de campo sin v\u00ednculo TEM omite la red",
+      "estado": "PASA",
+      "observacion": "status=soporte_vacio"
+    },
+    {
+      "id": "V-P8-16",
+      "descripcion": "Resoluci\u00f3n correcta de soporte parcial F_aplicacion (33 frecuencias en D0)",
+      "estado": "PASA",
+      "observacion": "n_freqs=33"
+    },
+    {
+      "id": "V-P8-17",
+      "descripcion": "Banda RMT D2 excluida por dise\u00f1o con red omitida",
+      "estado": "PASA",
+      "observacion": "status=excluido_rmt"
+    },
+    {
+      "id": "V-P8-18",
+      "descripcion": "Cero intervenci\u00f3n en se\u00f1al de banda D2 (s_hat == x)",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P8-19",
+      "descripcion": "Banda RMT D3 excluida por dise\u00f1o con red omitida",
+      "estado": "PASA",
+      "observacion": "status=excluido_rmt"
+    },
+    {
+      "id": "V-P8-20",
+      "descripcion": "Cero intervenci\u00f3n en se\u00f1al de banda D3 (s_hat == x)",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P8-21",
+      "descripcion": "Selectividad temporal: 0 falsas alarmas en prefijo limpio",
+      "estado": "PASA",
+      "observacion": "flagged=0"
+    },
+    {
+      "id": "V-P8-22",
+      "descripcion": "Selectividad temporal: 0 falsas alarmas en sufijo limpio",
+      "estado": "PASA",
+      "observacion": "flagged=0"
+    },
+    {
+      "id": "V-P8-23",
+      "descripcion": "Sensibilidad temporal: detecci\u00f3n en tramo contaminado central",
+      "estado": "PASA",
+      "observacion": "detected=245"
+    },
+    {
+      "id": "V-P8-24",
+      "descripcion": "Ganancia de SNR en tramo contaminado central (> +10.0 dB)",
+      "estado": "PASA",
+      "observacion": "gain=+13.73 dB"
+    },
+    {
+      "id": "V-P8-25",
+      "descripcion": "No inferioridad en continuo limpio: sesgo Zxy <= 5.0%",
+      "estado": "PASA",
+      "observacion": "bias=0.0000%"
+    },
+    {
+      "id": "V-P8-26",
+      "descripcion": "No inferioridad en continuo limpio: error de fase <= 2.0\u00b0",
+      "estado": "PASA",
+      "observacion": "diff=0.0000\u00b0"
+    },
+    {
+      "id": "V-P8-27",
+      "descripcion": "Detecci\u00f3n de Rango 1 en excitaci\u00f3n colineal (condici\u00f3n HH > 1e4)",
+      "estado": "PASA",
+      "observacion": "cond=1.67e+16"
+    },
+    {
+      "id": "V-P8-28",
+      "descripcion": "Activaci\u00f3n de abstenci\u00f3n de tensor completo en Rango 1 (100% frecuencias)",
+      "estado": "PASA",
+      "observacion": "abstained=3/3"
+    },
+    {
+      "id": "V-P8-29",
+      "descripcion": "Componente Hz conservada id\u00e9ntica e intacta sin pasar por CBAM",
+      "estado": "PASA",
+      "observacion": "diff=0.0e+00"
+    },
+    {
+      "id": "V-P8-30",
+      "descripcion": "Guardas temporales de borde de 0.5 s para absorci\u00f3n de transitorios",
+      "estado": "PASA",
+      "observacion": "guard=0.5 s"
+    },
+    {
+      "id": "V-P8-31",
+      "descripcion": "Aislamiento estricto: cero extrapolaci\u00f3n fuera de subbandas D0/D1",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P8-32",
+      "descripcion": "Aprobaci\u00f3n global formal de la Puerta P8 en resumen_p8.json",
+      "estado": "PASA",
+      "observacion": "passed=True"
+    }
+  ]
+}

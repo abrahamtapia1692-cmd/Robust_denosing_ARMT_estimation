@@ -1,0 +1,108 @@
+{
+  "artifact": "resumen_p4",
+  "version": "P4-1.0.0",
+  "config_version": "P4-CONFIG-1.0.0",
+  "extractor_version": "P4-EXTRACT-1.0.0",
+  "generated_at_utc": "2026-10-29T15:54:32.225986Z",
+  "gate": "P4",
+  "subgate": "P4-N",
+  "stage": 4,
+  "status": "APROBADO",
+  "summary": {
+    "total_episodes_extracted": 4,
+    "episodes_by_class": {
+      "ruido_admitido": 3,
+      "candidato_o_ambiguo": 0,
+      "senal_protegida": 1
+    },
+    "all_identity_pass": true,
+    "all_nominal_leakage_pass": true,
+    "max_nominal_leakage_observed": 0.0,
+    "max_identity_reconstruction_error": 0.0
+  },
+  "nominal_leakage_grid": [
+    {
+      "snr_db": 0.0,
+      "leakage_fraction": 0.0,
+      "pasa_fuga": true
+    },
+    {
+      "snr_db": 10.0,
+      "leakage_fraction": 0.0,
+      "pasa_fuga": true
+    }
+  ],
+  "stress_leakage_grid": [
+    {
+      "snr_db": -10.0,
+      "leakage_fraction": 0.09671620479011436,
+      "pasa_fuga": false
+    }
+  ],
+  "episodes": [
+    {
+      "episode_id": "NOISE-D0-001",
+      "band": "D0",
+      "record_id": "ARMT5-700-14-14-01",
+      "start_s": 10.0,
+      "stop_s": 18.0,
+      "duration_s": 8.0,
+      "class": "ruido_admitido",
+      "kurtosis_max": 1.5553,
+      "coherence_max": 0.9999,
+      "gamma2_crit": 0.0172,
+      "leakage_fraction": 0.0,
+      "identity_reconstruction_error": 0.0,
+      "channels": "Ex-Ey-Hx-Hy-Hz",
+      "file": "etapa4\\noise_bank\\NOISE-D0-001.npz"
+    },
+    {
+      "episode_id": "NOISE-D0-002",
+      "band": "D0",
+      "record_id": "ARMT5-700-14-14-01",
+      "start_s": 60.0,
+      "stop_s": 70.0,
+      "duration_s": 10.0,
+      "class": "ruido_admitido",
+      "kurtosis_max": 1.5853,
+      "coherence_max": 0.9999,
+      "gamma2_crit": 0.0137,
+      "leakage_fraction": 0.031865,
+      "identity_reconstruction_error": 0.0,
+      "channels": "Ex-Ey-Hx-Hy-Hz",
+      "file": "etapa4\\noise_bank\\NOISE-D0-002.npz"
+    },
+    {
+      "episode_id": "NOISE-D0-003",
+      "band": "D0",
+      "record_id": "ARMT5-700-14-14-01",
+      "start_s": 120.0,
+      "stop_s": 132.0,
+      "duration_s": 12.0,
+      "class": "senal_protegida",
+      "kurtosis_max": 92.2886,
+      "coherence_max": 0.9999,
+      "gamma2_crit": 0.0114,
+      "leakage_fraction": 0.319972,
+      "identity_reconstruction_error": 0.0,
+      "channels": "Ex-Ey-Hx-Hy-Hz",
+      "file": "etapa4\\noise_bank\\NOISE-D0-003.npz"
+    },
+    {
+      "episode_id": "NOISE-D1-004",
+      "band": "D1",
+      "record_id": "ARMT5-700-14-14-01",
+      "start_s": 10.0,
+      "stop_s": 18.0,
+      "duration_s": 8.0,
+      "class": "ruido_admitido",
+      "kurtosis_max": 1534.6896,
+      "coherence_max": 0.9954,
+      "gamma2_crit": 0.0021,
+      "leakage_fraction": 0.032152,
+      "identity_reconstruction_error": 0.0,
+      "channels": "Ex-Ey-Hx-Hy-Hz",
+      "file": "etapa4\\noise_bank\\NOISE-D1-004.npz"
+    }
+  ]
+}

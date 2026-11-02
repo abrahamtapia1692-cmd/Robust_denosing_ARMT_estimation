@@ -1,0 +1,1530 @@
+{
+  "record_version": "P1-BARRIDO-1.0.0",
+  "record_id": "ARMT5-700-45-45-01",
+  "generated_at_utc": "2026-10-28T19:03:39.426637Z",
+  "split": {
+    "split": "desarrollo",
+    "split_group": "S2021-A700-L045",
+    "campaign_group": "C2021-A700",
+    "protocol_version": "P0-SPLITS-1.0.0",
+    "assignment_basis": "record_level_site_holdout",
+    "frozen": true
+  },
+  "campaign": {
+    "year": 2021,
+    "campaign_group": "C2021-A700",
+    "label": null
+  },
+  "site": {
+    "site_id": null,
+    "site_name": null,
+    "status": "no_resuelto",
+    "note": "Identidad de sitio sin resolver (B-P0-01/B-P0-02)."
+  },
+  "source": {
+    "path_abs": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\04504501.sbf",
+    "path_ref": "ARMT_processing/ARMT_data/04504501.sbf",
+    "path_base": "software_root",
+    "sha256": "91a7e729b3b3cb651d7556284315089866b3d74ee98e69537cfd60719660b2ac",
+    "size_bytes": 508952577,
+    "mtime_utc": "2021-01-20T20:23:10Z"
+  },
+  "source_sha256_recomputed": "91a7e729b3b3cb651d7556284315089866b3d74ee98e69537cfd60719660b2ac",
+  "source_sha256_match": true,
+  "consistency": {
+    "bands": {
+      "D0": {
+        "sample_count_match": true,
+        "sample_rate_match": true,
+        "channels_match": true,
+        "adc_to_uv_match": true,
+        "receiver_serial_match": true
+      },
+      "D1": {
+        "sample_count_match": true,
+        "sample_rate_match": true,
+        "channels_match": true,
+        "adc_to_uv_match": true,
+        "receiver_serial_match": true
+      }
+    },
+    "all_match": true
+  },
+  "settings_summary": {
+    "gain_values_unique": [
+      1.77828002
+    ],
+    "gain_db": [
+      5.000002979314534
+    ],
+    "nearest_gain_directory": {
+      "directory": "CLB_G1.8_Ex_shifted",
+      "label": "1.8",
+      "delta_pct": -1.1246822577723491e-06
+    },
+    "adc_to_uv": [
+      0.5960090756416321,
+      0.5960000157356262
+    ],
+    "electric_dipole_lengths_cm": [
+      2000.0,
+      2000.0
+    ],
+    "sensor_azimuth_degrees": [
+      0.0,
+      90.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "delay_seconds": 0.0,
+    "settings_sections": 4
+  },
+  "bands": {
+    "D0": {
+      "trace_index": 0,
+      "sample_rate_hz": 4000.0,
+      "n_samples": 21600000,
+      "duration_s": 5400.0,
+      "channels": [
+        "Ex",
+        "Ey",
+        "Hx",
+        "Hy",
+        "Hz"
+      ],
+      "thresholds": {
+        "clip_run_samples": 4,
+        "stuck_run_samples": 2000,
+        "zero_fill_run_samples": 400,
+        "guard_samples": 40,
+        "jump_guard_samples": 20,
+        "edge_samples": 400
+      },
+      "sbf_audit": {
+        "trace_index": 0,
+        "band": "D0",
+        "sample_rate_hz": 4000.0,
+        "sample_count": 21600000,
+        "duration_s": 5400.0,
+        "bytes_per_sample": 4,
+        "channel_count": 5,
+        "channels": [
+          "Ex",
+          "Ey",
+          "Hx",
+          "Hy",
+          "Hz"
+        ],
+        "receiver_serial": 1,
+        "adc_to_uv": [
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321
+        ],
+        "settings_match": "inferred_single_settings_0xabcd",
+        "settings_count": 1,
+        "independent_export_comparison": "no_disponible",
+        "note": "No hay exportacion independiente del software del fabricante para comparar signo, bits e intercalado. Se usa el lector ARMT_processing y se verifica la longitud leida."
+      },
+      "checks": {
+        "clipping": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "plateaus >= 1.000 ms en el minimo o maximo global"
+        },
+        "canales_muertos": {
+          "estado": "PASA",
+          "channels": [],
+          "detail": "std <= 1.000 counts"
+        },
+        "valores_pegados": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos constantes >= 0.500 s"
+        },
+        "relleno_de_ceros": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos de ceros >= 0.100 s"
+        },
+        "saltos": {
+          "estado": "OBSERVACION",
+          "counts": {
+            "Ex": 56,
+            "Ey": 16,
+            "Hx": 0,
+            "Hy": 2,
+            "Hz": 0
+          },
+          "enmascarados": false,
+          "detail": "|diff - mediana| > 50.0 sigma robusta; se reportan como candidatos, no se enmascaran para no borrar sferics"
+        },
+        "muestras_faltantes": {
+          "estado": "PASA",
+          "expected_samples": 21600000,
+          "read_samples": 21600000,
+          "match": true,
+          "note": "El lector entrega exactamente sample_count; no hay huecos declarados en el SBF."
+        },
+        "transitorios_conmutacion": {
+          "estado": "NO_APLICABLE",
+          "detail": "El registro tiene una sola configuracion de ganancia (settings_count=1); el detector de cambios de media por bloque queda como observacion.",
+          "detector_por_bloque": {
+            "Ex": {
+              "estado": "PASA",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.49525000000039654,
+              "robust_sigma": 23.751993299999448,
+              "threshold": 237.51993299999447,
+              "count": 0,
+              "events": []
+            },
+            "Ey": {
+              "estado": "PASA",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": 0.22950000000037107,
+              "robust_sigma": 22.21194254999988,
+              "threshold": 222.11942549999878,
+              "count": 0,
+              "events": []
+            },
+            "Hx": {
+              "estado": "PASA",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": 0.1525000000000034,
+              "robust_sigma": 12.91307535000002,
+              "threshold": 129.1307535000002,
+              "count": 0,
+              "events": []
+            },
+            "Hy": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.16424999999999557,
+              "robust_sigma": 13.614345149999997,
+              "threshold": 136.14345149999997,
+              "count": 3,
+              "events": [
+                {
+                  "block_index": 5177,
+                  "time_s": 5177.0,
+                  "delta_mean_counts": 141.82925
+                },
+                {
+                  "block_index": 5284,
+                  "time_s": 5284.0,
+                  "delta_mean_counts": -136.64049999999997
+                },
+                {
+                  "block_index": 5295,
+                  "time_s": 5295.0,
+                  "delta_mean_counts": 138.19125
+                }
+              ]
+            },
+            "Hz": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.05074999999987995,
+              "robust_sigma": 13.245177750000215,
+              "threshold": 132.45177750000215,
+              "count": 1,
+              "events": [
+                {
+                  "block_index": 503,
+                  "time_s": 503.0,
+                  "delta_mean_counts": -141.70674999999983
+                }
+              ]
+            }
+          }
+        }
+      },
+      "per_channel": {
+        "Ex": {
+          "minimum_counts": -37200,
+          "maximum_counts": 255514,
+          "mean_counts": 2887.5370009722224,
+          "std_counts": 1314.1036994545689,
+          "zero_count": 0,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 283803,
+          "jump_count": 56,
+          "jump_fraction": 2.592592712620033e-06,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 292.0722,
+            "threshold_counts": 14603.61,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              223880,
+              223922
+            ],
+            [
+              1614034,
+              1614075
+            ],
+            [
+              1760966,
+              1761007
+            ],
+            [
+              3716160,
+              3716204
+            ],
+            [
+              5528855,
+              5528898
+            ],
+            [
+              7349873,
+              7349914
+            ],
+            [
+              8595779,
+              8595821
+            ],
+            [
+              9433924,
+              9433967
+            ],
+            [
+              9434560,
+              9434609
+            ],
+            [
+              10187791,
+              10187832
+            ],
+            [
+              10553617,
+              10553660
+            ],
+            [
+              10864820,
+              10864863
+            ],
+            [
+              10982552,
+              10982595
+            ],
+            [
+              11205017,
+              11205061
+            ],
+            [
+              11451243,
+              11451288
+            ],
+            [
+              11696998,
+              11697041
+            ],
+            [
+              11852092,
+              11852137
+            ],
+            [
+              13403832,
+              13403873
+            ],
+            [
+              16085477,
+              16085518
+            ],
+            [
+              17886372,
+              17886413
+            ],
+            [
+              18781322,
+              18781363
+            ],
+            [
+              19764677,
+              19764720
+            ],
+            [
+              20249483,
+              20249529
+            ],
+            [
+              20936779,
+              20936820
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 4746,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Ey": {
+          "minimum_counts": -272698,
+          "maximum_counts": 141726,
+          "mean_counts": 4097.082973425926,
+          "std_counts": 10530.311283192263,
+          "zero_count": 497,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 1896261,
+          "jump_count": 16,
+          "jump_fraction": 7.407407750342952e-07,
+          "jump_threshold": {
+            "median_diff_counts": -2.0,
+            "robust_sigma_counts": 1426.2612,
+            "threshold_counts": 71313.06,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              10864820,
+              10864862
+            ],
+            [
+              11205017,
+              11205060
+            ],
+            [
+              11451244,
+              11451287
+            ],
+            [
+              11852093,
+              11852136
+            ],
+            [
+              19764678,
+              19764721
+            ],
+            [
+              20249484,
+              20249529
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 30170,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hx": {
+          "minimum_counts": -9207,
+          "maximum_counts": 35483,
+          "mean_counts": 168.51034981481482,
+          "std_counts": 2778.6436987478296,
+          "zero_count": 2024,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 1222561,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 440.3322,
+            "threshold_counts": 22016.61,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 9054,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hy": {
+          "minimum_counts": -9235,
+          "maximum_counts": 33925,
+          "mean_counts": -56.39136087962963,
+          "std_counts": 1918.7040725727995,
+          "zero_count": 2765,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 1421212,
+          "jump_count": 2,
+          "jump_fraction": 9.25925968792869e-08,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 352.8588,
+            "threshold_counts": 17642.94,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              20249484,
+              20249527
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 6353,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hz": {
+          "minimum_counts": -4739,
+          "maximum_counts": 9239,
+          "mean_counts": 2380.834659583333,
+          "std_counts": 2186.713255218447,
+          "zero_count": 4426,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 2451998,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 386.9586,
+            "threshold_counts": 19347.93,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 6803,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        }
+      },
+      "bad_mask": {
+        "file": "ARMT5-700-45-45-01_D0.npz",
+        "sha256": "3074161eb56f3f1340d2817f99cbf3b14ab70799672025a3a0067164538a8127",
+        "total_bad_samples_summed": 0,
+        "union_bad_samples": 0,
+        "union_bad_fraction": 0.0,
+        "max_channel_bad_fraction": 0.0,
+        "guard_samples": 40,
+        "bitorder": "little",
+        "relative_path": "barrido/mascaras/ARMT5-700-45-45-01_D0.npz"
+      },
+      "status": "PASA_CON_OBSERVACIONES",
+      "manifest_trace": {
+        "index": 0,
+        "section_index": 1,
+        "sample_count": 21600000,
+        "sample_rate_hz": 4000.0,
+        "duration_seconds": 5400.0,
+        "start_time_local": "2021-01-20T18:52:21",
+        "adc_to_uv": [
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321
+        ]
+      }
+    },
+    "D1": {
+      "trace_index": 1,
+      "sample_rate_hz": 32000.0,
+      "n_samples": 1440000,
+      "duration_s": 45.0,
+      "channels": [
+        "Ex",
+        "Ey",
+        "Hx",
+        "Hy",
+        "Hz"
+      ],
+      "thresholds": {
+        "clip_run_samples": 32,
+        "stuck_run_samples": 16000,
+        "zero_fill_run_samples": 3200,
+        "guard_samples": 320,
+        "jump_guard_samples": 160,
+        "edge_samples": 3200
+      },
+      "sbf_audit": {
+        "trace_index": 1,
+        "band": "D1",
+        "sample_rate_hz": 32000.0,
+        "sample_count": 1440000,
+        "duration_s": 45.0,
+        "bytes_per_sample": 4,
+        "channel_count": 5,
+        "channels": [
+          "Ex",
+          "Ey",
+          "Hx",
+          "Hy",
+          "Hz"
+        ],
+        "receiver_serial": 1,
+        "adc_to_uv": [
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262
+        ],
+        "settings_match": "inferred_single_settings_0xabcd",
+        "settings_count": 1,
+        "independent_export_comparison": "no_disponible",
+        "note": "No hay exportacion independiente del software del fabricante para comparar signo, bits e intercalado. Se usa el lector ARMT_processing y se verifica la longitud leida."
+      },
+      "checks": {
+        "clipping": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "plateaus >= 1.000 ms en el minimo o maximo global"
+        },
+        "canales_muertos": {
+          "estado": "PASA",
+          "channels": [],
+          "detail": "std <= 1.000 counts"
+        },
+        "valores_pegados": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos constantes >= 0.500 s"
+        },
+        "relleno_de_ceros": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos de ceros >= 0.100 s"
+        },
+        "saltos": {
+          "estado": "OBSERVACION",
+          "counts": {
+            "Ex": 144,
+            "Ey": 495,
+            "Hx": 0,
+            "Hy": 0,
+            "Hz": 0
+          },
+          "enmascarados": false,
+          "detail": "|diff - mediana| > 50.0 sigma robusta; se reportan como candidatos, no se enmascaran para no borrar sferics"
+        },
+        "muestras_faltantes": {
+          "estado": "PASA",
+          "expected_samples": 1440000,
+          "read_samples": 1440000,
+          "match": true,
+          "note": "El lector entrega exactamente sample_count; no hay huecos declarados en el SBF."
+        },
+        "transitorios_conmutacion": {
+          "estado": "NO_APLICABLE",
+          "detail": "El registro tiene una sola configuracion de ganancia (settings_count=1); el detector de cambios de media por bloque queda como observacion.",
+          "detector_por_bloque": {
+            "Ex": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -0.23539062500003638,
+              "robust_sigma": 23.04595138125006,
+              "threshold": 230.4595138125006,
+              "count": 0,
+              "events": []
+            },
+            "Ey": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -1.4429062500003056,
+              "robust_sigma": 23.89441556249981,
+              "threshold": 238.94415562499807,
+              "count": 0,
+              "events": []
+            },
+            "Hx": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -2.281406249999975,
+              "robust_sigma": 14.883103265625003,
+              "threshold": 148.83103265625004,
+              "count": 0,
+              "events": []
+            },
+            "Hy": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": 5.413156250000014,
+              "robust_sigma": 51.11895921562501,
+              "threshold": 511.1895921562501,
+              "count": 0,
+              "events": []
+            },
+            "Hz": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -1.4836875000000873,
+              "robust_sigma": 11.67362174999996,
+              "threshold": 116.7362174999996,
+              "count": 0,
+              "events": []
+            }
+          }
+        }
+      },
+      "per_channel": {
+        "Ex": {
+          "minimum_counts": -319478,
+          "maximum_counts": 274935,
+          "mean_counts": 3030.396220138889,
+          "std_counts": 1727.0473977529673,
+          "zero_count": 26,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 2593,
+          "jump_count": 144,
+          "jump_fraction": 0.00010000006944449267,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 815.43,
+            "threshold_counts": 40771.5,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              171552,
+              171875
+            ],
+            [
+              209790,
+              210118
+            ],
+            [
+              367884,
+              368314
+            ],
+            [
+              368315,
+              368640
+            ],
+            [
+              370263,
+              370612
+            ],
+            [
+              394241,
+              394564
+            ],
+            [
+              517037,
+              517361
+            ],
+            [
+              517466,
+              517787
+            ],
+            [
+              517847,
+              518169
+            ],
+            [
+              651215,
+              651538
+            ],
+            [
+              655610,
+              656290
+            ],
+            [
+              656391,
+              656727
+            ],
+            [
+              720025,
+              720347
+            ],
+            [
+              720992,
+              721313
+            ],
+            [
+              825361,
+              825689
+            ],
+            [
+              1128471,
+              1128794
+            ],
+            [
+              1167111,
+              1167434
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 7072,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Ey": {
+          "minimum_counts": -675568,
+          "maximum_counts": 765480,
+          "mean_counts": 4129.5318125,
+          "std_counts": 11685.833769806224,
+          "zero_count": 29,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 854,
+          "jump_count": 495,
+          "jump_fraction": 0.00034375023871544355,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 876.2166,
+            "threshold_counts": 43810.83,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              13327,
+              13649
+            ],
+            [
+              14599,
+              14920
+            ],
+            [
+              52238,
+              52565
+            ],
+            [
+              115029,
+              115351
+            ],
+            [
+              120838,
+              121276
+            ],
+            [
+              131919,
+              132242
+            ],
+            [
+              145355,
+              145676
+            ],
+            [
+              171546,
+              171876
+            ],
+            [
+              172474,
+              172796
+            ],
+            [
+              187828,
+              188154
+            ],
+            [
+              200337,
+              200658
+            ],
+            [
+              209790,
+              210119
+            ],
+            [
+              243885,
+              244241
+            ],
+            [
+              244320,
+              244661
+            ],
+            [
+              248877,
+              249198
+            ],
+            [
+              249359,
+              249691
+            ],
+            [
+              250990,
+              251332
+            ],
+            [
+              252300,
+              252631
+            ],
+            [
+              294139,
+              294461
+            ],
+            [
+              367884,
+              368641
+            ],
+            [
+              370261,
+              370620
+            ],
+            [
+              373624,
+              373946
+            ],
+            [
+              394240,
+              394567
+            ],
+            [
+              404998,
+              405325
+            ],
+            [
+              517007,
+              517429
+            ],
+            [
+              517465,
+              517792
+            ],
+            [
+              517847,
+              518173
+            ],
+            [
+              518496,
+              518817
+            ],
+            [
+              559371,
+              559695
+            ],
+            [
+              564851,
+              565173
+            ],
+            [
+              599140,
+              599463
+            ],
+            [
+              600531,
+              600854
+            ],
+            [
+              651214,
+              651568
+            ],
+            [
+              655603,
+              656293
+            ],
+            [
+              656391,
+              656731
+            ],
+            [
+              657077,
+              657398
+            ],
+            [
+              690145,
+              690467
+            ],
+            [
+              720021,
+              720350
+            ],
+            [
+              720718,
+              721317
+            ],
+            [
+              725439,
+              725761
+            ],
+            [
+              784483,
+              784809
+            ],
+            [
+              825282,
+              825697
+            ],
+            [
+              862678,
+              863002
+            ],
+            [
+              889838,
+              890285
+            ],
+            [
+              890830,
+              891157
+            ],
+            [
+              980108,
+              980429
+            ],
+            [
+              1021042,
+              1021374
+            ],
+            [
+              1034612,
+              1034934
+            ],
+            [
+              1097622,
+              1097944
+            ],
+            [
+              1115229,
+              1115552
+            ],
+            [
+              1128467,
+              1128800
+            ],
+            [
+              1151831,
+              1152152
+            ],
+            [
+              1167106,
+              1167438
+            ],
+            [
+              1174560,
+              1175035
+            ],
+            [
+              1275224,
+              1275545
+            ],
+            [
+              1341997,
+              1342318
+            ],
+            [
+              1348628,
+              1348952
+            ],
+            [
+              1370149,
+              1370471
+            ],
+            [
+              1377136,
+              1377481
+            ],
+            [
+              1379148,
+              1379473
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 35787,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hx": {
+          "minimum_counts": -26848,
+          "maximum_counts": 22448,
+          "mean_counts": 314.4553340277778,
+          "std_counts": 3538.1095644878246,
+          "zero_count": 137,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 11130,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": -2.0,
+            "robust_sigma_counts": 2556.0024,
+            "threshold_counts": 127800.12,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 16805,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hy": {
+          "minimum_counts": -21866,
+          "maximum_counts": 21192,
+          "mean_counts": 159.56976180555554,
+          "std_counts": 2187.8066630211365,
+          "zero_count": 165,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 9.375e-05,
+          "longest_constant_run_start_sample": 1284550,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 2.0,
+            "robust_sigma_counts": 920.6945999999999,
+            "threshold_counts": 46034.729999999996,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 9352,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hz": {
+          "minimum_counts": -4011,
+          "maximum_counts": 8173,
+          "mean_counts": 2326.6772194444443,
+          "std_counts": 2482.772268513889,
+          "zero_count": 212,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 9.375e-05,
+          "longest_constant_run_start_sample": 193547,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 867.3209999999999,
+            "threshold_counts": 43366.049999999996,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 9592,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        }
+      },
+      "bad_mask": {
+        "file": "ARMT5-700-45-45-01_D1.npz",
+        "sha256": "dd70f0cce0a34e73ee4790ac96c3d93cef4840a8e636aab173a33a1b15105028",
+        "total_bad_samples_summed": 0,
+        "union_bad_samples": 0,
+        "union_bad_fraction": 0.0,
+        "max_channel_bad_fraction": 0.0,
+        "guard_samples": 320,
+        "bitorder": "little",
+        "relative_path": "barrido/mascaras/ARMT5-700-45-45-01_D1.npz"
+      },
+      "status": "PASA_CON_OBSERVACIONES",
+      "manifest_trace": {
+        "index": 1,
+        "section_index": 2,
+        "sample_count": 1440000,
+        "sample_rate_hz": 32000.0,
+        "duration_seconds": 45.0,
+        "start_time_local": "2021-01-20T20:22:22",
+        "adc_to_uv": [
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "D0": [
+      {
+        "record_id": "ARMT5-700-45-45-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Ex",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 100,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000100.clb",
+        "clb_sha256": "781e02eba3a351c533494f78273ecad7495d017b339ac2cdf350a387987c9f42",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.66015625,
+        "amplitude_max_step_db": 0.6482192873954773,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-45-45-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Ey",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 101,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000101.clb",
+        "clb_sha256": "3b47ffbe0a0498289f4ced40883f98138c7763f50616ca972a5b9201ef218922",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.66015625,
+        "amplitude_max_step_db": 0.6482192873954773,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-45-45-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hx",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 200,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000200.clb",
+        "clb_sha256": "ede90272fa32f9bb2c35dd94569072bc07acbe5a9febb47f68c4e4b2b02a4771",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 4.324948310852051,
+        "amplitude_max_step_db": 0.6732779741287231,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-45-45-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hy",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 201,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000201.clb",
+        "clb_sha256": "f125fc82e8266bfecd41fef4beba4aef1064bc50f047271d80631a9f1a17bf54",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8949241638183594,
+        "amplitude_max_step_db": 0.678858757019043,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-45-45-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hz",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 202,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000202.clb",
+        "clb_sha256": "95f58d4322992f326bb23e1e4d084d6547d67878ebd9824d25121df61b37455c",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8952369689941406,
+        "amplitude_max_step_db": 0.6696397066116333,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      }
+    ],
+    "D1": [
+      {
+        "record_id": "ARMT5-700-45-45-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Ex",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 100,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000100.clb",
+        "clb_sha256": "781e02eba3a351c533494f78273ecad7495d017b339ac2cdf350a387987c9f42",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.66015625,
+        "amplitude_max_step_db": 0.6482192873954773,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-45-45-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Ey",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 101,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000101.clb",
+        "clb_sha256": "3b47ffbe0a0498289f4ced40883f98138c7763f50616ca972a5b9201ef218922",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.66015625,
+        "amplitude_max_step_db": 0.6482192873954773,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-45-45-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hx",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 200,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000200.clb",
+        "clb_sha256": "ede90272fa32f9bb2c35dd94569072bc07acbe5a9febb47f68c4e4b2b02a4771",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 4.324948310852051,
+        "amplitude_max_step_db": 0.6732779741287231,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-45-45-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hy",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 201,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000201.clb",
+        "clb_sha256": "f125fc82e8266bfecd41fef4beba4aef1064bc50f047271d80631a9f1a17bf54",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8949241638183594,
+        "amplitude_max_step_db": 0.678858757019043,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-45-45-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hz",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 202,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000202.clb",
+        "clb_sha256": "95f58d4322992f326bb23e1e4d084d6547d67878ebd9824d25121df61b37455c",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8952369689941406,
+        "amplitude_max_step_db": 0.6696397066116333,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      }
+    ]
+  },
+  "calibration_all_covered": true,
+  "status": "PASA_CON_OBSERVACIONES",
+  "blockers": {
+    "B-P0-05": {
+      "id": "B-P0-05",
+      "alcance": "registro ARMT5-700-45-45-01, bandas D0/D1",
+      "estado": "CERRADO_PARA_ESTE_REGISTRO",
+      "evidencia": "barrido/registros/ARMT5-700-45-45-01.json y mascaras en barrido/mascaras/"
+    }
+  }
+}

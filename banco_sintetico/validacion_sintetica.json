@@ -1,0 +1,118 @@
+{
+  "validation_version": "1.0.0",
+  "generated_at_utc": "2026-10-28T18:25:36.464651Z",
+  "result": "APROBADO",
+  "summary": {
+    "total": 20,
+    "pasa": 20,
+    "falla": 0
+  },
+  "checks": [
+    {
+      "id": "S-01",
+      "estado": "PASA",
+      "detalle": "Archivos obligatorios presentes"
+    },
+    {
+      "id": "S-02",
+      "estado": "PASA",
+      "detalle": "Manifiesto, verdades y soportes legibles"
+    },
+    {
+      "id": "S-03",
+      "estado": "PASA",
+      "detalle": "Insumos P0 sin cambios y hashes coherentes"
+    },
+    {
+      "id": "S-04",
+      "estado": "PASA",
+      "detalle": "Registro objetivo en desarrollo y declarado"
+    },
+    {
+      "id": "S-05",
+      "estado": "PASA",
+      "detalle": "Sin IDs SYN- en el manifiesto P0"
+    },
+    {
+      "id": "S-06",
+      "estado": "PASA",
+      "detalle": "Sin IDs SYN- en splits.csv"
+    },
+    {
+      "id": "S-07",
+      "estado": "PASA",
+      "detalle": "Marcas de cuarentena y no-afirmacion correctas"
+    },
+    {
+      "id": "S-08",
+      "estado": "PASA",
+      "detalle": "Identidad TEM sintetica correcta"
+    },
+    {
+      "id": "S-09",
+      "estado": "PASA",
+      "detalle": "Coordenadas vacias y sin datum"
+    },
+    {
+      "id": "S-10",
+      "estado": "PASA",
+      "detalle": "Gates, fechas y receptor sinteticos correctos"
+    },
+    {
+      "id": "S-11",
+      "estado": "PASA",
+      "detalle": "Verdades sinteticas coherentes con sus archivos"
+    },
+    {
+      "id": "S-12",
+      "estado": "PASA",
+      "detalle": "Semantica de S0/S1 y semillas correctas"
+    },
+    {
+      "id": "S-13",
+      "estado": "PASA",
+      "detalle": "Regeneracion determinista de TEM y verdad"
+    },
+    {
+      "id": "S-14",
+      "estado": "PASA",
+      "detalle": "Metadatos de soporte coherentes"
+    },
+    {
+      "id": "S-15",
+      "estado": "PASA",
+      "detalle": "Frecuencias y transiciones de soporte coherentes"
+    },
+    {
+      "id": "S-16",
+      "estado": "PASA",
+      "detalle": "Resumen de soporte consistente"
+    },
+    {
+      "id": "S-17",
+      "estado": "PASA",
+      "detalle": "S0 sin soporte, interseccion vacia y G0 activado"
+    },
+    {
+      "id": "S-18",
+      "estado": "PASA",
+      "detalle": "S1 con soporte D0 habilitado y D1 condicional"
+    },
+    {
+      "id": "S-19",
+      "estado": "PASA",
+      "detalle": "Ninguna frecuencia de 1-5 kHz queda habilitada"
+    },
+    {
+      "id": "S-20",
+      "estado": "PASA",
+      "detalle": "Manifiesto enlaza soportes con hashes correctos"
+    }
+  ],
+  "notes": [
+    "El banco sintetico no es evidencia TEM del sitio.",
+    "No cierra B-P0-03, no cierra P2-T y no habilita etiquetas de entrenamiento.",
+    "S0 valida abstencion; S1 valida soporte parcial y penalizacion de la banda muerta AMT.",
+    "La regeneracion determinista se comprobo en un directorio temporal."
+  ]
+}

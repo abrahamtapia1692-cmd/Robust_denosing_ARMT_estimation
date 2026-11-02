@@ -1,0 +1,3471 @@
+{
+  "record_version": "P1-BARRIDO-1.0.0",
+  "record_id": "ARMT5-700-24-24-01",
+  "generated_at_utc": "2026-10-28T19:00:54.690979Z",
+  "split": {
+    "split": "desarrollo",
+    "split_group": "S2021-A700-L024",
+    "campaign_group": "C2021-A700",
+    "protocol_version": "P0-SPLITS-1.0.0",
+    "assignment_basis": "record_level_site_holdout",
+    "frozen": true
+  },
+  "campaign": {
+    "year": 2021,
+    "campaign_group": "C2021-A700",
+    "label": null
+  },
+  "site": {
+    "site_id": null,
+    "site_name": null,
+    "status": "no_resuelto",
+    "note": "Identidad de sitio sin resolver (B-P0-01/B-P0-02)."
+  },
+  "source": {
+    "path_abs": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\02402401.sbf",
+    "path_ref": "ARMT_processing/ARMT_data/02402401.sbf",
+    "path_base": "software_root",
+    "sha256": "ea2bd30ce0c71315d9e28987f99997ee471c950fe1998d4a7ea424eb9f75a3ca",
+    "size_bytes": 508952577,
+    "mtime_utc": "2021-01-17T23:12:32Z"
+  },
+  "source_sha256_recomputed": "ea2bd30ce0c71315d9e28987f99997ee471c950fe1998d4a7ea424eb9f75a3ca",
+  "source_sha256_match": true,
+  "consistency": {
+    "bands": {
+      "D0": {
+        "sample_count_match": true,
+        "sample_rate_match": true,
+        "channels_match": true,
+        "adc_to_uv_match": true,
+        "receiver_serial_match": true
+      },
+      "D1": {
+        "sample_count_match": true,
+        "sample_rate_match": true,
+        "channels_match": true,
+        "adc_to_uv_match": true,
+        "receiver_serial_match": true
+      }
+    },
+    "all_match": true
+  },
+  "settings_summary": {
+    "gain_values_unique": [
+      1.77828002
+    ],
+    "gain_db": [
+      5.000002979314534
+    ],
+    "nearest_gain_directory": {
+      "directory": "CLB_G1.8_Ex_shifted",
+      "label": "1.8",
+      "delta_pct": -1.1246822577723491e-06
+    },
+    "adc_to_uv": [
+      0.5960090756416321,
+      0.5960000157356262
+    ],
+    "electric_dipole_lengths_cm": [
+      2000.0,
+      2000.0
+    ],
+    "sensor_azimuth_degrees": [
+      0.0,
+      90.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "delay_seconds": 0.0,
+    "settings_sections": 4
+  },
+  "bands": {
+    "D0": {
+      "trace_index": 0,
+      "sample_rate_hz": 4000.0,
+      "n_samples": 21600000,
+      "duration_s": 5400.0,
+      "channels": [
+        "Ex",
+        "Ey",
+        "Hx",
+        "Hy",
+        "Hz"
+      ],
+      "thresholds": {
+        "clip_run_samples": 4,
+        "stuck_run_samples": 2000,
+        "zero_fill_run_samples": 400,
+        "guard_samples": 40,
+        "jump_guard_samples": 20,
+        "edge_samples": 400
+      },
+      "sbf_audit": {
+        "trace_index": 0,
+        "band": "D0",
+        "sample_rate_hz": 4000.0,
+        "sample_count": 21600000,
+        "duration_s": 5400.0,
+        "bytes_per_sample": 4,
+        "channel_count": 5,
+        "channels": [
+          "Ex",
+          "Ey",
+          "Hx",
+          "Hy",
+          "Hz"
+        ],
+        "receiver_serial": 1,
+        "adc_to_uv": [
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321
+        ],
+        "settings_match": "inferred_single_settings_0xabcd",
+        "settings_count": 1,
+        "independent_export_comparison": "no_disponible",
+        "note": "No hay exportacion independiente del software del fabricante para comparar signo, bits e intercalado. Se usa el lector ARMT_processing y se verifica la longitud leida."
+      },
+      "checks": {
+        "clipping": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "plateaus >= 1.000 ms en el minimo o maximo global"
+        },
+        "canales_muertos": {
+          "estado": "PASA",
+          "channels": [],
+          "detail": "std <= 1.000 counts"
+        },
+        "valores_pegados": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos constantes >= 0.500 s"
+        },
+        "relleno_de_ceros": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos de ceros >= 0.100 s"
+        },
+        "saltos": {
+          "estado": "OBSERVACION",
+          "counts": {
+            "Ex": 95,
+            "Ey": 21,
+            "Hx": 5,
+            "Hy": 13,
+            "Hz": 0
+          },
+          "enmascarados": false,
+          "detail": "|diff - mediana| > 50.0 sigma robusta; se reportan como candidatos, no se enmascaran para no borrar sferics"
+        },
+        "muestras_faltantes": {
+          "estado": "PASA",
+          "expected_samples": 21600000,
+          "read_samples": 21600000,
+          "match": true,
+          "note": "El lector entrega exactamente sample_count; no hay huecos declarados en el SBF."
+        },
+        "transitorios_conmutacion": {
+          "estado": "NO_APLICABLE",
+          "detail": "El registro tiene una sola configuracion de ganancia (settings_count=1); el detector de cambios de media por bloque queda como observacion.",
+          "detector_por_bloque": {
+            "Ex": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": 0.032999999999901775,
+              "robust_sigma": 39.611365500000296,
+              "threshold": 396.11365500000295,
+              "count": 39,
+              "events": [
+                {
+                  "block_index": 220,
+                  "time_s": 220.0,
+                  "delta_mean_counts": 502.0717499999996
+                },
+                {
+                  "block_index": 221,
+                  "time_s": 221.0,
+                  "delta_mean_counts": -687.4109999999998
+                },
+                {
+                  "block_index": 263,
+                  "time_s": 263.0,
+                  "delta_mean_counts": 471.2597499999997
+                },
+                {
+                  "block_index": 264,
+                  "time_s": 264.0,
+                  "delta_mean_counts": -401.23199999999997
+                },
+                {
+                  "block_index": 349,
+                  "time_s": 349.0,
+                  "delta_mean_counts": 480.6780000000001
+                },
+                {
+                  "block_index": 369,
+                  "time_s": 369.0,
+                  "delta_mean_counts": -460.6252500000003
+                },
+                {
+                  "block_index": 370,
+                  "time_s": 370.0,
+                  "delta_mean_counts": 400.2167500000003
+                },
+                {
+                  "block_index": 449,
+                  "time_s": 449.0,
+                  "delta_mean_counts": -451.9242499999998
+                },
+                {
+                  "block_index": 507,
+                  "time_s": 507.0,
+                  "delta_mean_counts": 462.60725
+                },
+                {
+                  "block_index": 510,
+                  "time_s": 510.0,
+                  "delta_mean_counts": -487.83524999999986
+                },
+                {
+                  "block_index": 549,
+                  "time_s": 549.0,
+                  "delta_mean_counts": 473.5875000000001
+                },
+                {
+                  "block_index": 557,
+                  "time_s": 557.0,
+                  "delta_mean_counts": 405.4494999999997
+                },
+                {
+                  "block_index": 801,
+                  "time_s": 801.0,
+                  "delta_mean_counts": -427.20399999999995
+                },
+                {
+                  "block_index": 802,
+                  "time_s": 802.0,
+                  "delta_mean_counts": 466.34950000000003
+                },
+                {
+                  "block_index": 1003,
+                  "time_s": 1003.0,
+                  "delta_mean_counts": 639.9640000000002
+                },
+                {
+                  "block_index": 1028,
+                  "time_s": 1028.0,
+                  "delta_mean_counts": 41201.30025
+                },
+                {
+                  "block_index": 1029,
+                  "time_s": 1029.0,
+                  "delta_mean_counts": -59070.685000000005
+                },
+                {
+                  "block_index": 1030,
+                  "time_s": 1030.0,
+                  "delta_mean_counts": 8033.5332499999995
+                },
+                {
+                  "block_index": 1031,
+                  "time_s": 1031.0,
+                  "delta_mean_counts": 4302.124750000001
+                },
+                {
+                  "block_index": 1032,
+                  "time_s": 1032.0,
+                  "delta_mean_counts": 2403.2445
+                }
+              ]
+            },
+            "Ey": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.024249999999938154,
+              "robust_sigma": 31.758403950000332,
+              "threshold": 317.5840395000033,
+              "count": 7,
+              "events": [
+                {
+                  "block_index": 263,
+                  "time_s": 263.0,
+                  "delta_mean_counts": -358.7950000000001
+                },
+                {
+                  "block_index": 1317,
+                  "time_s": 1317.0,
+                  "delta_mean_counts": 376.54124999999976
+                },
+                {
+                  "block_index": 1319,
+                  "time_s": 1319.0,
+                  "delta_mean_counts": -399.53449999999975
+                },
+                {
+                  "block_index": 1320,
+                  "time_s": 1320.0,
+                  "delta_mean_counts": -456.5987500000001
+                },
+                {
+                  "block_index": 2132,
+                  "time_s": 2132.0,
+                  "delta_mean_counts": 440.1590000000001
+                },
+                {
+                  "block_index": 2134,
+                  "time_s": 2134.0,
+                  "delta_mean_counts": -416.0867499999995
+                },
+                {
+                  "block_index": 2181,
+                  "time_s": 2181.0,
+                  "delta_mean_counts": 359.067
+                }
+              ]
+            },
+            "Hx": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": 0.037249999999971806,
+              "robust_sigma": 16.22853959999987,
+              "threshold": 162.28539599999868,
+              "count": 34,
+              "events": [
+                {
+                  "block_index": 60,
+                  "time_s": 60.0,
+                  "delta_mean_counts": 177.28300000000002
+                },
+                {
+                  "block_index": 1483,
+                  "time_s": 1483.0,
+                  "delta_mean_counts": -218.78599999999994
+                },
+                {
+                  "block_index": 1527,
+                  "time_s": 1527.0,
+                  "delta_mean_counts": -834.6564999999999
+                },
+                {
+                  "block_index": 1528,
+                  "time_s": 1528.0,
+                  "delta_mean_counts": 1154.2175
+                },
+                {
+                  "block_index": 1530,
+                  "time_s": 1530.0,
+                  "delta_mean_counts": -274.62775
+                },
+                {
+                  "block_index": 2927,
+                  "time_s": 2927.0,
+                  "delta_mean_counts": 5425.29525
+                },
+                {
+                  "block_index": 2928,
+                  "time_s": 2928.0,
+                  "delta_mean_counts": -7630.24175
+                },
+                {
+                  "block_index": 2929,
+                  "time_s": 2929.0,
+                  "delta_mean_counts": -835.8030000000001
+                },
+                {
+                  "block_index": 2930,
+                  "time_s": 2930.0,
+                  "delta_mean_counts": 2456.7940000000003
+                },
+                {
+                  "block_index": 2931,
+                  "time_s": 2931.0,
+                  "delta_mean_counts": 773.38325
+                },
+                {
+                  "block_index": 2932,
+                  "time_s": 2932.0,
+                  "delta_mean_counts": -310.55824999999993
+                },
+                {
+                  "block_index": 4937,
+                  "time_s": 4937.0,
+                  "delta_mean_counts": 477.5037500000001
+                },
+                {
+                  "block_index": 4938,
+                  "time_s": 4938.0,
+                  "delta_mean_counts": -404.1337500000001
+                },
+                {
+                  "block_index": 4941,
+                  "time_s": 4941.0,
+                  "delta_mean_counts": 278.86299999999994
+                },
+                {
+                  "block_index": 4943,
+                  "time_s": 4943.0,
+                  "delta_mean_counts": -188.293
+                },
+                {
+                  "block_index": 4969,
+                  "time_s": 4969.0,
+                  "delta_mean_counts": -374.979
+                },
+                {
+                  "block_index": 4970,
+                  "time_s": 4970.0,
+                  "delta_mean_counts": 632.4437499999999
+                },
+                {
+                  "block_index": 4979,
+                  "time_s": 4979.0,
+                  "delta_mean_counts": 217.09000000000003
+                },
+                {
+                  "block_index": 4980,
+                  "time_s": 4980.0,
+                  "delta_mean_counts": -305.1435
+                },
+                {
+                  "block_index": 4981,
+                  "time_s": 4981.0,
+                  "delta_mean_counts": 173.0285
+                }
+              ]
+            },
+            "Hy": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": 0.0589999999999975,
+              "robust_sigma": 15.56359349999996,
+              "threshold": 155.63593499999962,
+              "count": 46,
+              "events": [
+                {
+                  "block_index": 5,
+                  "time_s": 5.0,
+                  "delta_mean_counts": -155.724
+                },
+                {
+                  "block_index": 53,
+                  "time_s": 53.0,
+                  "delta_mean_counts": 218.94575
+                },
+                {
+                  "block_index": 59,
+                  "time_s": 59.0,
+                  "delta_mean_counts": -166.81225
+                },
+                {
+                  "block_index": 61,
+                  "time_s": 61.0,
+                  "delta_mean_counts": 228.572
+                },
+                {
+                  "block_index": 738,
+                  "time_s": 738.0,
+                  "delta_mean_counts": -165.02075
+                },
+                {
+                  "block_index": 877,
+                  "time_s": 877.0,
+                  "delta_mean_counts": 181.77700000000002
+                },
+                {
+                  "block_index": 879,
+                  "time_s": 879.0,
+                  "delta_mean_counts": -248.32025
+                },
+                {
+                  "block_index": 880,
+                  "time_s": 880.0,
+                  "delta_mean_counts": 166.40875
+                },
+                {
+                  "block_index": 1483,
+                  "time_s": 1483.0,
+                  "delta_mean_counts": 176.544
+                },
+                {
+                  "block_index": 1526,
+                  "time_s": 1526.0,
+                  "delta_mean_counts": -414.75124999999997
+                },
+                {
+                  "block_index": 1527,
+                  "time_s": 1527.0,
+                  "delta_mean_counts": 427.47775
+                },
+                {
+                  "block_index": 1528,
+                  "time_s": 1528.0,
+                  "delta_mean_counts": 246.2665
+                },
+                {
+                  "block_index": 1529,
+                  "time_s": 1529.0,
+                  "delta_mean_counts": -446.68925
+                },
+                {
+                  "block_index": 1530,
+                  "time_s": 1530.0,
+                  "delta_mean_counts": 160.23575
+                },
+                {
+                  "block_index": 2924,
+                  "time_s": 2924.0,
+                  "delta_mean_counts": -304.67650000000003
+                },
+                {
+                  "block_index": 2926,
+                  "time_s": 2926.0,
+                  "delta_mean_counts": 190.28625
+                },
+                {
+                  "block_index": 2927,
+                  "time_s": 2927.0,
+                  "delta_mean_counts": -2954.4547500000003
+                },
+                {
+                  "block_index": 2928,
+                  "time_s": 2928.0,
+                  "delta_mean_counts": 7058.070000000001
+                },
+                {
+                  "block_index": 2929,
+                  "time_s": 2929.0,
+                  "delta_mean_counts": -4043.9082500000004
+                },
+                {
+                  "block_index": 2930,
+                  "time_s": 2930.0,
+                  "delta_mean_counts": -361.72725
+                }
+              ]
+            },
+            "Hz": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.3419999999996435,
+              "robust_sigma": 16.80119385000057,
+              "threshold": 168.0119385000057,
+              "count": 25,
+              "events": [
+                {
+                  "block_index": 1527,
+                  "time_s": 1527.0,
+                  "delta_mean_counts": 535.0225
+                },
+                {
+                  "block_index": 1528,
+                  "time_s": 1528.0,
+                  "delta_mean_counts": -302.2959999999998
+                },
+                {
+                  "block_index": 2926,
+                  "time_s": 2926.0,
+                  "delta_mean_counts": -232.43775000000005
+                },
+                {
+                  "block_index": 2927,
+                  "time_s": 2927.0,
+                  "delta_mean_counts": 4065.1772499999997
+                },
+                {
+                  "block_index": 2928,
+                  "time_s": 2928.0,
+                  "delta_mean_counts": -8053.37325
+                },
+                {
+                  "block_index": 2929,
+                  "time_s": 2929.0,
+                  "delta_mean_counts": 4852.19775
+                },
+                {
+                  "block_index": 2930,
+                  "time_s": 2930.0,
+                  "delta_mean_counts": -409.8937500000002
+                },
+                {
+                  "block_index": 2931,
+                  "time_s": 2931.0,
+                  "delta_mean_counts": 232.62924999999996
+                },
+                {
+                  "block_index": 2932,
+                  "time_s": 2932.0,
+                  "delta_mean_counts": -437.4097499999998
+                },
+                {
+                  "block_index": 4937,
+                  "time_s": 4937.0,
+                  "delta_mean_counts": 220.48949999999968
+                },
+                {
+                  "block_index": 4938,
+                  "time_s": 4938.0,
+                  "delta_mean_counts": -411.9200000000001
+                },
+                {
+                  "block_index": 4942,
+                  "time_s": 4942.0,
+                  "delta_mean_counts": 200.57799999999997
+                },
+                {
+                  "block_index": 4943,
+                  "time_s": 4943.0,
+                  "delta_mean_counts": -269.27424999999994
+                },
+                {
+                  "block_index": 4944,
+                  "time_s": 4944.0,
+                  "delta_mean_counts": 175.57199999999966
+                },
+                {
+                  "block_index": 4990,
+                  "time_s": 4990.0,
+                  "delta_mean_counts": 776.40425
+                },
+                {
+                  "block_index": 4991,
+                  "time_s": 4991.0,
+                  "delta_mean_counts": -485.4477499999998
+                },
+                {
+                  "block_index": 4992,
+                  "time_s": 4992.0,
+                  "delta_mean_counts": -303.6170000000002
+                },
+                {
+                  "block_index": 5038,
+                  "time_s": 5038.0,
+                  "delta_mean_counts": -185.78125
+                },
+                {
+                  "block_index": 5039,
+                  "time_s": 5039.0,
+                  "delta_mean_counts": -283.4135000000001
+                },
+                {
+                  "block_index": 5046,
+                  "time_s": 5046.0,
+                  "delta_mean_counts": -174.94575000000032
+                }
+              ]
+            }
+          }
+        }
+      },
+      "per_channel": {
+        "Ex": {
+          "minimum_counts": -449064,
+          "maximum_counts": 477020,
+          "mean_counts": 2167.086635,
+          "std_counts": 26675.197333706416,
+          "zero_count": 159,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 7040362,
+          "jump_count": 95,
+          "jump_fraction": 4.398148351766128e-06,
+          "jump_threshold": {
+            "median_diff_counts": 5.0,
+            "robust_sigma_counts": 3264.6852,
+            "threshold_counts": 163234.26,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              106567,
+              106608
+            ],
+            [
+              165937,
+              165979
+            ],
+            [
+              224946,
+              224988
+            ],
+            [
+              746702,
+              746743
+            ],
+            [
+              1885408,
+              1885449
+            ],
+            [
+              2430892,
+              2430934
+            ],
+            [
+              3204652,
+              3204693
+            ],
+            [
+              3861966,
+              3862007
+            ],
+            [
+              4275216,
+              4275257
+            ],
+            [
+              4275385,
+              4275428
+            ],
+            [
+              5812820,
+              5812861
+            ],
+            [
+              6093865,
+              6093906
+            ],
+            [
+              6415497,
+              6415538
+            ],
+            [
+              6759930,
+              6759972
+            ],
+            [
+              6759982,
+              6760033
+            ],
+            [
+              7785384,
+              7785425
+            ],
+            [
+              7831091,
+              7831132
+            ],
+            [
+              7831166,
+              7831208
+            ],
+            [
+              8307855,
+              8307896
+            ],
+            [
+              8499696,
+              8499737
+            ],
+            [
+              8713662,
+              8713703
+            ],
+            [
+              8723650,
+              8723693
+            ],
+            [
+              9503024,
+              9503065
+            ],
+            [
+              10688012,
+              10688081
+            ],
+            [
+              10752928,
+              10752970
+            ],
+            [
+              10882622,
+              10882663
+            ],
+            [
+              10882664,
+              10882706
+            ],
+            [
+              11031484,
+              11031525
+            ],
+            [
+              11144336,
+              11144377
+            ],
+            [
+              11201326,
+              11201367
+            ],
+            [
+              11370926,
+              11370968
+            ],
+            [
+              11371429,
+              11371470
+            ],
+            [
+              11375322,
+              11375363
+            ],
+            [
+              11807627,
+              11807669
+            ],
+            [
+              12351354,
+              12351395
+            ],
+            [
+              12500421,
+              12500464
+            ],
+            [
+              12718434,
+              12718476
+            ],
+            [
+              12820811,
+              12820852
+            ],
+            [
+              12905551,
+              12905594
+            ],
+            [
+              13374466,
+              13374508
+            ],
+            [
+              13375064,
+              13375105
+            ],
+            [
+              13552075,
+              13552116
+            ],
+            [
+              13647637,
+              13647678
+            ],
+            [
+              14099364,
+              14099406
+            ],
+            [
+              14374133,
+              14374175
+            ],
+            [
+              14642222,
+              14642263
+            ],
+            [
+              14859717,
+              14859758
+            ],
+            [
+              15153586,
+              15153627
+            ],
+            [
+              15164880,
+              15164921
+            ],
+            [
+              15164982,
+              15165023
+            ],
+            [
+              15165427,
+              15165468
+            ],
+            [
+              16326121,
+              16326162
+            ],
+            [
+              17025924,
+              17025965
+            ],
+            [
+              17302792,
+              17302833
+            ],
+            [
+              17302957,
+              17302999
+            ],
+            [
+              17303401,
+              17303445
+            ],
+            [
+              17971474,
+              17971515
+            ],
+            [
+              19449824,
+              19449865
+            ],
+            [
+              20141748,
+              20141790
+            ],
+            [
+              20321775,
+              20321817
+            ],
+            [
+              20505974,
+              20506016
+            ],
+            [
+              20553102,
+              20553144
+            ],
+            [
+              20926029,
+              20926070
+            ],
+            [
+              20926072,
+              20926117
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 62916,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Ey": {
+          "minimum_counts": -262360,
+          "maximum_counts": 259929,
+          "mean_counts": 3458.691241527778,
+          "std_counts": 23747.13021485684,
+          "zero_count": 228,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 2120337,
+          "jump_count": 21,
+          "jump_fraction": 9.722222672325124e-07,
+          "jump_threshold": {
+            "median_diff_counts": -4.0,
+            "robust_sigma_counts": 3307.6805999999997,
+            "threshold_counts": 165384.02999999997,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              224947,
+              224988
+            ],
+            [
+              915081,
+              915123
+            ],
+            [
+              4973179,
+              4973220
+            ],
+            [
+              6759936,
+              6759977
+            ],
+            [
+              6820406,
+              6820447
+            ],
+            [
+              6883908,
+              6883949
+            ],
+            [
+              7227183,
+              7227224
+            ],
+            [
+              8723650,
+              8723692
+            ],
+            [
+              11286487,
+              11286528
+            ],
+            [
+              11375322,
+              11375363
+            ],
+            [
+              12039981,
+              12040022
+            ],
+            [
+              16869186,
+              16869227
+            ],
+            [
+              17303402,
+              17303443
+            ],
+            [
+              19168602,
+              19168643
+            ],
+            [
+              19285235,
+              19285276
+            ],
+            [
+              20141748,
+              20141790
+            ],
+            [
+              20321777,
+              20321818
+            ],
+            [
+              21404905,
+              21404946
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 60757,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hx": {
+          "minimum_counts": -30493,
+          "maximum_counts": 74236,
+          "mean_counts": 648.246302037037,
+          "std_counts": 3498.3117600357436,
+          "zero_count": 1494,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 4,
+          "longest_constant_run_s": 0.001,
+          "longest_constant_run_start_sample": 9658067,
+          "jump_count": 5,
+          "jump_fraction": 2.3148149219821724e-07,
+          "jump_threshold": {
+            "median_diff_counts": -1.0,
+            "robust_sigma_counts": 590.0748,
+            "threshold_counts": 29503.739999999998,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              8723650,
+              8723692
+            ],
+            [
+              19168599,
+              19168642
+            ],
+            [
+              20321776,
+              20321817
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 11780,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hy": {
+          "minimum_counts": -42629,
+          "maximum_counts": 78357,
+          "mean_counts": 226.48394273148148,
+          "std_counts": 2122.8592806092497,
+          "zero_count": 2167,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 137087,
+          "jump_count": 13,
+          "jump_fraction": 6.018518797153648e-07,
+          "jump_threshold": {
+            "median_diff_counts": -1.0,
+            "robust_sigma_counts": 358.7892,
+            "threshold_counts": 17939.46,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              4275216,
+              4275258
+            ],
+            [
+              8723650,
+              8723694
+            ],
+            [
+              10688012,
+              10688053
+            ],
+            [
+              11371424,
+              11371467
+            ],
+            [
+              12500421,
+              12500462
+            ],
+            [
+              20321774,
+              20321817
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 7766,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hz": {
+          "minimum_counts": -15273,
+          "maximum_counts": 22226,
+          "mean_counts": 2484.864339027778,
+          "std_counts": 3387.219492565516,
+          "zero_count": 1603,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 568177,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 461.0886,
+            "threshold_counts": 23054.43,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 10983,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        }
+      },
+      "bad_mask": {
+        "file": "ARMT5-700-24-24-01_D0.npz",
+        "sha256": "3074161eb56f3f1340d2817f99cbf3b14ab70799672025a3a0067164538a8127",
+        "total_bad_samples_summed": 0,
+        "union_bad_samples": 0,
+        "union_bad_fraction": 0.0,
+        "max_channel_bad_fraction": 0.0,
+        "guard_samples": 40,
+        "bitorder": "little",
+        "relative_path": "barrido/mascaras/ARMT5-700-24-24-01_D0.npz"
+      },
+      "status": "PASA_CON_OBSERVACIONES",
+      "manifest_trace": {
+        "index": 0,
+        "section_index": 1,
+        "sample_count": 21600000,
+        "sample_rate_hz": 4000.0,
+        "duration_seconds": 5400.0,
+        "start_time_local": "2021-01-17T21:41:43",
+        "adc_to_uv": [
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321
+        ]
+      }
+    },
+    "D1": {
+      "trace_index": 1,
+      "sample_rate_hz": 32000.0,
+      "n_samples": 1440000,
+      "duration_s": 45.0,
+      "channels": [
+        "Ex",
+        "Ey",
+        "Hx",
+        "Hy",
+        "Hz"
+      ],
+      "thresholds": {
+        "clip_run_samples": 32,
+        "stuck_run_samples": 16000,
+        "zero_fill_run_samples": 3200,
+        "guard_samples": 320,
+        "jump_guard_samples": 160,
+        "edge_samples": 3200
+      },
+      "sbf_audit": {
+        "trace_index": 1,
+        "band": "D1",
+        "sample_rate_hz": 32000.0,
+        "sample_count": 1440000,
+        "duration_s": 45.0,
+        "bytes_per_sample": 4,
+        "channel_count": 5,
+        "channels": [
+          "Ex",
+          "Ey",
+          "Hx",
+          "Hy",
+          "Hz"
+        ],
+        "receiver_serial": 1,
+        "adc_to_uv": [
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262
+        ],
+        "settings_match": "inferred_single_settings_0xabcd",
+        "settings_count": 1,
+        "independent_export_comparison": "no_disponible",
+        "note": "No hay exportacion independiente del software del fabricante para comparar signo, bits e intercalado. Se usa el lector ARMT_processing y se verifica la longitud leida."
+      },
+      "checks": {
+        "clipping": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "plateaus >= 1.000 ms en el minimo o maximo global"
+        },
+        "canales_muertos": {
+          "estado": "PASA",
+          "channels": [],
+          "detail": "std <= 1.000 counts"
+        },
+        "valores_pegados": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos constantes >= 0.500 s"
+        },
+        "relleno_de_ceros": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos de ceros >= 0.100 s"
+        },
+        "saltos": {
+          "estado": "OBSERVACION",
+          "counts": {
+            "Ex": 1945,
+            "Ey": 2342,
+            "Hx": 2,
+            "Hy": 2,
+            "Hz": 0
+          },
+          "enmascarados": false,
+          "detail": "|diff - mediana| > 50.0 sigma robusta; se reportan como candidatos, no se enmascaran para no borrar sferics"
+        },
+        "muestras_faltantes": {
+          "estado": "PASA",
+          "expected_samples": 1440000,
+          "read_samples": 1440000,
+          "match": true,
+          "note": "El lector entrega exactamente sample_count; no hay huecos declarados en el SBF."
+        },
+        "transitorios_conmutacion": {
+          "estado": "NO_APLICABLE",
+          "detail": "El registro tiene una sola configuracion de ganancia (settings_count=1); el detector de cambios de media por bloque queda como observacion.",
+          "detector_por_bloque": {
+            "Ex": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": 1.4814062499999636,
+              "robust_sigma": 37.735065703125066,
+              "threshold": 377.35065703125065,
+              "count": 0,
+              "events": []
+            },
+            "Ey": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": 2.973843749999787,
+              "robust_sigma": 39.61437703124973,
+              "threshold": 396.1437703124973,
+              "count": 0,
+              "events": []
+            },
+            "Hx": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": 1.3593437499999936,
+              "robust_sigma": 13.461289865624913,
+              "threshold": 134.61289865624911,
+              "count": 0,
+              "events": []
+            },
+            "Hy": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -1.9438437499999708,
+              "robust_sigma": 17.63105603437503,
+              "threshold": 176.31056034375032,
+              "count": 0,
+              "events": []
+            },
+            "Hz": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -2.07034375000012,
+              "robust_sigma": 18.67109993437551,
+              "threshold": 186.71099934375508,
+              "count": 0,
+              "events": []
+            }
+          }
+        }
+      },
+      "per_channel": {
+        "Ex": {
+          "minimum_counts": -1053843,
+          "maximum_counts": 1145000,
+          "mean_counts": 2199.387475,
+          "std_counts": 26642.127333659217,
+          "zero_count": 8,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 9.375e-05,
+          "longest_constant_run_start_sample": 992817,
+          "jump_count": 1945,
+          "jump_fraction": 0.001350695382427349,
+          "jump_threshold": {
+            "median_diff_counts": -1.0,
+            "robust_sigma_counts": 950.3466,
+            "threshold_counts": 47517.33,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              422,
+              865
+            ],
+            [
+              1245,
+              1567
+            ],
+            [
+              1724,
+              2052
+            ],
+            [
+              55051,
+              55381
+            ],
+            [
+              55492,
+              56105
+            ],
+            [
+              61733,
+              62227
+            ],
+            [
+              62409,
+              62834
+            ],
+            [
+              63229,
+              63719
+            ],
+            [
+              63810,
+              64903
+            ],
+            [
+              65558,
+              66299
+            ],
+            [
+              66350,
+              66672
+            ],
+            [
+              67569,
+              67892
+            ],
+            [
+              86055,
+              86604
+            ],
+            [
+              86971,
+              87587
+            ],
+            [
+              93548,
+              94016
+            ],
+            [
+              95559,
+              95889
+            ],
+            [
+              96022,
+              96343
+            ],
+            [
+              96519,
+              96842
+            ],
+            [
+              97764,
+              99361
+            ],
+            [
+              99456,
+              99779
+            ],
+            [
+              101911,
+              102232
+            ],
+            [
+              102544,
+              102872
+            ],
+            [
+              102898,
+              103228
+            ],
+            [
+              109323,
+              109680
+            ],
+            [
+              109947,
+              110285
+            ],
+            [
+              110983,
+              111360
+            ],
+            [
+              111969,
+              112322
+            ],
+            [
+              113808,
+              114178
+            ],
+            [
+              116653,
+              117002
+            ],
+            [
+              118440,
+              118796
+            ],
+            [
+              121130,
+              121494
+            ],
+            [
+              123093,
+              123487
+            ],
+            [
+              125095,
+              125530
+            ],
+            [
+              127056,
+              127383
+            ],
+            [
+              128778,
+              129120
+            ],
+            [
+              129811,
+              130276
+            ],
+            [
+              131044,
+              131371
+            ],
+            [
+              133235,
+              133791
+            ],
+            [
+              134922,
+              135250
+            ],
+            [
+              137365,
+              137689
+            ],
+            [
+              141403,
+              141724
+            ],
+            [
+              170755,
+              171077
+            ],
+            [
+              234512,
+              234833
+            ],
+            [
+              256767,
+              257091
+            ],
+            [
+              264851,
+              265605
+            ],
+            [
+              270006,
+              270338
+            ],
+            [
+              298933,
+              299349
+            ],
+            [
+              302463,
+              303032
+            ],
+            [
+              307544,
+              307878
+            ],
+            [
+              318547,
+              318873
+            ],
+            [
+              324657,
+              325313
+            ],
+            [
+              325988,
+              326309
+            ],
+            [
+              331277,
+              331602
+            ],
+            [
+              338745,
+              339066
+            ],
+            [
+              383255,
+              383919
+            ],
+            [
+              384382,
+              386237
+            ],
+            [
+              386625,
+              387318
+            ],
+            [
+              387426,
+              388060
+            ],
+            [
+              388124,
+              389021
+            ],
+            [
+              389430,
+              389752
+            ],
+            [
+              390123,
+              390514
+            ],
+            [
+              393522,
+              393843
+            ],
+            [
+              395933,
+              396265
+            ],
+            [
+              398538,
+              398910
+            ],
+            [
+              399910,
+              400232
+            ],
+            [
+              400973,
+              401439
+            ],
+            [
+              402458,
+              402785
+            ],
+            [
+              405010,
+              405331
+            ],
+            [
+              406690,
+              407020
+            ],
+            [
+              407250,
+              407594
+            ],
+            [
+              408336,
+              408675
+            ],
+            [
+              409050,
+              409721
+            ],
+            [
+              409989,
+              410328
+            ],
+            [
+              410698,
+              411019
+            ],
+            [
+              418723,
+              419044
+            ],
+            [
+              449742,
+              450064
+            ],
+            [
+              469008,
+              469396
+            ],
+            [
+              473414,
+              473752
+            ],
+            [
+              475545,
+              475867
+            ],
+            [
+              483384,
+              483706
+            ],
+            [
+              486901,
+              487223
+            ],
+            [
+              530998,
+              531346
+            ],
+            [
+              532789,
+              533111
+            ],
+            [
+              533354,
+              533684
+            ],
+            [
+              534277,
+              534671
+            ],
+            [
+              535063,
+              535384
+            ],
+            [
+              536685,
+              537414
+            ],
+            [
+              537476,
+              537808
+            ],
+            [
+              540997,
+              541327
+            ],
+            [
+              541789,
+              542116
+            ],
+            [
+              543073,
+              543629
+            ],
+            [
+              543688,
+              544561
+            ],
+            [
+              545010,
+              545344
+            ],
+            [
+              545407,
+              545737
+            ],
+            [
+              549308,
+              549666
+            ],
+            [
+              611952,
+              612278
+            ],
+            [
+              626865,
+              627395
+            ],
+            [
+              628790,
+              629130
+            ],
+            [
+              630261,
+              630599
+            ],
+            [
+              632139,
+              632489
+            ],
+            [
+              632777,
+              633131
+            ],
+            [
+              636824,
+              637145
+            ],
+            [
+              641720,
+              642047
+            ],
+            [
+              642062,
+              642530
+            ],
+            [
+              644685,
+              645024
+            ],
+            [
+              645466,
+              645809
+            ],
+            [
+              646385,
+              646718
+            ],
+            [
+              646973,
+              647300
+            ],
+            [
+              651604,
+              651927
+            ],
+            [
+              652679,
+              653126
+            ],
+            [
+              653559,
+              653886
+            ],
+            [
+              659598,
+              659919
+            ],
+            [
+              733975,
+              734306
+            ],
+            [
+              763953,
+              764274
+            ],
+            [
+              768688,
+              769021
+            ],
+            [
+              773071,
+              773392
+            ],
+            [
+              774268,
+              774716
+            ],
+            [
+              784263,
+              784720
+            ],
+            [
+              796013,
+              796343
+            ],
+            [
+              798758,
+              799079
+            ],
+            [
+              799465,
+              799792
+            ],
+            [
+              806316,
+              806640
+            ],
+            [
+              814195,
+              814517
+            ],
+            [
+              888267,
+              888588
+            ],
+            [
+              890973,
+              891297
+            ],
+            [
+              918477,
+              919081
+            ],
+            [
+              924975,
+              925604
+            ],
+            [
+              926125,
+              926730
+            ],
+            [
+              926806,
+              927135
+            ],
+            [
+              963797,
+              964118
+            ],
+            [
+              1011731,
+              1012070
+            ],
+            [
+              1018985,
+              1019311
+            ],
+            [
+              1028701,
+              1029023
+            ],
+            [
+              1032503,
+              1032825
+            ],
+            [
+              1075980,
+              1076307
+            ],
+            [
+              1076640,
+              1076965
+            ],
+            [
+              1077756,
+              1078085
+            ],
+            [
+              1118153,
+              1118481
+            ],
+            [
+              1119930,
+              1120574
+            ],
+            [
+              1124096,
+              1124417
+            ],
+            [
+              1132870,
+              1133202
+            ],
+            [
+              1195966,
+              1196375
+            ],
+            [
+              1201911,
+              1202233
+            ],
+            [
+              1207704,
+              1208420
+            ],
+            [
+              1222721,
+              1223047
+            ],
+            [
+              1223300,
+              1223764
+            ],
+            [
+              1223938,
+              1224323
+            ],
+            [
+              1224325,
+              1224688
+            ],
+            [
+              1225454,
+              1225780
+            ],
+            [
+              1226030,
+              1226387
+            ],
+            [
+              1226626,
+              1227170
+            ],
+            [
+              1228624,
+              1228989
+            ],
+            [
+              1230254,
+              1230576
+            ],
+            [
+              1230823,
+              1231350
+            ],
+            [
+              1236185,
+              1236507
+            ],
+            [
+              1237145,
+              1237473
+            ],
+            [
+              1240022,
+              1240619
+            ],
+            [
+              1242204,
+              1242527
+            ],
+            [
+              1243640,
+              1243968
+            ],
+            [
+              1256253,
+              1256586
+            ],
+            [
+              1304863,
+              1305190
+            ],
+            [
+              1307511,
+              1307840
+            ],
+            [
+              1315177,
+              1315517
+            ],
+            [
+              1315542,
+              1315871
+            ],
+            [
+              1321202,
+              1321542
+            ],
+            [
+              1321577,
+              1321906
+            ],
+            [
+              1323616,
+              1323937
+            ],
+            [
+              1324152,
+              1324497
+            ],
+            [
+              1325574,
+              1325924
+            ],
+            [
+              1326644,
+              1327004
+            ],
+            [
+              1331926,
+              1332271
+            ],
+            [
+              1333322,
+              1333679
+            ],
+            [
+              1356583,
+              1356910
+            ],
+            [
+              1358120,
+              1358441
+            ],
+            [
+              1364038,
+              1364686
+            ],
+            [
+              1364826,
+              1365147
+            ],
+            [
+              1368087,
+              1368409
+            ],
+            [
+              1368522,
+              1368843
+            ],
+            [
+              1370742,
+              1371080
+            ],
+            [
+              1375658,
+              1375980
+            ],
+            [
+              1393454,
+              1393775
+            ],
+            [
+              1394144,
+              1394487
+            ],
+            [
+              1396120,
+              1396450
+            ],
+            [
+              1418439,
+              1418937
+            ],
+            [
+              1419076,
+              1420357
+            ],
+            [
+              1421142,
+              1421982
+            ],
+            [
+              1422358,
+              1422679
+            ],
+            [
+              1422861,
+              1423187
+            ],
+            [
+              1423567,
+              1423892
+            ],
+            [
+              1434265,
+              1434592
+            ],
+            [
+              1434812,
+              1435324
+            ],
+            [
+              1435392,
+              1435714
+            ],
+            [
+              1436104,
+              1436425
+            ],
+            [
+              1437921,
+              1438250
+            ],
+            [
+              1438426,
+              1439166
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 63026,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Ey": {
+          "minimum_counts": -1248694,
+          "maximum_counts": 1200455,
+          "mean_counts": 3516.5587895833332,
+          "std_counts": 23445.685470089356,
+          "zero_count": 16,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 1734,
+          "jump_count": 2342,
+          "jump_fraction": 0.0016263900183264017,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 950.3466,
+            "threshold_counts": 47517.33,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              1724,
+              2051
+            ],
+            [
+              38818,
+              39145
+            ],
+            [
+              55051,
+              55379
+            ],
+            [
+              55493,
+              55815
+            ],
+            [
+              61733,
+              62823
+            ],
+            [
+              62985,
+              64960
+            ],
+            [
+              65387,
+              66672
+            ],
+            [
+              67569,
+              67892
+            ],
+            [
+              71264,
+              71586
+            ],
+            [
+              72184,
+              72506
+            ],
+            [
+              86058,
+              86581
+            ],
+            [
+              86976,
+              87587
+            ],
+            [
+              93549,
+              94016
+            ],
+            [
+              95559,
+              95886
+            ],
+            [
+              96520,
+              96841
+            ],
+            [
+              96857,
+              97178
+            ],
+            [
+              97769,
+              99368
+            ],
+            [
+              99456,
+              99779
+            ],
+            [
+              102545,
+              102873
+            ],
+            [
+              102898,
+              103229
+            ],
+            [
+              109319,
+              110292
+            ],
+            [
+              110982,
+              111343
+            ],
+            [
+              111961,
+              112325
+            ],
+            [
+              113803,
+              114182
+            ],
+            [
+              114911,
+              115238
+            ],
+            [
+              116632,
+              117005
+            ],
+            [
+              118417,
+              118800
+            ],
+            [
+              121129,
+              121496
+            ],
+            [
+              123087,
+              123489
+            ],
+            [
+              125085,
+              125519
+            ],
+            [
+              127056,
+              127383
+            ],
+            [
+              128778,
+              129120
+            ],
+            [
+              129752,
+              130276
+            ],
+            [
+              131044,
+              131380
+            ],
+            [
+              133235,
+              133791
+            ],
+            [
+              134364,
+              134687
+            ],
+            [
+              134922,
+              135259
+            ],
+            [
+              135454,
+              135775
+            ],
+            [
+              137363,
+              137691
+            ],
+            [
+              140539,
+              140860
+            ],
+            [
+              142565,
+              142886
+            ],
+            [
+              170728,
+              171082
+            ],
+            [
+              213796,
+              214125
+            ],
+            [
+              215728,
+              216049
+            ],
+            [
+              218180,
+              218596
+            ],
+            [
+              256767,
+              257091
+            ],
+            [
+              258196,
+              258517
+            ],
+            [
+              260324,
+              260645
+            ],
+            [
+              263234,
+              263555
+            ],
+            [
+              264851,
+              265604
+            ],
+            [
+              270006,
+              270337
+            ],
+            [
+              270367,
+              270699
+            ],
+            [
+              272624,
+              272951
+            ],
+            [
+              273880,
+              274206
+            ],
+            [
+              298927,
+              299595
+            ],
+            [
+              299974,
+              300295
+            ],
+            [
+              302460,
+              303037
+            ],
+            [
+              307544,
+              307886
+            ],
+            [
+              318551,
+              318872
+            ],
+            [
+              324657,
+              325313
+            ],
+            [
+              325982,
+              326310
+            ],
+            [
+              328614,
+              328961
+            ],
+            [
+              329315,
+              329636
+            ],
+            [
+              330827,
+              331155
+            ],
+            [
+              331276,
+              331605
+            ],
+            [
+              337900,
+              338224
+            ],
+            [
+              338533,
+              339284
+            ],
+            [
+              339405,
+              339726
+            ],
+            [
+              340386,
+              340707
+            ],
+            [
+              383252,
+              383911
+            ],
+            [
+              384407,
+              385816
+            ],
+            [
+              385906,
+              386228
+            ],
+            [
+              386491,
+              387051
+            ],
+            [
+              387737,
+              388059
+            ],
+            [
+              388154,
+              388687
+            ],
+            [
+              388699,
+              389020
+            ],
+            [
+              392636,
+              393050
+            ],
+            [
+              393516,
+              393989
+            ],
+            [
+              395933,
+              396256
+            ],
+            [
+              398415,
+              398869
+            ],
+            [
+              399910,
+              400232
+            ],
+            [
+              400911,
+              401295
+            ],
+            [
+              403472,
+              403793
+            ],
+            [
+              405009,
+              405332
+            ],
+            [
+              406691,
+              407018
+            ],
+            [
+              407252,
+              407583
+            ],
+            [
+              408336,
+              408671
+            ],
+            [
+              409050,
+              409721
+            ],
+            [
+              409989,
+              410315
+            ],
+            [
+              449743,
+              450064
+            ],
+            [
+              455187,
+              455509
+            ],
+            [
+              457383,
+              457705
+            ],
+            [
+              461906,
+              462228
+            ],
+            [
+              483383,
+              483708
+            ],
+            [
+              486901,
+              487227
+            ],
+            [
+              487240,
+              487567
+            ],
+            [
+              531741,
+              532063
+            ],
+            [
+              532789,
+              533110
+            ],
+            [
+              533354,
+              533684
+            ],
+            [
+              534341,
+              534676
+            ],
+            [
+              534915,
+              535236
+            ],
+            [
+              536685,
+              537256
+            ],
+            [
+              537476,
+              537818
+            ],
+            [
+              541789,
+              542115
+            ],
+            [
+              543689,
+              544566
+            ],
+            [
+              545011,
+              545774
+            ],
+            [
+              549312,
+              549666
+            ],
+            [
+              604165,
+              604487
+            ],
+            [
+              608278,
+              608624
+            ],
+            [
+              611953,
+              612276
+            ],
+            [
+              626865,
+              627393
+            ],
+            [
+              628788,
+              629135
+            ],
+            [
+              630261,
+              630603
+            ],
+            [
+              632106,
+              632491
+            ],
+            [
+              632777,
+              633131
+            ],
+            [
+              636823,
+              637258
+            ],
+            [
+              637304,
+              637625
+            ],
+            [
+              641719,
+              642050
+            ],
+            [
+              642062,
+              642531
+            ],
+            [
+              644672,
+              645025
+            ],
+            [
+              645465,
+              645808
+            ],
+            [
+              646384,
+              646726
+            ],
+            [
+              646971,
+              647975
+            ],
+            [
+              651603,
+              651935
+            ],
+            [
+              652678,
+              653131
+            ],
+            [
+              653147,
+              653895
+            ],
+            [
+              654314,
+              654636
+            ],
+            [
+              656861,
+              657203
+            ],
+            [
+              659595,
+              659923
+            ],
+            [
+              659924,
+              660247
+            ],
+            [
+              731564,
+              731890
+            ],
+            [
+              733976,
+              734306
+            ],
+            [
+              735442,
+              735763
+            ],
+            [
+              736366,
+              736689
+            ],
+            [
+              738117,
+              738442
+            ],
+            [
+              763952,
+              764279
+            ],
+            [
+              765143,
+              765465
+            ],
+            [
+              768687,
+              769020
+            ],
+            [
+              773065,
+              773392
+            ],
+            [
+              774235,
+              774816
+            ],
+            [
+              780265,
+              780586
+            ],
+            [
+              784263,
+              784844
+            ],
+            [
+              786194,
+              786518
+            ],
+            [
+              796007,
+              796344
+            ],
+            [
+              797633,
+              797954
+            ],
+            [
+              798758,
+              799087
+            ],
+            [
+              799399,
+              799793
+            ],
+            [
+              806315,
+              806640
+            ],
+            [
+              813898,
+              814517
+            ],
+            [
+              883210,
+              883535
+            ],
+            [
+              887995,
+              888620
+            ],
+            [
+              890956,
+              891299
+            ],
+            [
+              918571,
+              919077
+            ],
+            [
+              924975,
+              925603
+            ],
+            [
+              926128,
+              926465
+            ],
+            [
+              926810,
+              927135
+            ],
+            [
+              934501,
+              934836
+            ],
+            [
+              936852,
+              937174
+            ],
+            [
+              938371,
+              938697
+            ],
+            [
+              963796,
+              964121
+            ],
+            [
+              1011730,
+              1012070
+            ],
+            [
+              1018984,
+              1019315
+            ],
+            [
+              1020104,
+              1020426
+            ],
+            [
+              1028701,
+              1029023
+            ],
+            [
+              1032501,
+              1032826
+            ],
+            [
+              1071485,
+              1072011
+            ],
+            [
+              1075981,
+              1076307
+            ],
+            [
+              1077068,
+              1077391
+            ],
+            [
+              1118155,
+              1118478
+            ],
+            [
+              1119931,
+              1120255
+            ],
+            [
+              1124053,
+              1124552
+            ],
+            [
+              1124639,
+              1125113
+            ],
+            [
+              1132742,
+              1133210
+            ],
+            [
+              1133921,
+              1134276
+            ],
+            [
+              1134627,
+              1134952
+            ],
+            [
+              1136685,
+              1137281
+            ],
+            [
+              1195966,
+              1196376
+            ],
+            [
+              1199428,
+              1199750
+            ],
+            [
+              1201911,
+              1202233
+            ],
+            [
+              1207704,
+              1208422
+            ],
+            [
+              1222720,
+              1223049
+            ],
+            [
+              1223304,
+              1223764
+            ],
+            [
+              1223940,
+              1224318
+            ],
+            [
+              1224354,
+              1224691
+            ],
+            [
+              1225460,
+              1225781
+            ],
+            [
+              1226033,
+              1226376
+            ],
+            [
+              1226849,
+              1227170
+            ],
+            [
+              1228622,
+              1228998
+            ],
+            [
+              1230823,
+              1231349
+            ],
+            [
+              1236185,
+              1236506
+            ],
+            [
+              1237152,
+              1237473
+            ],
+            [
+              1240022,
+              1240618
+            ],
+            [
+              1242198,
+              1242526
+            ],
+            [
+              1243640,
+              1243967
+            ],
+            [
+              1246537,
+              1246859
+            ],
+            [
+              1250537,
+              1250913
+            ],
+            [
+              1256250,
+              1256909
+            ],
+            [
+              1257632,
+              1257954
+            ],
+            [
+              1275120,
+              1275442
+            ],
+            [
+              1303132,
+              1303453
+            ]
+          ],
+          "jump_intervals_truncated": true,
+          "dead_channel": false,
+          "unique_values_subsample": 65237,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hx": {
+          "minimum_counts": -37193,
+          "maximum_counts": 55031,
+          "mean_counts": 697.9416083333333,
+          "std_counts": 3449.4817636913263,
+          "zero_count": 102,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 8775,
+          "jump_count": 2,
+          "jump_fraction": 1.3888898533957316e-06,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 876.2166,
+            "threshold_counts": 43810.83,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              110991,
+              111316
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 13469,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hy": {
+          "minimum_counts": -48345,
+          "maximum_counts": 49291,
+          "mean_counts": 252.46326805555555,
+          "std_counts": 2215.035369461322,
+          "zero_count": 147,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 9613,
+          "jump_count": 2,
+          "jump_fraction": 1.3888898533957316e-06,
+          "jump_threshold": {
+            "median_diff_counts": 1.0,
+            "robust_sigma_counts": 908.8338,
+            "threshold_counts": 45441.69,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              86239,
+              86562
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 9183,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hz": {
+          "minimum_counts": -5755,
+          "maximum_counts": 12410,
+          "mean_counts": 2478.117922916667,
+          "std_counts": 3295.4587229946533,
+          "zero_count": 112,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 207,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 864.3557999999999,
+            "threshold_counts": 43217.78999999999,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 11906,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        }
+      },
+      "bad_mask": {
+        "file": "ARMT5-700-24-24-01_D1.npz",
+        "sha256": "dd70f0cce0a34e73ee4790ac96c3d93cef4840a8e636aab173a33a1b15105028",
+        "total_bad_samples_summed": 0,
+        "union_bad_samples": 0,
+        "union_bad_fraction": 0.0,
+        "max_channel_bad_fraction": 0.0,
+        "guard_samples": 320,
+        "bitorder": "little",
+        "relative_path": "barrido/mascaras/ARMT5-700-24-24-01_D1.npz"
+      },
+      "status": "PASA_CON_OBSERVACIONES",
+      "manifest_trace": {
+        "index": 1,
+        "section_index": 2,
+        "sample_count": 1440000,
+        "sample_rate_hz": 32000.0,
+        "duration_seconds": 45.0,
+        "start_time_local": "2021-01-17T23:11:44",
+        "adc_to_uv": [
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "D0": [
+      {
+        "record_id": "ARMT5-700-24-24-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Ex",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 100,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000100.clb",
+        "clb_sha256": "781e02eba3a351c533494f78273ecad7495d017b339ac2cdf350a387987c9f42",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.66015625,
+        "amplitude_max_step_db": 0.6482192873954773,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-24-24-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Ey",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 101,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000101.clb",
+        "clb_sha256": "3b47ffbe0a0498289f4ced40883f98138c7763f50616ca972a5b9201ef218922",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.66015625,
+        "amplitude_max_step_db": 0.6482192873954773,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-24-24-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hx",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 200,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000200.clb",
+        "clb_sha256": "ede90272fa32f9bb2c35dd94569072bc07acbe5a9febb47f68c4e4b2b02a4771",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 4.324948310852051,
+        "amplitude_max_step_db": 0.6732779741287231,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-24-24-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hy",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 201,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000201.clb",
+        "clb_sha256": "f125fc82e8266bfecd41fef4beba4aef1064bc50f047271d80631a9f1a17bf54",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8949241638183594,
+        "amplitude_max_step_db": 0.678858757019043,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-24-24-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hz",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 202,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000202.clb",
+        "clb_sha256": "95f58d4322992f326bb23e1e4d084d6547d67878ebd9824d25121df61b37455c",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8952369689941406,
+        "amplitude_max_step_db": 0.6696397066116333,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      }
+    ],
+    "D1": [
+      {
+        "record_id": "ARMT5-700-24-24-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Ex",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 100,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000100.clb",
+        "clb_sha256": "781e02eba3a351c533494f78273ecad7495d017b339ac2cdf350a387987c9f42",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.66015625,
+        "amplitude_max_step_db": 0.6482192873954773,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-24-24-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Ey",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 101,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000101.clb",
+        "clb_sha256": "3b47ffbe0a0498289f4ced40883f98138c7763f50616ca972a5b9201ef218922",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.66015625,
+        "amplitude_max_step_db": 0.6482192873954773,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-24-24-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hx",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 200,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000200.clb",
+        "clb_sha256": "ede90272fa32f9bb2c35dd94569072bc07acbe5a9febb47f68c4e4b2b02a4771",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 4.324948310852051,
+        "amplitude_max_step_db": 0.6732779741287231,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-24-24-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hy",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 201,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000201.clb",
+        "clb_sha256": "f125fc82e8266bfecd41fef4beba4aef1064bc50f047271d80631a9f1a17bf54",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8949241638183594,
+        "amplitude_max_step_db": 0.678858757019043,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-24-24-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hz",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 202,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000202.clb",
+        "clb_sha256": "95f58d4322992f326bb23e1e4d084d6547d67878ebd9824d25121df61b37455c",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.7782800197601318,
+        "gain_directory": 1.8,
+        "delta_pct": 1.2214038283350879,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8952369689941406,
+        "amplitude_max_step_db": 0.6696397066116333,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      }
+    ]
+  },
+  "calibration_all_covered": true,
+  "status": "PASA_CON_OBSERVACIONES",
+  "blockers": {
+    "B-P0-05": {
+      "id": "B-P0-05",
+      "alcance": "registro ARMT5-700-24-24-01, bandas D0/D1",
+      "estado": "CERRADO_PARA_ESTE_REGISTRO",
+      "evidencia": "barrido/registros/ARMT5-700-24-24-01.json y mascaras en barrido/mascaras/"
+    }
+  }
+}

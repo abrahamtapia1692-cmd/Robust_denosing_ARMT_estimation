@@ -1,0 +1,221 @@
+{
+  "artifact": "validacion_etapa4",
+  "version": "P4-VAL-1.0.0",
+  "generated_at_utc": "2026-10-29T15:56:16.468174Z",
+  "stage": 4,
+  "gate": "P4",
+  "subgate": "P4-N",
+  "status": "APROBADO",
+  "counts": {
+    "checks": 34,
+    "passed": 34,
+    "failed": 0,
+    "observations": 0
+  },
+  "checks": [
+    {
+      "id": "FILE-CONFIG",
+      "descripcion": "Existe config_p4.json",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa4\\config_p4.json"
+    },
+    {
+      "id": "FILE-EXTRACT",
+      "descripcion": "Existe extractor_ruido.py",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa4\\extractor_ruido.py"
+    },
+    {
+      "id": "FILE-DRIVER",
+      "descripcion": "Existe p4.py",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa4\\p4.py"
+    },
+    {
+      "id": "FILE-CATALOG",
+      "descripcion": "Existe noise_episodes.csv",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa4\\noise_episodes.csv"
+    },
+    {
+      "id": "FILE-RESUMEN",
+      "descripcion": "Existe resumen_p4.json",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa4\\resumen_p4.json"
+    },
+    {
+      "id": "FILE-REPORTE",
+      "descripcion": "Existe reporte_p4.md",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa4\\reporte_p4.md"
+    },
+    {
+      "id": "DIR-NOISE-BANK",
+      "descripcion": "Existe directorio noise_bank/",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa4\\noise_bank"
+    },
+    {
+      "id": "VER-CONFIG",
+      "descripcion": "config_p4.json declara P4-CONFIG-1.0.0",
+      "resultado": "PASA",
+      "detalle": "P4-CONFIG-1.0.0"
+    },
+    {
+      "id": "VER-RESUMEN",
+      "descripcion": "resumen_p4.json declara P4-1.0.0",
+      "resultado": "PASA",
+      "detalle": "P4-1.0.0"
+    },
+    {
+      "id": "CATALOG-COUNT",
+      "descripcion": "Cat\u00e1logo contiene al menos 4 episodios extra\u00eddos",
+      "resultado": "PASA",
+      "detalle": "4 episodios"
+    },
+    {
+      "id": "EPISODE-FILE-NOISE-D0-001",
+      "descripcion": "Existe archivo binario NOISE-D0-001.npz",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa4\\noise_bank\\NOISE-D0-001.npz"
+    },
+    {
+      "id": "EPISODE-ARRAYS-NOISE-D0-001",
+      "descripcion": "NOISE-D0-001.npz contiene noise y signal_residual",
+      "resultado": "PASA",
+      "detalle": "['noise', 'signal_residual', 'channels', 'fs']"
+    },
+    {
+      "id": "IDENTITY-NOISE-D0-001",
+      "descripcion": "NOISE-D0-001 error de reconstrucci\u00f3n identidad < 1%",
+      "resultado": "PASA",
+      "detalle": "err=0.00e+00"
+    },
+    {
+      "id": "CLASS-NOISE-D0-001",
+      "descripcion": "NOISE-D0-001 clase v\u00e1lida en taxonom\u00eda P4-N",
+      "resultado": "PASA",
+      "detalle": "clase=ruido_admitido"
+    },
+    {
+      "id": "EPISODE-FILE-NOISE-D0-002",
+      "descripcion": "Existe archivo binario NOISE-D0-002.npz",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa4\\noise_bank\\NOISE-D0-002.npz"
+    },
+    {
+      "id": "EPISODE-ARRAYS-NOISE-D0-002",
+      "descripcion": "NOISE-D0-002.npz contiene noise y signal_residual",
+      "resultado": "PASA",
+      "detalle": "['noise', 'signal_residual', 'channels', 'fs']"
+    },
+    {
+      "id": "IDENTITY-NOISE-D0-002",
+      "descripcion": "NOISE-D0-002 error de reconstrucci\u00f3n identidad < 1%",
+      "resultado": "PASA",
+      "detalle": "err=0.00e+00"
+    },
+    {
+      "id": "CLASS-NOISE-D0-002",
+      "descripcion": "NOISE-D0-002 clase v\u00e1lida en taxonom\u00eda P4-N",
+      "resultado": "PASA",
+      "detalle": "clase=ruido_admitido"
+    },
+    {
+      "id": "EPISODE-FILE-NOISE-D0-003",
+      "descripcion": "Existe archivo binario NOISE-D0-003.npz",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa4\\noise_bank\\NOISE-D0-003.npz"
+    },
+    {
+      "id": "EPISODE-ARRAYS-NOISE-D0-003",
+      "descripcion": "NOISE-D0-003.npz contiene noise y signal_residual",
+      "resultado": "PASA",
+      "detalle": "['noise', 'signal_residual', 'channels', 'fs']"
+    },
+    {
+      "id": "IDENTITY-NOISE-D0-003",
+      "descripcion": "NOISE-D0-003 error de reconstrucci\u00f3n identidad < 1%",
+      "resultado": "PASA",
+      "detalle": "err=0.00e+00"
+    },
+    {
+      "id": "CLASS-NOISE-D0-003",
+      "descripcion": "NOISE-D0-003 clase v\u00e1lida en taxonom\u00eda P4-N",
+      "resultado": "PASA",
+      "detalle": "clase=senal_protegida"
+    },
+    {
+      "id": "EPISODE-FILE-NOISE-D1-004",
+      "descripcion": "Existe archivo binario NOISE-D1-004.npz",
+      "resultado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa4\\noise_bank\\NOISE-D1-004.npz"
+    },
+    {
+      "id": "EPISODE-ARRAYS-NOISE-D1-004",
+      "descripcion": "NOISE-D1-004.npz contiene noise y signal_residual",
+      "resultado": "PASA",
+      "detalle": "['noise', 'signal_residual', 'channels', 'fs']"
+    },
+    {
+      "id": "IDENTITY-NOISE-D1-004",
+      "descripcion": "NOISE-D1-004 error de reconstrucci\u00f3n identidad < 1%",
+      "resultado": "PASA",
+      "detalle": "err=0.00e+00"
+    },
+    {
+      "id": "CLASS-NOISE-D1-004",
+      "descripcion": "NOISE-D1-004 clase v\u00e1lida en taxonom\u00eda P4-N",
+      "resultado": "PASA",
+      "detalle": "clase=ruido_admitido"
+    },
+    {
+      "id": "THEORY-COHERENCE-FORMULA",
+      "descripcion": "F\u00f3rmula de coherencia cr\u00edtica gamma2_crit(K=16) coincide con 1 - 0.05^(1/15) (~0.181)",
+      "resultado": "PASA",
+      "detalle": "gamma2_crit=0.1810"
+    },
+    {
+      "id": "THEORY-NO-FORCE-2PLUS2",
+      "descripcion": "BSS opera con rango k <= C - r_s sin forzar 2 naturales + 2 ruido",
+      "resultado": "PASA",
+      "detalle": "Componentes=[4, 4, 4, 4]"
+    },
+    {
+      "id": "LEAKAGE-BENCHMARK-RUN",
+      "descripcion": "Benchmark de fuga evaluado en niveles nominales",
+      "resultado": "PASA",
+      "detalle": "2 niveles evaluados"
+    },
+    {
+      "id": "LEAKAGE-SNR-+00dB",
+      "descripcion": "Fuga de se\u00f1al \u00fatil a SNR=+0 dB < 5% (P4)",
+      "resultado": "PASA",
+      "detalle": "Fuga=0.00%"
+    },
+    {
+      "id": "LEAKAGE-SNR-+10dB",
+      "descripcion": "Fuga de se\u00f1al \u00fatil a SNR=+10 dB < 5% (P4)",
+      "resultado": "PASA",
+      "detalle": "Fuga=0.00%"
+    },
+    {
+      "id": "P4N-SIGNAL-PROTECTION",
+      "descripcion": "Subpuerta P4-N protege se\u00f1ales \u00fatiles contra fuga indebida",
+      "resultado": "PASA",
+      "detalle": "Clases presentes: {'ruido_admitido', 'senal_protegida'}"
+    },
+    {
+      "id": "SPLIT-RESTRICTION",
+      "descripcion": "Ruido extra\u00eddo \u00fanicamente de split 'desarrollo'",
+      "resultado": "PASA",
+      "detalle": "split=desarrollo"
+    },
+    {
+      "id": "ISOLATION-P0",
+      "descripcion": "Manifiesto y particiones de P0 intactos (sin modificaci\u00f3n por BSS)",
+      "resultado": "PASA",
+      "detalle": "Manifest hash=5a67b03fea..."
+    }
+  ]
+}

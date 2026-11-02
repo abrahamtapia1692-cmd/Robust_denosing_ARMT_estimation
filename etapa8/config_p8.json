@@ -1,0 +1,87 @@
+{
+  "version": "P8-CONFIG-1.0.0",
+  "stage": 8,
+  "gate": "P8",
+  "bands": {
+    "D0": {
+      "fs_hz": 4000.0,
+      "f_min_hz": 125.0,
+      "f_max_hz": 1000.0,
+      "window_length": 256,
+      "step": 128
+    },
+    "D1": {
+      "fs_hz": 32000.0,
+      "f_min_hz": 1000.0,
+      "f_max_hz": 10000.0,
+      "window_length": 256,
+      "step": 128
+    }
+  },
+  "excluded_bands": [
+    "D2",
+    "D3"
+  ],
+  "reconstruction": {
+    "window_type": "hann",
+    "overlap_fraction": 0.5,
+    "step": 128,
+    "window_length": 256,
+    "temporal_guard_sec": 0.5,
+    "seamless_tolerance": 1e-12
+  },
+  "models": {
+    "detector_checkpoint": "etapa7/checkpoints/c_theta_scnet18.pt",
+    "denoiser_checkpoint": "etapa7/checkpoints/d_psi_b4_cbam.pt",
+    "detector_tau": 1.0,
+    "batch_size": 32,
+    "device_preference": "cuda"
+  },
+  "support_resolution": {
+    "tem_support_catalog": "etapa2/tem_amt_support.csv",
+    "synthetic_support_catalog": "banco_sintetico",
+    "require_tem_support": true,
+    "empty_support_fallback": "omit_network_fallback_p6"
+  },
+  "robust_estimation": {
+    "p6_config": "etapa6/config_p6.json",
+    "alpha_significance": 0.05,
+    "huber_c": 1.345,
+    "max_cond_rank2": 1000.0,
+    "rank1_threshold": 10000.0
+  },
+  "test_soundings": {
+    "S1_partial_support": {
+      "name": "CTRL-03-STRATIFIED-S1-D0",
+      "file": "etapa3/datos/CTRL-03-STRATIFIED-S1-D0.npz",
+      "band": "D0",
+      "support_file": "banco_sintetico/soporte_S1.json",
+      "noise_episode": "etapa4/noise_bank/NOISE-D0-001.npz"
+    },
+    "S0_empty_support": {
+      "name": "CTRL-01-HALFSPACE-D0",
+      "file": "etapa3/datos/CTRL-01-HALFSPACE-D0.npz",
+      "band": "D0",
+      "support_file": "banco_sintetico/soporte_S0.json"
+    },
+    "field_empty_support": {
+      "name": "ARMT5-123-01-01-01",
+      "band": "D0",
+      "catalog_row_match": "ARMT5-123-01-01-01"
+    },
+    "rank1_abstention": {
+      "name": "CTRL-04-ABSTENTION-RANK1",
+      "file": "etapa3/datos/CTRL-04-ABSTENTION-RANK1.npz",
+      "band": "D0"
+    },
+    "adc_saturation": {
+      "name": "CTRL-06-INSTRUMENT-ADC-SAT",
+      "file": "etapa3/datos/CTRL-06-INSTRUMENT-ADC-SAT.npz",
+      "band": "D0"
+    },
+    "rmt_exclusion_test": {
+      "name": "SYNTH-RMT-D2",
+      "band": "D2"
+    }
+  }
+}

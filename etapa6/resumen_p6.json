@@ -1,0 +1,159 @@
+{
+ "artifact": "resumen_p6",
+ "version": "P6-1.0.0",
+ "gate": "P6",
+ "estado_puerta": "PARCIAL",
+ "rama": "AMT_sin_TEM",
+ "generated_at_utc": "2026-10-28T23:29:05.955085Z",
+ "scope": {
+  "rama": "AMT_sin_TEM",
+  "tem_usado": false,
+  "sintesis_para_entrenamiento": false,
+  "etiquetas": false,
+  "red_neuronal": false,
+  "calibracion_aplicada": false,
+  "respuesta_real": "respuesta relativa no calibrada; no se presenta como rho_a fisica",
+  "justificacion": "PLAN_IMPLEMENTACION_ARMT.md v1.3, seccion 10: la Etapa 6 puede estimar respuestas convencionales fuera del soporte TEM si los datos ARMT lo permiten. P3-P5 y P7 siguen cerradas porque exigen P2-T.",
+  "bloqueos_que_limitan": [
+   "B-P0-04",
+   "B-P0-06",
+   "B-P0-01",
+   "B-P0-02"
+  ]
+ },
+ "records": 15,
+ "responses": 630,
+ "states": {
+  "no_evaluado": 270,
+  "estimado": 141,
+  "senal_insuficiente": 219
+ },
+ "per_band": {
+  "D0": {
+   "filas": 435,
+   "estimado": 111,
+   "no_evaluado": 270,
+   "no_identificable": 0,
+   "senal_insuficiente": 54,
+   "frecuencia_min_estimada_hz": 150.7313464,
+   "frecuencia_max_estimada_hz": 1000.0
+  },
+  "D1": {
+   "filas": 195,
+   "estimado": 30,
+   "no_evaluado": 0,
+   "no_identificable": 0,
+   "senal_insuficiente": 165,
+   "frecuencia_min_estimada_hz": 1000.0,
+   "frecuencia_max_estimada_hz": 10000.0
+  }
+ },
+ "benchmark": {
+  "limpio/semiespacio_100": "PASA",
+  "ruido_E/semiespacio_100": "PASA",
+  "ruido_H/semiespacio_100": "OBSERVACION",
+  "ruido_coherente/semiespacio_100": "OBSERVACION",
+  "outliers/semiespacio_100": "PASA",
+  "rango_uno/semiespacio_100": "PASA",
+  "limpio/dos_capas": "OBSERVACION",
+  "limpio/tres_capas": "OBSERVACION"
+ },
+ "calibration": {
+  "factors": {
+   "D0": {
+    "r_log10": 1.32312734531253,
+    "r_phase_deg": 1.080146298116657
+   },
+   "D1": {
+    "r_log10": 1.7375531898436827,
+    "r_phase_deg": 0.9037309539760983
+   }
+  },
+  "source": "calibracion_p6.json",
+  "n_calibracion": 24,
+  "coverage_limpio": {
+   "log10": 0.697916666667,
+   "phase_deg": 0.71875,
+   "bootstrap_log10": 0.48214285714300004
+  },
+  "nota": "r corrige la subcobertura del bootstrap temporal. La cobertura se mide en la mitad de evaluacion, independiente de la calibracion."
+ },
+ "real_diagnostics": {
+  "sigma_log10_median": 0.0100856114968,
+  "sigma_log10_max": 0.961746172687,
+  "sigma_cal_log10_median": 0.0137288264136,
+  "coherence_xy_median": 0.358713023036,
+  "coherence_xy_min": 0.015472293966
+ },
+ "limits": [
+  "Sin calibracion aplicada: Z es relativa y no se convierte a rho_a.",
+  "Sin referencia remota: el ruido en H no es corregible.",
+  "D0 por debajo de 125 Hz queda no_evaluado con L=256 (N_c=8).",
+  "La compuerta de coherencia descarta las frecuencias sin correlacion Ex-Hy: una respuesta bajo el critico no se publica.",
+  "La cobertura de frecuencias es instrumental; F_red_validada por familia de ruido sigue pendiente (B-P0-06).",
+  "El factor r de incertidumbre se calibra en controles 1D: no cubre error de calibracion ni de modelo en campo.",
+  "P3-P5 y P7 siguen cerradas: no hay sintesis guiada por TEM, etiquetas ni entrenamiento."
+ ],
+ "conclusion": "P6 se cierra como PARCIAL en la rama AMT sin TEM: el estimador recupera la verdad en controles identificables, rechaza el rango uno y produce respuestas relativas con covarianza; no habilita la rama neuronal.",
+ "metas": {
+  "p6_estimador_control": "ver benchmark_control.csv",
+  "p6_respuesta_covarianza": "respuestas/*.npz y respuestas_resumen.csv"
+ },
+ "software": {
+  "p6": {
+   "path": "etapa6/p6.py",
+   "sha256": "195d29cfa3fb1aee43c326fcae4b2a431e8be0eb65ad19b6a4e9755d2a4ff26e"
+  },
+  "estimador": {
+   "path": "etapa6/estimador.py",
+   "version": "P6-EST-1.0.1",
+   "sha256": "d45f4375a9a45e8e58c8961841efeb939fd1b16d6de989192f4d0fe2b59b3376"
+  },
+  "mt1d": {
+   "path": "etapa2/mt1d.py",
+   "version": "MT1D-1.0.0",
+   "sha256": "fa67dfbc9109438645bc994582f63f1ffdfd0a70dad2e082a0044de2d5088381"
+  }
+ },
+ "files": [
+  "README.md",
+  "benchmark_control.csv",
+  "calibracion_p6.json",
+  "config_p6.json",
+  "esquema_response.json",
+  "reporte_p6.md",
+  "respuestas_resumen.csv",
+  "resumen_p6.json",
+  "validacion_etapa6.json",
+  "ARMT5-123-01-01-01_D0.npz",
+  "ARMT5-123-01-01-01_D1.npz",
+  "ARMT5-123-02-02-01_D0.npz",
+  "ARMT5-123-02-02-01_D1.npz",
+  "ARMT5-700-01-00-01_D0.npz",
+  "ARMT5-700-01-00-01_D1.npz",
+  "ARMT5-700-01-23-01_D0.npz",
+  "ARMT5-700-01-23-01_D1.npz",
+  "ARMT5-700-01-24-01_D0.npz",
+  "ARMT5-700-01-24-01_D1.npz",
+  "ARMT5-700-14-14-01_D0.npz",
+  "ARMT5-700-14-14-01_D1.npz",
+  "ARMT5-700-24-24-01_D0.npz",
+  "ARMT5-700-24-24-01_D1.npz",
+  "ARMT5-700-32-32-01_D0.npz",
+  "ARMT5-700-32-32-01_D1.npz",
+  "ARMT5-700-34-34-01_D0.npz",
+  "ARMT5-700-34-34-01_D1.npz",
+  "ARMT5-700-42-42-01_D0.npz",
+  "ARMT5-700-42-42-01_D1.npz",
+  "ARMT5-700-43-43-01_D0.npz",
+  "ARMT5-700-43-43-01_D1.npz",
+  "ARMT5-700-44-44-01_D0.npz",
+  "ARMT5-700-44-44-01_D1.npz",
+  "ARMT5-700-45-45-01_D0.npz",
+  "ARMT5-700-45-45-01_D1.npz",
+  "ARMT5-700-55-55-01_D0.npz",
+  "ARMT5-700-55-55-01_D1.npz",
+  "ARMT5-700-90-90-01_D0.npz",
+  "ARMT5-700-90-90-01_D1.npz"
+ ]
+}

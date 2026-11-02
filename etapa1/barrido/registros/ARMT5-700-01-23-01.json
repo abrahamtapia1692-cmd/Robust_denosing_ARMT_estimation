@@ -1,0 +1,1358 @@
+{
+  "record_version": "P1-BARRIDO-1.0.0",
+  "record_id": "ARMT5-700-01-23-01",
+  "generated_at_utc": "2026-10-28T18:59:27.312809Z",
+  "split": {
+    "split": "desarrollo",
+    "split_group": "S2021-A700-L001",
+    "campaign_group": "C2021-A700",
+    "protocol_version": "P0-SPLITS-1.0.0",
+    "assignment_basis": "record_level_site_holdout",
+    "frozen": true
+  },
+  "campaign": {
+    "year": 2021,
+    "campaign_group": "C2021-A700",
+    "label": null
+  },
+  "site": {
+    "site_id": null,
+    "site_name": null,
+    "status": "no_resuelto",
+    "note": "Identidad de sitio sin resolver (B-P0-01/B-P0-02)."
+  },
+  "source": {
+    "path_abs": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\00102301.sbf",
+    "path_ref": "ARMT_processing/ARMT_data/00102301.sbf",
+    "path_base": "software_root",
+    "sha256": "0c45acb8289e96465b480d2fac8f918075122ca58f76e8153f037c1313d9031d",
+    "size_bytes": 508952577,
+    "mtime_utc": "2021-01-17T18:03:54Z"
+  },
+  "source_sha256_recomputed": "0c45acb8289e96465b480d2fac8f918075122ca58f76e8153f037c1313d9031d",
+  "source_sha256_match": true,
+  "consistency": {
+    "bands": {
+      "D0": {
+        "sample_count_match": true,
+        "sample_rate_match": true,
+        "channels_match": true,
+        "adc_to_uv_match": true,
+        "receiver_serial_match": true
+      },
+      "D1": {
+        "sample_count_match": true,
+        "sample_rate_match": true,
+        "channels_match": true,
+        "adc_to_uv_match": true,
+        "receiver_serial_match": true
+      }
+    },
+    "all_match": true
+  },
+  "settings_summary": {
+    "gain_values_unique": [
+      1.0
+    ],
+    "gain_db": [
+      0.0
+    ],
+    "nearest_gain_directory": {
+      "directory": "CLB_G1_Ex_shifted",
+      "label": "1",
+      "delta_pct": 0.0
+    },
+    "adc_to_uv": [
+      0.5960090756416321,
+      0.5960000157356262
+    ],
+    "electric_dipole_lengths_cm": [
+      2000.0,
+      2000.0
+    ],
+    "sensor_azimuth_degrees": [
+      0.0,
+      90.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "delay_seconds": 0.0,
+    "settings_sections": 4
+  },
+  "bands": {
+    "D0": {
+      "trace_index": 0,
+      "sample_rate_hz": 4000.0,
+      "n_samples": 21600000,
+      "duration_s": 5400.0,
+      "channels": [
+        "Ex",
+        "Ey",
+        "Hx",
+        "Hy",
+        "Hz"
+      ],
+      "thresholds": {
+        "clip_run_samples": 4,
+        "stuck_run_samples": 2000,
+        "zero_fill_run_samples": 400,
+        "guard_samples": 40,
+        "jump_guard_samples": 20,
+        "edge_samples": 400
+      },
+      "sbf_audit": {
+        "trace_index": 0,
+        "band": "D0",
+        "sample_rate_hz": 4000.0,
+        "sample_count": 21600000,
+        "duration_s": 5400.0,
+        "bytes_per_sample": 4,
+        "channel_count": 5,
+        "channels": [
+          "Ex",
+          "Ey",
+          "Hx",
+          "Hy",
+          "Hz"
+        ],
+        "receiver_serial": 1,
+        "adc_to_uv": [
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321
+        ],
+        "settings_match": "inferred_single_settings_0xabcd",
+        "settings_count": 1,
+        "independent_export_comparison": "no_disponible",
+        "note": "No hay exportacion independiente del software del fabricante para comparar signo, bits e intercalado. Se usa el lector ARMT_processing y se verifica la longitud leida."
+      },
+      "checks": {
+        "clipping": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "plateaus >= 1.000 ms en el minimo o maximo global"
+        },
+        "canales_muertos": {
+          "estado": "PASA",
+          "channels": [],
+          "detail": "std <= 1.000 counts"
+        },
+        "valores_pegados": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos constantes >= 0.500 s"
+        },
+        "relleno_de_ceros": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos de ceros >= 0.100 s"
+        },
+        "saltos": {
+          "estado": "PASA",
+          "counts": {
+            "Ex": 0,
+            "Ey": 0,
+            "Hx": 0,
+            "Hy": 0,
+            "Hz": 0
+          },
+          "enmascarados": false,
+          "detail": "|diff - mediana| > 50.0 sigma robusta; se reportan como candidatos, no se enmascaran para no borrar sferics"
+        },
+        "muestras_faltantes": {
+          "estado": "PASA",
+          "expected_samples": 21600000,
+          "read_samples": 21600000,
+          "match": true,
+          "note": "El lector entrega exactamente sample_count; no hay huecos declarados en el SBF."
+        },
+        "transitorios_conmutacion": {
+          "estado": "NO_APLICABLE",
+          "detail": "El registro tiene una sola configuracion de ganancia (settings_count=1); el detector de cambios de media por bloque queda como observacion.",
+          "detector_por_bloque": {
+            "Ex": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.21824999999989814,
+              "robust_sigma": 19.7541624000001,
+              "threshold": 197.541624000001,
+              "count": 18,
+              "events": [
+                {
+                  "block_index": 1750,
+                  "time_s": 1750.0,
+                  "delta_mean_counts": 197.7777500000002
+                },
+                {
+                  "block_index": 2885,
+                  "time_s": 2885.0,
+                  "delta_mean_counts": -230.93475000000035
+                },
+                {
+                  "block_index": 2887,
+                  "time_s": 2887.0,
+                  "delta_mean_counts": 226.48825000000033
+                },
+                {
+                  "block_index": 2889,
+                  "time_s": 2889.0,
+                  "delta_mean_counts": -232.86825
+                },
+                {
+                  "block_index": 3134,
+                  "time_s": 3134.0,
+                  "delta_mean_counts": -239.26275000000032
+                },
+                {
+                  "block_index": 3164,
+                  "time_s": 3164.0,
+                  "delta_mean_counts": -215.05499999999984
+                },
+                {
+                  "block_index": 3189,
+                  "time_s": 3189.0,
+                  "delta_mean_counts": 223.45775000000003
+                },
+                {
+                  "block_index": 3190,
+                  "time_s": 3190.0,
+                  "delta_mean_counts": -341.91100000000006
+                },
+                {
+                  "block_index": 3313,
+                  "time_s": 3313.0,
+                  "delta_mean_counts": 235.80600000000004
+                },
+                {
+                  "block_index": 3390,
+                  "time_s": 3390.0,
+                  "delta_mean_counts": -218.12474999999995
+                },
+                {
+                  "block_index": 3706,
+                  "time_s": 3706.0,
+                  "delta_mean_counts": 260.0272500000001
+                },
+                {
+                  "block_index": 4164,
+                  "time_s": 4164.0,
+                  "delta_mean_counts": -235.32824999999957
+                },
+                {
+                  "block_index": 4298,
+                  "time_s": 4298.0,
+                  "delta_mean_counts": -207.96000000000004
+                },
+                {
+                  "block_index": 4352,
+                  "time_s": 4352.0,
+                  "delta_mean_counts": 207.08424999999988
+                },
+                {
+                  "block_index": 4354,
+                  "time_s": 4354.0,
+                  "delta_mean_counts": -351.94675000000007
+                },
+                {
+                  "block_index": 4484,
+                  "time_s": 4484.0,
+                  "delta_mean_counts": -211.80249999999978
+                },
+                {
+                  "block_index": 5036,
+                  "time_s": 5036.0,
+                  "delta_mean_counts": 245.32799999999997
+                },
+                {
+                  "block_index": 5039,
+                  "time_s": 5039.0,
+                  "delta_mean_counts": -201.18975
+                }
+              ]
+            },
+            "Ey": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.23450000000002547,
+              "robust_sigma": 17.960216400000046,
+              "threshold": 179.60216400000047,
+              "count": 4,
+              "events": [
+                {
+                  "block_index": 2,
+                  "time_s": 2.0,
+                  "delta_mean_counts": -226.92150000000038
+                },
+                {
+                  "block_index": 925,
+                  "time_s": 925.0,
+                  "delta_mean_counts": 213.32299999999987
+                },
+                {
+                  "block_index": 926,
+                  "time_s": 926.0,
+                  "delta_mean_counts": -228.1322500000001
+                },
+                {
+                  "block_index": 2691,
+                  "time_s": 2691.0,
+                  "delta_mean_counts": 404.24175000000014
+                }
+              ]
+            },
+            "Hx": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": 0.020249999999919055,
+              "robust_sigma": 9.316658399999818,
+              "threshold": 93.16658399999818,
+              "count": 13,
+              "events": [
+                {
+                  "block_index": 149,
+                  "time_s": 149.0,
+                  "delta_mean_counts": 113.44574999999998
+                },
+                {
+                  "block_index": 150,
+                  "time_s": 150.0,
+                  "delta_mean_counts": 221.59924999999998
+                },
+                {
+                  "block_index": 151,
+                  "time_s": 151.0,
+                  "delta_mean_counts": 596.5015000000001
+                },
+                {
+                  "block_index": 153,
+                  "time_s": 153.0,
+                  "delta_mean_counts": -1291.2015
+                },
+                {
+                  "block_index": 154,
+                  "time_s": 154.0,
+                  "delta_mean_counts": -1666.14925
+                },
+                {
+                  "block_index": 155,
+                  "time_s": 155.0,
+                  "delta_mean_counts": 2014.6615
+                },
+                {
+                  "block_index": 156,
+                  "time_s": 156.0,
+                  "delta_mean_counts": 221.0540000000001
+                },
+                {
+                  "block_index": 157,
+                  "time_s": 157.0,
+                  "delta_mean_counts": -528.1145000000001
+                },
+                {
+                  "block_index": 159,
+                  "time_s": 159.0,
+                  "delta_mean_counts": 96.07799999999997
+                },
+                {
+                  "block_index": 160,
+                  "time_s": 160.0,
+                  "delta_mean_counts": 256.33000000000004
+                },
+                {
+                  "block_index": 161,
+                  "time_s": 161.0,
+                  "delta_mean_counts": -156.17224999999996
+                },
+                {
+                  "block_index": 201,
+                  "time_s": 201.0,
+                  "delta_mean_counts": 118.74199999999996
+                },
+                {
+                  "block_index": 203,
+                  "time_s": 203.0,
+                  "delta_mean_counts": -128.4842500000001
+                }
+              ]
+            },
+            "Hy": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.06074999999998454,
+              "robust_sigma": 10.824462599999897,
+              "threshold": 108.24462599999897,
+              "count": 8,
+              "events": [
+                {
+                  "block_index": 150,
+                  "time_s": 150.0,
+                  "delta_mean_counts": 318.5
+                },
+                {
+                  "block_index": 151,
+                  "time_s": 151.0,
+                  "delta_mean_counts": 779.1840000000001
+                },
+                {
+                  "block_index": 152,
+                  "time_s": 152.0,
+                  "delta_mean_counts": -1721.3570000000002
+                },
+                {
+                  "block_index": 153,
+                  "time_s": 153.0,
+                  "delta_mean_counts": 317.6975
+                },
+                {
+                  "block_index": 155,
+                  "time_s": 155.0,
+                  "delta_mean_counts": 173.63875000000002
+                },
+                {
+                  "block_index": 156,
+                  "time_s": 156.0,
+                  "delta_mean_counts": 568.0125
+                },
+                {
+                  "block_index": 157,
+                  "time_s": 157.0,
+                  "delta_mean_counts": -589.0405000000001
+                },
+                {
+                  "block_index": 202,
+                  "time_s": 202.0,
+                  "delta_mean_counts": -141.93024999999994
+                }
+              ]
+            },
+            "Hz": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": 0.03150000000005093,
+              "robust_sigma": 9.319623600000085,
+              "threshold": 93.19623600000085,
+              "count": 9,
+              "events": [
+                {
+                  "block_index": 151,
+                  "time_s": 151.0,
+                  "delta_mean_counts": -256.40925000000016
+                },
+                {
+                  "block_index": 152,
+                  "time_s": 152.0,
+                  "delta_mean_counts": 216.43499999999995
+                },
+                {
+                  "block_index": 153,
+                  "time_s": 153.0,
+                  "delta_mean_counts": 1828.1532500000003
+                },
+                {
+                  "block_index": 154,
+                  "time_s": 154.0,
+                  "delta_mean_counts": -2234.3635000000004
+                },
+                {
+                  "block_index": 155,
+                  "time_s": 155.0,
+                  "delta_mean_counts": 252.01250000000027
+                },
+                {
+                  "block_index": 157,
+                  "time_s": 157.0,
+                  "delta_mean_counts": 203.2437500000001
+                },
+                {
+                  "block_index": 158,
+                  "time_s": 158.0,
+                  "delta_mean_counts": -226.97900000000027
+                },
+                {
+                  "block_index": 159,
+                  "time_s": 159.0,
+                  "delta_mean_counts": 107.0965000000001
+                },
+                {
+                  "block_index": 161,
+                  "time_s": 161.0,
+                  "delta_mean_counts": 99.23925000000008
+                }
+              ]
+            }
+          }
+        }
+      },
+      "per_channel": {
+        "Ex": {
+          "minimum_counts": -6560,
+          "maximum_counts": 7029,
+          "mean_counts": 2536.102863888889,
+          "std_counts": 1733.2092630690547,
+          "zero_count": 4284,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 72061,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 306.8982,
+            "threshold_counts": 15344.909999999998,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 6243,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Ey": {
+          "minimum_counts": -1957,
+          "maximum_counts": 9475,
+          "mean_counts": 3628.8600027314815,
+          "std_counts": 2390.9522681310655,
+          "zero_count": 2268,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 615651,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 382.51079999999996,
+            "threshold_counts": 19125.539999999997,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 8531,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hx": {
+          "minimum_counts": -9723,
+          "maximum_counts": 12995,
+          "mean_counts": 791.8567365277778,
+          "std_counts": 2250.8353613793524,
+          "zero_count": 2483,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 1253394,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 385.476,
+            "threshold_counts": 19273.8,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 8081,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hy": {
+          "minimum_counts": -5686,
+          "maximum_counts": 6093,
+          "mean_counts": 495.22952291666667,
+          "std_counts": 1332.1491675193222,
+          "zero_count": 3508,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 383089,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 332.1024,
+            "threshold_counts": 16605.12,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 4925,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hz": {
+          "minimum_counts": -6003,
+          "maximum_counts": 11666,
+          "mean_counts": 2707.9265829166666,
+          "std_counts": 1656.3378402601247,
+          "zero_count": 908,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 1431957,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 343.9632,
+            "threshold_counts": 17198.16,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 5808,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        }
+      },
+      "bad_mask": {
+        "file": "ARMT5-700-01-23-01_D0.npz",
+        "sha256": "3074161eb56f3f1340d2817f99cbf3b14ab70799672025a3a0067164538a8127",
+        "total_bad_samples_summed": 0,
+        "union_bad_samples": 0,
+        "union_bad_fraction": 0.0,
+        "max_channel_bad_fraction": 0.0,
+        "guard_samples": 40,
+        "bitorder": "little",
+        "relative_path": "barrido/mascaras/ARMT5-700-01-23-01_D0.npz"
+      },
+      "status": "PASA_CON_OBSERVACIONES",
+      "manifest_trace": {
+        "index": 0,
+        "section_index": 1,
+        "sample_count": 21600000,
+        "sample_rate_hz": 4000.0,
+        "duration_seconds": 5400.0,
+        "start_time_local": "2021-01-17T16:33:04",
+        "adc_to_uv": [
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321
+        ]
+      }
+    },
+    "D1": {
+      "trace_index": 1,
+      "sample_rate_hz": 32000.0,
+      "n_samples": 1440000,
+      "duration_s": 45.0,
+      "channels": [
+        "Ex",
+        "Ey",
+        "Hx",
+        "Hy",
+        "Hz"
+      ],
+      "thresholds": {
+        "clip_run_samples": 32,
+        "stuck_run_samples": 16000,
+        "zero_fill_run_samples": 3200,
+        "guard_samples": 320,
+        "jump_guard_samples": 160,
+        "edge_samples": 3200
+      },
+      "sbf_audit": {
+        "trace_index": 1,
+        "band": "D1",
+        "sample_rate_hz": 32000.0,
+        "sample_count": 1440000,
+        "duration_s": 45.0,
+        "bytes_per_sample": 4,
+        "channel_count": 5,
+        "channels": [
+          "Ex",
+          "Ey",
+          "Hx",
+          "Hy",
+          "Hz"
+        ],
+        "receiver_serial": 1,
+        "adc_to_uv": [
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262
+        ],
+        "settings_match": "inferred_single_settings_0xabcd",
+        "settings_count": 1,
+        "independent_export_comparison": "no_disponible",
+        "note": "No hay exportacion independiente del software del fabricante para comparar signo, bits e intercalado. Se usa el lector ARMT_processing y se verifica la longitud leida."
+      },
+      "checks": {
+        "clipping": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "plateaus >= 1.000 ms en el minimo o maximo global"
+        },
+        "canales_muertos": {
+          "estado": "PASA",
+          "channels": [],
+          "detail": "std <= 1.000 counts"
+        },
+        "valores_pegados": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos constantes >= 0.500 s"
+        },
+        "relleno_de_ceros": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos de ceros >= 0.100 s"
+        },
+        "saltos": {
+          "estado": "OBSERVACION",
+          "counts": {
+            "Ex": 5,
+            "Ey": 7,
+            "Hx": 0,
+            "Hy": 0,
+            "Hz": 0
+          },
+          "enmascarados": false,
+          "detail": "|diff - mediana| > 50.0 sigma robusta; se reportan como candidatos, no se enmascaran para no borrar sferics"
+        },
+        "muestras_faltantes": {
+          "estado": "PASA",
+          "expected_samples": 1440000,
+          "read_samples": 1440000,
+          "match": true,
+          "note": "El lector entrega exactamente sample_count; no hay huecos declarados en el SBF."
+        },
+        "transitorios_conmutacion": {
+          "estado": "NO_APLICABLE",
+          "detail": "El registro tiene una sola configuracion de ganancia (settings_count=1); el detector de cambios de media por bloque queda como observacion.",
+          "detector_por_bloque": {
+            "Ex": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -0.18542187499997453,
+              "robust_sigma": 17.012788668750023,
+              "threshold": 170.12788668750022,
+              "count": 0,
+              "events": []
+            },
+            "Ey": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": 1.541437500000029,
+              "robust_sigma": 14.3114683031251,
+              "threshold": 143.114683031251,
+              "count": 0,
+              "events": []
+            },
+            "Hx": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": 0.6057031249999909,
+              "robust_sigma": 6.799666912500029,
+              "threshold": 67.99666912500028,
+              "count": 0,
+              "events": []
+            },
+            "Hy": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -0.9856406249999736,
+              "robust_sigma": 8.142253874999946,
+              "threshold": 81.42253874999946,
+              "count": 0,
+              "events": []
+            },
+            "Hz": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": 0.9089374999998654,
+              "robust_sigma": 10.13095328437511,
+              "threshold": 101.3095328437511,
+              "count": 0,
+              "events": []
+            }
+          }
+        }
+      },
+      "per_channel": {
+        "Ex": {
+          "minimum_counts": -24428,
+          "maximum_counts": 31456,
+          "mean_counts": 2588.8100104166665,
+          "std_counts": 1867.014864610955,
+          "zero_count": 212,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 9.375e-05,
+          "longest_constant_run_start_sample": 832935,
+          "jump_count": 5,
+          "jump_fraction": 3.4722246334893287e-06,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 781.3302,
+            "threshold_counts": 39066.51,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              139247,
+              139569
+            ],
+            [
+              1126857,
+              1127181
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 7897,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Ey": {
+          "minimum_counts": -35377,
+          "maximum_counts": 31646,
+          "mean_counts": 3596.503457638889,
+          "std_counts": 2478.1725746385823,
+          "zero_count": 154,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 9.375e-05,
+          "longest_constant_run_start_sample": 335393,
+          "jump_count": 7,
+          "jump_fraction": 4.861114486885061e-06,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 787.2606,
+            "threshold_counts": 39363.03,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              139247,
+              139568
+            ],
+            [
+              955546,
+              955868
+            ],
+            [
+              1126856,
+              1127181
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 9979,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hx": {
+          "minimum_counts": -6230,
+          "maximum_counts": 7628,
+          "mean_counts": 736.9164159722222,
+          "std_counts": 2353.685464164944,
+          "zero_count": 182,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 1575,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 1.0,
+            "robust_sigma_counts": 944.4162,
+            "threshold_counts": 47220.81,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 10062,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hy": {
+          "minimum_counts": -4503,
+          "maximum_counts": 5644,
+          "mean_counts": 466.35320277777777,
+          "std_counts": 1496.2974134873418,
+          "zero_count": 266,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 9.375e-05,
+          "longest_constant_run_start_sample": 831365,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 1.0,
+            "robust_sigma_counts": 1021.5114,
+            "threshold_counts": 51075.57,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 7331,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hz": {
+          "minimum_counts": -2578,
+          "maximum_counts": 7776,
+          "mean_counts": 2680.564611111111,
+          "std_counts": 1787.618223640627,
+          "zero_count": 153,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 3285,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 1.0,
+            "robust_sigma_counts": 942.9336,
+            "threshold_counts": 47146.68,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 7984,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        }
+      },
+      "bad_mask": {
+        "file": "ARMT5-700-01-23-01_D1.npz",
+        "sha256": "dd70f0cce0a34e73ee4790ac96c3d93cef4840a8e636aab173a33a1b15105028",
+        "total_bad_samples_summed": 0,
+        "union_bad_samples": 0,
+        "union_bad_fraction": 0.0,
+        "max_channel_bad_fraction": 0.0,
+        "guard_samples": 320,
+        "bitorder": "little",
+        "relative_path": "barrido/mascaras/ARMT5-700-01-23-01_D1.npz"
+      },
+      "status": "PASA_CON_OBSERVACIONES",
+      "manifest_trace": {
+        "index": 1,
+        "section_index": 2,
+        "sample_count": 1440000,
+        "sample_rate_hz": 32000.0,
+        "duration_seconds": 45.0,
+        "start_time_local": "2021-01-17T18:03:05",
+        "adc_to_uv": [
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "D0": [
+      {
+        "record_id": "ARMT5-700-01-23-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Ex",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 100,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/e000100.clb",
+        "clb_sha256": "62871b15b489f990fa009ea7b7050658a4a5b077ce2f1c4f01cedb1c4f79ad19",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.084060668945312,
+        "amplitude_max_step_db": 0.7017743587493896,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-23-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Ey",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 101,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/e000101.clb",
+        "clb_sha256": "59a26101230ed551bc4bab23215c59919345bea0c1d32087f78c737a92995e1a",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.084060668945312,
+        "amplitude_max_step_db": 0.7017743587493896,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-23-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hx",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 200,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/h000200.clb",
+        "clb_sha256": "20003632960c2b98d9129259683738c245a60836136b6fcfbc9fde0e89868151",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 4.3343000411987305,
+        "amplitude_max_step_db": 0.6739859282970428,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-23-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hy",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 201,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/h000201.clb",
+        "clb_sha256": "f3ae7f88b575e63e95ede293a3d87c0b36c4b40148a49ea8e0a753c86c97d6da",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8687515258789062,
+        "amplitude_max_step_db": 0.6726457178592682,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-23-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hz",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 202,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/h000202.clb",
+        "clb_sha256": "d64e65a69b7c25cfdadc1baf7834b5887f82102b81685b7f1460bde5328ef8f9",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8939132690429688,
+        "amplitude_max_step_db": 0.6780390441417694,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      }
+    ],
+    "D1": [
+      {
+        "record_id": "ARMT5-700-01-23-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Ex",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 100,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/e000100.clb",
+        "clb_sha256": "62871b15b489f990fa009ea7b7050658a4a5b077ce2f1c4f01cedb1c4f79ad19",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.084060668945312,
+        "amplitude_max_step_db": 0.7017743587493896,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-23-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Ey",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 101,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/e000101.clb",
+        "clb_sha256": "59a26101230ed551bc4bab23215c59919345bea0c1d32087f78c737a92995e1a",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.084060668945312,
+        "amplitude_max_step_db": 0.7017743587493896,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-23-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hx",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 200,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/h000200.clb",
+        "clb_sha256": "20003632960c2b98d9129259683738c245a60836136b6fcfbc9fde0e89868151",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 4.3343000411987305,
+        "amplitude_max_step_db": 0.6739859282970428,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-23-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hy",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 201,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/h000201.clb",
+        "clb_sha256": "f3ae7f88b575e63e95ede293a3d87c0b36c4b40148a49ea8e0a753c86c97d6da",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8687515258789062,
+        "amplitude_max_step_db": 0.6726457178592682,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-23-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hz",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 202,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/h000202.clb",
+        "clb_sha256": "d64e65a69b7c25cfdadc1baf7834b5887f82102b81685b7f1460bde5328ef8f9",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8939132690429688,
+        "amplitude_max_step_db": 0.6780390441417694,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      }
+    ]
+  },
+  "calibration_all_covered": true,
+  "status": "PASA_CON_OBSERVACIONES",
+  "blockers": {
+    "B-P0-05": {
+      "id": "B-P0-05",
+      "alcance": "registro ARMT5-700-01-23-01, bandas D0/D1",
+      "estado": "CERRADO_PARA_ESTE_REGISTRO",
+      "evidencia": "barrido/registros/ARMT5-700-01-23-01.json y mascaras en barrido/mascaras/"
+    }
+  }
+}

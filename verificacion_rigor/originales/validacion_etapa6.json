@@ -1,0 +1,558 @@
+{
+ "artifact": "validacion_etapa6",
+ "version": "P6-VAL-1.0.0",
+ "generated_at_utc": "2026-10-28T23:29:37.867843Z",
+ "stage": 6,
+ "gate": "P6",
+ "rama": "AMT_sin_TEM",
+ "status": "APROBADO_CON_OBSERVACIONES",
+ "counts": {
+  "checks": 78,
+  "passed": 70,
+  "failed": 0,
+  "observations": 8
+ },
+ "checks": [
+  {
+   "id": "FILE-config",
+   "descripcion": "Existe config_p6.json",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa6\\config_p6.json"
+  },
+  {
+   "id": "FILE-estimador",
+   "descripcion": "Existe estimador.py",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa6\\estimador.py"
+  },
+  {
+   "id": "FILE-driver",
+   "descripcion": "Existe p6.py",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa6\\p6.py"
+  },
+  {
+   "id": "FILE-responses",
+   "descripcion": "Existe respuestas_resumen.csv",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa6\\respuestas_resumen.csv"
+  },
+  {
+   "id": "FILE-benchmark",
+   "descripcion": "Existe benchmark_control.csv",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa6\\benchmark_control.csv"
+  },
+  {
+   "id": "FILE-calibration",
+   "descripcion": "Existe calibracion_p6.json",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa6\\calibracion_p6.json"
+  },
+  {
+   "id": "FILE-summary",
+   "descripcion": "Existe resumen_p6.json",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa6\\resumen_p6.json"
+  },
+  {
+   "id": "FILE-report",
+   "descripcion": "Existe reporte_p6.md",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa6\\reporte_p6.md"
+  },
+  {
+   "id": "FILE-schema",
+   "descripcion": "Existe esquema_response.json",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa6\\esquema_response.json"
+  },
+  {
+   "id": "FILE-readme",
+   "descripcion": "Existe README.md",
+   "resultado": "PASA",
+   "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa6\\README.md"
+  },
+  {
+   "id": "VER-CONFIG",
+   "descripcion": "config_p6 declara P6-CONFIG-1.0.0",
+   "resultado": "PASA",
+   "detalle": "P6-CONFIG-1.0.0"
+  },
+  {
+   "id": "VER-EST",
+   "descripcion": "estimador declara P6-EST-1.0.1",
+   "resultado": "PASA",
+   "detalle": "P6-EST-1.0.1"
+  },
+  {
+   "id": "VER-DRIVER",
+   "descripcion": "p6.py declara P6-1.0.0",
+   "resultado": "PASA",
+   "detalle": "P6-1.0.0"
+  },
+  {
+   "id": "HDR-RESPONSE",
+   "descripcion": "Columnas de respuestas_resumen.csv",
+   "resultado": "PASA",
+   "detalle": "respuestas_resumen.csv"
+  },
+  {
+   "id": "HDR-BENCH",
+   "descripcion": "Columnas de benchmark_control.csv",
+   "resultado": "PASA",
+   "detalle": "benchmark_control.csv"
+  },
+  {
+   "id": "SCHEMA-ID",
+   "descripcion": "esquema_response declara version 1.0.0",
+   "resultado": "PASA",
+   "detalle": "1.0.0"
+  },
+  {
+   "id": "SCHEMA-CSV",
+   "descripcion": "El esquema cubre las columnas del CSV",
+   "resultado": "PASA",
+   "detalle": "37 columnas"
+  },
+  {
+   "id": "RECORDS",
+   "descripcion": "Los 15 registros del manifiesto estan presentes",
+   "resultado": "PASA",
+   "detalle": "15 registros"
+  },
+  {
+   "id": "ROWS-TOTAL",
+   "descripcion": "Filas = 15 x (29 D0 + 13 D1)",
+   "resultado": "PASA",
+   "detalle": "630 filas"
+  },
+  {
+   "id": "ROWS-BAND",
+   "descripcion": "Cada registro tiene la grilla completa en D0 y D1",
+   "resultado": "PASA",
+   "detalle": "0 combinaciones incompletas"
+  },
+  {
+   "id": "SPLIT",
+   "descripcion": "El split coincide con etapa0/splits.csv",
+   "resultado": "PASA",
+   "detalle": ""
+  },
+  {
+   "id": "DUP",
+   "descripcion": "Sin filas duplicadas por registro, banda y frecuencia",
+   "resultado": "PASA",
+   "detalle": "0 duplicadas"
+  },
+  {
+   "id": "GUARD-CAL",
+   "descripcion": "Todas las filas declaran calibrado=no",
+   "resultado": "PASA",
+   "detalle": "no"
+  },
+  {
+   "id": "GUARD-TEM",
+   "descripcion": "Todas las filas declaran soporte_tem=no_aplica",
+   "resultado": "PASA",
+   "detalle": "no_aplica"
+  },
+  {
+   "id": "GUARD-RAMA",
+   "descripcion": "Todas las filas pertenecen a AMT_sin_TEM",
+   "resultado": "PASA",
+   "detalle": "AMT_sin_TEM"
+  },
+  {
+   "id": "GUARD-VERSION",
+   "descripcion": "Todas las filas declaran P6-RESPONSE-1.0.0",
+   "resultado": "PASA",
+   "detalle": "P6-RESPONSE-1.0.0"
+  },
+  {
+   "id": "GUARD-ESTADO",
+   "descripcion": "Los estados pertenecen al vocabulario cerrado",
+   "resultado": "PASA",
+   "detalle": "estimado, no_evaluado, senal_insuficiente"
+  },
+  {
+   "id": "NO-RHOA",
+   "descripcion": "No se publica rho_a en la rama sin calibracion",
+   "resultado": "PASA",
+   "detalle": "respuestas_resumen.csv y reporte_p6.md"
+  },
+  {
+   "id": "NO-ENTRENO",
+   "descripcion": "No hay etiquetas ni entrenamiento en el driver",
+   "resultado": "PASA",
+   "detalle": "p6.py"
+  },
+  {
+   "id": "D0-FMIN",
+   "descripcion": "D0 por debajo de 125 Hz queda no_evaluado",
+   "resultado": "PASA",
+   "detalle": "270 filas"
+  },
+  {
+   "id": "D0-MOTIVO",
+   "descripcion": "El motivo de D0 cita la resolucion L=256",
+   "resultado": "PASA",
+   "detalle": "resolucion_L256_fmin_125"
+  },
+  {
+   "id": "D1-RANGO",
+   "descripcion": "D1 no contiene frecuencias fuera de su grilla",
+   "resultado": "PASA",
+   "detalle": "0 filas"
+  },
+  {
+   "id": "EST-COUNT",
+   "descripcion": "Hay respuestas estimadas en ambas bandas",
+   "resultado": "PASA",
+   "detalle": "141 estimadas"
+  },
+  {
+   "id": "NAN-NOEVAL",
+   "descripcion": "Las filas no estimadas no publican |Zxy|",
+   "resultado": "PASA",
+   "detalle": "0 filas con valor"
+  },
+  {
+   "id": "EST-VALID",
+   "descripcion": "Cada fila estimada tiene Zxy, cond, coherencia y sigma finitos",
+   "resultado": "PASA",
+   "detalle": "0 filas anomalas"
+  },
+  {
+   "id": "IDENT-MOTIVO",
+   "descripcion": "no_identificable cita el rango deficiente de S_HH",
+   "resultado": "PASA",
+   "detalle": "0 filas"
+  },
+  {
+   "id": "COH-GATE",
+   "descripcion": "Ninguna fila estimada queda bajo la coherencia critica",
+   "resultado": "PASA",
+   "detalle": "0 filas"
+  },
+  {
+   "id": "COH-STATE",
+   "descripcion": "La coherencia baja se publica como senal_insuficiente",
+   "resultado": "PASA",
+   "detalle": "219 filas"
+  },
+  {
+   "id": "NPZ-COUNT",
+   "descripcion": "Hay un NPZ por registro y banda",
+   "resultado": "PASA",
+   "detalle": "30 archivos"
+  },
+  {
+   "id": "NPZ-ARRAYS",
+   "descripcion": "Los NPZ contienen todos los arreglos del contrato",
+   "resultado": "PASA",
+   "detalle": "0 archivos incompletos"
+  },
+  {
+   "id": "NPZ-SHAPE",
+   "descripcion": "Formas de z y cov y nan fuera de estimado",
+   "resultado": "PASA",
+   "detalle": "0 entradas"
+  },
+  {
+   "id": "NPZ-GRID",
+   "descripcion": "La grilla del NPZ coincide con la de P1",
+   "resultado": "PASA",
+   "detalle": ""
+  },
+  {
+   "id": "COV-PSD",
+   "descripcion": "La covarianza es simetrica y semidefinida positiva",
+   "resultado": "PASA",
+   "detalle": "30 matrices"
+  },
+  {
+   "id": "SIG-CAL",
+   "descripcion": "sigma_cal = r * sigma con el r declarado",
+   "resultado": "PASA",
+   "detalle": "0 entradas"
+  },
+  {
+   "id": "DETERMINISMO",
+   "descripcion": "Repetir ARMT5-123-01-01-01 D1 reproduce estado y Zxy bit a bit",
+   "resultado": "PASA",
+   "detalle": "max|delta Zxy|=0.000e+00, 0 estados discrepantes"
+  },
+  {
+   "id": "BENCH-GRUPOS",
+   "descripcion": "El benchmark cubre los 8 grupos previstos",
+   "resultado": "PASA",
+   "detalle": "8 grupos"
+  },
+  {
+   "id": "BENCH-N",
+   "descripcion": "Cada grupo usa 48 realizaciones y 24 de calibración",
+   "resultado": "PASA",
+   "detalle": "48/24"
+  },
+  {
+   "id": "RECUPERA-AMP",
+   "descripcion": "Semiespacio limpio: |bias| <= 0.01 dec",
+   "resultado": "PASA",
+   "detalle": "max |bias|=0.00021 dec"
+  },
+  {
+   "id": "RECUPERA-FASE",
+   "descripcion": "Semiespacio limpio: |bias fase| <= 0.2 deg",
+   "resultado": "PASA",
+   "detalle": "max |bias|=0.0020 deg"
+  },
+  {
+   "id": "COBERTURA",
+   "descripcion": "Cobertura calibrada del control limpio en [0.45, 0.88]",
+   "resultado": "PASA",
+   "detalle": "log10=0.698, fase=0.719"
+  },
+  {
+   "id": "COBERTURA-BOOT",
+   "descripcion": "La cobertura bootstrap sola queda por debajo de la calibrada",
+   "resultado": "PASA",
+   "detalle": "bootstrap=0.482 vs calibrada=0.698"
+  },
+  {
+   "id": "RANGO-UNO",
+   "descripcion": "Rango uno rechazado en >= 0.95 de las realizaciones",
+   "resultado": "PASA",
+   "detalle": "fraccion=1.00"
+  },
+  {
+   "id": "OUTLIERS",
+   "descripcion": "El estimador robusto no empeora frente a LS",
+   "resultado": "PASA",
+   "detalle": "rmse=0.00020 vs LS=0.00223"
+  },
+  {
+   "id": "FACTORES",
+   "descripcion": "Los factores r son finitos y positivos, con subcobertura en amplitud",
+   "resultado": "PASA",
+   "detalle": "D0: 1.323/1.080, D1: 1.738/0.904"
+  },
+  {
+   "id": "BENCH-LABEL",
+   "descripcion": "Los criterios usan el vocabulario PASA/FALLA/OBSERVACION",
+   "resultado": "PASA",
+   "detalle": "OBSERVACION, PASA"
+  },
+  {
+   "id": "BENCH-NOFALLA",
+   "descripcion": "Ningun grupo del benchmark queda en FALLA",
+   "resultado": "PASA",
+   "detalle": "OBSERVACION, PASA"
+  },
+  {
+   "id": "SUM-ESTADO",
+   "descripcion": "resumen_p6 declara la puerta PARCIAL",
+   "resultado": "PASA",
+   "detalle": "PARCIAL"
+  },
+  {
+   "id": "SUM-RAMA",
+   "descripcion": "resumen_p6 declara la rama AMT_sin_TEM",
+   "resultado": "PASA",
+   "detalle": "AMT_sin_TEM"
+  },
+  {
+   "id": "SUM-N",
+   "descripcion": "resumen_p6 cuenta 15 registros y 630 respuestas",
+   "resultado": "PASA",
+   "detalle": "15 registros, 630 respuestas"
+  },
+  {
+   "id": "SUM-ESTADOS",
+   "descripcion": "El recuento de estados del resumen coincide con el CSV",
+   "resultado": "PASA",
+   "detalle": "{\"estimado\": 141, \"no_evaluado\": 270, \"senal_insuficiente\": 219}"
+  },
+  {
+   "id": "SUM-CAL",
+   "descripcion": "El resumen cita los factores de calibración",
+   "resultado": "PASA",
+   "detalle": "calibracion_p6.json"
+  },
+  {
+   "id": "SUM-SCOPE",
+   "descripcion": "El alcance declara sin TEM, sin etiquetas y sin red",
+   "resultado": "PASA",
+   "detalle": "scope"
+  },
+  {
+   "id": "REPORT-SEC",
+   "descripcion": "El reporte incluye alcance, controles, incertidumbre y límites",
+   "resultado": "PASA",
+   "detalle": "reporte_p6.md"
+  },
+  {
+   "id": "REPORT-CAL",
+   "descripcion": "El reporte advierte que Z es relativa y no rho_a",
+   "resultado": "PASA",
+   "detalle": "reporte_p6.md"
+  },
+  {
+   "id": "MATRIZ-P6",
+   "descripcion": "La matriz tiene una fila P6 en PARCIAL",
+   "resultado": "PASA",
+   "detalle": "PARCIAL"
+  },
+  {
+   "id": "MATRIZ-REF",
+   "descripcion": "La fila P6 cita el entregable de la etapa",
+   "resultado": "PASA",
+   "detalle": "MATRIZ_VALIDACION_ARMT.csv"
+  },
+  {
+   "id": "BLOCKERS",
+   "descripcion": "Los bloqueos activos siguen declarados en la configuracion",
+   "resultado": "PASA",
+   "detalle": "B-P0-01, B-P0-02, B-P0-04, B-P0-06, SIN-REF-REMOTA"
+  },
+  {
+   "id": "NOSYN",
+   "descripcion": "No hay marcadores SYN- en los entregables de P6",
+   "resultado": "PASA",
+   "detalle": ""
+  },
+  {
+   "id": "NOPYCACHE",
+   "descripcion": "No hay __pycache__ en etapa6",
+   "resultado": "PASA",
+   "detalle": "etapa6/__pycache__"
+  },
+  {
+   "id": "HASH-STABLE",
+   "descripcion": "Los hashes del software son estables y no vacios",
+   "resultado": "PASA",
+   "detalle": "{\"estimador.py\": \"d45f4375a9a45e8e58c8961841efeb939fd1b16d6de989192f4d0fe2b59b33..."
+  },
+  {
+   "id": "OBS-01",
+   "descripcion": "La respuesta de campo es relativa: sin calibracion certificada (B-P0-04) no se calcula rho_a.",
+   "resultado": "OBSERVACION",
+   "detalle": "calibrado=no en las 630 filas"
+  },
+  {
+   "id": "OBS-02",
+   "descripcion": "El bootstrap temporal subestima el error real (cobertura ~0.6); se aplica un factor r calibrado en controles.",
+   "resultado": "OBSERVACION",
+   "detalle": "r_D0=1.323, r_D1=1.738"
+  },
+  {
+   "id": "OBS-03",
+   "descripcion": "El factor r se calibra con un semiespacio 1D limpio; no cubre error de modelo ni de calibracion en campo.",
+   "resultado": "OBSERVACION",
+   "detalle": "mitad de calibracion 24 / evaluacion 24"
+  },
+  {
+   "id": "OBS-04",
+   "descripcion": "La cobertura es estadistica sobre controles; el ruido en H no es corregible sin referencia remota.",
+   "resultado": "OBSERVACION",
+   "detalle": "ruido_H: bias sistematico, no cobertura"
+  },
+  {
+   "id": "OBS-05",
+   "descripcion": "D0 por debajo de 125 Hz no se evalua con L=256; no se extrapola con otra ventana.",
+   "resultado": "OBSERVACION",
+   "detalle": "0 filas no_evaluado"
+  },
+  {
+   "id": "OBS-06",
+   "descripcion": "La coherencia alta no demuestra identidad E-H; el escenario coherente se reporta como observacion.",
+   "resultado": "OBSERVACION",
+   "detalle": "ruido_coherente"
+  },
+  {
+   "id": "OBS-07",
+   "descripcion": "Los modelos estratificados 1D son controles de recuperacion, no evidencia de estructura del sitio.",
+   "resultado": "OBSERVACION",
+   "detalle": "dos_capas y tres_capas"
+  },
+  {
+   "id": "OBS-08",
+   "descripcion": "P6 queda PARCIAL: no habilita sintesis, etiquetas ni entrenamiento (P3-P5 y P7 cerradas).",
+   "resultado": "OBSERVACION",
+   "detalle": "B-P0-03 abierto"
+  }
+ ],
+ "observations": [
+  {
+   "id": "OBS-01",
+   "descripcion": "La respuesta de campo es relativa: sin calibracion certificada (B-P0-04) no se calcula rho_a.",
+   "resultado": "OBSERVACION",
+   "detalle": "calibrado=no en las 630 filas"
+  },
+  {
+   "id": "OBS-02",
+   "descripcion": "El bootstrap temporal subestima el error real (cobertura ~0.6); se aplica un factor r calibrado en controles.",
+   "resultado": "OBSERVACION",
+   "detalle": "r_D0=1.323, r_D1=1.738"
+  },
+  {
+   "id": "OBS-03",
+   "descripcion": "El factor r se calibra con un semiespacio 1D limpio; no cubre error de modelo ni de calibracion en campo.",
+   "resultado": "OBSERVACION",
+   "detalle": "mitad de calibracion 24 / evaluacion 24"
+  },
+  {
+   "id": "OBS-04",
+   "descripcion": "La cobertura es estadistica sobre controles; el ruido en H no es corregible sin referencia remota.",
+   "resultado": "OBSERVACION",
+   "detalle": "ruido_H: bias sistematico, no cobertura"
+  },
+  {
+   "id": "OBS-05",
+   "descripcion": "D0 por debajo de 125 Hz no se evalua con L=256; no se extrapola con otra ventana.",
+   "resultado": "OBSERVACION",
+   "detalle": "0 filas no_evaluado"
+  },
+  {
+   "id": "OBS-06",
+   "descripcion": "La coherencia alta no demuestra identidad E-H; el escenario coherente se reporta como observacion.",
+   "resultado": "OBSERVACION",
+   "detalle": "ruido_coherente"
+  },
+  {
+   "id": "OBS-07",
+   "descripcion": "Los modelos estratificados 1D son controles de recuperacion, no evidencia de estructura del sitio.",
+   "resultado": "OBSERVACION",
+   "detalle": "dos_capas y tres_capas"
+  },
+  {
+   "id": "OBS-08",
+   "descripcion": "P6 queda PARCIAL: no habilita sintesis, etiquetas ni entrenamiento (P3-P5 y P7 cerradas).",
+   "resultado": "OBSERVACION",
+   "detalle": "B-P0-03 abierto"
+  }
+ ],
+ "blockers": [
+  {
+   "id": "B-P0-04",
+   "impact": "sin calibracion certificada; la respuesta real es relativa y no se convierte a rho_a"
+  },
+  {
+   "id": "B-P0-06",
+   "impact": "sin F_red_validada por familia de ruido; la cobertura de frecuencias es solo instrumental"
+  },
+  {
+   "id": "B-P0-01",
+   "impact": "sitio sin identificar; no se agrupa por sitio"
+  },
+  {
+   "id": "B-P0-02",
+   "impact": "coordenadas candidatas sin datum; no se comparan espacialmente"
+  },
+  {
+   "id": "SIN-REF-REMOTA",
+   "impact": "no hay referencia remota; el ruido en H no es corregible y se reporta como limite"
+  }
+ ],
+ "note": "La validacion confirma coherencia interna, guardas de alcance, contrato de covarianza y recuperacion en controles 1D. No certifica calibracion, vinculo TEM ni validez fisica de las respuestas de campo."
+}

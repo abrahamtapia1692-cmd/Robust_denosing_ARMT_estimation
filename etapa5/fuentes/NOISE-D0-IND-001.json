@@ -1,0 +1,9 @@
+{
+  "file": "etapa5/fuentes/NOISE-D0-IND-001.npz",
+  "generator": "P5-IND-NOISE-1.0.0",
+  "seed": 20261030,
+  "n_samples": 48000,
+  "fs_hz": 4000.0,
+  "independent_of_bss": true,
+  "purpose": "Split de prueba P5 (elimina fuga NOISE-D0-001)"
+}

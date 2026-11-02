@@ -1,0 +1,445 @@
+{
+  "validacion_version": "1.0.0",
+  "generated_at_utc": "2026-10-28T19:07:17.310206Z",
+  "stage": 1,
+  "target_record": "ARMT5-700-14-14-01",
+  "p1_status_declarado": "PARCIAL",
+  "p1_status_calculado": "PARCIAL",
+  "resultado": "APROBADO_CON_OBSERVACIONES",
+  "summary": {
+    "total": 76,
+    "pasa": 70,
+    "falla": 0,
+    "observaciones": 6
+  },
+  "checks": [
+    {
+      "id": "P0-HASH-manifest.json",
+      "estado": "PASA",
+      "detalle": "etapa0/manifest.json: sin cambios"
+    },
+    {
+      "id": "P0-HASH-schema.json",
+      "estado": "PASA",
+      "detalle": "etapa0/schema.json: sin cambios"
+    },
+    {
+      "id": "P0-HASH-splits.csv",
+      "estado": "PASA",
+      "detalle": "etapa0/splits.csv: sin cambios"
+    },
+    {
+      "id": "P0-HASH-protocolo_validacion.md",
+      "estado": "PASA",
+      "detalle": "etapa0/protocolo_validacion.md: sin cambios"
+    },
+    {
+      "id": "P0-TARGET-SPLIT",
+      "estado": "PASA",
+      "detalle": "registro ARMT5-700-14-14-01 en split desarrollo"
+    },
+    {
+      "id": "P0-NO-SYNTHETIC",
+      "estado": "PASA",
+      "detalle": "sin identificadores SYN- en P0"
+    },
+    {
+      "id": "SOURCE-HASH",
+      "estado": "PASA",
+      "detalle": "SBF de origen con SHA-256 del manifiesto"
+    },
+    {
+      "id": "CONFIG-VERSION",
+      "estado": "PASA",
+      "detalle": "config P1-CONFIG-1.1.0 para ARMT5-700-14-14-01"
+    },
+    {
+      "id": "REGISTRY-EXISTS",
+      "estado": "PASA",
+      "detalle": "D:\\ARRT_software\\Robust_denosing_ARMT_estimation\\etapa1\\calibration_registry.json"
+    },
+    {
+      "id": "REGISTRY-STATUS",
+      "estado": "PASA",
+      "detalle": "estado declarado PARCIAL"
+    },
+    {
+      "id": "REGISTRY-BANDS",
+      "estado": "PASA",
+      "detalle": "bandas ['D0', 'D1']"
+    },
+    {
+      "id": "REGISTRY-CHANNELS-D0",
+      "estado": "PASA",
+      "detalle": "D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "REGISTRY-COUNT-D0",
+      "estado": "PASA",
+      "detalle": "D0: 29 puntos interpolados"
+    },
+    {
+      "id": "REGISTRY-CHANNEL-FILES-D0",
+      "estado": "PASA",
+      "detalle": "D0: hashes, gain=1.0, cobertura y continuidad"
+    },
+    {
+      "id": "REGISTRY-CHANNELS-D1",
+      "estado": "PASA",
+      "detalle": "D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "REGISTRY-COUNT-D1",
+      "estado": "PASA",
+      "detalle": "D1: 13 puntos interpolados"
+    },
+    {
+      "id": "REGISTRY-CHANNEL-FILES-D1",
+      "estado": "PASA",
+      "detalle": "D1: hashes, gain=1.0, cobertura y continuidad"
+    },
+    {
+      "id": "REGISTRY-SPLICE-EX",
+      "estado": "PASA",
+      "detalle": "empalme de 10 kHz detectado y punto atipico excluido en Ex"
+    },
+    {
+      "id": "REGISTRY-H-NO-OUTLIER",
+      "estado": "PASA",
+      "detalle": "Hx sin atipicos de fase"
+    },
+    {
+      "id": "REGISTRY-ONLY-ADC",
+      "estado": "PASA",
+      "detalle": "solo adc_to_uv marcado como aplicado"
+    },
+    {
+      "id": "RESP-FILE-D0",
+      "estado": "PASA",
+      "detalle": "D0: 29 filas"
+    },
+    {
+      "id": "RESP-GRID-D0",
+      "estado": "PASA",
+      "detalle": "D0: grilla 5.00000018-1000 Hz monotona y cubre la banda"
+    },
+    {
+      "id": "RESP-VALUES-D0",
+      "estado": "PASA",
+      "detalle": "D0: amplitudes positivas y finitas"
+    },
+    {
+      "id": "RESP-CONTINUITY-D0",
+      "estado": "PASA",
+      "detalle": "D0: fase continua en la grilla interpolada"
+    },
+    {
+      "id": "RESP-FILE-D1",
+      "estado": "PASA",
+      "detalle": "D1: 13 filas"
+    },
+    {
+      "id": "RESP-GRID-D1",
+      "estado": "PASA",
+      "detalle": "D1: grilla 1000-10000 Hz monotona y cubre la banda"
+    },
+    {
+      "id": "RESP-VALUES-D1",
+      "estado": "PASA",
+      "detalle": "D1: amplitudes positivas y finitas"
+    },
+    {
+      "id": "RESP-CONTINUITY-D1",
+      "estado": "PASA",
+      "detalle": "D1: fase continua en la grilla interpolada"
+    },
+    {
+      "id": "GAIN-DIRECTORIES",
+      "estado": "PASA",
+      "detalle": "9 directorios y uno seleccionado"
+    },
+    {
+      "id": "GAIN-ROUNDING",
+      "estado": "PASA",
+      "detalle": "etiqueta 1.8 vs 1.77828: 1.2214 %"
+    },
+    {
+      "id": "GAIN-NO-SECTIONS",
+      "estado": "PASA",
+      "detalle": "73 archivos con una sola tabla gain=1.0"
+    },
+    {
+      "id": "GAIN-PROBES",
+      "estado": "PASA",
+      "detalle": "sondas para ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "GAIN-SPREAD",
+      "estado": "PASA",
+      "detalle": "dispersion E 24.10 %, H 4.65 % a 100 Hz"
+    },
+    {
+      "id": "GAIN-UNIT-AMBIGUITY",
+      "estado": "PASA",
+      "detalle": "cociente V/(A/m) vs mV/nT documentado"
+    },
+    {
+      "id": "QC-BANDS",
+      "estado": "PASA",
+      "detalle": "bandas ['D0', 'D1']"
+    },
+    {
+      "id": "QC-LENGTH-D0",
+      "estado": "PASA",
+      "detalle": "D0: 21600000 muestras"
+    },
+    {
+      "id": "QC-CHECKS-D0",
+      "estado": "PASA",
+      "detalle": "D0: 7 comprobaciones"
+    },
+    {
+      "id": "QC-NO-INVALID-D0",
+      "estado": "PASA",
+      "detalle": "D0: sin clipping, muertos, pegados, ceros ni huecos"
+    },
+    {
+      "id": "QC-JUMPS-REPORTED-D0",
+      "estado": "PASA",
+      "detalle": "D0: saltos reportados y no enmascarados"
+    },
+    {
+      "id": "QC-MASK-D0",
+      "estado": "PASA",
+      "detalle": "D0: mascara empaquetada, 0 muestras invalidas"
+    },
+    {
+      "id": "QC-LENGTH-D1",
+      "estado": "PASA",
+      "detalle": "D1: 1440000 muestras"
+    },
+    {
+      "id": "QC-CHECKS-D1",
+      "estado": "PASA",
+      "detalle": "D1: 7 comprobaciones"
+    },
+    {
+      "id": "QC-NO-INVALID-D1",
+      "estado": "PASA",
+      "detalle": "D1: sin clipping, muertos, pegados, ceros ni huecos"
+    },
+    {
+      "id": "QC-JUMPS-REPORTED-D1",
+      "estado": "PASA",
+      "detalle": "D1: saltos reportados y no enmascarados"
+    },
+    {
+      "id": "QC-MASK-D1",
+      "estado": "PASA",
+      "detalle": "D1: mascara empaquetada, 0 muestras invalidas"
+    },
+    {
+      "id": "EXPORT-BANDS",
+      "estado": "PASA",
+      "detalle": "bandas ['D0', 'D1']"
+    },
+    {
+      "id": "EXPORT-FILE-D0",
+      "estado": "PASA",
+      "detalle": "D0: 01401401_D0_900s_uV.npy"
+    },
+    {
+      "id": "EXPORT-SHAPE-D0",
+      "estado": "PASA",
+      "detalle": "D0: (3600000, 5) float32"
+    },
+    {
+      "id": "EXPORT-UNITS-D0",
+      "estado": "PASA",
+      "detalle": "D0: unidades y formula"
+    },
+    {
+      "id": "EXPORT-FINITE-D0",
+      "estado": "PASA",
+      "detalle": "D0: 0 valores no finitos"
+    },
+    {
+      "id": "EXPORT-SCALE-D0",
+      "estado": "PASA",
+      "detalle": "D0: max |diff| = 0.000e+00 uV"
+    },
+    {
+      "id": "EXPORT-STATS-D0",
+      "estado": "PASA",
+      "detalle": "D0: min/max coherentes"
+    },
+    {
+      "id": "EXPORT-FILE-D1",
+      "estado": "PASA",
+      "detalle": "D1: 01401401_D1_45s_uV.npy"
+    },
+    {
+      "id": "EXPORT-SHAPE-D1",
+      "estado": "PASA",
+      "detalle": "D1: (1440000, 5) float32"
+    },
+    {
+      "id": "EXPORT-UNITS-D1",
+      "estado": "PASA",
+      "detalle": "D1: unidades y formula"
+    },
+    {
+      "id": "EXPORT-FINITE-D1",
+      "estado": "PASA",
+      "detalle": "D1: 0 valores no finitos"
+    },
+    {
+      "id": "EXPORT-SCALE-D1",
+      "estado": "PASA",
+      "detalle": "D1: max |diff| = 0.000e+00 uV"
+    },
+    {
+      "id": "EXPORT-STATS-D1",
+      "estado": "PASA",
+      "detalle": "D1: min/max coherentes"
+    },
+    {
+      "id": "EXPORT-VERIFICATION",
+      "estado": "PASA",
+      "detalle": "70 muestras de verificacion, max |diff| = 2.381e-04 uV"
+    },
+    {
+      "id": "BUDGET-ROWS",
+      "estado": "PASA",
+      "detalle": "24 filas, IDs P1-01..P1-24"
+    },
+    {
+      "id": "BUDGET-ADC-APPLIED",
+      "estado": "PASA",
+      "detalle": "ADC aplicado en D0 y D1"
+    },
+    {
+      "id": "BUDGET-NOT-APPLIED",
+      "estado": "PASA",
+      "detalle": "ganancia, respuesta y dipolo no aplicados"
+    },
+    {
+      "id": "BUDGET-SUMMARY",
+      "estado": "PASA",
+      "detalle": "resumen declara presupuesto no certificable"
+    },
+    {
+      "id": "BUILD-STEPS",
+      "estado": "PASA",
+      "detalle": "4 pasos, estado COMPLETADO"
+    },
+    {
+      "id": "BUILD-SOURCE",
+      "estado": "PASA",
+      "detalle": "fuente sin cambios y sin fuga sintetica"
+    },
+    {
+      "id": "P1-STATUS",
+      "estado": "PASA",
+      "detalle": "P1 PARCIAL con 5 razones"
+    },
+    {
+      "id": "B-P0-05-CLOSED",
+      "estado": "PASA",
+      "detalle": "QC irreversible cerrado para el registro objetivo"
+    },
+    {
+      "id": "B-P0-04-OPEN",
+      "estado": "PASA",
+      "detalle": "validez de calibracion sigue abierta"
+    },
+    {
+      "id": "P2-T-BLOCKED",
+      "estado": "PASA",
+      "detalle": "vinculo TEM-ARMT sigue no verificado"
+    },
+    {
+      "id": "P1-NO-SYNTHETIC",
+      "estado": "PASA",
+      "detalle": "sin SYN- en entregables de datos P1"
+    },
+    {
+      "id": "OBS-INDEPENDENT-EXPORT",
+      "estado": "OBSERVACION",
+      "detalle": "No hay exportacion independiente del fabricante para comparar signo, bits e intercalado (P1.1)."
+    },
+    {
+      "id": "OBS-CALIBRATION-VALIDITY",
+      "estado": "OBSERVACION",
+      "detalle": "Las 73 .clb no tienen fecha, certificado ni seccion de ganancia; B-P0-04 sigue abierto."
+    },
+    {
+      "id": "OBS-GAIN-AMBIGUITY",
+      "estado": "OBSERVACION",
+      "detalle": "La amplitud electrica no es reproducible entre directorios (hasta ~32 % en D1); no se aplica ganancia."
+    },
+    {
+      "id": "OBS-H-UNITS",
+      "estado": "OBSERVACION",
+      "detalle": "La unidad magnetica V/(A/m) del manual no coincide con el factor 1000 del codigo existente."
+    },
+    {
+      "id": "OBS-DIPOLE",
+      "estado": "OBSERVACION",
+      "detalle": "La longitud de dipolo de 20 m esta declarada en el SBF, no verificada en campo."
+    },
+    {
+      "id": "OBS-TIMEZONE",
+      "estado": "OBSERVACION",
+      "detalle": "La zona horaria de las marcas locales sigue sin declarar (B-P0-07)."
+    }
+  ],
+  "blockers_cerrados": [
+    {
+      "id": "B-P0-05",
+      "alcance": "registro ARMT5-700-14-14-01, D0/D1",
+      "evidencia": "qc_D0_D1.json, mascaras_QC_D0/D1.npz"
+    }
+  ],
+  "blockers_abiertos": [
+    "B-P0-01",
+    "B-P0-02",
+    "B-P0-03",
+    "B-P0-04",
+    "B-P0-06",
+    "B-P0-07"
+  ],
+  "p2t_status": "BLOQUEADO",
+  "observaciones": [
+    {
+      "id": "OBS-INDEPENDENT-EXPORT",
+      "estado": "OBSERVACION",
+      "detalle": "No hay exportacion independiente del fabricante para comparar signo, bits e intercalado (P1.1)."
+    },
+    {
+      "id": "OBS-CALIBRATION-VALIDITY",
+      "estado": "OBSERVACION",
+      "detalle": "Las 73 .clb no tienen fecha, certificado ni seccion de ganancia; B-P0-04 sigue abierto."
+    },
+    {
+      "id": "OBS-GAIN-AMBIGUITY",
+      "estado": "OBSERVACION",
+      "detalle": "La amplitud electrica no es reproducible entre directorios (hasta ~32 % en D1); no se aplica ganancia."
+    },
+    {
+      "id": "OBS-H-UNITS",
+      "estado": "OBSERVACION",
+      "detalle": "La unidad magnetica V/(A/m) del manual no coincide con el factor 1000 del codigo existente."
+    },
+    {
+      "id": "OBS-DIPOLE",
+      "estado": "OBSERVACION",
+      "detalle": "La longitud de dipolo de 20 m esta declarada en el SBF, no verificada en campo."
+    },
+    {
+      "id": "OBS-TIMEZONE",
+      "estado": "OBSERVACION",
+      "detalle": "La zona horaria de las marcas locales sigue sin declarar (B-P0-07)."
+    }
+  ]
+}

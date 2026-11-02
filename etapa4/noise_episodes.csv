@@ -1,0 +1,5 @@
+episode_id,band,record_id,start_s,stop_s,duration_s,class,kurtosis_max,coherence_max,gamma2_crit,leakage_fraction,identity_reconstruction_error,channels,file
+NOISE-D0-001,D0,ARMT5-700-14-14-01,10.0,18.0,8.0,ruido_admitido,1.5553,0.9999,0.0172,0.0,0.0,Ex-Ey-Hx-Hy-Hz,etapa4\noise_bank\NOISE-D0-001.npz
+NOISE-D0-002,D0,ARMT5-700-14-14-01,60.0,70.0,10.0,ruido_admitido,1.5853,0.9999,0.0137,0.031865,0.0,Ex-Ey-Hx-Hy-Hz,etapa4\noise_bank\NOISE-D0-002.npz
+NOISE-D0-003,D0,ARMT5-700-14-14-01,120.0,132.0,12.0,senal_protegida,92.2886,0.9999,0.0114,0.319972,0.0,Ex-Ey-Hx-Hy-Hz,etapa4\noise_bank\NOISE-D0-003.npz
+NOISE-D1-004,D1,ARMT5-700-14-14-01,10.0,18.0,8.0,ruido_admitido,1534.6896,0.9954,0.0021,0.032152,0.0,Ex-Ey-Hx-Hy-Hz,etapa4\noise_bank\NOISE-D1-004.npz

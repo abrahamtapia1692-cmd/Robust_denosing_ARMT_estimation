@@ -1,0 +1,157 @@
+﻿{
+  "version": "1.3",
+  "fecha_revision": "2026-10-28",
+  "alcance": "Pruebas aisladas y lectura de código; no certifican los pipelines ni modifican fuentes.",
+  "sha256_fuentes": {
+    "D:\\ARRT_software\\ARMT_validacion\\simulacion_armt5_multibanda.py": "c8f76477ed39a9e59fc651c6232b6b6d0ff057c2c7ea25dd555a022c372d8fab",
+    "D:\\ARRT_software\\Preproces_Time_series_M_boundedInfluence_preprocess_teoria_sperical_datawindos_FFT_cwt_escalas_densas_optimized\\fdica_no_rr.py": "7c64ff18b3f5848a76904578ef68444142393069039e84e8a8e113ea99153d58",
+    "D:\\ARRT_software\\ARMT_processing\\armt\\comb_spectral.py": "0ef7d7a42493140c563ca0c848a442de9d2767793fa2b0f52d9dfe79564115cc"
+  },
+  "tipo_evidencia": {
+    "H07": "prueba_aislada",
+    "H10": "prueba_aislada_mas_monte_carlo",
+    "H11": "prueba_aislada",
+    "H18": "lectura_de_codigo",
+    "H19": "prueba_aislada",
+    "H20": "lectura_de_codigo",
+    "H21": "formula_replicada"
+  },
+  "sha256_codigo_no_ejecutado": {
+    "D:\\ARRT_software\\Preproces_Time_series_M_boundedInfluence_preprocess_teoria_sperical_datawindos_FFT_cwt_escalas_densas_optimized\\cpp\\src\\estimator\\FDICAReconstructor.cpp": "410ada6eabaa5ee83072bc34edebbc1d8314d66ec515f03c9cb6f3ddca8de3e2",
+    "D:\\ARRT_software\\Denoise_MT\\CBAM_AMT_Denoising\\identification\\g13.py": "c6dca0797f7f0a8d4d55053d917c81c0768b1ea02830b44289bc10793fc413dc",
+    "D:\\ARRT_software\\Denoise_MT\\CBAM_AMT_Denoising\\identification\\g16.py": "597749f4930631ab2b0bd92795d47fa413d00b70ab8bed19649a42511e9423eb"
+  },
+  "semiespacio_100_ohm_m": {
+    "error_relativo_maximo": 2.5278198955558e-16
+  },
+  "score_polarizacion_python": {
+    "scores_4_componentes_independientes": [
+      0.9999999999994863,
+      0.9999999999995047,
+      0.9999999999994638,
+      0.9999999999994823
+    ],
+    "hallazgo": "Incluye autocorrelacion: los cuatro scores son aproximadamente 1. No discrimina estas componentes. No se atribuye este resultado al motor C++."
+  },
+  "bode_ley_potencia": {
+    "exponente_Z": 0.75,
+    "pendiente_logrho_logf": 0.5,
+    "fase_correcta_frecuencia_grados": 67.5,
+    "fase_correcta_periodo_grados": 67.5,
+    "fase_predicha_codigo_mediana_grados": 22.5,
+    "error_grados": -45.0,
+    "hallazgo": "El codigo usa 45(1-s) con s en frecuencia; la forma correcta es 45(1+s)=67.5 grados (o 45(1-s_T) en periodo). Es una prueba 1D, no una identidad 2D/3D."
+  },
+  "bracket_ruido_coherente": {
+    "rho_senal_verdadera": 0.02,
+    "rho_campo_total": 0.5,
+    "salida_codigo": {
+      "g2": 0.9999999999999999,
+      "rho_fwd": 0.49999999999999994,
+      "rho_psd": 0.5,
+      "rho_rev": 0.5000000000000001,
+      "phase": 9.27883348340227e-17
+    },
+    "hallazgo": "Con E=10u y H=2u el codigo devuelve [0.5, 0.5] porque rho_psd es la razon de autopotencias del campo total; la rho de la senal (0.02) no es identificable con una sola realizacion. El ancho es monotono en (1-gamma^2) y se anula en gamma^2=1."
+  },
+  "bracket_monte_carlo": {
+    "independiente": {
+      "cobertura": 0.998,
+      "ancho_mediano": 0.034802353838394876,
+      "rho_psd_mediano": 0.020053356930187265,
+      "g2_mediano": 0.4585622238234859
+    },
+    "coherente": {
+      "cobertura": 0.0,
+      "ancho_mediano": 0.10381721453543932,
+      "rho_psd_mediano": 0.4016193265372298,
+      "g2_mediano": 0.8787979422156766
+    },
+    "rho_senal_verdadera": 0.02,
+    "replicas": 500,
+    "ventanas_por_replica": 32
+  },
+  "h19_ratio_por_coeficiente": {
+    "ratio_mediana": 1.0,
+    "ratio_min": 0.9999999999999991,
+    "ratio_max": 1.0000000000000009,
+    "coherencia_promediada_K": {
+      "8": 0.1252481842586425,
+      "16": 0.061882115536986235,
+      "64": 0.015968323581135375
+    },
+    "hallazgo": "La razon por coeficiente es 1 si ambos son no nulos; no es una coherencia. La coherencia promediada de pares independientes tiende a 1/K."
+  },
+  "h21_ca_normalizacion": {
+    "Pyy": 0.970349510242549,
+    "P_RR": 1.9854988703786252,
+    "ca_P2": 0.00012140421583784957,
+    "ca_P2_escala_R2": 0.00048561686335139826,
+    "ca_escala_Y2": 3.035105395949261e-05,
+    "gamma2_normalizada": 5.933245449658624e-05,
+    "hallazgo": "CA no es invariante a la potencia de la referencia; solo coincide con gamma^2 si P_RR=1. Verificar la normalización del llamador antes de atribuir la selección 2+2 a la física."
+  },
+  "resolucion_ventana": {
+    "D0": {
+      "fs_eff": 4000,
+      "L": 256,
+      "duracion_s": 0.064,
+      "delta_f_hz": 15.625,
+      "f_min_8_hz": 125.0,
+      "f_min_16_hz": 250.0,
+      "ciclos_50_hz": 3.2
+    },
+    "D1": {
+      "fs_eff": 32000,
+      "L": 256,
+      "duracion_s": 0.008,
+      "delta_f_hz": 125.0,
+      "f_min_8_hz": 1000.0,
+      "f_min_16_hz": 2000.0,
+      "ciclos_50_hz": 0.4
+    },
+    "D0_dec_x2": {
+      "fs_eff": 2000,
+      "L": 256,
+      "duracion_s": 0.128,
+      "delta_f_hz": 7.8125,
+      "f_min_8_hz": 62.5,
+      "f_min_16_hz": 125.0,
+      "ciclos_50_hz": 6.4
+    },
+    "D0_dec_x4": {
+      "fs_eff": 1000,
+      "L": 256,
+      "duracion_s": 0.256,
+      "delta_f_hz": 3.90625,
+      "f_min_8_hz": 31.25,
+      "f_min_16_hz": 62.5,
+      "ciclos_50_hz": 12.8
+    },
+    "D1_L4096": {
+      "fs_eff": 32000,
+      "L": 4096,
+      "duracion_s": 0.128,
+      "delta_f_hz": 7.8125,
+      "f_min_8_hz": 62.5,
+      "f_min_16_hz": 125.0,
+      "ciclos_50_hz": 6.4
+    },
+    "D1_L8192": {
+      "fs_eff": 32000,
+      "L": 8192,
+      "duracion_s": 0.256,
+      "delta_f_hz": 3.90625,
+      "f_min_8_hz": 31.25,
+      "f_min_16_hz": 62.5,
+      "ciclos_50_hz": 12.8
+    }
+  },
+  "duracion_256_muestras_segundos": {
+    "150": 1.7066666666666668,
+    "4000": 0.064,
+    "32000": 0.008,
+    "400000": 0.00064,
+    "4000000": 6.4e-05
+  }
+}

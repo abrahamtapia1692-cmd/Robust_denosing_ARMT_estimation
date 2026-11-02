@@ -1,0 +1,171 @@
+\documentclass[11pt,letterpaper]{article}
+
+% --- Paquetes de idioma y tipografía ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% --- Configuración de márgenes ---
+\usepackage[top=2.2cm, bottom=2.2cm, left=2.2cm, right=2.2cm]{geometry}
+
+% --- Elementos visuales y colores ---
+\usepackage{xcolor}
+\definecolor{geotemBlue}{RGB}{10, 25, 47}       % Navy corporativo
+\definecolor{geotemPurple}{RGB}{112, 48, 160}   % Púrpura I+D / IA
+\definecolor{geotemAccent}{RGB}{0, 119, 182}    % Azul técnico
+\definecolor{lightGray}{RGB}{248, 250, 252}     % Fondo claro
+\definecolor{borderGray}{RGB}{220, 226, 235}
+\definecolor{alertOrange}{RGB}{217, 119, 6}     % Ámbar advertencia de rigor
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+% --- Encabezados y pies de página ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\fancyhead[L]{\textcolor{geotemBlue}{\textbf{GEOTEM} \textbar\ Catálogo de Desarrollos Internos}}
+\fancyhead[R]{\textcolor{gray}{\small Noviembre 2024}}
+\fancyfoot[C]{\thepage}
+
+% --- Hipervínculos ---
+\usepackage[colorlinks=true, linkcolor=geotemBlue, urlcolor=geotemPurple]{hyperref}
+
+\begin{document}
+
+% ==================== ENCABEZADO / COMUNICADO ====================
+\begin{tcolorbox}[
+    colback=lightGray,
+    colframe=geotemBlue,
+    arc=2mm,
+    boxrule=1pt,
+    left=14pt, right=14pt, top=10pt, bottom=10pt
+]
+    {\LARGE \textbf{\textcolor{geotemBlue}{REGISTRO TÉCNICO DE DESARROLLO INTERNO}}}\\[4pt]
+    \noindent\textcolor{geotemPurple}{\rule{\textwidth}{1.5pt}}\\[6pt]
+    \begin{tabular}{ll}
+        \textbf{A la atención de:} & Dirección General / Coordinación de Desarrollos GEOTEM \\
+        \textbf{En seguimiento a:} & Reunión con Dirección y acuerdo del correo de Alfredo \\
+        \textbf{Propósito:}        & Integración al Checklist y Plan de Priorización Institucional \\
+        \textbf{Fecha de entrega:} & Noviembre 2024
+    \end{tabular}
+\end{tcolorbox}
+
+\vspace{0.6em}
+
+\noindent Estimados,
+
+\vspace{0.4em}
+En cumplimiento con las directrices institucionales de \textbf{GEOTEM} para la organización y auditoría de desarrollos propios, se presenta la caracterización del proyecto de vanguardia en \textbf{reducción de ruido mediante Inteligencia Artificial (CBAM/ResUNet), separación ciega de fuentes (BSS/FDICA) y estimación robusta para sondeos electromagnéticos de alta frecuencia (ARMT/AMT)}.
+
+\vspace{0.8em}
+
+% ==================== FICHA DETALLADA (LOS 10 PUNTOS) ====================
+\begin{tcolorbox}[
+    colback=white,
+    colframe=geotemBlue,
+    arc=2mm,
+    boxrule=1pt,
+    title=\textbf{\large 10 Puntos de Caracterización Institucional},
+    coltitle=white,
+    colbacktitle=geotemBlue,
+    left=10pt, right=10pt, top=10pt, bottom=10pt
+]
+
+\renewcommand{\arraystretch}{1.36}
+\begin{tabularx}{\textwidth}{@{} p{4.6cm} X @{}}
+    \textbf{1. Nombre del desarrollo:} & 
+    \textbf{Robust Denoising \& ARMT Estimation Suite} \newline
+    \textit{(Sistema de Descontaminación Neuronal CBAM y Estimación Robusta ARMT/AMT Guiada por TEM)} \\
+    \hline
+
+    \textbf{2. Objetivo principal:} & 
+    Desarrollar e implementar una ruta metrológica y científicamente rigurosa de 11 etapas estructuradas (\textbf{Etapa 0 a Etapa 10}) con compuertas de validación (\textbf{P0 a P10}) para la recuperación y reducción de ruido en sondeos electromagnéticos de alta frecuencia (Radio-Magnetotelúrica \textbf{ARMT} y Audio-Magnetotelúrica \textbf{AMT}, bandas D0 a 4~kHz y D1 a 32~kHz). Combina restricciones físicas a priori derivadas de transitorios electromagnéticos (\textbf{TEM}), separación ciega de fuentes multicanal (\textbf{BSS/FDICA}) y redes neuronales con mecanismos de atención (\textbf{CBAM-ResUNet} y \textbf{SCNet18}), garantizando la preservación estricta de la impedancia tensorial $Z(f)$, resistividad aparente $\rho_a$ y fase $\phi$. \\
+    \hline
+
+    \textbf{3. Alcance:} & 
+    \textbf{Investigación, Desarrollo e Innovación (I+D+i) Estratégica Institucional.} Diseñado para operar en entornos con severa contaminación antropogénica e industrial (zonas mineras, proyectos geotérmicos e infraestructura eléctrica) donde el procesamiento clásico colapsa. \\
+    \hline
+
+    \textbf{4. Área de aplicación:} & 
+    \textbf{I+D}, \textbf{Procesamiento Avanzado de Señales}, \textbf{Gabinete Especializado} y \textbf{Auditoría de Calidad (QC Riguroso)} en métodos electromagnéticos profundos y semiprofundos (ARMT, AMT, MT y TEM). \\
+    \hline
+
+    \textbf{5. Técnica / Método / Sistema:} & 
+    \textbf{Métodos:} Radio-Magnetotelúrica (ARMT), Audio-Magnetotelúrica (AMT), Magnetotelúrica (MT) y Electromagnetismo en Dominio del Tiempo (TEM). \newline
+    \textbf{Instrumentación:} Sistema ARMT-5 de 5 canales ($E_x, E_y, H_x, H_y, H_z$) en bandas D0 (4~kHz) y D1 (32~kHz), acoplado a prospecciones TEM (WalkTEM/TEM-FAST). \\
+    \hline
+
+    \textbf{6. Motor numérico utilizado:} & 
+    \textbf{Ecosistema Científico Híbrido y Deep Learning:}
+    \begin{itemize}[leftmargin=1.2em, topsep=2pt, itemsep=1pt]
+        \item \textbf{Deep Learning en PyTorch:} Red neuronal \textbf{CBAM-ResUNet} (mecanismos de atención espacial y de canal) como separador $\mathcal{D}_\psi$ y red \textbf{SCNet18} como detector de ventanas contaminadas $\mathcal{C}_\theta$.
+        \item \textbf{Separación Ciega de Fuentes (BSS):} \texttt{Complex FastICA} y \texttt{FDICA} para descomposición de ruido multicanal no gaussiano en frecuencia.
+        \item \textbf{Modelado Directo e Inversión EM:} Algoritmos matriciales 1D para ecuaciones de Maxwell cuasiestáticas, evaluación de sensibilidad de Jacobianos TEM--MT y propagación de incertidumbre estadística vía Bootstrap.
+        \item \textbf{Trazabilidad y Criptografía:} Integridad mediante hashes \texttt{SHA-256} y control estricto de semillas estocásticas para reproducibilidad.
+    \end{itemize} \\
+    \hline
+
+    \textbf{7. Lenguaje de programación:} & 
+    \textbf{Python 3.x} modular distribuido en paquetes por etapas (\texttt{etapa0/} a \texttt{etapa10/}), con componentes complementarios optimizados en \textbf{C++} para reconstrucción espectral multicanal. \\
+    \hline
+
+    \textbf{8. Breve descripción del proyecto:} & 
+    Arquitectura metodológica completa dividida en 11 etapas auditables:
+    \begin{enumerate}[leftmargin=1.2em, topsep=2pt, itemsep=1pt]
+        \item \textbf{Etapa 0--1:} Inventario formal, schemas de datos, calibración instrumental (\texttt{SBF/CLB}) y control de calidad en tiempo.
+        \item \textbf{Etapa 2 (P2-T):} Determinación rigurosa del soporte común TEM--AMT mediante análisis de sensibilidad, impidiendo extrapolar etiquetas donde TEM no tiene resolución.
+        \item \textbf{Etapa 3--4:} Síntesis física de subbanda con conmutatividad espectral $W_b(f)$ y extracción BSS de episodios de ruido real de campo.
+        \item \textbf{Etapa 5:} Creación de datasets equilibrados ($D_{id}$, $D_{sep}$, $D_{real}$) con cero fuga de fuentes (\textit{zero group/source leakage}).
+        \item \textbf{Etapa 6--8:} Estimador robusto Huber/Bootstrap, entrenamiento de redes detectoras/separadoras CBAM y pipeline de inferencia por reconstrucción *Hann Overlap-Add*.
+        \item \textbf{Etapa 9--10:} Auditoría ciega contra filtros lineales óptimos (Wiener) y empaquetador de liberación con congelación de hashes criptográficos y exportación a \textbf{SEG-EDI}.
+    \end{enumerate} \\
+    \hline
+
+    \textbf{9. Estado actual del desarrollo:} & 
+    \textbf{Funcional en Etapas 0 a 8; Etapas 9 y 10 en Auditoría y Reentrenamiento Científico.} \newline
+    Toda la infraestructura matemática, de síntesis, BSS, datasets y pipelines de inferencia está implementada y funcional. En la evaluación ciega (Etapa 9), el protocolo de auditoría identificó que el modelo CBAM requiere reentrenamiento con regularización física tensorial para superar de manera consistente a la cota óptima de Wiener, encontrándose el sistema actualmente en cuarentena controlada como muestra de integridad metodológica. \\
+    \hline
+
+    \textbf{10. Ubicación actual del código:} & 
+    \textbf{Equipo local de trabajo:} \texttt{D:\textbackslash ARRT\_software\textbackslash Robust\_denosing\_ARMT\_estimation} \newline
+    \textit{Recomendación de seguridad institucional:} Debe crearse de inmediato un repositorio corporativo privado en GitHub/GitLab institucional de GEOTEM para resguardar este valioso desarrollo de I+D. \\
+\end{tabularx}
+\end{tcolorbox}
+
+\vspace{0.8em}
+
+% ==================== EVALUACIÓN Y SIGUIENTES PASOS ====================
+\begin{tcolorbox}[
+    colback=lightGray,
+    colframe=borderGray,
+    arc=1.5mm,
+    boxrule=0.8pt,
+    title=\textbf{\textcolor{geotemBlue}{Recomendaciones para el Checklist Institucional}},
+    coltitle=geotemBlue
+]
+\begin{itemize}[leftmargin=1.2em, topsep=1pt, itemsep=2pt]
+    \item \textbf{Respaldo y Control de Versiones:} Aunque internamente utiliza hashes SHA-256 para cada etapa, no cuenta con un repositorio Git remoto. Es urgente versionarlo en el repositorio institucional de GEOTEM.
+    \item \textbf{Nivel de Innovación (I+D):} Es el desarrollo de mayor nivel técnico y matemático en la empresa en materia de Inteligencia Artificial aplicada a geofísica electromagnética.
+    \item \textbf{Plan de Trabajo Inmediato:} Ajustar la función de pérdida del separador CBAM para incluir explícitamente la penalización del tensor de impedancia $Z(f)$ y proceder con la liberación formal de la Etapa 10 hacia producción.
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{1.5em}
+
+\noindent
+\begin{tabular}{p{7.5cm}}
+    \textbf{Elaborado por:}\\[2.5em]
+    \rule{7cm}{0.5pt}\\
+    Área de Procesamiento e I+D\\
+    GEOTEM
+\end{tabular}
+
+\end{document}
+

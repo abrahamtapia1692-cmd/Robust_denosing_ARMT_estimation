@@ -1,0 +1,667 @@
+{
+  "format": "JSON-COV",
+  "format_version": "1.0.0",
+  "sounding_id": "SND-BLIND-01",
+  "timestamp_utc": "2026-10-30T16:05:20Z",
+  "provenance": {
+    "software": "ARMT MT/AMT Suite",
+    "software_version": "1.3.0",
+    "release_title": "ARMT MT/AMT Robust Denoising & Transfer Function Estimation Suite",
+    "data_origin": "synthetic",
+    "synthetic": true,
+    "frozen_hashes": {
+      "etapa7/checkpoints/c_theta_scnet18.pt": "1e1d92b89b04afc4af6301ac0ad84c99e472161b05cb8573da5cfb90348acd08",
+      "etapa7/checkpoints/d_psi_b3_scnet18.pt": "35c5e45c9676cead3b2c32eeddf0899bfbd861072e4f514670f63fc962a25f4e",
+      "etapa7/checkpoints/d_psi_b4_cbam.pt": "c987c9713ce4dbcc1597b3fc956fa7bbe05c9e1e9809fd6f20599ec6dc6f7be3",
+      "etapa7/modelos_cbam.py": "18f03b97888c046441f599cb0e8ac37470dcca73d08db5f31e6bb5ade6bac8d5",
+      "etapa8/pipeline_armt.py": "8e37cd1a23c0266697b5772633d67777c93d757d2b5e9baf6c46cdf0d4578191",
+      "etapa8/config_p8.json": "dd197dd2d5987347548d88381a3e529edfd85259960f52f1625c5d72986e43c8",
+      "etapa9/evaluador_ciego.py": "bc10461d608c813fe60bd959e04bb03f26b4d7424b27857b5ad940a8233c05d9",
+      "etapa9/config_p9.json": "1d7336ee80ea699f87a69ee15beb9e0149c434acb5e6c8fae8c1145e70634103",
+      "banco_sintetico/soporte_S1.json": "a6b50cfb1c64c832644078867f4b381802752f810e93dd41a8ba7fa12a8ffffd",
+      "etapa4/noise_episodes.csv": "1f3be6d1e78e3cd79e6d90ab3d29799fe41c04793143bb40741d00f13c730f69"
+    },
+    "operator_metadata": {}
+  },
+  "domain_governance": {
+    "band": "D0",
+    "tem_support_status": "soporte_aprobado",
+    "release_allowed": false,
+    "quarantine": true,
+    "zero_d2_d3_intervention": true,
+    "zero_fake_field_targets": true,
+    "zero_support_extrapolation": true
+  },
+  "window_statistics": {
+    "total_windows": 499,
+    "clean_windows": 499,
+    "contaminated_windows": 0,
+    "intervened_windows": 0,
+    "intervened_pct": 0.0
+  },
+  "residual_decomposition": {
+    "identity_error_norm_inf": 0.0
+  },
+  "transfer_functions": [
+    {
+      "f_hz": 125.0,
+      "band": "D0",
+      "category": "aceptado",
+      "category_reason": "CAT_ACCEPTED_RANK2_COHERENT",
+      "fallback_to_b0": false,
+      "cond_hh": 1.083039616782328,
+      "coherence_xy": 0.9986694255638441,
+      "Z": {
+        "Zxx": {
+          "real": -0.00047928206918578377,
+          "imag": -0.0002607792627914781
+        },
+        "Zxy": {
+          "real": 0.22174800517763024,
+          "imag": 0.22152996490470775
+        },
+        "Zyx": {
+          "real": -0.22211829175495595,
+          "imag": -0.2220248531513603
+        },
+        "Zyy": {
+          "real": 0.00038675566953118366,
+          "imag": 0.0005603003519414447
+        }
+      },
+      "cov_4x4": [
+        [
+          2.977171257450732e-10,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          9.824770315093938e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          9.863157094902285e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          4.6351643230022094e-10
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": 99.54573573394218,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": 44.971817263121636,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 150.0,
+      "band": "D0",
+      "category": "aceptado",
+      "category_reason": "CAT_ACCEPTED_RANK2_COHERENT",
+      "fallback_to_b0": false,
+      "cond_hh": 1.1930130547814466,
+      "coherence_xy": 0.9992392515820891,
+      "Z": {
+        "Zxx": {
+          "real": 0.00016231065297281702,
+          "imag": -0.00018898986623163555
+        },
+        "Zxy": {
+          "real": 0.24793492709196976,
+          "imag": 0.2477817646445391
+        },
+        "Zyx": {
+          "real": -0.24730129718615265,
+          "imag": -0.24758139085902361
+        },
+        "Zyy": {
+          "real": -2.341290872800994e-06,
+          "imag": 8.596964355533573e-05
+        }
+      },
+      "cov_4x4": [
+        [
+          6.206191760671375e-11,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00012286753096246212,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00012245447668964243,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          7.39626125598254e-12
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": 103.74236390273539,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": 44.982297224029956,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 200.0,
+      "band": "D0",
+      "category": "aceptado",
+      "category_reason": "CAT_ACCEPTED_RANK2_COHERENT",
+      "fallback_to_b0": false,
+      "cond_hh": 1.0063409115525028,
+      "coherence_xy": 0.9994554031543177,
+      "Z": {
+        "Zxx": {
+          "real": -0.0005158440125420465,
+          "imag": -0.0004952066405894348
+        },
+        "Zxy": {
+          "real": 0.28219513854236816,
+          "imag": 0.2824181659170756
+        },
+        "Zyx": {
+          "real": -0.283190777144318,
+          "imag": -0.28269258209265746
+        },
+        "Zyy": {
+          "real": -0.00023062206019544855,
+          "imag": 0.00023251199302772908
+        }
+      },
+      "cov_4x4": [
+        [
+          5.113246621593526e-10,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0001593941166569112,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00016011211222981665,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0724836155051984e-10
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": 100.93750353314444,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": 45.02263235124123,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 250.0,
+      "band": "D0",
+      "category": "aceptado",
+      "category_reason": "CAT_ACCEPTED_RANK2_COHERENT",
+      "fallback_to_b0": false,
+      "cond_hh": 1.2219486448719041,
+      "coherence_xy": 0.9996611402253257,
+      "Z": {
+        "Zxx": {
+          "real": -3.3952870417668785e-05,
+          "imag": 0.0004688998823702481
+        },
+        "Zxy": {
+          "real": 0.31372826715688945,
+          "imag": 0.3135978781540757
+        },
+        "Zyx": {
+          "real": -0.3138825670536864,
+          "imag": -0.3141559173660919
+        },
+        "Zyy": {
+          "real": 1.382792009121947e-05,
+          "imag": -0.0002802014703253662
+        }
+      },
+      "cov_4x4": [
+        [
+          2.2101989709643146e-10,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0001967690547960031,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0001972162063163427,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          7.870407534654625e-11
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": 99.68436768057529,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": 44.9880911396657,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 300.0,
+      "band": "D0",
+      "category": "aceptado",
+      "category_reason": "CAT_ACCEPTED_RANK2_COHERENT",
+      "fallback_to_b0": false,
+      "cond_hh": 1.0717856477106045,
+      "coherence_xy": 0.999625123182829,
+      "Z": {
+        "Zxx": {
+          "real": -0.00019440376756394925,
+          "imag": 0.00013201325981491464
+        },
+        "Zxy": {
+          "real": 0.3461982380979616,
+          "imag": 0.3465187003899951
+        },
+        "Zyx": {
+          "real": -0.3461919378398981,
+          "imag": -0.3461383007608751
+        },
+        "Zyy": {
+          "real": -4.314492611727592e-05,
+          "imag": 0.00023676615962234986
+        }
+      },
+      "cov_4x4": [
+        [
+          5.522032561001817e-11,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00023992842978210407,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00023966058107896987,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          5.791969899198125e-11
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": 101.29096872904296,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": 45.02650597162651,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 400.0,
+      "band": "D0",
+      "category": "aceptado",
+      "category_reason": "CAT_ACCEPTED_RANK2_COHERENT",
+      "fallback_to_b0": false,
+      "cond_hh": 1.136698498803184,
+      "coherence_xy": 0.9997904872592938,
+      "Z": {
+        "Zxx": {
+          "real": 0.00011236450757285549,
+          "imag": -0.00017653896108744114
+        },
+        "Zxy": {
+          "real": 0.39648806627248884,
+          "imag": 0.3963998246848851
+        },
+        "Zyx": {
+          "real": -0.39618261785447273,
+          "imag": -0.3964692700474154
+        },
+        "Zyy": {
+          "real": -5.1128907007174556e-05,
+          "imag": 2.3447043334096085e-05
+        }
+      },
+      "cov_4x4": [
+        [
+          4.379178734392336e-11,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00031433560770670517,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0003141485487819535,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          3.1639289728592833e-12
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": 99.52767448055288,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": 44.9936234736537,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 500.0,
+      "band": "D0",
+      "category": "aceptado",
+      "category_reason": "CAT_ACCEPTED_RANK2_COHERENT",
+      "fallback_to_b0": false,
+      "cond_hh": 1.0635638215357326,
+      "coherence_xy": 0.9997432803928428,
+      "Z": {
+        "Zxx": {
+          "real": 5.654327948818958e-05,
+          "imag": 8.45419102769307e-05
+        },
+        "Zxy": {
+          "real": 0.444465555371442,
+          "imag": 0.44425735582068643
+        },
+        "Zyx": {
+          "real": -0.4437427497769096,
+          "imag": -0.44382737868800765
+        },
+        "Zyy": {
+          "real": -0.00011101035445517174,
+          "imag": -1.2369595396778243e-05
+        }
+      },
+      "cov_4x4": [
+        [
+          1.0344477048552122e-11,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0003949142281124323,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0003938903700526412,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.2476305686542865e-11
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": 100.03294257387958,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": 44.98657741891611,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 600.0,
+      "band": "D0",
+      "category": "aceptado",
+      "category_reason": "CAT_ACCEPTED_RANK2_COHERENT",
+      "fallback_to_b0": false,
+      "cond_hh": 1.0126261668136711,
+      "coherence_xy": 0.9997294434346734,
+      "Z": {
+        "Zxx": {
+          "real": 0.00024684379267796613,
+          "imag": 0.0004231608670660237
+        },
+        "Zxy": {
+          "real": 0.4871854292564865,
+          "imag": 0.4871077227023449
+        },
+        "Zyx": {
+          "real": -0.486938430211565,
+          "imag": -0.48689282025889513
+        },
+        "Zyy": {
+          "real": -0.00037914855412970105,
+          "imag": -0.00027646548016526973
+        }
+      },
+      "cov_4x4": [
+        [
+          2.399969773997117e-10,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00047462357599609156,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.00047417365323656395,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          2.2018678782165595e-10
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": 100.18629688433968,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": 44.99543026903718,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 800.0,
+      "band": "D0",
+      "category": "aceptado",
+      "category_reason": "CAT_ACCEPTED_RANK2_COHERENT",
+      "fallback_to_b0": false,
+      "cond_hh": 1.0445161566923473,
+      "coherence_xy": 0.9997721595991409,
+      "Z": {
+        "Zxx": {
+          "real": 7.57109722518308e-05,
+          "imag": 5.57587073889837e-06
+        },
+        "Zxy": {
+          "real": 0.5606994045441998,
+          "imag": 0.5607693649522026
+        },
+        "Zyx": {
+          "real": -0.5603958419553124,
+          "imag": -0.5603035093232346
+        },
+        "Zyy": {
+          "real": -5.247749548894197e-05,
+          "imag": -9.849863299231723e-05
+        }
+      },
+      "cov_4x4": [
+        [
+          5.763241653814395e-12,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0006288461029251169,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0006279835222407354,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.2455868234147131e-11
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": 99.55536168319408,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": 45.00357427350222,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    },
+    {
+      "f_hz": 1000.0,
+      "band": "D0",
+      "category": "aceptado",
+      "category_reason": "CAT_ACCEPTED_RANK2_COHERENT",
+      "fallback_to_b0": false,
+      "cond_hh": 1.075765587383919,
+      "coherence_xy": 0.9998300121621302,
+      "Z": {
+        "Zxx": {
+          "real": -0.0002807194817273243,
+          "imag": 0.00010467275554790472
+        },
+        "Zxy": {
+          "real": 0.6235855481853776,
+          "imag": 0.6234717658516727
+        },
+        "Zyx": {
+          "real": -0.6237261519604851,
+          "imag": -0.6236976046249112
+        },
+        "Zyy": {
+          "real": -2.7971646719818655e-05,
+          "imag": 0.0003259789036177364
+        }
+      },
+      "cov_4x4": [
+        [
+          8.975981317524896e-11,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.000777575978719861,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0007780330146542863,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0704465862403981e-10
+        ]
+      ],
+      "rho_a": {
+        "rho_a_xy": 98.48114816968197,
+        "rho_a_yx": null
+      },
+      "phase_deg": {
+        "phase_xy_deg": 44.99477229521613,
+        "phase_yx_deg": null
+      },
+      "tipper": null
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "version": "P3-CONFIG-1.0.0",
+  "stage": 3,
+  "gate": "P3",
+  "synthetic": true,
+  "scientific_claim": false,
+  "description": "Configuración de síntesis de series limpias con física controlada y validación de Puerta P3",
+  "bands": {
+    "D0": {
+      "fs": 4000.0,
+      "f_min": 125.0,
+      "f_max": 1000.0,
+      "n_samples": 64000,
+      "duration_s": 16.0,
+      "window_length": 256,
+      "step": 128
+    },
+    "D1": {
+      "fs": 32000.0,
+      "f_min": 1000.0,
+      "f_max": 10000.0,
+      "n_samples": 262144,
+      "duration_s": 8.192,
+      "window_length": 256,
+      "step": 128
+    }
+  },
+  "guard_time_s": 0.5,
+  "tolerances": {
+    "max_relative_spectral_residual": 1.0e-8,
+    "max_fft_reconstruction_error": 1.0e-12,
+    "max_subband_commutativity_residual": 1.0e-8,
+    "max_estimation_bias_dec": 0.01,
+    "max_estimation_phase_deg": 0.5,
+    "rank_one_condition_number_threshold": 1.0e4
+  },
+  "scenarios": [
+    {
+      "id": "CTRL-01-HALFSPACE-D0",
+      "name": "Semiespacio 100 ohm.m en D0",
+      "band": "D0",
+      "model_type": "halfspace",
+      "rho_ohm_m": [100.0],
+      "interfaces_m": [],
+      "excitation_mode": "two_polarizations",
+      "seed": 202610281,
+      "support_source": "full_band",
+      "strike_angle_deg": 0.0,
+      "tipper_vector": [0.0, 0.0]
+    },
+    {
+      "id": "CTRL-02-HALFSPACE-D1",
+      "name": "Semiespacio 100 ohm.m en D1",
+      "band": "D1",
+      "model_type": "halfspace",
+      "rho_ohm_m": [100.0],
+      "interfaces_m": [],
+      "excitation_mode": "two_polarizations",
+      "seed": 202610282,
+      "support_source": "full_band",
+      "strike_angle_deg": 0.0,
+      "tipper_vector": [0.0, 0.0]
+    },
+    {
+      "id": "CTRL-03-STRATIFIED-S1-D0",
+      "name": "Capas estratificadas S1 en D0 restringido a soporte TEM",
+      "band": "D0",
+      "model_type": "stratified",
+      "rho_ohm_m": [40.0, 8.0, 300.0],
+      "interfaces_m": [30.0, 120.0],
+      "excitation_mode": "two_polarizations",
+      "seed": 202610283,
+      "support_source": "banco_sintetico/soporte_S1.json",
+      "strike_angle_deg": 0.0,
+      "tipper_vector": [0.0, 0.0]
+    },
+    {
+      "id": "CTRL-04-ABSTENTION-RANK1",
+      "name": "Excitación polarizada de rango uno (abstención)",
+      "band": "D0",
+      "model_type": "halfspace",
+      "rho_ohm_m": [100.0],
+      "interfaces_m": [],
+      "excitation_mode": "single_polarization_rank1",
+      "seed": 202610284,
+      "support_source": "full_band",
+      "strike_angle_deg": 0.0,
+      "tipper_vector": [0.0, 0.0]
+    },
+    {
+      "id": "CTRL-05-NONSTATIONARY-SFERICS",
+      "name": "Fuente no estacionaria con ráfagas impulsivas (sferics) y tipper",
+      "band": "D0",
+      "model_type": "halfspace_2d_tipper",
+      "rho_ohm_m": [100.0],
+      "interfaces_m": [],
+      "excitation_mode": "nonstationary_sferics",
+      "seed": 202610285,
+      "support_source": "full_band",
+      "strike_angle_deg": 30.0,
+      "tipper_vector": [0.05, -0.02]
+    },
+    {
+      "id": "CTRL-06-INSTRUMENT-ADC-SAT",
+      "name": "Efectos instrumentales: ruido sensor, ganancias y saturación ADC",
+      "band": "D0",
+      "model_type": "halfspace",
+      "rho_ohm_m": [100.0],
+      "interfaces_m": [],
+      "excitation_mode": "two_polarizations_large_amplitude",
+      "seed": 202610286,
+      "support_source": "full_band",
+      "strike_angle_deg": 0.0,
+      "tipper_vector": [0.0, 0.0],
+      "instrument": {
+        "noise_sigma_uv": 0.5,
+        "gain_db": 6.0,
+        "adc_bits": 24,
+        "adc_full_scale_uv": 100.0,
+        "simulate_clipping": true,
+        "clipping_threshold_fraction": 0.85
+      }
+    }
+  ]
+}

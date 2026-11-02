@@ -1,0 +1,13 @@
+prueba,valor,limite,unidad,pasa,detalle,version
+semiespacio_rho_1_Z,2.849985337348214e-16,1e-10,rel,True,Z vs sqrt(i*omega*mu0*rho),MT1D-1.0.0
+semiespacio_rho_10_Z,2.468875870662475e-16,1e-10,rel,True,Z vs sqrt(i*omega*mu0*rho),MT1D-1.0.0
+semiespacio_rho_100_Z,2.3261184874189067e-16,1e-10,rel,True,Z vs sqrt(i*omega*mu0*rho),MT1D-1.0.0
+semiespacio_rho_1000_Z,2.5773484853373666e-16,1e-10,rel,True,Z vs sqrt(i*omega*mu0*rho),MT1D-1.0.0
+semiespacio_rhoa,6.661338147750939e-16,1e-10,rel,True,rho_a/rho - 1 en 4 resistividades,MT1D-1.0.0
+semiespacio_fase,1.4210854715202004e-14,1e-08,deg,True,|fase - 45| en 4 resistividades,MT1D-1.0.0
+matriz_vs_recursion_Z,1.2659009093075235e-15,1e-08,rel,True,"propagacion [E,H] vs recursion de impedancia",MT1D-1.0.0
+matriz_vs_recursion_fase,4.7819210039010713e-14,1e-06,deg,True,diferencia de fase entre formulaciones,MT1D-1.0.0
+limite_capa_espesor_nulo,8.796908206766452e-08,1e-05,rel,True,h1 -> 0 debe recuperar el semiespacio inferior,MT1D-1.0.0
+limite_capa_espesor_grande,2.400025673394875e-16,1e-05,rel,True,h1 -> infinito debe recuperar el semiespacio superior,MT1D-1.0.0
+convergencia_subdivision,2.7747310439639036e-15,1e-06,rel,True,"factores 2, 4 y 8 sobre el modelo de cuatro capas",MT1D-1.0.0
+fase_en_rango_1D,0.0,0.0,bool,True,0 < fase < 90 grados en todos los modelos,MT1D-1.0.0

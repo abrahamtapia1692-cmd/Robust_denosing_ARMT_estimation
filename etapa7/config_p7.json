@@ -1,0 +1,86 @@
+{
+  "config_version": "P7-CONFIG-1.0.0",
+  "stage": 7,
+  "gates": ["P7", "P7-I", "P7-S"],
+  "synthetic": true,
+  "scientific_claim": false,
+  "data_origin": "synthetic",
+  "random_seed": 42,
+  "channels": ["Ex", "Ey", "Hx", "Hy"],
+  "window_samples": 256,
+  "subbands": {
+    "D0": {
+      "freq_range_hz": [125.0, 1000.0],
+      "fs_hz": 4000.0
+    },
+    "D1": {
+      "freq_range_hz": [1000.0, 10000.0],
+      "fs_hz": 32000.0
+    }
+  },
+  "detector": {
+    "model_name": "SCNet18_Classifier",
+    "reference": "Zhang et al. (2024) identification/g12.py",
+    "in_channels": 4,
+    "num_classes": 2,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "epochs": 15,
+    "target_fpr_clean": 0.01,
+    "target_sensitivity": 0.90
+  },
+  "separator_b3_reproduced": {
+    "model_name": "SCNet18_Denoiser",
+    "reference": "Zhang et al. (2024) denoising/g15.py",
+    "in_channels": 4,
+    "out_channels": 4,
+    "data_size": 256,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "epochs": 15,
+    "loss": "MSELoss"
+  },
+  "separator_b4_adapted": {
+    "model_name": "CBAM_ResUNet_Denoiser",
+    "reference": "Plan v1.3 CBAM Adaptado con decodificador convolucional y balance de canal",
+    "in_channels": 4,
+    "base_channels": 32,
+    "reduction_ratio": 4,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "epochs": 15,
+    "loss_weights": {
+      "lambda_time": 1.0,
+      "lambda_freq": 0.5,
+      "lambda_id": 1.0
+    }
+  },
+  "baselines": {
+    "b0_raw_uncleaned": true,
+    "b3_cbam_reproduced": true,
+    "b4_cbam_adapted": true,
+    "b7_power_classifier": true,
+    "b8_wiener_filter": true,
+    "b10_noise_oracle": true
+  },
+  "evaluation": {
+    "clean_non_inferiority_max_z_bias_pct": 5.0,
+    "clean_non_inferiority_max_phase_deg": 2.0,
+    "over_suppression_min_energy_ratio": 0.80,
+    "target_b7_auc_cota": 0.65
+  },
+  "paths": {
+    "d_id_file": "etapa5/datasets/D_id.npz",
+    "d_sep_file": "etapa5/datasets/D_sep.npz",
+    "d_real_file": "etapa5/datasets/D_real.npz",
+    "detector_checkpoint": "etapa7/checkpoints/c_theta_scnet18.pt",
+    "separator_b3_checkpoint": "etapa7/checkpoints/d_psi_b3_scnet18.pt",
+    "separator_b4_checkpoint": "etapa7/checkpoints/d_psi_b4_cbam.pt",
+    "resumen_file": "etapa7/resumen_p7.json",
+    "reporte_file": "etapa7/reporte_p7.md",
+    "validacion_file": "etapa7/validacion_etapa7.json"
+  }
+}

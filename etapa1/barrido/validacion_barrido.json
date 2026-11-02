@@ -1,0 +1,1932 @@
+{
+  "validacion_version": "1.0.0",
+  "generated_at_utc": "2026-10-28T19:07:14.036465Z",
+  "stage": 1,
+  "extension": "barrido de los 15 registros",
+  "config_version": "P1-CONFIG-2.0.0",
+  "resultado": "APROBADO_CON_OBSERVACIONES",
+  "summary": {
+    "total": 366,
+    "pasa": 362,
+    "falla": 0,
+    "observaciones": 4
+  },
+  "totals": {
+    "records": 15,
+    "by_split": {
+      "prueba": 2,
+      "desarrollo": 10,
+      "validacion": 3
+    },
+    "samples": {
+      "D0": 288000000,
+      "D1": 21600000,
+      "total": 309600000
+    },
+    "jumps": {
+      "Ex": 5946,
+      "Ey": 6513,
+      "Hx": 47,
+      "Hy": 129,
+      "Hz": 23
+    },
+    "bad_samples_by_channel": 0,
+    "bad_union_samples": 0,
+    "dead_channels": 0,
+    "clip_runs": 0,
+    "stuck_runs": 0,
+    "zero_fill_runs": 0,
+    "records_falla": [],
+    "records_con_observaciones": [
+      "ARMT5-123-01-01-01",
+      "ARMT5-123-02-02-01",
+      "ARMT5-700-01-00-01",
+      "ARMT5-700-01-23-01",
+      "ARMT5-700-01-24-01",
+      "ARMT5-700-14-14-01",
+      "ARMT5-700-24-24-01",
+      "ARMT5-700-32-32-01",
+      "ARMT5-700-34-34-01",
+      "ARMT5-700-42-42-01",
+      "ARMT5-700-43-43-01",
+      "ARMT5-700-44-44-01",
+      "ARMT5-700-45-45-01",
+      "ARMT5-700-55-55-01",
+      "ARMT5-700-90-90-01"
+    ],
+    "calibration_uncovered": [],
+    "source_hash_mismatch": [],
+    "consistency_mismatch": []
+  },
+  "checks": [
+    {
+      "id": "P0-HASH-manifest.json",
+      "estado": "PASA",
+      "detalle": "etapa0/manifest.json: sin cambios"
+    },
+    {
+      "id": "P0-HASH-schema.json",
+      "estado": "PASA",
+      "detalle": "etapa0/schema.json: sin cambios"
+    },
+    {
+      "id": "P0-HASH-splits.csv",
+      "estado": "PASA",
+      "detalle": "etapa0/splits.csv: sin cambios"
+    },
+    {
+      "id": "P0-HASH-protocolo_validacion.md",
+      "estado": "PASA",
+      "detalle": "etapa0/protocolo_validacion.md: sin cambios"
+    },
+    {
+      "id": "P0-NO-SYNTHETIC",
+      "estado": "PASA",
+      "detalle": "sin identificadores SYN- en P0"
+    },
+    {
+      "id": "BARRIDO-CONFIG",
+      "estado": "PASA",
+      "detalle": "config P1-CONFIG-2.0.0, sin exportacion de series"
+    },
+    {
+      "id": "BARRIDO-RECORDS",
+      "estado": "PASA",
+      "detalle": "15 registros en el manifiesto"
+    },
+    {
+      "id": "BARRIDO-SPLITS-COVERAGE",
+      "estado": "PASA",
+      "detalle": "splits.csv y manifiesto cubren los mismos registros"
+    },
+    {
+      "id": "BARRIDO-FILES",
+      "estado": "PASA",
+      "detalle": "15 archivos de registro"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-123-01-01-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-123-02-02-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-700-01-00-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-700-01-23-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-700-01-24-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-700-14-14-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-700-24-24-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-700-32-32-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-700-34-34-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-700-42-42-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-700-43-43-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-700-44-44-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-700-45-45-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-700-55-55-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01.json"
+    },
+    {
+      "id": "BARRIDO-FILE-ARMT5-700-90-90-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01.json"
+    },
+    {
+      "id": "SPLIT-ARMT5-123-01-01-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 en split prueba"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-123-01-01-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-123-01-01-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-123-01-01-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-123-01-01-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D0: 3600000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-123-01-01-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-123-01-01-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-123-01-01-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-123-01-01-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D0: ARMT5-123-01-01-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-123-01-01-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-123-01-01-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-123-01-01-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-123-01-01-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-123-01-01-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-123-01-01-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D1: ARMT5-123-01-01-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-123-01-01-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-123-01-01-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-123-01-01-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-123-01-01-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-123-01-01-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-123-01-01-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-01-01-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-123-02-02-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 en split prueba"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-123-02-02-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-123-02-02-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-123-02-02-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-123-02-02-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D0: 3600000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-123-02-02-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-123-02-02-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-123-02-02-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-123-02-02-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D0: ARMT5-123-02-02-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-123-02-02-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-123-02-02-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-123-02-02-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-123-02-02-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-123-02-02-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-123-02-02-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D1: ARMT5-123-02-02-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-123-02-02-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-123-02-02-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-123-02-02-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-123-02-02-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-123-02-02-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-123-02-02-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-123-02-02-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-700-01-00-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 en split desarrollo"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-700-01-00-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-700-01-00-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-700-01-00-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-01-00-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D0: 21600000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-01-00-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-01-00-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-01-00-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-01-00-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D0: ARMT5-700-01-00-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-01-00-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-01-00-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-01-00-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-01-00-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-01-00-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-01-00-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D1: ARMT5-700-01-00-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-01-00-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-01-00-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-01-00-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-01-00-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-01-00-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-700-01-00-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-00-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-700-01-23-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 en split desarrollo"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-700-01-23-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-700-01-23-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-700-01-23-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-01-23-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D0: 21600000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-01-23-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-01-23-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-01-23-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-01-23-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D0: ARMT5-700-01-23-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-01-23-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-01-23-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-01-23-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-01-23-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-01-23-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-01-23-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D1: ARMT5-700-01-23-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-01-23-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-01-23-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-01-23-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-01-23-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-01-23-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-700-01-23-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-23-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-700-01-24-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 en split desarrollo"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-700-01-24-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-700-01-24-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-700-01-24-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-01-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D0: 21600000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-01-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-01-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-01-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-01-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D0: ARMT5-700-01-24-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-01-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-01-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-01-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-01-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-01-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-01-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D1: ARMT5-700-01-24-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-01-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-01-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-01-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-01-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-01-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-700-01-24-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-01-24-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-700-14-14-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 en split desarrollo"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-700-14-14-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-700-14-14-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-700-14-14-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-14-14-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D0: 21600000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-14-14-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-14-14-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-14-14-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-14-14-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D0: ARMT5-700-14-14-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-14-14-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-14-14-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-14-14-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-14-14-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-14-14-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-14-14-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D1: ARMT5-700-14-14-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-14-14-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-14-14-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-14-14-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-14-14-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-14-14-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-700-14-14-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-14-14-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-700-24-24-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 en split desarrollo"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-700-24-24-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-700-24-24-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-700-24-24-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-24-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D0: 21600000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-24-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-24-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-24-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-24-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D0: ARMT5-700-24-24-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-24-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-24-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-24-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-24-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-24-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-24-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D1: ARMT5-700-24-24-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-24-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-24-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-24-24-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-24-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-24-24-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-700-24-24-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-24-24-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-700-32-32-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 en split desarrollo"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-700-32-32-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-700-32-32-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-700-32-32-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-32-32-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D0: 21600000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-32-32-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-32-32-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-32-32-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-32-32-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D0: ARMT5-700-32-32-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-32-32-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-32-32-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-32-32-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-32-32-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-32-32-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-32-32-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D1: ARMT5-700-32-32-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-32-32-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-32-32-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-32-32-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-32-32-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-32-32-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-700-32-32-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-32-32-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-700-34-34-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 en split desarrollo"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-700-34-34-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-700-34-34-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-700-34-34-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-34-34-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D0: 21600000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-34-34-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-34-34-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-34-34-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-34-34-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D0: ARMT5-700-34-34-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-34-34-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-34-34-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-34-34-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-34-34-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-34-34-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-34-34-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D1: ARMT5-700-34-34-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-34-34-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-34-34-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-34-34-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-34-34-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-34-34-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-700-34-34-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-34-34-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-700-42-42-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 en split desarrollo"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-700-42-42-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-700-42-42-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-700-42-42-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-42-42-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D0: 21600000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-42-42-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-42-42-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-42-42-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-42-42-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D0: ARMT5-700-42-42-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-42-42-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-42-42-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-42-42-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-42-42-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-42-42-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-42-42-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D1: ARMT5-700-42-42-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-42-42-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-42-42-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-42-42-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-42-42-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-42-42-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-700-42-42-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-42-42-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-700-43-43-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 en split validacion"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-700-43-43-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-700-43-43-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-700-43-43-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-43-43-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D0: 21600000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-43-43-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-43-43-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-43-43-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-43-43-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D0: ARMT5-700-43-43-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-43-43-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-43-43-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-43-43-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-43-43-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-43-43-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-43-43-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D1: ARMT5-700-43-43-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-43-43-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-43-43-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-43-43-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-43-43-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-43-43-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-700-43-43-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-43-43-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-700-44-44-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 en split desarrollo"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-700-44-44-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-700-44-44-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-700-44-44-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-44-44-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D0: 14400000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-44-44-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-44-44-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-44-44-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-44-44-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D0: ARMT5-700-44-44-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-44-44-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-44-44-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-44-44-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-44-44-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-44-44-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-44-44-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D1: ARMT5-700-44-44-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-44-44-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-44-44-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-44-44-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-44-44-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-44-44-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-700-44-44-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-44-44-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-700-45-45-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 en split desarrollo"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-700-45-45-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-700-45-45-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-700-45-45-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-45-45-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D0: 21600000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-45-45-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-45-45-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-45-45-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-45-45-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D0: ARMT5-700-45-45-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-45-45-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-45-45-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-45-45-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-45-45-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-45-45-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-45-45-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D1: ARMT5-700-45-45-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-45-45-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-45-45-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-45-45-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-45-45-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-45-45-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-700-45-45-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-45-45-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-700-55-55-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 en split validacion"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-700-55-55-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-700-55-55-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-700-55-55-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-55-55-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D0: 21600000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-55-55-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-55-55-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-55-55-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-55-55-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D0: ARMT5-700-55-55-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-55-55-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-55-55-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-55-55-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-55-55-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-55-55-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-55-55-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D1: ARMT5-700-55-55-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-55-55-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-55-55-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-55-55-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-55-55-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-55-55-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-700-55-55-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-55-55-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "SPLIT-ARMT5-700-90-90-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 en split validacion"
+    },
+    {
+      "id": "SOURCE-HASH-ARMT5-700-90-90-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01: SHA-256 del SBF"
+    },
+    {
+      "id": "CONSISTENCY-ARMT5-700-90-90-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01: SBF y manifiesto coinciden en muestras, fs, canales y ADC"
+    },
+    {
+      "id": "SITE-UNRESOLVED-ARMT5-700-90-90-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01: identidad de sitio sigue no resuelta"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-90-90-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D0: 28800000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-90-90-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D0: 4000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-90-90-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D0: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-90-90-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D0: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-90-90-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D0: ARMT5-700-90-90-01_D0.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-90-90-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D0: 0 muestras en mascara"
+    },
+    {
+      "id": "LENGTH-ARMT5-700-90-90-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D1: 1440000 muestras"
+    },
+    {
+      "id": "FS-ARMT5-700-90-90-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D1: 32000.000 Hz"
+    },
+    {
+      "id": "CHANNELS-ARMT5-700-90-90-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D1: ['Ex', 'Ey', 'Hx', 'Hy', 'Hz']"
+    },
+    {
+      "id": "STATUS-CONSISTENT-ARMT5-700-90-90-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D1: estado PASA_CON_OBSERVACIONES derivado de sus comprobaciones"
+    },
+    {
+      "id": "MASK-FILE-ARMT5-700-90-90-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D1: ARMT5-700-90-90-01_D1.npz"
+    },
+    {
+      "id": "MASK-CONTENT-ARMT5-700-90-90-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D1: 0 muestras en mascara"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-90-90-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D0: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-90-90-01-D0",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D0: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "CAL-CHANNELS-ARMT5-700-90-90-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D1: 5 canales"
+    },
+    {
+      "id": "CAL-COVERAGE-ARMT5-700-90-90-01-D1",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01 D1: hashes, gain=1.0 y cobertura"
+    },
+    {
+      "id": "B-P0-05-ARMT5-700-90-90-01",
+      "estado": "PASA",
+      "detalle": "ARMT5-700-90-90-01: B-P0-05 CERRADO_PARA_ESTE_REGISTRO con QC PASA_CON_OBSERVACIONES"
+    },
+    {
+      "id": "CSV-QC-ROWS",
+      "estado": "PASA",
+      "detalle": "150 filas = 15 registros x 2 bandas x 5 canales"
+    },
+    {
+      "id": "CSV-CAL-ROWS",
+      "estado": "PASA",
+      "detalle": "150 filas de cobertura"
+    },
+    {
+      "id": "CSV-GAIN-ROWS",
+      "estado": "PASA",
+      "detalle": "15 filas de ganancia"
+    },
+    {
+      "id": "CSV-QC-COLUMNS",
+      "estado": "PASA",
+      "detalle": "columnas de qc_registros.csv"
+    },
+    {
+      "id": "CSV-CAL-COLUMNS",
+      "estado": "PASA",
+      "detalle": "columnas de calibracion_cobertura.csv"
+    },
+    {
+      "id": "CSV-GAIN-COLUMNS",
+      "estado": "PASA",
+      "detalle": "columnas de ganancias_registros.csv"
+    },
+    {
+      "id": "TOTAL-RECORDS",
+      "estado": "PASA",
+      "detalle": "15 registros, 10 en desarrollo"
+    },
+    {
+      "id": "TOTAL-TRACES",
+      "estado": "PASA",
+      "detalle": "30 trazas D0/D1 procesadas"
+    },
+    {
+      "id": "TOTAL-SAMPLES-D0",
+      "estado": "PASA",
+      "detalle": "D0: 288000000 muestras"
+    },
+    {
+      "id": "TOTAL-SAMPLES-D1",
+      "estado": "PASA",
+      "detalle": "D1: 21600000 muestras"
+    },
+    {
+      "id": "TOTAL-SAMPLES",
+      "estado": "PASA",
+      "detalle": "total: 309600000 muestras"
+    },
+    {
+      "id": "TOTAL-BAD-SAMPLES",
+      "estado": "PASA",
+      "detalle": "0 muestras en mascara (union)"
+    },
+    {
+      "id": "TOTAL-BAD-BY-CHANNEL",
+      "estado": "PASA",
+      "detalle": "0 muestras en mascara (suma por canal)"
+    },
+    {
+      "id": "TOTAL-JUMPS",
+      "estado": "PASA",
+      "detalle": "conteo de saltos por canal"
+    },
+    {
+      "id": "TOTAL-STATUS",
+      "estado": "PASA",
+      "detalle": "ningun registro en FALLA"
+    },
+    {
+      "id": "NO-NPY-IN-BARRIDO",
+      "estado": "PASA",
+      "detalle": "0 archivos .npy en barrido"
+    },
+    {
+      "id": "EXPORT-UNCHANGED",
+      "estado": "PASA",
+      "detalle": "las exportaciones del registro objetivo conservan su SHA-256"
+    },
+    {
+      "id": "ONLY-TARGET-EXPORTED",
+      "estado": "PASA",
+      "detalle": "solo el registro objetivo tiene series exportadas"
+    },
+    {
+      "id": "NO-SYNTHETIC",
+      "estado": "PASA",
+      "detalle": "sin SYN- en reportes del barrido"
+    },
+    {
+      "id": "NO-SYNTHETIC-P0",
+      "estado": "PASA",
+      "detalle": "manifiesto P0 sin SYN-"
+    },
+    {
+      "id": "P1-STATUS",
+      "estado": "PASA",
+      "detalle": "P1 PARCIAL con 5 razones"
+    },
+    {
+      "id": "P2T-BLOCKED",
+      "estado": "PASA",
+      "detalle": "P2-T sigue bloqueado por B-P0-03"
+    },
+    {
+      "id": "REPORT",
+      "estado": "PASA",
+      "detalle": "reporte con el alcance declarado"
+    },
+    {
+      "id": "OBS-CALIBRATION-VALIDITY",
+      "estado": "OBSERVACION",
+      "detalle": "La cobertura de calibracion es de frecuencia, no metrologica: B-P0-04 sigue abierto."
+    },
+    {
+      "id": "OBS-SITE",
+      "estado": "OBSERVACION",
+      "detalle": "Los 15 registros siguen sin identidad de sitio ni coordenadas verificadas (B-P0-01/B-P0-02)."
+    },
+    {
+      "id": "OBS-TIMEZONE",
+      "estado": "OBSERVACION",
+      "detalle": "La zona horaria de las marcas locales no esta declarada (B-P0-07)."
+    },
+    {
+      "id": "OBS-NO-INDEPENDENT-EXPORT",
+      "estado": "OBSERVACION",
+      "detalle": "No hay exportacion independiente del fabricante para contrastar el lector SBF."
+    }
+  ],
+  "blockers_cerrados": [
+    {
+      "id": "B-P0-05",
+      "alcance": "los 15 registros, bandas D0/D1",
+      "evidencia": "barrido/registros/*.json, barrido/mascaras/*.npz"
+    }
+  ],
+  "blockers_abiertos": [
+    "B-P0-01",
+    "B-P0-02",
+    "B-P0-03",
+    "B-P0-04",
+    "B-P0-06",
+    "B-P0-07"
+  ],
+  "p1_status": "PARCIAL",
+  "p2t_status": "BLOQUEADO",
+  "observaciones": [
+    {
+      "id": "OBS-CALIBRATION-VALIDITY",
+      "estado": "OBSERVACION",
+      "detalle": "La cobertura de calibracion es de frecuencia, no metrologica: B-P0-04 sigue abierto."
+    },
+    {
+      "id": "OBS-SITE",
+      "estado": "OBSERVACION",
+      "detalle": "Los 15 registros siguen sin identidad de sitio ni coordenadas verificadas (B-P0-01/B-P0-02)."
+    },
+    {
+      "id": "OBS-TIMEZONE",
+      "estado": "OBSERVACION",
+      "detalle": "La zona horaria de las marcas locales no esta declarada (B-P0-07)."
+    },
+    {
+      "id": "OBS-NO-INDEPENDENT-EXPORT",
+      "estado": "OBSERVACION",
+      "detalle": "No hay exportacion independiente del fabricante para contrastar el lector SBF."
+    }
+  ]
+}

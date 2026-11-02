@@ -1,0 +1,867 @@
+{
+  "registry_version": "P1-CALREG-1.0.0",
+  "generated_at_utc": "2026-10-28T18:50:45.904616Z",
+  "stage": 1,
+  "target_record": "ARMT5-700-14-14-01",
+  "source": {
+    "path_abs": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\01401401.sbf",
+    "path_ref": "ARMT_processing/ARMT_data/01401401.sbf",
+    "path_base": "software_root",
+    "sha256": "51b08fc815b2b171e6e02da5c7f009fd165704524990af36dcfeb6da9a30f8d2",
+    "size_bytes": 508952577,
+    "mtime_utc": "2021-01-18T18:48:26Z"
+  },
+  "p0_manifest_sha256": "5a67b03feab778e44578a37ef04982e85e56fc5f586f05c3c03e20c7b17ee435",
+  "manual_reference": "ARMT-5 user manual 1.0 ENG, Appendix 7, p. 70",
+  "phase_convention": "respuesta compleja = amplitud * exp(+i*phi), convencion de armt.calibration; el signo no se verifico contra un patron",
+  "gain_chain": {
+    "record_gain": 1.7782800197601318,
+    "directory_label": 1.8,
+    "table_gain": 1.0,
+    "applied_in_export": false,
+    "audit_file": "auditoria_ganancias.json"
+  },
+  "bands": {
+    "D0": {
+      "trace_index": 0,
+      "sample_rate_hz": 4000.0,
+      "review_range_hz": [
+        5.0,
+        1000.0
+      ],
+      "effective_range_hz": [
+        5.0000001782354415,
+        1000.0
+      ],
+      "interp_points": 29,
+      "channels": [
+        {
+          "channel": "Ex",
+          "band": "D0",
+          "sensor_type": "electrical_amplifier",
+          "serial_number": 100,
+          "record_gain": 1.7782800197601318,
+          "record_gain_db": 5.000002978142914,
+          "gain_directory": 1.8,
+          "gain_delta_rel": 0.01221403828335088,
+          "gain_delta_pct": 1.2214038283350879,
+          "table_index": 0,
+          "table_gain": 1.0,
+          "clb": {
+            "path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000100.clb",
+            "sha256": "781e02eba3a351c533494f78273ecad7495d017b339ac2cdf350a387987c9f42",
+            "size_bytes": 2288
+          },
+          "frequency_count_raw": 189,
+          "frequency_count_used": 188,
+          "frequency_min_hz": 5.0000001782354415,
+          "frequency_max_hz": 1000000.0,
+          "band_review_hz": [
+            5.0,
+            1000.0
+          ],
+          "support_covered": true,
+          "response_units": "V/V (manual App.7)",
+          "audit": {
+            "raw_frequency_count": 189,
+            "used_frequency_count": 188,
+            "near_duplicate_groups": [],
+            "near_duplicate_groups_after_cleaning": [],
+            "outliers_removed": [
+              {
+                "index": 89,
+                "frequency_hz": 10000.0,
+                "phase_deg": -8.095436096191406,
+                "log10_amplitude": 0.2591025307774544,
+                "step_vs_previous_kept_deg": -173.60839080810547
+              }
+            ],
+            "branch_corrections_360": 1,
+            "phase_unwrapped_min_deg": -381.45777320861816,
+            "phase_unwrapped_max_deg": -179.94720458984375,
+            "max_phase_step_deg": 12.66015625,
+            "max_phase_step_at_hz": 10000.01097958735,
+            "max_amplitude_step_db": 0.6482192873954773,
+            "max_amplitude_step_at_hz": 10000.01097958735,
+            "splice_detected": true,
+            "splice_groups": [
+              {
+                "center_hz": 10000.0,
+                "frequencies_hz": [
+                  9999.989020424706,
+                  10000.0,
+                  10000.01097958735
+                ],
+                "kept_frequencies_hz": [
+                  9999.989020424706,
+                  10000.01097958735
+                ],
+                "removed_indices": [
+                  89
+                ]
+              }
+            ],
+            "splice_phase_jump_deg": 12.66015625,
+            "splice_amplitude_jump_db": 0.6482192873954773,
+            "splice_width_hz": 0.02195916264463449,
+            "phase_continuous": true,
+            "amplitude_continuous": true,
+            "amplitude_units": "log10(amplitud) en el archivo; se exporta amplitud lineal"
+          },
+          "interpolated_response": {
+            "file": "respuesta_interpolada_D0.csv",
+            "points": 29,
+            "f_min_hz": 5.0000001782354415,
+            "f_max_hz": 1000.0,
+            "phase_continuous": true,
+            "usable_range_hz": [
+              5.0000001782354415,
+              1000.0
+            ],
+            "splice_note": "sin empalme dentro de la banda revisada"
+          },
+          "status": "candidata_no_verificada",
+          "notes": [
+            "SHA-256 verificado contra el manifiesto P0",
+            "No se aplico ganancia, amplitud ni fase a las series temporales",
+            "Fecha, certificado y cadena de aplicacion siguen ausentes (B-P0-04)",
+            "La tabla electrica contiene un empalme anomalo cerca de 10 kHz; el punto atipico se excluye solo para interpolar"
+          ]
+        },
+        {
+          "channel": "Ey",
+          "band": "D0",
+          "sensor_type": "electrical_amplifier",
+          "serial_number": 101,
+          "record_gain": 1.7782800197601318,
+          "record_gain_db": 5.000002978142914,
+          "gain_directory": 1.8,
+          "gain_delta_rel": 0.01221403828335088,
+          "gain_delta_pct": 1.2214038283350879,
+          "table_index": 0,
+          "table_gain": 1.0,
+          "clb": {
+            "path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000101.clb",
+            "sha256": "3b47ffbe0a0498289f4ced40883f98138c7763f50616ca972a5b9201ef218922",
+            "size_bytes": 2288
+          },
+          "frequency_count_raw": 189,
+          "frequency_count_used": 188,
+          "frequency_min_hz": 5.0000001782354415,
+          "frequency_max_hz": 1000000.0,
+          "band_review_hz": [
+            5.0,
+            1000.0
+          ],
+          "support_covered": true,
+          "response_units": "V/V (manual App.7)",
+          "audit": {
+            "raw_frequency_count": 189,
+            "used_frequency_count": 188,
+            "near_duplicate_groups": [],
+            "near_duplicate_groups_after_cleaning": [],
+            "outliers_removed": [
+              {
+                "index": 89,
+                "frequency_hz": 10000.0,
+                "phase_deg": -8.095436096191406,
+                "log10_amplitude": 0.2591025307774544,
+                "step_vs_previous_kept_deg": -173.60839080810547
+              }
+            ],
+            "branch_corrections_360": 1,
+            "phase_unwrapped_min_deg": -381.45777320861816,
+            "phase_unwrapped_max_deg": -179.94720458984375,
+            "max_phase_step_deg": 12.66015625,
+            "max_phase_step_at_hz": 10000.01097958735,
+            "max_amplitude_step_db": 0.6482192873954773,
+            "max_amplitude_step_at_hz": 10000.01097958735,
+            "splice_detected": true,
+            "splice_groups": [
+              {
+                "center_hz": 10000.0,
+                "frequencies_hz": [
+                  9999.989020424706,
+                  10000.0,
+                  10000.01097958735
+                ],
+                "kept_frequencies_hz": [
+                  9999.989020424706,
+                  10000.01097958735
+                ],
+                "removed_indices": [
+                  89
+                ]
+              }
+            ],
+            "splice_phase_jump_deg": 12.66015625,
+            "splice_amplitude_jump_db": 0.6482192873954773,
+            "splice_width_hz": 0.02195916264463449,
+            "phase_continuous": true,
+            "amplitude_continuous": true,
+            "amplitude_units": "log10(amplitud) en el archivo; se exporta amplitud lineal"
+          },
+          "interpolated_response": {
+            "file": "respuesta_interpolada_D0.csv",
+            "points": 29,
+            "f_min_hz": 5.0000001782354415,
+            "f_max_hz": 1000.0,
+            "phase_continuous": true,
+            "usable_range_hz": [
+              5.0000001782354415,
+              1000.0
+            ],
+            "splice_note": "sin empalme dentro de la banda revisada"
+          },
+          "status": "candidata_no_verificada",
+          "notes": [
+            "SHA-256 verificado contra el manifiesto P0",
+            "No se aplico ganancia, amplitud ni fase a las series temporales",
+            "Fecha, certificado y cadena de aplicacion siguen ausentes (B-P0-04)",
+            "La tabla electrica contiene un empalme anomalo cerca de 10 kHz; el punto atipico se excluye solo para interpolar"
+          ]
+        },
+        {
+          "channel": "Hx",
+          "band": "D0",
+          "sensor_type": "magnetic_sensor",
+          "serial_number": 200,
+          "record_gain": 1.7782800197601318,
+          "record_gain_db": 5.000002978142914,
+          "gain_directory": 1.8,
+          "gain_delta_rel": 0.01221403828335088,
+          "gain_delta_pct": 1.2214038283350879,
+          "table_index": 0,
+          "table_gain": 1.0,
+          "clb": {
+            "path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000200.clb",
+            "sha256": "ede90272fa32f9bb2c35dd94569072bc07acbe5a9febb47f68c4e4b2b02a4771",
+            "size_bytes": 1124
+          },
+          "frequency_count_raw": 93,
+          "frequency_count_used": 93,
+          "frequency_min_hz": 5.0000001782354415,
+          "frequency_max_hz": 15317.413357399793,
+          "band_review_hz": [
+            5.0,
+            1000.0
+          ],
+          "support_covered": true,
+          "response_units": "V/(A/m) (manual App.7); interpretacion no verificada",
+          "audit": {
+            "raw_frequency_count": 93,
+            "used_frequency_count": 93,
+            "near_duplicate_groups": [],
+            "near_duplicate_groups_after_cleaning": [],
+            "outliers_removed": [],
+            "branch_corrections_360": 0,
+            "phase_unwrapped_min_deg": -34.8593864440918,
+            "phase_unwrapped_max_deg": 79.70703125,
+            "max_phase_step_deg": 4.324948310852051,
+            "max_phase_step_at_hz": 91.82500453813334,
+            "max_amplitude_step_db": 0.6732779741287231,
+            "max_amplitude_step_at_hz": 5.5050002895832755,
+            "splice_detected": false,
+            "splice_groups": [],
+            "splice_phase_jump_deg": 0.0,
+            "splice_amplitude_jump_db": 0.0,
+            "splice_width_hz": 0.0,
+            "phase_continuous": true,
+            "amplitude_continuous": true,
+            "amplitude_units": "log10(amplitud) en el archivo; se exporta amplitud lineal"
+          },
+          "interpolated_response": {
+            "file": "respuesta_interpolada_D0.csv",
+            "points": 29,
+            "f_min_hz": 5.0000001782354415,
+            "f_max_hz": 1000.0,
+            "phase_continuous": true,
+            "usable_range_hz": [
+              5.0000001782354415,
+              1000.0
+            ],
+            "splice_note": "sin empalme dentro de la banda revisada"
+          },
+          "status": "candidata_no_verificada",
+          "notes": [
+            "SHA-256 verificado contra el manifiesto P0",
+            "No se aplico ganancia, amplitud ni fase a las series temporales",
+            "Fecha, certificado y cadena de aplicacion siguen ausentes (B-P0-04)",
+            "La tabla electrica contiene un empalme anomalo cerca de 10 kHz; el punto atipico se excluye solo para interpolar"
+          ]
+        },
+        {
+          "channel": "Hy",
+          "band": "D0",
+          "sensor_type": "magnetic_sensor",
+          "serial_number": 201,
+          "record_gain": 1.7782800197601318,
+          "record_gain_db": 5.000002978142914,
+          "gain_directory": 1.8,
+          "gain_delta_rel": 0.01221403828335088,
+          "gain_delta_pct": 1.2214038283350879,
+          "table_index": 0,
+          "table_gain": 1.0,
+          "clb": {
+            "path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000201.clb",
+            "sha256": "f125fc82e8266bfecd41fef4beba4aef1064bc50f047271d80631a9f1a17bf54",
+            "size_bytes": 1136
+          },
+          "frequency_count_raw": 94,
+          "frequency_count_used": 94,
+          "frequency_min_hz": 5.0000001782354415,
+          "frequency_max_hz": 15317.413357399793,
+          "band_review_hz": [
+            5.0,
+            1000.0
+          ],
+          "support_covered": true,
+          "response_units": "V/(A/m) (manual App.7); interpretacion no verificada",
+          "audit": {
+            "raw_frequency_count": 94,
+            "used_frequency_count": 94,
+            "near_duplicate_groups": [],
+            "near_duplicate_groups_after_cleaning": [],
+            "outliers_removed": [],
+            "branch_corrections_360": 0,
+            "phase_unwrapped_min_deg": -35.52945327758789,
+            "phase_unwrapped_max_deg": 79.81688690185547,
+            "max_phase_step_deg": 2.8949241638183594,
+            "max_phase_step_at_hz": 15317.413357399793,
+            "max_amplitude_step_db": 0.678858757019043,
+            "max_amplitude_step_at_hz": 6.529000388843337,
+            "splice_detected": false,
+            "splice_groups": [],
+            "splice_phase_jump_deg": 0.0,
+            "splice_amplitude_jump_db": 0.0,
+            "splice_width_hz": 0.0,
+            "phase_continuous": true,
+            "amplitude_continuous": true,
+            "amplitude_units": "log10(amplitud) en el archivo; se exporta amplitud lineal"
+          },
+          "interpolated_response": {
+            "file": "respuesta_interpolada_D0.csv",
+            "points": 29,
+            "f_min_hz": 5.0000001782354415,
+            "f_max_hz": 1000.0,
+            "phase_continuous": true,
+            "usable_range_hz": [
+              5.0000001782354415,
+              1000.0
+            ],
+            "splice_note": "sin empalme dentro de la banda revisada"
+          },
+          "status": "candidata_no_verificada",
+          "notes": [
+            "SHA-256 verificado contra el manifiesto P0",
+            "No se aplico ganancia, amplitud ni fase a las series temporales",
+            "Fecha, certificado y cadena de aplicacion siguen ausentes (B-P0-04)",
+            "La tabla electrica contiene un empalme anomalo cerca de 10 kHz; el punto atipico se excluye solo para interpolar"
+          ]
+        },
+        {
+          "channel": "Hz",
+          "band": "D0",
+          "sensor_type": "magnetic_sensor",
+          "serial_number": 202,
+          "record_gain": 1.7782800197601318,
+          "record_gain_db": 5.000002978142914,
+          "gain_directory": 1.8,
+          "gain_delta_rel": 0.01221403828335088,
+          "gain_delta_pct": 1.2214038283350879,
+          "table_index": 0,
+          "table_gain": 1.0,
+          "clb": {
+            "path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000202.clb",
+            "sha256": "95f58d4322992f326bb23e1e4d084d6547d67878ebd9824d25121df61b37455c",
+            "size_bytes": 1148
+          },
+          "frequency_count_raw": 95,
+          "frequency_count_used": 95,
+          "frequency_min_hz": 5.0000001782354415,
+          "frequency_max_hz": 15317.413357399793,
+          "band_review_hz": [
+            5.0,
+            1000.0
+          ],
+          "support_covered": true,
+          "response_units": "V/(A/m) (manual App.7); interpretacion no verificada",
+          "audit": {
+            "raw_frequency_count": 95,
+            "used_frequency_count": 95,
+            "near_duplicate_groups": [],
+            "near_duplicate_groups_after_cleaning": [],
+            "outliers_removed": [],
+            "branch_corrections_360": 0,
+            "phase_unwrapped_min_deg": -35.589508056640625,
+            "phase_unwrapped_max_deg": 79.6605224609375,
+            "max_phase_step_deg": 2.8952369689941406,
+            "max_phase_step_at_hz": 15317.413357399793,
+            "max_amplitude_step_db": 0.6696397066116333,
+            "max_amplitude_step_at_hz": 5.5050002895832755,
+            "splice_detected": false,
+            "splice_groups": [],
+            "splice_phase_jump_deg": 0.0,
+            "splice_amplitude_jump_db": 0.0,
+            "splice_width_hz": 0.0,
+            "phase_continuous": true,
+            "amplitude_continuous": true,
+            "amplitude_units": "log10(amplitud) en el archivo; se exporta amplitud lineal"
+          },
+          "interpolated_response": {
+            "file": "respuesta_interpolada_D0.csv",
+            "points": 29,
+            "f_min_hz": 5.0000001782354415,
+            "f_max_hz": 1000.0,
+            "phase_continuous": true,
+            "usable_range_hz": [
+              5.0000001782354415,
+              1000.0
+            ],
+            "splice_note": "sin empalme dentro de la banda revisada"
+          },
+          "status": "candidata_no_verificada",
+          "notes": [
+            "SHA-256 verificado contra el manifiesto P0",
+            "No se aplico ganancia, amplitud ni fase a las series temporales",
+            "Fecha, certificado y cadena de aplicacion siguen ausentes (B-P0-04)",
+            "La tabla electrica contiene un empalme anomalo cerca de 10 kHz; el punto atipico se excluye solo para interpolar"
+          ]
+        }
+      ],
+      "complete_channel_set": true
+    },
+    "D1": {
+      "trace_index": 1,
+      "sample_rate_hz": 32000.0,
+      "review_range_hz": [
+        1000.0,
+        10000.0
+      ],
+      "effective_range_hz": [
+        1000.0,
+        10000.0
+      ],
+      "interp_points": 13,
+      "channels": [
+        {
+          "channel": "Ex",
+          "band": "D1",
+          "sensor_type": "electrical_amplifier",
+          "serial_number": 100,
+          "record_gain": 1.7782800197601318,
+          "record_gain_db": 5.000002978142914,
+          "gain_directory": 1.8,
+          "gain_delta_rel": 0.01221403828335088,
+          "gain_delta_pct": 1.2214038283350879,
+          "table_index": 0,
+          "table_gain": 1.0,
+          "clb": {
+            "path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000100.clb",
+            "sha256": "781e02eba3a351c533494f78273ecad7495d017b339ac2cdf350a387987c9f42",
+            "size_bytes": 2288
+          },
+          "frequency_count_raw": 189,
+          "frequency_count_used": 188,
+          "frequency_min_hz": 5.0000001782354415,
+          "frequency_max_hz": 1000000.0,
+          "band_review_hz": [
+            1000.0,
+            10000.0
+          ],
+          "support_covered": true,
+          "response_units": "V/V (manual App.7)",
+          "audit": {
+            "raw_frequency_count": 189,
+            "used_frequency_count": 188,
+            "near_duplicate_groups": [],
+            "near_duplicate_groups_after_cleaning": [],
+            "outliers_removed": [
+              {
+                "index": 89,
+                "frequency_hz": 10000.0,
+                "phase_deg": -8.095436096191406,
+                "log10_amplitude": 0.2591025307774544,
+                "step_vs_previous_kept_deg": -173.60839080810547
+              }
+            ],
+            "branch_corrections_360": 1,
+            "phase_unwrapped_min_deg": -381.45777320861816,
+            "phase_unwrapped_max_deg": -179.94720458984375,
+            "max_phase_step_deg": 12.66015625,
+            "max_phase_step_at_hz": 10000.01097958735,
+            "max_amplitude_step_db": 0.6482192873954773,
+            "max_amplitude_step_at_hz": 10000.01097958735,
+            "splice_detected": true,
+            "splice_groups": [
+              {
+                "center_hz": 10000.0,
+                "frequencies_hz": [
+                  9999.989020424706,
+                  10000.0,
+                  10000.01097958735
+                ],
+                "kept_frequencies_hz": [
+                  9999.989020424706,
+                  10000.01097958735
+                ],
+                "removed_indices": [
+                  89
+                ]
+              }
+            ],
+            "splice_phase_jump_deg": 12.66015625,
+            "splice_amplitude_jump_db": 0.6482192873954773,
+            "splice_width_hz": 0.02195916264463449,
+            "phase_continuous": true,
+            "amplitude_continuous": true,
+            "amplitude_units": "log10(amplitud) en el archivo; se exporta amplitud lineal"
+          },
+          "interpolated_response": {
+            "file": "respuesta_interpolada_D1.csv",
+            "points": 13,
+            "f_min_hz": 1000.0,
+            "f_max_hz": 10000.0,
+            "phase_continuous": true,
+            "usable_range_hz": [
+              1000.0,
+              9900.0
+            ],
+            "splice_note": "El extremo superior coincide con el empalme de 10 kHz; usar hasta 9.9 kHz o tratar 10 kHz como escenario separado."
+          },
+          "status": "candidata_no_verificada",
+          "notes": [
+            "SHA-256 verificado contra el manifiesto P0",
+            "No se aplico ganancia, amplitud ni fase a las series temporales",
+            "Fecha, certificado y cadena de aplicacion siguen ausentes (B-P0-04)",
+            "La tabla electrica contiene un empalme anomalo cerca de 10 kHz; el punto atipico se excluye solo para interpolar"
+          ]
+        },
+        {
+          "channel": "Ey",
+          "band": "D1",
+          "sensor_type": "electrical_amplifier",
+          "serial_number": 101,
+          "record_gain": 1.7782800197601318,
+          "record_gain_db": 5.000002978142914,
+          "gain_directory": 1.8,
+          "gain_delta_rel": 0.01221403828335088,
+          "gain_delta_pct": 1.2214038283350879,
+          "table_index": 0,
+          "table_gain": 1.0,
+          "clb": {
+            "path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/e000101.clb",
+            "sha256": "3b47ffbe0a0498289f4ced40883f98138c7763f50616ca972a5b9201ef218922",
+            "size_bytes": 2288
+          },
+          "frequency_count_raw": 189,
+          "frequency_count_used": 188,
+          "frequency_min_hz": 5.0000001782354415,
+          "frequency_max_hz": 1000000.0,
+          "band_review_hz": [
+            1000.0,
+            10000.0
+          ],
+          "support_covered": true,
+          "response_units": "V/V (manual App.7)",
+          "audit": {
+            "raw_frequency_count": 189,
+            "used_frequency_count": 188,
+            "near_duplicate_groups": [],
+            "near_duplicate_groups_after_cleaning": [],
+            "outliers_removed": [
+              {
+                "index": 89,
+                "frequency_hz": 10000.0,
+                "phase_deg": -8.095436096191406,
+                "log10_amplitude": 0.2591025307774544,
+                "step_vs_previous_kept_deg": -173.60839080810547
+              }
+            ],
+            "branch_corrections_360": 1,
+            "phase_unwrapped_min_deg": -381.45777320861816,
+            "phase_unwrapped_max_deg": -179.94720458984375,
+            "max_phase_step_deg": 12.66015625,
+            "max_phase_step_at_hz": 10000.01097958735,
+            "max_amplitude_step_db": 0.6482192873954773,
+            "max_amplitude_step_at_hz": 10000.01097958735,
+            "splice_detected": true,
+            "splice_groups": [
+              {
+                "center_hz": 10000.0,
+                "frequencies_hz": [
+                  9999.989020424706,
+                  10000.0,
+                  10000.01097958735
+                ],
+                "kept_frequencies_hz": [
+                  9999.989020424706,
+                  10000.01097958735
+                ],
+                "removed_indices": [
+                  89
+                ]
+              }
+            ],
+            "splice_phase_jump_deg": 12.66015625,
+            "splice_amplitude_jump_db": 0.6482192873954773,
+            "splice_width_hz": 0.02195916264463449,
+            "phase_continuous": true,
+            "amplitude_continuous": true,
+            "amplitude_units": "log10(amplitud) en el archivo; se exporta amplitud lineal"
+          },
+          "interpolated_response": {
+            "file": "respuesta_interpolada_D1.csv",
+            "points": 13,
+            "f_min_hz": 1000.0,
+            "f_max_hz": 10000.0,
+            "phase_continuous": true,
+            "usable_range_hz": [
+              1000.0,
+              9900.0
+            ],
+            "splice_note": "El extremo superior coincide con el empalme de 10 kHz; usar hasta 9.9 kHz o tratar 10 kHz como escenario separado."
+          },
+          "status": "candidata_no_verificada",
+          "notes": [
+            "SHA-256 verificado contra el manifiesto P0",
+            "No se aplico ganancia, amplitud ni fase a las series temporales",
+            "Fecha, certificado y cadena de aplicacion siguen ausentes (B-P0-04)",
+            "La tabla electrica contiene un empalme anomalo cerca de 10 kHz; el punto atipico se excluye solo para interpolar"
+          ]
+        },
+        {
+          "channel": "Hx",
+          "band": "D1",
+          "sensor_type": "magnetic_sensor",
+          "serial_number": 200,
+          "record_gain": 1.7782800197601318,
+          "record_gain_db": 5.000002978142914,
+          "gain_directory": 1.8,
+          "gain_delta_rel": 0.01221403828335088,
+          "gain_delta_pct": 1.2214038283350879,
+          "table_index": 0,
+          "table_gain": 1.0,
+          "clb": {
+            "path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000200.clb",
+            "sha256": "ede90272fa32f9bb2c35dd94569072bc07acbe5a9febb47f68c4e4b2b02a4771",
+            "size_bytes": 1124
+          },
+          "frequency_count_raw": 93,
+          "frequency_count_used": 93,
+          "frequency_min_hz": 5.0000001782354415,
+          "frequency_max_hz": 15317.413357399793,
+          "band_review_hz": [
+            1000.0,
+            10000.0
+          ],
+          "support_covered": true,
+          "response_units": "V/(A/m) (manual App.7); interpretacion no verificada",
+          "audit": {
+            "raw_frequency_count": 93,
+            "used_frequency_count": 93,
+            "near_duplicate_groups": [],
+            "near_duplicate_groups_after_cleaning": [],
+            "outliers_removed": [],
+            "branch_corrections_360": 0,
+            "phase_unwrapped_min_deg": -34.8593864440918,
+            "phase_unwrapped_max_deg": 79.70703125,
+            "max_phase_step_deg": 4.324948310852051,
+            "max_phase_step_at_hz": 91.82500453813334,
+            "max_amplitude_step_db": 0.6732779741287231,
+            "max_amplitude_step_at_hz": 5.5050002895832755,
+            "splice_detected": false,
+            "splice_groups": [],
+            "splice_phase_jump_deg": 0.0,
+            "splice_amplitude_jump_db": 0.0,
+            "splice_width_hz": 0.0,
+            "phase_continuous": true,
+            "amplitude_continuous": true,
+            "amplitude_units": "log10(amplitud) en el archivo; se exporta amplitud lineal"
+          },
+          "interpolated_response": {
+            "file": "respuesta_interpolada_D1.csv",
+            "points": 13,
+            "f_min_hz": 1000.0,
+            "f_max_hz": 10000.0,
+            "phase_continuous": true,
+            "usable_range_hz": [
+              1000.0,
+              10000.0
+            ],
+            "splice_note": "sin empalme dentro de la banda revisada"
+          },
+          "status": "candidata_no_verificada",
+          "notes": [
+            "SHA-256 verificado contra el manifiesto P0",
+            "No se aplico ganancia, amplitud ni fase a las series temporales",
+            "Fecha, certificado y cadena de aplicacion siguen ausentes (B-P0-04)",
+            "La tabla electrica contiene un empalme anomalo cerca de 10 kHz; el punto atipico se excluye solo para interpolar"
+          ]
+        },
+        {
+          "channel": "Hy",
+          "band": "D1",
+          "sensor_type": "magnetic_sensor",
+          "serial_number": 201,
+          "record_gain": 1.7782800197601318,
+          "record_gain_db": 5.000002978142914,
+          "gain_directory": 1.8,
+          "gain_delta_rel": 0.01221403828335088,
+          "gain_delta_pct": 1.2214038283350879,
+          "table_index": 0,
+          "table_gain": 1.0,
+          "clb": {
+            "path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000201.clb",
+            "sha256": "f125fc82e8266bfecd41fef4beba4aef1064bc50f047271d80631a9f1a17bf54",
+            "size_bytes": 1136
+          },
+          "frequency_count_raw": 94,
+          "frequency_count_used": 94,
+          "frequency_min_hz": 5.0000001782354415,
+          "frequency_max_hz": 15317.413357399793,
+          "band_review_hz": [
+            1000.0,
+            10000.0
+          ],
+          "support_covered": true,
+          "response_units": "V/(A/m) (manual App.7); interpretacion no verificada",
+          "audit": {
+            "raw_frequency_count": 94,
+            "used_frequency_count": 94,
+            "near_duplicate_groups": [],
+            "near_duplicate_groups_after_cleaning": [],
+            "outliers_removed": [],
+            "branch_corrections_360": 0,
+            "phase_unwrapped_min_deg": -35.52945327758789,
+            "phase_unwrapped_max_deg": 79.81688690185547,
+            "max_phase_step_deg": 2.8949241638183594,
+            "max_phase_step_at_hz": 15317.413357399793,
+            "max_amplitude_step_db": 0.678858757019043,
+            "max_amplitude_step_at_hz": 6.529000388843337,
+            "splice_detected": false,
+            "splice_groups": [],
+            "splice_phase_jump_deg": 0.0,
+            "splice_amplitude_jump_db": 0.0,
+            "splice_width_hz": 0.0,
+            "phase_continuous": true,
+            "amplitude_continuous": true,
+            "amplitude_units": "log10(amplitud) en el archivo; se exporta amplitud lineal"
+          },
+          "interpolated_response": {
+            "file": "respuesta_interpolada_D1.csv",
+            "points": 13,
+            "f_min_hz": 1000.0,
+            "f_max_hz": 10000.0,
+            "phase_continuous": true,
+            "usable_range_hz": [
+              1000.0,
+              10000.0
+            ],
+            "splice_note": "sin empalme dentro de la banda revisada"
+          },
+          "status": "candidata_no_verificada",
+          "notes": [
+            "SHA-256 verificado contra el manifiesto P0",
+            "No se aplico ganancia, amplitud ni fase a las series temporales",
+            "Fecha, certificado y cadena de aplicacion siguen ausentes (B-P0-04)",
+            "La tabla electrica contiene un empalme anomalo cerca de 10 kHz; el punto atipico se excluye solo para interpolar"
+          ]
+        },
+        {
+          "channel": "Hz",
+          "band": "D1",
+          "sensor_type": "magnetic_sensor",
+          "serial_number": 202,
+          "record_gain": 1.7782800197601318,
+          "record_gain_db": 5.000002978142914,
+          "gain_directory": 1.8,
+          "gain_delta_rel": 0.01221403828335088,
+          "gain_delta_pct": 1.2214038283350879,
+          "table_index": 0,
+          "table_gain": 1.0,
+          "clb": {
+            "path_ref": "ARMT_processing/Calibrations/CLB_G1.8_Ex_shifted/h000202.clb",
+            "sha256": "95f58d4322992f326bb23e1e4d084d6547d67878ebd9824d25121df61b37455c",
+            "size_bytes": 1148
+          },
+          "frequency_count_raw": 95,
+          "frequency_count_used": 95,
+          "frequency_min_hz": 5.0000001782354415,
+          "frequency_max_hz": 15317.413357399793,
+          "band_review_hz": [
+            1000.0,
+            10000.0
+          ],
+          "support_covered": true,
+          "response_units": "V/(A/m) (manual App.7); interpretacion no verificada",
+          "audit": {
+            "raw_frequency_count": 95,
+            "used_frequency_count": 95,
+            "near_duplicate_groups": [],
+            "near_duplicate_groups_after_cleaning": [],
+            "outliers_removed": [],
+            "branch_corrections_360": 0,
+            "phase_unwrapped_min_deg": -35.589508056640625,
+            "phase_unwrapped_max_deg": 79.6605224609375,
+            "max_phase_step_deg": 2.8952369689941406,
+            "max_phase_step_at_hz": 15317.413357399793,
+            "max_amplitude_step_db": 0.6696397066116333,
+            "max_amplitude_step_at_hz": 5.5050002895832755,
+            "splice_detected": false,
+            "splice_groups": [],
+            "splice_phase_jump_deg": 0.0,
+            "splice_amplitude_jump_db": 0.0,
+            "splice_width_hz": 0.0,
+            "phase_continuous": true,
+            "amplitude_continuous": true,
+            "amplitude_units": "log10(amplitud) en el archivo; se exporta amplitud lineal"
+          },
+          "interpolated_response": {
+            "file": "respuesta_interpolada_D1.csv",
+            "points": 13,
+            "f_min_hz": 1000.0,
+            "f_max_hz": 10000.0,
+            "phase_continuous": true,
+            "usable_range_hz": [
+              1000.0,
+              10000.0
+            ],
+            "splice_note": "sin empalme dentro de la banda revisada"
+          },
+          "status": "candidata_no_verificada",
+          "notes": [
+            "SHA-256 verificado contra el manifiesto P0",
+            "No se aplico ganancia, amplitud ni fase a las series temporales",
+            "Fecha, certificado y cadena de aplicacion siguen ausentes (B-P0-04)",
+            "La tabla electrica contiene un empalme anomalo cerca de 10 kHz; el punto atipico se excluye solo para interpolar"
+          ]
+        }
+      ],
+      "complete_channel_set": true
+    }
+  },
+  "corrections_applied_to_export": {
+    "adc_to_uv": true,
+    "gain": false,
+    "clb_amplitude": false,
+    "clb_phase": false,
+    "dipole_length": false,
+    "polarity": false,
+    "orientation": false
+  },
+  "status": "PARCIAL",
+  "status_reasons": [
+    "Las calibraciones no tienen fecha, certificado ni cadena de aplicacion (B-P0-04)",
+    "La amplitud electrica no es reproducible entre directorios de ganancia",
+    "La unidad magnetica del manual (V/(A/m)) no coincide con el factor 1000 del codigo existente",
+    "No hay calibracion de entradas del receptor (archivos r*.clb)",
+    "No se aplico ninguna correccion de amplitud o fase a las series temporales"
+  ],
+  "blockers": [
+    "B-P0-04",
+    "B-P0-03",
+    "B-P0-01",
+    "B-P0-02"
+  ]
+}

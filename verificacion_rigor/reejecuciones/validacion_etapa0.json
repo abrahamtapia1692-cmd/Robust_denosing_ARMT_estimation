@@ -1,0 +1,219 @@
+{
+  "validacion_version": "1.0.0",
+  "generated_at_utc": "2026-10-30T15:46:15.169513Z",
+  "manifest_sha256": "5a67b03feab778e44578a37ef04982e85e56fc5f586f05c3c03e20c7b17ee435",
+  "schema_sha256": "bdbcfd867333413cbe0a25b92d3f848887f5b64f89de84411f627429a0bc433e",
+  "splits_sha256": "78cccedc36a0f3850fbc2017adcca6b66abeb77fc71a129280d9d87ea21d9352",
+  "protocolo_sha256": "3f33c0ff12fa2d0c66b642a7bcd209ef6e607ef02b31de994022b7fdae7045cb",
+  "samples_sha256": "6656a70089be51bd0d6e42fef48fef4a55e9e3eccc8806453a2a8846dd69726c",
+  "p0_status_declarado": "PARCIAL",
+  "p0_status_calculado": "PARCIAL",
+  "resultado": "RECHAZADO",
+  "summary": {
+    "total": 25,
+    "pasa": 22,
+    "falla": 2,
+    "observaciones": 1
+  },
+  "checks": [
+    {
+      "id": "V-01",
+      "estado": "PASA",
+      "detalle": "schema.json es un JSON Schema draft-07 valido"
+    },
+    {
+      "id": "V-02",
+      "estado": "PASA",
+      "detalle": "manifest.json cumple schema.json"
+    },
+    {
+      "id": "V-03",
+      "estado": "PASA",
+      "detalle": "Los tres artefactos obligatorios estan declarados"
+    },
+    {
+      "id": "V-04",
+      "estado": "PASA",
+      "detalle": "Hashes de artefactos verificados"
+    },
+    {
+      "id": "V-05",
+      "estado": "PASA",
+      "detalle": "El generador coincide con el hash declarado"
+    },
+    {
+      "id": "V-09",
+      "estado": "FALLA",
+      "detalle": "derived_products ARMT_processing/outputs/soundings_batch/survey_batch_summary.json cambió de tamano: 3946 != 2969"
+    },
+    {
+      "id": "V-10",
+      "estado": "FALLA",
+      "detalle": "Modulo ARMT_processing/armt/calibration.py cambió de tamano: 4306 != 4143"
+    },
+    {
+      "id": "V-12",
+      "estado": "PASA",
+      "detalle": "Cabecera de splits.csv correcta"
+    },
+    {
+      "id": "V-13",
+      "estado": "PASA",
+      "detalle": "splits.csv cubre exactamente los 15 registros"
+    },
+    {
+      "id": "V-14",
+      "estado": "PASA",
+      "detalle": "Filas de splits.csv consistentes con el manifiesto"
+    },
+    {
+      "id": "V-15",
+      "estado": "PASA",
+      "detalle": "Grupos de sitio disjuntos entre particiones"
+    },
+    {
+      "id": "V-16",
+      "estado": "PASA",
+      "detalle": "La campana de prueba no comparte grupo con desarrollo ni validacion"
+    },
+    {
+      "id": "V-17",
+      "estado": "PASA",
+      "detalle": "Conteos de particion coinciden"
+    },
+    {
+      "id": "V-18",
+      "estado": "PASA",
+      "detalle": "Alcance D0/D1 y exclusion D2/D3/RMT declarados"
+    },
+    {
+      "id": "V-19",
+      "estado": "PASA",
+      "detalle": "Cada registro tiene D0 y D1 y solo esas bandas estan in_scope"
+    },
+    {
+      "id": "V-20",
+      "estado": "PASA",
+      "detalle": "Conteos de registros y trazas coinciden"
+    },
+    {
+      "id": "V-21",
+      "estado": "PASA",
+      "detalle": "Incognitas U-01 a U-13 declaradas"
+    },
+    {
+      "id": "V-22",
+      "estado": "PASA",
+      "detalle": "Sin vinculos TEM-ARMT inventados"
+    },
+    {
+      "id": "V-23",
+      "estado": "PASA",
+      "detalle": "Calibraciones candidatas coherentes"
+    },
+    {
+      "id": "V-24",
+      "estado": "PASA",
+      "detalle": "Conteo de calibraciones coincide"
+    },
+    {
+      "id": "V-29",
+      "estado": "OBSERVACION",
+      "detalle": "Version del paquete inconsistente: __init__.py=0.2.0, pyproject=0.1.0"
+    },
+    {
+      "id": "V-25",
+      "estado": "PASA",
+      "detalle": "Estado P0 declarado PARCIAL y calculado PARCIAL"
+    },
+    {
+      "id": "V-26",
+      "estado": "PASA",
+      "detalle": "Existen bloqueos abiertos declarados"
+    },
+    {
+      "id": "V-27",
+      "estado": "PASA",
+      "detalle": "validacion_muestras.json cubre los 15 registros y aprueba"
+    },
+    {
+      "id": "V-28",
+      "estado": "PASA",
+      "detalle": "P0-12 refleja la lectura completa aprobada"
+    }
+  ],
+  "bloqueos_abiertos": [
+    {
+      "id": "B-P0-01",
+      "descripcion": "Nombre e identificador oficial del sitio desconocidos",
+      "estado": "abierto",
+      "severidad": "bloqueante",
+      "afecta_p0": true,
+      "evidencia": "site.site_id y site.site_name son null en los 15 registros"
+    },
+    {
+      "id": "B-P0-02",
+      "descripcion": "Coordenadas solo candidatas; politica de hemisferios no verificada",
+      "estado": "abierto",
+      "severidad": "bloqueante",
+      "afecta_p0": true,
+      "evidencia": "La lectura signed en radianes x 1e8 produce 17.8-19.3 N y 99.6-99.7 W, pero no hay confirmacion independiente del signo ni del datum"
+    },
+    {
+      "id": "B-P0-03",
+      "descripcion": "Vinculo TEM-ARMT no verificado",
+      "estado": "abierto",
+      "severidad": "bloqueante",
+      "afecta_p0": true,
+      "evidencia": "tem_link.status=no_verificado en los 15 registros y en los 6 sondeos"
+    },
+    {
+      "id": "B-P0-04",
+      "descripcion": "Calibraciones sin fecha, certificado ni cadena de aplicacion",
+      "estado": "abierto",
+      "severidad": "bloqueante",
+      "afecta_p0": true,
+      "evidencia": "73 archivos .clb emparejados solo por tipo, serie y ganancia"
+    },
+    {
+      "id": "B-P0-05",
+      "descripcion": "QC de clipping, canales muertos, saltos y huecos no evaluado",
+      "estado": "abierto",
+      "severidad": "mayor",
+      "afecta_p0": true,
+      "evidencia": "qc.status=no_evaluado en los 15 registros"
+    },
+    {
+      "id": "B-P0-06",
+      "descripcion": "Etiquetas de escenario y familia de ruido ausentes",
+      "estado": "abierto",
+      "severidad": "mayor",
+      "afecta_p0": true,
+      "evidencia": "No existe campo de escenario ni de familia en el inventario"
+    },
+    {
+      "id": "B-P0-07",
+      "descripcion": "Zona horaria de las marcas temporales no declarada",
+      "estado": "abierto",
+      "severidad": "mayor",
+      "afecta_p0": true,
+      "evidencia": "reader.summary declara timestamp_timezone=unspecified"
+    }
+  ],
+  "observaciones": [
+    {
+      "id": "P0-06",
+      "requisito": "Presupuesto de error distribuido y separacion de error aleatorio y sesgo",
+      "estado": "PARCIAL",
+      "evidencia": "protocolo_validacion.md, seccion 6",
+      "nota": "Las metas estan fijadas; la distribucion instrumental requiere P1"
+    },
+    {
+      "id": "P0-09",
+      "requisito": "Manifiesto completo para el piloto",
+      "estado": "PARCIAL",
+      "evidencia": "manifest.json",
+      "nota": "Faltan identidad de sitio, coordenadas, vinculo TEM y validez de calibracion"
+    }
+  ]
+}

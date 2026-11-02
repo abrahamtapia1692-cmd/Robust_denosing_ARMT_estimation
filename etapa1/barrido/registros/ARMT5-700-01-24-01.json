@@ -1,0 +1,1555 @@
+{
+  "record_version": "P1-BARRIDO-1.0.0",
+  "record_id": "ARMT5-700-01-24-01",
+  "generated_at_utc": "2026-10-28T18:59:56.469614Z",
+  "split": {
+    "split": "desarrollo",
+    "split_group": "S2021-A700-L001",
+    "campaign_group": "C2021-A700",
+    "protocol_version": "P0-SPLITS-1.0.0",
+    "assignment_basis": "record_level_site_holdout",
+    "frozen": true
+  },
+  "campaign": {
+    "year": 2021,
+    "campaign_group": "C2021-A700",
+    "label": null
+  },
+  "site": {
+    "site_id": null,
+    "site_name": null,
+    "status": "no_resuelto",
+    "note": "Identidad de sitio sin resolver (B-P0-01/B-P0-02)."
+  },
+  "source": {
+    "path_abs": "D:\\ARRT_software\\ARMT_processing\\ARMT_data\\00102401.sbf",
+    "path_ref": "ARMT_processing/ARMT_data/00102401.sbf",
+    "path_base": "software_root",
+    "sha256": "02cceed835e3bebec7179eba8124e979f57054098ec7b1e6907cfc143a4d49a5",
+    "size_bytes": 508952577,
+    "mtime_utc": "2021-01-17T19:34:46Z"
+  },
+  "source_sha256_recomputed": "02cceed835e3bebec7179eba8124e979f57054098ec7b1e6907cfc143a4d49a5",
+  "source_sha256_match": true,
+  "consistency": {
+    "bands": {
+      "D0": {
+        "sample_count_match": true,
+        "sample_rate_match": true,
+        "channels_match": true,
+        "adc_to_uv_match": true,
+        "receiver_serial_match": true
+      },
+      "D1": {
+        "sample_count_match": true,
+        "sample_rate_match": true,
+        "channels_match": true,
+        "adc_to_uv_match": true,
+        "receiver_serial_match": true
+      }
+    },
+    "all_match": true
+  },
+  "settings_summary": {
+    "gain_values_unique": [
+      1.0
+    ],
+    "gain_db": [
+      0.0
+    ],
+    "nearest_gain_directory": {
+      "directory": "CLB_G1_Ex_shifted",
+      "label": "1",
+      "delta_pct": 0.0
+    },
+    "adc_to_uv": [
+      0.5960090756416321,
+      0.5960000157356262
+    ],
+    "electric_dipole_lengths_cm": [
+      2000.0,
+      2000.0
+    ],
+    "sensor_azimuth_degrees": [
+      0.0,
+      90.0,
+      0.0,
+      90.0,
+      0.0
+    ],
+    "delay_seconds": 0.0,
+    "settings_sections": 4
+  },
+  "bands": {
+    "D0": {
+      "trace_index": 0,
+      "sample_rate_hz": 4000.0,
+      "n_samples": 21600000,
+      "duration_s": 5400.0,
+      "channels": [
+        "Ex",
+        "Ey",
+        "Hx",
+        "Hy",
+        "Hz"
+      ],
+      "thresholds": {
+        "clip_run_samples": 4,
+        "stuck_run_samples": 2000,
+        "zero_fill_run_samples": 400,
+        "guard_samples": 40,
+        "jump_guard_samples": 20,
+        "edge_samples": 400
+      },
+      "sbf_audit": {
+        "trace_index": 0,
+        "band": "D0",
+        "sample_rate_hz": 4000.0,
+        "sample_count": 21600000,
+        "duration_s": 5400.0,
+        "bytes_per_sample": 4,
+        "channel_count": 5,
+        "channels": [
+          "Ex",
+          "Ey",
+          "Hx",
+          "Hy",
+          "Hz"
+        ],
+        "receiver_serial": 1,
+        "adc_to_uv": [
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321
+        ],
+        "settings_match": "inferred_single_settings_0xabcd",
+        "settings_count": 1,
+        "independent_export_comparison": "no_disponible",
+        "note": "No hay exportacion independiente del software del fabricante para comparar signo, bits e intercalado. Se usa el lector ARMT_processing y se verifica la longitud leida."
+      },
+      "checks": {
+        "clipping": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "plateaus >= 1.000 ms en el minimo o maximo global"
+        },
+        "canales_muertos": {
+          "estado": "PASA",
+          "channels": [],
+          "detail": "std <= 1.000 counts"
+        },
+        "valores_pegados": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos constantes >= 0.500 s"
+        },
+        "relleno_de_ceros": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos de ceros >= 0.100 s"
+        },
+        "saltos": {
+          "estado": "OBSERVACION",
+          "counts": {
+            "Ex": 16,
+            "Ey": 474,
+            "Hx": 0,
+            "Hy": 1,
+            "Hz": 0
+          },
+          "enmascarados": false,
+          "detail": "|diff - mediana| > 50.0 sigma robusta; se reportan como candidatos, no se enmascaran para no borrar sferics"
+        },
+        "muestras_faltantes": {
+          "estado": "PASA",
+          "expected_samples": 21600000,
+          "read_samples": 21600000,
+          "match": true,
+          "note": "El lector entrega exactamente sample_count; no hay huecos declarados en el SBF."
+        },
+        "transitorios_conmutacion": {
+          "estado": "NO_APLICABLE",
+          "detail": "El registro tiene una sola configuracion de ganancia (settings_count=1); el detector de cambios de media por bloque queda como observacion.",
+          "detector_por_bloque": {
+            "Ex": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": 0.06775000000016007,
+              "robust_sigma": 14.101749900000101,
+              "threshold": 141.017499000001,
+              "count": 19,
+              "events": [
+                {
+                  "block_index": 134,
+                  "time_s": 134.0,
+                  "delta_mean_counts": 166.42849999999999
+                },
+                {
+                  "block_index": 138,
+                  "time_s": 138.0,
+                  "delta_mean_counts": -267.7669999999998
+                },
+                {
+                  "block_index": 497,
+                  "time_s": 497.0,
+                  "delta_mean_counts": -1529.5590000000002
+                },
+                {
+                  "block_index": 498,
+                  "time_s": 498.0,
+                  "delta_mean_counts": 489.38974999999994
+                },
+                {
+                  "block_index": 499,
+                  "time_s": 499.0,
+                  "delta_mean_counts": 2869.0470000000005
+                },
+                {
+                  "block_index": 501,
+                  "time_s": 501.0,
+                  "delta_mean_counts": -377.79275000000007
+                },
+                {
+                  "block_index": 502,
+                  "time_s": 502.0,
+                  "delta_mean_counts": -473.8319999999999
+                },
+                {
+                  "block_index": 503,
+                  "time_s": 503.0,
+                  "delta_mean_counts": -325.95700000000033
+                },
+                {
+                  "block_index": 504,
+                  "time_s": 504.0,
+                  "delta_mean_counts": -147.25475000000006
+                },
+                {
+                  "block_index": 508,
+                  "time_s": 508.0,
+                  "delta_mean_counts": -155.04624999999987
+                },
+                {
+                  "block_index": 515,
+                  "time_s": 515.0,
+                  "delta_mean_counts": -248.7867500000002
+                },
+                {
+                  "block_index": 574,
+                  "time_s": 574.0,
+                  "delta_mean_counts": -270.9465
+                },
+                {
+                  "block_index": 575,
+                  "time_s": 575.0,
+                  "delta_mean_counts": 174.7800000000002
+                },
+                {
+                  "block_index": 576,
+                  "time_s": 576.0,
+                  "delta_mean_counts": 190.38049999999976
+                },
+                {
+                  "block_index": 583,
+                  "time_s": 583.0,
+                  "delta_mean_counts": -181.9889999999998
+                },
+                {
+                  "block_index": 595,
+                  "time_s": 595.0,
+                  "delta_mean_counts": 187.57674999999995
+                },
+                {
+                  "block_index": 596,
+                  "time_s": 596.0,
+                  "delta_mean_counts": 217.85175000000027
+                },
+                {
+                  "block_index": 598,
+                  "time_s": 598.0,
+                  "delta_mean_counts": 163.33449999999993
+                },
+                {
+                  "block_index": 599,
+                  "time_s": 599.0,
+                  "delta_mean_counts": -155.87800000000016
+                }
+              ]
+            },
+            "Ey": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.2642500000001746,
+              "robust_sigma": 55.26836280000036,
+              "threshold": 552.6836280000036,
+              "count": 19,
+              "events": [
+                {
+                  "block_index": 494,
+                  "time_s": 494.0,
+                  "delta_mean_counts": -3575.4805
+                },
+                {
+                  "block_index": 495,
+                  "time_s": 495.0,
+                  "delta_mean_counts": -127441.2665
+                },
+                {
+                  "block_index": 496,
+                  "time_s": 496.0,
+                  "delta_mean_counts": 173004.78625
+                },
+                {
+                  "block_index": 497,
+                  "time_s": 497.0,
+                  "delta_mean_counts": 16131.33625
+                },
+                {
+                  "block_index": 498,
+                  "time_s": 498.0,
+                  "delta_mean_counts": -22134.636249999996
+                },
+                {
+                  "block_index": 499,
+                  "time_s": 499.0,
+                  "delta_mean_counts": -18094.762250000003
+                },
+                {
+                  "block_index": 500,
+                  "time_s": 500.0,
+                  "delta_mean_counts": -5735.7697499999995
+                },
+                {
+                  "block_index": 502,
+                  "time_s": 502.0,
+                  "delta_mean_counts": -3992.2067499999994
+                },
+                {
+                  "block_index": 503,
+                  "time_s": 503.0,
+                  "delta_mean_counts": -2445.83575
+                },
+                {
+                  "block_index": 504,
+                  "time_s": 504.0,
+                  "delta_mean_counts": -2355.401
+                },
+                {
+                  "block_index": 505,
+                  "time_s": 505.0,
+                  "delta_mean_counts": -1286.1622499999994
+                },
+                {
+                  "block_index": 506,
+                  "time_s": 506.0,
+                  "delta_mean_counts": -579.4417500000009
+                },
+                {
+                  "block_index": 508,
+                  "time_s": 508.0,
+                  "delta_mean_counts": -11782.882
+                },
+                {
+                  "block_index": 509,
+                  "time_s": 509.0,
+                  "delta_mean_counts": -7305.1275000000005
+                },
+                {
+                  "block_index": 510,
+                  "time_s": 510.0,
+                  "delta_mean_counts": 26467.7435
+                },
+                {
+                  "block_index": 511,
+                  "time_s": 511.0,
+                  "delta_mean_counts": -2263.2392500000005
+                },
+                {
+                  "block_index": 513,
+                  "time_s": 513.0,
+                  "delta_mean_counts": -2606.4387499999993
+                },
+                {
+                  "block_index": 514,
+                  "time_s": 514.0,
+                  "delta_mean_counts": -1604.3112499999997
+                },
+                {
+                  "block_index": 515,
+                  "time_s": 515.0,
+                  "delta_mean_counts": -1030.8557499999997
+                }
+              ]
+            },
+            "Hx": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.043000000000006366,
+              "robust_sigma": 9.141340950000004,
+              "threshold": 91.41340950000003,
+              "count": 2,
+              "events": [
+                {
+                  "block_index": 505,
+                  "time_s": 505.0,
+                  "delta_mean_counts": 105.221
+                },
+                {
+                  "block_index": 506,
+                  "time_s": 506.0,
+                  "delta_mean_counts": -162.8075
+                }
+              ]
+            },
+            "Hy": {
+              "estado": "OBSERVACION",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": -0.02174999999999727,
+              "robust_sigma": 9.479003100000025,
+              "threshold": 94.79003100000025,
+              "count": 3,
+              "events": [
+                {
+                  "block_index": 505,
+                  "time_s": 505.0,
+                  "delta_mean_counts": -238.98425
+                },
+                {
+                  "block_index": 506,
+                  "time_s": 506.0,
+                  "delta_mean_counts": 483.8755
+                },
+                {
+                  "block_index": 507,
+                  "time_s": 507.0,
+                  "delta_mean_counts": -224.46124999999995
+                }
+              ]
+            },
+            "Hz": {
+              "estado": "PASA",
+              "n_blocks": 5400,
+              "block_s": 1.0,
+              "median_diff": 0.14000000000032742,
+              "robust_sigma": 9.322959449999416,
+              "threshold": 93.22959449999416,
+              "count": 0,
+              "events": []
+            }
+          }
+        }
+      },
+      "per_channel": {
+        "Ex": {
+          "minimum_counts": -56480,
+          "maximum_counts": 26499,
+          "mean_counts": 2190.0732358796295,
+          "std_counts": 1849.6658193011249,
+          "zero_count": 5417,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 198607,
+          "jump_count": 16,
+          "jump_fraction": 7.407407750342952e-07,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 314.3112,
+            "threshold_counts": 15715.56,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              7637607,
+              7637648
+            ],
+            [
+              14304396,
+              14304441
+            ],
+            [
+              15264481,
+              15264522
+            ],
+            [
+              16134215,
+              16134257
+            ],
+            [
+              16134732,
+              16134773
+            ],
+            [
+              17010671,
+              17010713
+            ],
+            [
+              17425779,
+              17425820
+            ],
+            [
+              17559306,
+              17559347
+            ],
+            [
+              21369032,
+              21369073
+            ],
+            [
+              21576818,
+              21576863
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 6063,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Ey": {
+          "minimum_counts": -606665,
+          "maximum_counts": 405773,
+          "mean_counts": 3435.385450324074,
+          "std_counts": 4658.408374789174,
+          "zero_count": 441,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 755769,
+          "jump_count": 474,
+          "jump_fraction": 2.1944445460390995e-05,
+          "jump_threshold": {
+            "median_diff_counts": 3.0,
+            "robust_sigma_counts": 345.44579999999996,
+            "threshold_counts": 17272.289999999997,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              1981468,
+              1981534
+            ],
+            [
+              1981908,
+              1981955
+            ],
+            [
+              1981977,
+              1982039
+            ],
+            [
+              1982091,
+              1982368
+            ],
+            [
+              1982486,
+              1982632
+            ],
+            [
+              1982674,
+              1982735
+            ],
+            [
+              1982775,
+              1982841
+            ],
+            [
+              1982882,
+              1983052
+            ],
+            [
+              1983057,
+              1983394
+            ],
+            [
+              1984403,
+              1984467
+            ],
+            [
+              1984562,
+              1984612
+            ],
+            [
+              1985197,
+              1985238
+            ],
+            [
+              1985240,
+              1985283
+            ],
+            [
+              1985337,
+              1985384
+            ],
+            [
+              1985400,
+              1985459
+            ],
+            [
+              1987221,
+              1987357
+            ],
+            [
+              1987426,
+              1987495
+            ],
+            [
+              1990238,
+              1990283
+            ],
+            [
+              1990366,
+              1990407
+            ],
+            [
+              1990592,
+              1990633
+            ],
+            [
+              1991584,
+              1991639
+            ],
+            [
+              1991768,
+              1991813
+            ],
+            [
+              1991847,
+              1991889
+            ],
+            [
+              1992052,
+              1992149
+            ],
+            [
+              1992374,
+              1992460
+            ],
+            [
+              1993287,
+              1993328
+            ],
+            [
+              1997439,
+              1997487
+            ],
+            [
+              1997831,
+              1997877
+            ],
+            [
+              1997911,
+              1997993
+            ],
+            [
+              2005700,
+              2005741
+            ],
+            [
+              2009912,
+              2009974
+            ],
+            [
+              2032723,
+              2032836
+            ],
+            [
+              2035403,
+              2035453
+            ],
+            [
+              2035468,
+              2035509
+            ],
+            [
+              2036455,
+              2036567
+            ],
+            [
+              2037877,
+              2038034
+            ],
+            [
+              2042005,
+              2042053
+            ],
+            [
+              2045850,
+              2045925
+            ],
+            [
+              14304397,
+              14304438
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 8466,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hx": {
+          "minimum_counts": -14045,
+          "maximum_counts": 13578,
+          "mean_counts": 739.5783711111111,
+          "std_counts": 2323.55322141009,
+          "zero_count": 2369,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 1215221,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 403.2672,
+            "threshold_counts": 20163.36,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 8242,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hy": {
+          "minimum_counts": -23833,
+          "maximum_counts": 8602,
+          "mean_counts": 398.46025837962964,
+          "std_counts": 1399.394422602728,
+          "zero_count": 3088,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 1629417,
+          "jump_count": 1,
+          "jump_fraction": 4.629629843964345e-08,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 321.7242,
+            "threshold_counts": 16086.21,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              14304398,
+              14304439
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 4923,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hz": {
+          "minimum_counts": -16998,
+          "maximum_counts": 22990,
+          "mean_counts": 2712.4893243055553,
+          "std_counts": 1722.5614644711081,
+          "zero_count": 1827,
+          "fraction_at_minimum": 4.6296296296296295e-08,
+          "fraction_at_maximum": 4.6296296296296295e-08,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 0.00075,
+          "longest_constant_run_start_sample": 598540,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 348.411,
+            "threshold_counts": 17420.55,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 5843,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        }
+      },
+      "bad_mask": {
+        "file": "ARMT5-700-01-24-01_D0.npz",
+        "sha256": "3074161eb56f3f1340d2817f99cbf3b14ab70799672025a3a0067164538a8127",
+        "total_bad_samples_summed": 0,
+        "union_bad_samples": 0,
+        "union_bad_fraction": 0.0,
+        "max_channel_bad_fraction": 0.0,
+        "guard_samples": 40,
+        "bitorder": "little",
+        "relative_path": "barrido/mascaras/ARMT5-700-01-24-01_D0.npz"
+      },
+      "status": "PASA_CON_OBSERVACIONES",
+      "manifest_trace": {
+        "index": 0,
+        "section_index": 1,
+        "sample_count": 21600000,
+        "sample_rate_hz": 4000.0,
+        "duration_seconds": 5400.0,
+        "start_time_local": "2021-01-17T18:03:56",
+        "adc_to_uv": [
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321,
+          0.5960090756416321
+        ]
+      }
+    },
+    "D1": {
+      "trace_index": 1,
+      "sample_rate_hz": 32000.0,
+      "n_samples": 1440000,
+      "duration_s": 45.0,
+      "channels": [
+        "Ex",
+        "Ey",
+        "Hx",
+        "Hy",
+        "Hz"
+      ],
+      "thresholds": {
+        "clip_run_samples": 32,
+        "stuck_run_samples": 16000,
+        "zero_fill_run_samples": 3200,
+        "guard_samples": 320,
+        "jump_guard_samples": 160,
+        "edge_samples": 3200
+      },
+      "sbf_audit": {
+        "trace_index": 1,
+        "band": "D1",
+        "sample_rate_hz": 32000.0,
+        "sample_count": 1440000,
+        "duration_s": 45.0,
+        "bytes_per_sample": 4,
+        "channel_count": 5,
+        "channels": [
+          "Ex",
+          "Ey",
+          "Hx",
+          "Hy",
+          "Hz"
+        ],
+        "receiver_serial": 1,
+        "adc_to_uv": [
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262
+        ],
+        "settings_match": "inferred_single_settings_0xabcd",
+        "settings_count": 1,
+        "independent_export_comparison": "no_disponible",
+        "note": "No hay exportacion independiente del software del fabricante para comparar signo, bits e intercalado. Se usa el lector ARMT_processing y se verifica la longitud leida."
+      },
+      "checks": {
+        "clipping": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "plateaus >= 1.000 ms en el minimo o maximo global"
+        },
+        "canales_muertos": {
+          "estado": "PASA",
+          "channels": [],
+          "detail": "std <= 1.000 counts"
+        },
+        "valores_pegados": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos constantes >= 0.500 s"
+        },
+        "relleno_de_ceros": {
+          "estado": "PASA",
+          "runs": 0,
+          "detail": "tramos de ceros >= 0.100 s"
+        },
+        "saltos": {
+          "estado": "OBSERVACION",
+          "counts": {
+            "Ex": 31,
+            "Ey": 12,
+            "Hx": 0,
+            "Hy": 0,
+            "Hz": 0
+          },
+          "enmascarados": false,
+          "detail": "|diff - mediana| > 50.0 sigma robusta; se reportan como candidatos, no se enmascaran para no borrar sferics"
+        },
+        "muestras_faltantes": {
+          "estado": "PASA",
+          "expected_samples": 1440000,
+          "read_samples": 1440000,
+          "match": true,
+          "note": "El lector entrega exactamente sample_count; no hay huecos declarados en el SBF."
+        },
+        "transitorios_conmutacion": {
+          "estado": "NO_APLICABLE",
+          "detail": "El registro tiene una sola configuracion de ganancia (settings_count=1); el detector de cambios de media por bloque queda como observacion.",
+          "detector_por_bloque": {
+            "Ex": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": 0.36243750000016917,
+              "robust_sigma": 13.338164568750113,
+              "threshold": 133.38164568750113,
+              "count": 0,
+              "events": []
+            },
+            "Ey": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": 3.9171406249997744,
+              "robust_sigma": 75.74703012187533,
+              "threshold": 757.4703012187533,
+              "count": 0,
+              "events": []
+            },
+            "Hx": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -0.7245156250000377,
+              "robust_sigma": 9.825838837499978,
+              "threshold": 98.25838837499978,
+              "count": 0,
+              "events": []
+            },
+            "Hy": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -0.33846874999997567,
+              "robust_sigma": 7.589939043749976,
+              "threshold": 75.89939043749976,
+              "count": 0,
+              "events": []
+            },
+            "Hz": {
+              "estado": "PASA",
+              "n_blocks": 45,
+              "block_s": 1.0,
+              "median_diff": -1.5128437499997744,
+              "robust_sigma": 8.701912209375234,
+              "threshold": 87.01912209375234,
+              "count": 0,
+              "events": []
+            }
+          }
+        }
+      },
+      "per_channel": {
+        "Ex": {
+          "minimum_counts": -102298,
+          "maximum_counts": 86684,
+          "mean_counts": 2198.686711111111,
+          "std_counts": 1959.2029356114192,
+          "zero_count": 313,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 4085,
+          "jump_count": 31,
+          "jump_fraction": 2.152779272763384e-05,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 787.2606,
+            "threshold_counts": 39363.03,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              436965,
+              437419
+            ],
+            [
+              493826,
+              494163
+            ],
+            [
+              500502,
+              500830
+            ],
+            [
+              519696,
+              520017
+            ],
+            [
+              521008,
+              521332
+            ],
+            [
+              523651,
+              523972
+            ],
+            [
+              526432,
+              526754
+            ],
+            [
+              730721,
+              731045
+            ],
+            [
+              988118,
+              988443
+            ],
+            [
+              1362269,
+              1362590
+            ],
+            [
+              1374608,
+              1374929
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 8154,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Ey": {
+          "minimum_counts": -65838,
+          "maximum_counts": 70144,
+          "mean_counts": 3410.472440972222,
+          "std_counts": 1663.647209875522,
+          "zero_count": 25,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 1922,
+          "jump_count": 12,
+          "jump_fraction": 8.333339120374388e-06,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 809.4996,
+            "threshold_counts": 40474.979999999996,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [
+            [
+              493841,
+              494162
+            ],
+            [
+              500503,
+              500830
+            ],
+            [
+              521009,
+              521330
+            ],
+            [
+              730720,
+              731046
+            ]
+          ],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 10422,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hx": {
+          "minimum_counts": -7665,
+          "maximum_counts": 9702,
+          "mean_counts": 715.7443618055555,
+          "std_counts": 2793.180318058873,
+          "zero_count": 175,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 15159,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": -3.0,
+            "robust_sigma_counts": 3653.1263999999996,
+            "threshold_counts": 182656.31999999998,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 13455,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hy": {
+          "minimum_counts": -9578,
+          "maximum_counts": 6867,
+          "mean_counts": 379.32954027777777,
+          "std_counts": 1581.278072652128,
+          "zero_count": 248,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 2,
+          "longest_constant_run_s": 6.25e-05,
+          "longest_constant_run_start_sample": 1601,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 1003.7202,
+            "threshold_counts": 50186.01,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 7463,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        },
+        "Hz": {
+          "minimum_counts": -2644,
+          "maximum_counts": 8027,
+          "mean_counts": 2717.496051388889,
+          "std_counts": 1813.6028299361644,
+          "zero_count": 165,
+          "fraction_at_minimum": 6.944444444444445e-07,
+          "fraction_at_maximum": 6.944444444444445e-07,
+          "clip_runs": 0,
+          "clip_samples": 0,
+          "zero_fill_runs": 0,
+          "zero_fill_samples": 0,
+          "stuck_runs": 0,
+          "stuck_samples": 0,
+          "longest_constant_run_samples": 3,
+          "longest_constant_run_s": 9.375e-05,
+          "longest_constant_run_start_sample": 112984,
+          "jump_count": 0,
+          "jump_fraction": 0.0,
+          "jump_threshold": {
+            "median_diff_counts": 0.0,
+            "robust_sigma_counts": 935.5206,
+            "threshold_counts": 46776.03,
+            "sigma_multiplier": 50.0,
+            "fallback_used": false,
+            "subsample_diffs": 1199976,
+            "blocks": 24,
+            "block_samples": 50000
+          },
+          "jump_intervals_first": [],
+          "jump_intervals_truncated": false,
+          "dead_channel": false,
+          "unique_values_subsample": 8231,
+          "bad_runs": 0,
+          "bad_samples": 0,
+          "bad_fraction": 0.0
+        }
+      },
+      "bad_mask": {
+        "file": "ARMT5-700-01-24-01_D1.npz",
+        "sha256": "dd70f0cce0a34e73ee4790ac96c3d93cef4840a8e636aab173a33a1b15105028",
+        "total_bad_samples_summed": 0,
+        "union_bad_samples": 0,
+        "union_bad_fraction": 0.0,
+        "max_channel_bad_fraction": 0.0,
+        "guard_samples": 320,
+        "bitorder": "little",
+        "relative_path": "barrido/mascaras/ARMT5-700-01-24-01_D1.npz"
+      },
+      "status": "PASA_CON_OBSERVACIONES",
+      "manifest_trace": {
+        "index": 1,
+        "section_index": 2,
+        "sample_count": 1440000,
+        "sample_rate_hz": 32000.0,
+        "duration_seconds": 45.0,
+        "start_time_local": "2021-01-17T19:33:57",
+        "adc_to_uv": [
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262,
+          0.5960000157356262
+        ]
+      }
+    }
+  },
+  "calibration": {
+    "D0": [
+      {
+        "record_id": "ARMT5-700-01-24-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Ex",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 100,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/e000100.clb",
+        "clb_sha256": "62871b15b489f990fa009ea7b7050658a4a5b077ce2f1c4f01cedb1c4f79ad19",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.084060668945312,
+        "amplitude_max_step_db": 0.7017743587493896,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-24-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Ey",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 101,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/e000101.clb",
+        "clb_sha256": "59a26101230ed551bc4bab23215c59919345bea0c1d32087f78c737a92995e1a",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.084060668945312,
+        "amplitude_max_step_db": 0.7017743587493896,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-24-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hx",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 200,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/h000200.clb",
+        "clb_sha256": "20003632960c2b98d9129259683738c245a60836136b6fcfbc9fde0e89868151",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 4.3343000411987305,
+        "amplitude_max_step_db": 0.6739859282970428,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-24-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hy",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 201,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/h000201.clb",
+        "clb_sha256": "f3ae7f88b575e63e95ede293a3d87c0b36c4b40148a49ea8e0a753c86c97d6da",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8687515258789062,
+        "amplitude_max_step_db": 0.6726457178592682,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-24-01",
+        "split": "desarrollo",
+        "band": "D0",
+        "channel": "Hz",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 202,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/h000202.clb",
+        "clb_sha256": "d64e65a69b7c25cfdadc1baf7834b5887f82102b81685b7f1460bde5328ef8f9",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 5.0,
+        "band_high_hz": 1000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8939132690429688,
+        "amplitude_max_step_db": 0.6780390441417694,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      }
+    ],
+    "D1": [
+      {
+        "record_id": "ARMT5-700-01-24-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Ex",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 100,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/e000100.clb",
+        "clb_sha256": "62871b15b489f990fa009ea7b7050658a4a5b077ce2f1c4f01cedb1c4f79ad19",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.084060668945312,
+        "amplitude_max_step_db": 0.7017743587493896,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-24-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Ey",
+        "sensor_type": "electrical_amplifier",
+        "serial_number": 101,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/e000101.clb",
+        "clb_sha256": "59a26101230ed551bc4bab23215c59919345bea0c1d32087f78c737a92995e1a",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 1000000.0,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": true,
+        "phase_continuous": true,
+        "phase_max_step_deg": 12.084060668945312,
+        "amplitude_max_step_db": 0.7017743587493896,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-24-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hx",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 200,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/h000200.clb",
+        "clb_sha256": "20003632960c2b98d9129259683738c245a60836136b6fcfbc9fde0e89868151",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 4.3343000411987305,
+        "amplitude_max_step_db": 0.6739859282970428,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-24-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hy",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 201,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/h000201.clb",
+        "clb_sha256": "f3ae7f88b575e63e95ede293a3d87c0b36c4b40148a49ea8e0a753c86c97d6da",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8687515258789062,
+        "amplitude_max_step_db": 0.6726457178592682,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      },
+      {
+        "record_id": "ARMT5-700-01-24-01",
+        "split": "desarrollo",
+        "band": "D1",
+        "channel": "Hz",
+        "sensor_type": "magnetic_sensor",
+        "serial_number": 202,
+        "clb_path_ref": "ARMT_processing/Calibrations/CLB_G1_Ex_shifted/h000202.clb",
+        "clb_sha256": "d64e65a69b7c25cfdadc1baf7834b5887f82102b81685b7f1460bde5328ef8f9",
+        "table_gain": 1.0,
+        "frequency_min_hz": 5.0000001782354415,
+        "frequency_max_hz": 15317.413357399793,
+        "band_low_hz": 1000.0,
+        "band_high_hz": 10000.0,
+        "covered": true,
+        "gain_record": 1.0,
+        "gain_directory": 1.0,
+        "delta_pct": 0.0,
+        "splice_detected": false,
+        "phase_continuous": true,
+        "phase_max_step_deg": 2.8939132690429688,
+        "amplitude_max_step_db": 0.6780390441417694,
+        "status": "candidata_no_verificada",
+        "sha_verified": true
+      }
+    ]
+  },
+  "calibration_all_covered": true,
+  "status": "PASA_CON_OBSERVACIONES",
+  "blockers": {
+    "B-P0-05": {
+      "id": "B-P0-05",
+      "alcance": "registro ARMT5-700-01-24-01, bandas D0/D1",
+      "estado": "CERRADO_PARA_ESTE_REGISTRO",
+      "evidencia": "barrido/registros/ARMT5-700-01-24-01.json y mascaras en barrido/mascaras/"
+    }
+  }
+}

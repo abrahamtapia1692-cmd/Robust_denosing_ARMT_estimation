@@ -1,0 +1,19 @@
+{
+ "artifact": "calibracion_p6",
+ "version": "P6-1.0.0",
+ "metodo": "r = RMS(error) / RMS(sigma bootstrap) en la mitad de calibracion",
+ "controles": "limpio/semiespacio_100",
+ "n_calibracion": 24,
+ "n_evaluacion": 24,
+ "factors": {
+  "D0": {
+   "r_log10": 1.32312734531253,
+   "r_phase_deg": 1.080146298116657
+  },
+  "D1": {
+   "r_log10": 1.7375531898436827,
+   "r_phase_deg": 0.9037309539760983
+  }
+ },
+ "nota": "El factor corrige la subcobertura del bootstrap temporal, que no captura el error sistematico de ventana y ancho de banda. No cubre error de calibracion ni de modelo."
+}

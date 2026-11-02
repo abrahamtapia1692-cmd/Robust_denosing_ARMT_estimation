@@ -1,0 +1,67 @@
+{
+  "version": "P5-CONFIG-1.0.0",
+  "stage": 5,
+  "gate": "P5",
+  "subgate": "P5-L",
+  "synthetic": true,
+  "scientific_claim": false,
+  "description": "Configuración para construcción de datasets de entrenamiento D_id y D_sep sin fuga (Etapa 5)",
+  "windowing": {
+    "length": 256,
+    "step": 128,
+    "channels": ["Ex", "Ey", "Hx", "Hy"]
+  },
+  "bands": {
+    "D0": {
+      "fs": 4000.0,
+      "f_min": 125.0,
+      "f_max": 1000.0
+    },
+    "D1": {
+      "fs": 32000.0,
+      "f_min": 1000.0,
+      "f_max": 10000.0
+    }
+  },
+  "dataset_splits": {
+    "entrenamiento": {
+      "fraction": 0.70,
+      "allowed_families": ["S0", "S1", "S2", "N"],
+      "group_prefix": "GRP-ENTR"
+    },
+    "validacion": {
+      "fraction": 0.15,
+      "allowed_families": ["S0", "S1", "S2", "N"],
+      "group_prefix": "GRP-VAL"
+    },
+    "prueba": {
+      "fraction": 0.15,
+      "allowed_families": ["S0", "S1", "S2", "N", "F2"],
+      "group_prefix": "GRP-TEST"
+    }
+  },
+  "sources": {
+    "clean_synthetics": [
+      "etapa3/datos/CTRL-01-HALFSPACE-D0.npz",
+      "etapa3/datos/CTRL-02-HALFSPACE-D1.npz",
+      "etapa3/datos/CTRL-03-STRATIFIED-S1-D0.npz",
+      "etapa3/datos/CTRL-05-NONSTATIONARY-SFERICS.npz"
+    ],
+    "noise_bank": [
+      "etapa4/noise_bank/NOISE-D0-001.npz",
+      "etapa4/noise_bank/NOISE-D0-002.npz",
+      "etapa4/noise_bank/NOISE-D1-004.npz",
+      "etapa5/fuentes/NOISE-D0-IND-001.npz"
+    ]
+  },
+  "snr_grid_db": [-10.0, -5.0, 0.0, 5.0, 10.0, 15.0],
+  "power_matching": {
+    "enabled": true,
+    "target_b7_auc_max": 0.65
+  },
+  "tolerances": {
+    "zero_group_leakage": true,
+    "zero_invented_targets": true,
+    "max_target_misalignment_samples": 0
+  }
+}

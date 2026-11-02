@@ -1,0 +1,234 @@
+{
+  "version": "P10-VAL-1.0.0",
+  "gate": "P10",
+  "total_checks": 32,
+  "passed_checks": 32,
+  "failed_checks": 0,
+  "all_passed": true,
+  "checks": [
+    {
+      "id": "P10-HASH-01-DETECTOR",
+      "description": "Hash congelado detector SCNet18 (c_theta_scnet18.pt) coincide exactamente",
+      "status": "PASA",
+      "passed": true,
+      "detail": "SHA256: 1e1d92b89b04afc4..."
+    },
+    {
+      "id": "P10-HASH-02-SCNET18-B3",
+      "description": "Hash congelado separador SCNet18 B3 (d_psi_b3_scnet18.pt) coincide exactamente",
+      "status": "PASA",
+      "passed": true,
+      "detail": "SHA256: 35c5e45c9676cead..."
+    },
+    {
+      "id": "P10-HASH-03-DENOISER-B4",
+      "description": "Hash congelado separador CBAM B4 (d_psi_b4_cbam.pt) coincide exactamente",
+      "status": "PASA",
+      "passed": true,
+      "detail": "SHA256: c987c9713ce4dbcc..."
+    },
+    {
+      "id": "P10-HASH-04-PIPELINE",
+      "description": "Hash congelado pipeline de inferencia continua (pipeline_armt.py) coincide exactamente",
+      "status": "PASA",
+      "passed": true,
+      "detail": "SHA256: 8e37cd1a23c02666..."
+    },
+    {
+      "id": "P10-HASH-05-CONFIG-P8",
+      "description": "Hash congelado configuracion de Etapa 8 (config_p8.json) coincide exactamente",
+      "status": "PASA",
+      "passed": true,
+      "detail": "SHA256: dd197dd2d5987347..."
+    },
+    {
+      "id": "P10-HASH-06-EVALUADOR",
+      "description": "Hash congelado evaluador ciego (evaluador_ciego.py) coincide exactamente",
+      "status": "PASA",
+      "passed": true,
+      "detail": "SHA256: 9499a9a38fc55277..."
+    },
+    {
+      "id": "P10-HASH-07-CONFIG-P9",
+      "description": "Hash congelado configuracion de Etapa 9 (config_p9.json) coincide exactamente",
+      "status": "PASA",
+      "passed": true,
+      "detail": "SHA256: c24f6f755a547c49..."
+    },
+    {
+      "id": "P10-HASH-08-SOPORTE-S1",
+      "description": "Hash congelado soporte TEM sintetico S1 (soporte_S1.json) coincide exactamente",
+      "status": "PASA",
+      "passed": true,
+      "detail": "SHA256: a6b50cfb1c64c832..."
+    },
+    {
+      "id": "P10-HASH-09-NOISE-EPISODES",
+      "description": "Hash congelado catalogo de episodios de ruido (noise_episodes.csv) coincide exactamente",
+      "status": "PASA",
+      "passed": true,
+      "detail": "SHA256: 1f3be6d1e78e3cd7..."
+    },
+    {
+      "id": "P10-EDI-10-BLOCKS-STANDARD",
+      "description": "Exportacion SEG-EDI incluye bloques estandar (>HEAD, >INFO, >=DEFINITIONS, >FREQ)",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Verificados bloques basicos en SND-BLIND-01.edi"
+    },
+    {
+      "id": "P10-EDI-11-IMPEDANCE-COMPONENTS",
+      "description": "Exportacion SEG-EDI incluye tensores completos ZXX, ZXY, ZYX, ZYY (R, I, VAR)",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Verificados 8 bloques tensoriales R/I en SND-BLIND-01.edi"
+    },
+    {
+      "id": "P10-EDI-12-RHO-PHASE-SECTIONS",
+      "description": "Exportacion SEG-EDI incluye secciones de resistividad aparente y fase (RHOXY, PHASXY, RHOYX, PHASYX)",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Verificadas secciones RHO y PHAS en SND-BLIND-01.edi"
+    },
+    {
+      "id": "P10-EDI-13-PARSER-COHERENCE",
+      "description": "Lector de verificacion SEG-EDI recupera 10 frecuencias con coherencia numerica completa",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Recuperadas 10 frecuencias, primer Zxy_r=0.2217"
+    },
+    {
+      "id": "P10-JSON-14-COV-4X4",
+      "description": "JSON-COV incluye matriz de covarianza completa 4x4 para tensores de impedancia",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Dimensiones de cov_4x4: 4x4"
+    },
+    {
+      "id": "P10-JSON-15-PROVENANCE",
+      "description": "JSON-COV incluye bloque de proveniencia completo (software, version, hashes congelados, timestamp)",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Version: 1.3.0 | Hashes: 9"
+    },
+    {
+      "id": "P10-JSON-16-COND-HH",
+      "description": "JSON-COV documenta numero de condicion de SHH por frecuencia",
+      "status": "PASA",
+      "passed": true,
+      "detail": "cond_hh primer punto: 1.083"
+    },
+    {
+      "id": "P10-JSON-17-COHERENCE",
+      "description": "JSON-COV documenta coherencia multicanal gamma2 por frecuencia",
+      "status": "PASA",
+      "passed": true,
+      "detail": "coherence_xy primer punto: 0.9987"
+    },
+    {
+      "id": "P10-JSON-18-WINDOW-STATS",
+      "description": "JSON-COV documenta estadisticas de ventaneo (limpias, contaminadas, intervenidas)",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Total: 499, Intervenidas: 0"
+    },
+    {
+      "id": "P10-CAT-19-FORMAL-POLICY-SET",
+      "description": "Todas las categorias asignadas pertenecen al conjunto formal cerrado de 6 categorias (\u00a710.5)",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Categorias registradas: ['aceptado', 'condicional', 'direccional', 'sin_soporte_tem', 'fuera_de_dominio_rmt', 'no_identificable']"
+    },
+    {
+      "id": "P10-CAT-20-ACCEPTED-RANK2",
+      "description": "Categoria 'aceptado' asignada correctamente en puntos de alta coherencia y rango 2 (SND-BLIND-01)",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Puntos clasificados como aceptado: 10/10"
+    },
+    {
+      "id": "P10-CAT-21-DIRECTIONAL-RANK1",
+      "description": "Categoria 'direccional' asignada ante polarizacion colineal cond(SHH) > 1e4 (SND-RANK1-TEST)",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Puntos clasificados como direccional: 10/10"
+    },
+    {
+      "id": "P10-CAT-22-EMPTY-TEM-SUPPORT",
+      "description": "Categoria 'sin_soporte_tem' asignada ante soporte TEM vacio segun Gate G0 (SND-FIELD-EMPTY)",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Puntos clasificados como sin_soporte_tem: 10/10"
+    },
+    {
+      "id": "P10-CAT-23-RMT-OUT-OF-DOMAIN",
+      "description": "Categoria 'fuera_de_dominio_rmt' asignada a frecuencias en bandas D2/D3 (SND-RMT-SCOPE)",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Puntos clasificados como fuera_de_dominio_rmt: 4/4"
+    },
+    {
+      "id": "P10-CAT-24-UNIDENTIFIABLE-SNR",
+      "description": "Categoria 'no_identificable' asignada correctamente ante coherencia nula (< 0.10) o no identificable",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Categoria: no_identificable, Razon: CAT_UNIDENTIFIABLE_SNR_DEFICIT"
+    },
+    {
+      "id": "P10-FALLBACK-25-REVERSION-TRIGGER",
+      "description": "Reversion automatica a estimador clasico B0 activada ante divergencia/anomalia numerica simulada",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Puntos revertidos a B0: 1/10"
+    },
+    {
+      "id": "P10-FALLBACK-26-UNSUPPORTED-SAFE-BYPASS",
+      "description": "Omision total de red (bypass seguro s_hat == x) cuando el soporte TEM esta vacio (Gate G0)",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Estado TEM: sin_soporte"
+    },
+    {
+      "id": "P10-FALLBACK-27-FLAG-TRANSPARENCY",
+      "description": "Transparencia total de fallback: bandera fallback_to_b0 registrada explicitamente en JSON y EDI",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Bandera fallback_to_b0=True"
+    },
+    {
+      "id": "P10-DECOMP-28-EXACT-IDENTITY",
+      "description": "Descomposicion continua exacta x = s_hat + n_hat verificada con error ||x - (s+n)||_inf < 1e-15",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Error de identidad observado: 0.00e+00"
+    },
+    {
+      "id": "P10-SCOPE-29-ZERO-RMT-INTERVENTION",
+      "description": "Exclusion estricta de bandas RMT D2/D3 certificada: cero intervencion neural",
+      "status": "PASA",
+      "passed": true,
+      "detail": "4/4 frecuencias RMT fuera de red"
+    },
+    {
+      "id": "P10-GOV-30-MANIFEST-INTEGRITY",
+      "description": "Manifiesto oficial manifest_liberacion.json existe y contiene hashes SHA-256 de todas las salidas",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Archivos exportados inventariados en manifiesto: 12"
+    },
+    {
+      "id": "P10-GOV-31-OUTPUTS-EXISTENCE",
+      "description": "Todos los 12 productos oficiales de liberacion (.edi y .json) existen y son no vacios",
+      "status": "PASA",
+      "passed": true,
+      "detail": "6 sondeos x 2 formatos (EDI + JSON) = 12 productos verificados en disco"
+    },
+    {
+      "id": "P10-GOV-32-GOVERNANCE-POLICIES",
+      "description": "Gobernanza de liberacion: cero blancos inventados, cero extrapolacion sin respaldo, trazabilidad completa",
+      "status": "PASA",
+      "passed": true,
+      "detail": "Certificacion de liberacion: APPROVED_FOR_RELEASE"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "version": "P7-2.0.0",
+  "timestamp_utc": "2026-10-29T17:11:05Z",
+  "device": "cuda",
+  "execution_time_sec": 334.28620624542236,
+  "subgate_p7_i": {
+    "model_name": "SCNet18_Classifier",
+    "reference": "Zhang et al. (2024)",
+    "tau_calibrated": 1.0,
+    "test_fpr_clean": 0.0,
+    "test_sensitivity": 0.9959839357429718,
+    "test_accuracy": 0.9979919678714859,
+    "test_roc_auc": 0.9999999999999999,
+    "b7_auc": 0.576805212819148,
+    "beats_b7": true,
+    "p7_i_pass": true,
+    "confusion_matrix": {
+      "TN": 498,
+      "FP": 0,
+      "FN": 2,
+      "TP": 496
+    }
+  },
+  "subgate_p7_s": {
+    "non_inferiority_clean": {
+      "b3_bias_z_pct": 6.42082203441012,
+      "b3_phase_deg": 3.122440450109629,
+      "b4_bias_z_pct": 0.7442811174763609,
+      "b4_phase_deg": 0.630440682038838,
+      "b8_bias_z_pct": 0.9921770103802564,
+      "b8_phase_deg": 1.6861983599389276,
+      "passed": true
+    },
+    "denoising_contaminated": {
+      "snr_raw_db": -2.410583311910108,
+      "snr_b3_db": -22.161644860531663,
+      "snr_b4_db": 16.74577525644771,
+      "snr_wiener_b8_db": -0.6545278069907874,
+      "delta_snr_b3_db": -19.751061548621553,
+      "delta_snr_b4_db": 19.15635856835782,
+      "delta_snr_wiener_b8_db": 1.7560555049193205,
+      "err_z_raw_pct": 0.708971831468932,
+      "err_z_b3_pct": 1.7166367771511242,
+      "err_z_b4_pct": 0.6518805069378033,
+      "err_z_wiener_b8_pct": 1.2699258328475258,
+      "err_ph_raw_deg": 0.3217203498584382,
+      "err_ph_b3_deg": 22.024621653657693,
+      "err_ph_b4_deg": 0.7504639062412792,
+      "err_ph_wiener_b8_deg": 1.5268616602919636,
+      "beats_wiener_b8": true,
+      "beats_b3_reproduced": true
+    },
+    "over_suppression_test": {
+      "energy_ratio": 1.0952838712047541,
+      "passed": true
+    },
+    "p7_s_pass": true
+  },
+  "gate_p7": {
+    "n_test_windows": 746,
+    "n_intervened_windows": 496,
+    "intervened_pct": 66.48793565683646,
+    "transfer_error_z": {
+      "raw_pct": 0.4405981321766661,
+      "wiener_b8_pct": 1.1442926639692979,
+      "cbam_global_pct": 0.6890863319796259,
+      "cbam_chain_pct": 0.43692425790203104
+    },
+    "transfer_error_phase": {
+      "raw_deg": 0.21318868570134697,
+      "wiener_b8_deg": 1.5745479439571355,
+      "cbam_global_deg": 0.7065773199477192,
+      "cbam_chain_deg": 0.4728038378560768
+    },
+    "chain_clean_bias_pct": 0.0,
+    "chain_clean_phase_deg": 0.0,
+    "p7_pass": true
+  },
+  "isolation_and_governance": {
+    "synthetic_isolation_verified": true,
+    "zero_leakage_groups": true,
+    "zero_d2_d3_intervention": true,
+    "zero_fake_field_targets": true,
+    "b7_shortcut_neutralized": true,
+    "b3_exact_scnet18_reproduced": true,
+    "b4_cbam_adapted_superior": true
+  }
+}

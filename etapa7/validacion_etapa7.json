@@ -1,0 +1,201 @@
+{
+  "validador_version": "P7-VAL-2.0.0",
+  "overall_status": "APROBADO",
+  "total_checks": 32,
+  "passed_checks": 32,
+  "failed_checks": 0,
+  "checks": [
+    {
+      "id": "V-P7-01",
+      "descripcion": "Existencia de config_p7.json",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P7-02",
+      "descripcion": "Versi\u00f3n y compuertas en config_p7.json",
+      "estado": "PASA",
+      "observacion": "Versi\u00f3n: P7-CONFIG-1.0.0"
+    },
+    {
+      "id": "V-P7-03",
+      "descripcion": "Subbandas autorizadas strictly D0 y D1",
+      "estado": "PASA",
+      "observacion": "Subbandas: ['D0', 'D1']"
+    },
+    {
+      "id": "V-P7-04",
+      "descripcion": "Canales de entrada de 4 componentes [Ex, Ey, Hx, Hy]",
+      "estado": "PASA",
+      "observacion": "Canales: ['Ex', 'Ey', 'Hx', 'Hy']"
+    },
+    {
+      "id": "V-P7-05",
+      "descripcion": "Existencia de datasets D_id, D_sep y D_real sin fuga",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P7-06",
+      "descripcion": "Existencia e integridad de checkpoint detector SCNet18 (c_theta_scnet18.pt)",
+      "estado": "PASA",
+      "observacion": "Tama\u00f1o: 15948862 bytes"
+    },
+    {
+      "id": "V-P7-07",
+      "descripcion": "Existencia e integridad de checkpoint B3 reproducido (d_psi_b3_scnet18.pt)",
+      "estado": "PASA",
+      "observacion": "Tama\u00f1o: 82930900 bytes"
+    },
+    {
+      "id": "V-P7-08",
+      "descripcion": "Existencia e integridad de checkpoint B4 adaptado (d_psi_b4_cbam.pt)",
+      "estado": "PASA",
+      "observacion": "Tama\u00f1o: 7064938 bytes"
+    },
+    {
+      "id": "V-P7-09",
+      "descripcion": "Carga e inferencia funcional de SCNet18_Classifier (Zhang et al. 2024)",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P7-10",
+      "descripcion": "Carga e inferencia funcional de CBAM_ResUNet_Denoiser (B4 adaptado)",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P7-11",
+      "descripcion": "Equivarianza de escala en CBAM_ResUNet_Denoiser (tolerancia fisica 1%)",
+      "estado": "PASA",
+      "observacion": "Error relativo de reescalado: 3.08e-03 (tolerancia 1e-02)"
+    },
+    {
+      "id": "V-P7-12",
+      "descripcion": "Existencia de resumen_p7.json y reporte_p7.md",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P7-13",
+      "descripcion": "Subpuerta P7-I: FPR en tiempo limpio <= 1.0%",
+      "estado": "PASA",
+      "observacion": "FPR observado: 0.00% (Meta <= 1.0%)"
+    },
+    {
+      "id": "V-P7-14",
+      "descripcion": "Subpuerta P7-I: Sensibilidad en episodios >= 90.0%",
+      "estado": "PASA",
+      "observacion": "Sensibilidad observada: 99.60% (Meta >= 90.0%)"
+    },
+    {
+      "id": "V-P7-15",
+      "descripcion": "Subpuerta P7-I: Exactitud en test set >= 90.0%",
+      "estado": "PASA",
+      "observacion": "Exactitud: 99.80%"
+    },
+    {
+      "id": "V-P7-16",
+      "descripcion": "Subpuerta P7-I: ROC-AUC detector C_theta >= 0.95",
+      "estado": "PASA",
+      "observacion": "ROC-AUC: 1.0000"
+    },
+    {
+      "id": "V-P7-17",
+      "descripcion": "Subpuerta P7-I: Comparador B7 solo-potencia neutralizado (AUC <= 0.65)",
+      "estado": "PASA",
+      "observacion": "B7 AUC: 0.5768"
+    },
+    {
+      "id": "V-P7-18",
+      "descripcion": "Subpuerta P7-I: C_theta supera abrumadoramente a B7",
+      "estado": "PASA",
+      "observacion": "C_theta AUC (1.0000) vs B7 AUC (0.5768)"
+    },
+    {
+      "id": "V-P7-19",
+      "descripcion": "Subpuerta P7-S: No inferioridad en limpio (sesgo Zxy <= 5.0%)",
+      "estado": "PASA",
+      "observacion": "Sesgo Zxy B4: 0.74%"
+    },
+    {
+      "id": "V-P7-20",
+      "descripcion": "Subpuerta P7-S: No inferioridad en limpio (error de fase <= 2.0\u00b0)",
+      "estado": "PASA",
+      "observacion": "Diferencia fase B4: 0.63\u00b0"
+    },
+    {
+      "id": "V-P7-21",
+      "descripcion": "Subpuerta P7-S: Ganancia de SNR positiva en tramos contaminados (B4)",
+      "estado": "PASA",
+      "observacion": "Delta SNR B4: +19.16 dB"
+    },
+    {
+      "id": "V-P7-22",
+      "descripcion": "Subpuerta P7-S: Superaci\u00f3n de Wiener B8 en SNR final",
+      "estado": "PASA",
+      "observacion": "B4 SNR: 16.75 dB vs Wiener B8: -0.65 dB"
+    },
+    {
+      "id": "V-P7-23",
+      "descripcion": "Subpuerta P7-S: B4 adaptado supera a B3 reproducido (Zhang et al.)",
+      "estado": "PASA",
+      "observacion": "B4 (+19.16 dB) vs B3 (+-19.75 dB)"
+    },
+    {
+      "id": "V-P7-24",
+      "descripcion": "Subpuerta P7-S: Prueba de sobre-supresi\u00f3n a SNR negativo aprobada",
+      "estado": "PASA",
+      "observacion": "Ratio energ\u00eda: 1.095 (Meta >= 0.80)"
+    },
+    {
+      "id": "V-P7-25",
+      "descripcion": "Puerta P7: Error de transferencia Zxy en cadena <= 5.0%",
+      "estado": "PASA",
+      "observacion": "Cadena Zxy error: 0.44%"
+    },
+    {
+      "id": "V-P7-26",
+      "descripcion": "Puerta P7: Error de fase en cadena <= 2.0\u00b0",
+      "estado": "PASA",
+      "observacion": "Cadena Fase error: 0.47\u00b0"
+    },
+    {
+      "id": "V-P7-27",
+      "descripcion": "Puerta P7: No inferioridad de la cadena en subconjunto limpio (<= 5.0%)",
+      "estado": "PASA",
+      "observacion": "Sesgo observado: 0.00%"
+    },
+    {
+      "id": "V-P7-28",
+      "descripcion": "Puerta P7: Aprobaci\u00f3n integral de la cadena selectiva C_theta -> D_psi",
+      "estado": "PASA",
+      "observacion": ""
+    },
+    {
+      "id": "V-P7-29",
+      "descripcion": "Aislamiento de cuarentena sintetica estricto preservado",
+      "estado": "PASA",
+      "observacion": "synthetic=True, scientific_claim=False"
+    },
+    {
+      "id": "V-P7-30",
+      "descripcion": "Cero fuga entre particiones (grupos y fuentes de ruido)",
+      "estado": "PASA",
+      "observacion": "zero_group_leakage=True; ruido train=['NOISE-D0-001', 'NOISE-D1-004'] test=['NOISE-D0-IND-001']; solape=[]"
+    },
+    {
+      "id": "V-P7-31",
+      "descripcion": "Cero procesamiento de portadoras o subbandas D2/D3",
+      "estado": "PASA",
+      "observacion": "excluded_bands=['D2', 'D3']"
+    },
+    {
+      "id": "V-P7-32",
+      "descripcion": "Cero blancos inventados para registros de campo (Subpuerta P5-L)",
+      "estado": "PASA",
+      "observacion": "target_type=unavailable"
+    }
+  ]
+}

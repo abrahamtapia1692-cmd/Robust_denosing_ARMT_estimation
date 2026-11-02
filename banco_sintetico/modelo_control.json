@@ -1,0 +1,114 @@
+{
+  "version": "SYN-MOD-1.0.0",
+  "synthetic": true,
+  "scientific_claim": false,
+  "purpose": "Fixture de contrato para ejercitar la maquinaria de soporte TEM de P2-T sin afirmar nada del sitio.",
+  "target_record": "ARMT5-700-14-14-01",
+  "target_split": "desarrollo",
+  "bands_hz": {
+    "D0": [125.0, 1000.0],
+    "D1": [1000.0, 10000.0]
+  },
+  "amt_dead_band_hz": [1000.0, 5000.0],
+  "layers": [
+    {
+      "id": "L1",
+      "rho_ohm_m": 40.0,
+      "thickness_m": 30.0,
+      "role": "cobertura somera declarada"
+    },
+    {
+      "id": "L2",
+      "rho_ohm_m": 8.0,
+      "thickness_m": 90.0,
+      "role": "nivel conductor declarado"
+    },
+    {
+      "id": "L3",
+      "rho_ohm_m": 300.0,
+      "thickness_m": null,
+      "role": "semiespacio resistivo declarado"
+    }
+  ],
+  "surrogate": {
+    "equation": "log10 V(t) = log10 A(t) + sum_i k_i(t) * log10(rho_i / rho_i_ref)",
+    "amplitude_anchors_ms_nv_per_a": [
+      [0.05, 200000000.0],
+      [1.0, 20000000.0],
+      [20.0, 200000.0]
+    ],
+    "kernels": [
+      {
+        "layer": "L1",
+        "center_ms": 0.25,
+        "width_dex": 0.3,
+        "amplitude": 0.55
+      },
+      {
+        "layer": "L2",
+        "center_ms": 1.2,
+        "width_dex": 0.35,
+        "amplitude": 0.55
+      },
+      {
+        "layer": "L3",
+        "center_ms": 7.0,
+        "width_dex": 0.45,
+        "amplitude": 0.4
+      }
+    ],
+    "apparent_resistivity_transitions_ms": [0.25, 4.0],
+    "apparent_resistivity_width_dex": 0.25,
+    "validity": "Surrogate fenomenologico de contrato. No resuelve Maxwell, no se calibró contra un TEM real y no representa el subsuelo del sitio."
+  },
+  "gates": {
+    "count": 48,
+    "start_ms": 0.05,
+    "stop_ms": 20.0
+  },
+  "noise": {
+    "seed": 20261028,
+    "multiplicative_sigma": 0.03,
+    "additive_nv_per_a": 100.0
+  },
+  "support": {
+    "mapping": "t_ms = 1000 / (2 * pi * f_hz)",
+    "window_dex": 0.2,
+    "min_gates": 3,
+    "threshold_supported": 0.08,
+    "threshold_conditional": 0.03,
+    "guard_early_ms": 0.08,
+    "guard_late_fraction": 0.1
+  },
+  "scenarios": [
+    {
+      "id": "S0",
+      "tem_id": "SYN-TEM-001",
+      "file": "datos/SYN-TEM-001.tem",
+      "purpose": "Soporte vacio y abstencion (G0).",
+      "mode": "constante_sin_decaimiento",
+      "kernels": [],
+      "amplitude_anchors_ms_nv_per_a": [
+        [0.05, 1000000.0],
+        [20.0, 1000000.0]
+      ],
+      "expected": {
+        "supported_any": false,
+        "g0_trigger": true
+      }
+    },
+    {
+      "id": "S1",
+      "tem_id": "SYN-TEM-002",
+      "file": "datos/SYN-TEM-002.tem",
+      "purpose": "Soporte parcial en D0 y borde de D1, con banda muerta AMT penalizada.",
+      "mode": "surrogate_capas",
+      "kernels": null,
+      "amplitude_anchors_ms_nv_per_a": null,
+      "expected": {
+        "supported_any": true,
+        "g0_trigger": false
+      }
+    }
+  ]
+}
